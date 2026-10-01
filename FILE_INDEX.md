@@ -2,12 +2,13 @@
 
 Dibuat oleh `python research/document_tree.py`. Ini daftar berkas saat generator terakhir dijalankan; tanggal riset dan pembaruan ada pada masing-masing dokumen. [Panduan hubungan folder](STRUKTUR_FOLDER.md) memberi penjelasan alur kerja.
 
-Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai data penelitian. Metadata internal .git, konfigurasi alat tersembunyi dan lingkungan virtual tidak diindeks. Deskripsi sumber menyatakan tingkat akses, bukan jaminan kebenaran klaim paper.
+Tercatat **245 berkas**. Cache bytecode Python, metadata internal .git, konfigurasi alat tersembunyi dan lingkungan virtual tidak diindeks. Deskripsi sumber menyatakan tingkat akses, bukan jaminan kebenaran klaim paper.
 
 ## research/ (root)
 
 | Berkas | Maksud/kegunaan |
 |---|---|
+| [.gitignore](.gitignore) | Aturan Git untuk mengecualikan cache bytecode Python yang dapat dibuat ulang. |
 | [__init__.py](__init__.py) | Penanda paket Python untuk impor dan pemanggilan python -m. |
 | [build_datasets.py](build_datasets.py) | Transkripsi/parsing input, deduplikasi dan pencatatan pengecualian. |
 | [document_tree.py](document_tree.py) | Generator indeks berkas ini; hanya menulis FILE_INDEX.md. |
@@ -24,12 +25,6 @@ Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai 
 | [render_pages.py](render_pages.py) | Merender halaman PDF terpilih untuk audit visual transkripsi. |
 | [requirements.txt](requirements.txt) | Daftar paket Python; versi eksperimen tercatat dalam results/environment.json. |
 | [STRUKTUR_FOLDER.md](STRUKTUR_FOLDER.md) | Panduan hubungan folder, data, kode, eksperimen dan laporan. |
-
-## __pycache__/
-
-| Berkas | Maksud/kegunaan |
-|---|---|
-| [__init__.cpython-313.pyc](__pycache__/__init__.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
 
 ## datasets/generated/
 
@@ -67,22 +62,6 @@ Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai 
 | [timing.py](experiments/timing.py) | Pengukuran waktu terkontrol pada sampel kasus. |
 | [verify.py](experiments/verify.py) | Pemeriksaan algoritma, anchor, enumerasi optimum kecil dan sifat rollout. |
 
-## experiments/__pycache__/
-
-| Berkas | Maksud/kegunaan |
-|---|---|
-| [__init__.cpython-313.pyc](experiments/__pycache__/__init__.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [audit_artifacts.cpython-313.pyc](experiments/__pycache__/audit_artifacts.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [diagnostics.cpython-313.pyc](experiments/__pycache__/diagnostics.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [enumerate_ties.cpython-313.pyc](experiments/__pycache__/enumerate_ties.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [jhm_supplement.cpython-313.pyc](experiments/__pycache__/jhm_supplement.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [run_baselines.cpython-313.pyc](experiments/__pycache__/run_baselines.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [run_jhm.cpython-313.pyc](experiments/__pycache__/run_jhm.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [run_modifications.cpython-313.pyc](experiments/__pycache__/run_modifications.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [summarize.cpython-313.pyc](experiments/__pycache__/summarize.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [timing.cpython-313.pyc](experiments/__pycache__/timing.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [verify.cpython-313.pyc](experiments/__pycache__/verify.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-
 ## methods/
 
 | Berkas | Maksud/kegunaan |
@@ -93,17 +72,6 @@ Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai 
 | [jhm.py](methods/jhm.py) | JHM terbatas dan empat variasi; cabang belum diketahui tidak diganti aturan lain. |
 | [mrm.py](methods/mrm.py) | MRM narasi, orientasi default atau paksa baris/kolom. |
 | [repair.py](methods/repair.py) | Interpretasi algoritma perbaikan SSM/CSM/RBSM/BCE, termasuk pencatatan kegagalan. |
-
-## methods/__pycache__/
-
-| Berkas | Maksud/kegunaan |
-|---|---|
-| [__init__.cpython-313.pyc](methods/__pycache__/__init__.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [common.cpython-313.pyc](methods/__pycache__/common.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [constructive.cpython-313.pyc](methods/__pycache__/constructive.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [jhm.cpython-313.pyc](methods/__pycache__/jhm.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [mrm.cpython-313.pyc](methods/__pycache__/mrm.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [repair.cpython-313.pyc](methods/__pycache__/repair.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
 
 ## modifications/
 
@@ -117,15 +85,6 @@ Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai 
 | [vam_top2_rollout.md](modifications/vam_top2_rollout.md) | Langkah VAM dua kandidat, asal ide, rumus, pseudocode, hasil dan batas kebaruan. |
 | [variants.py](modifications/variants.py) | Registry dan implementasi 24 modifikasi kecil, termasuk tiga shortlist. |
 | [worked_example.py](modifications/worked_example.py) | Membangun dan memeriksa contoh L05 yang sama pada empat Markdown, dengan seluruh simulasi kandidat/orientasi. |
-
-## modifications/__pycache__/
-
-| Berkas | Maksud/kegunaan |
-|---|---|
-| [__init__.cpython-313.pyc](modifications/__pycache__/__init__.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [demo.cpython-313.pyc](modifications/__pycache__/demo.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [variants.cpython-313.pyc](modifications/__pycache__/variants.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [worked_example.cpython-313.pyc](modifications/__pycache__/worked_example.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
 
 ## papers/external/
 
@@ -354,10 +313,3 @@ Tercatat **268 berkas**, termasuk 24 cache Python. Cache tidak dihitung sebagai 
 |---|---|
 | [__init__.py](solver/__init__.py) | Penanda paket Python untuk impor dan pemanggilan python -m. |
 | [optimal_lp.py](solver/optimal_lp.py) | LP SciPy/HiGHS untuk optimum pembanding dan sertifikat primal-dual. |
-
-## solver/__pycache__/
-
-| Berkas | Maksud/kegunaan |
-|---|---|
-| [__init__.cpython-313.pyc](solver/__pycache__/__init__.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |
-| [optimal_lp.cpython-313.pyc](solver/__pycache__/optimal_lp.cpython-313.pyc) | Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah. |

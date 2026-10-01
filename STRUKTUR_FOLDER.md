@@ -181,4 +181,4 @@ python research/document_tree.py
 
 Perintah pertama dan kedua hanya menampilkan hasil; ketiga menulis ringkasan audit; keempat memperbarui indeks berkas. Semua dijalankan dari root `Risop`.
 
-`__pycache__/` dan `*.pyc` merupakan cache otomatis Python, bukan sumber metode atau hasil ilmiah. Tidak perlu dibaca/disunting untuk penelitian. Berkas mentah `papers/` dan dataset yang menjadi dasar eksperimen sebaiknya dipertahankan agar asal angka dapat diaudit. Inventaris ini tidak mengklaim setiap paper yang ditemukan sudah direproduksi; batas akses dan implementasi tetap tercatat pada laporan.
+`__pycache__/`, `*.pyc`, dan `*.pyo` merupakan cache otomatis Python, bukan sumber metode atau hasil ilmiah. Cache dikecualikan dari indeks berkas dan diabaikan oleh aturan `.gitignore`; Python dapat membuatnya kembali saat program dijalankan. Berkas mentah `papers/` dan dataset yang menjadi dasar eksperimen sebaiknya dipertahankan agar asal angka dapat diaudit. Inventaris ini tidak mengklaim setiap paper yang ditemukan sudah direproduksi; batas akses dan implementasi tetap tercatat pada laporan.

@@ -13,6 +13,7 @@ FILE_INDEX.md|Indeks otomatis setiap berkas beserta kegunaannya.
 progress.md|Status tahap penelitian, pengecualian dan keterbatasan yang masih terbuka.
 paper_inventory.md|Inventaris lima PDF pengguna, contoh, klaim, DOI dan koreksi penemuan input 2x94.
 requirements.txt|Daftar paket Python; versi eksperimen tercatat dalam results/environment.json.
+.gitignore|Aturan Git untuk mengecualikan cache bytecode Python yang dapat dibuat ulang.
 document_tree.py|Generator indeks berkas ini; hanya menulis FILE_INDEX.md.
 extract_local.py|Pemindaian/ekstraksi PDF lokal dan pembentukan manifest sumber.
 read_text.py|Pembaca rentang baris teks dengan nomor baris.
@@ -134,8 +135,6 @@ def describe(path):
     key = path.as_posix()
     if key in DESCRIPTIONS:
         return DESCRIPTIONS[key]
-    if '__pycache__' in path.parts or path.suffix == '.pyc':
-        return 'Cache bytecode otomatis Python; bukan sumber algoritma atau hasil ilmiah.'
     if path.name == '__init__.py':
         return 'Penanda paket Python untuk impor dan pemanggilan python -m.'
     if path.parent.as_posix() == 'papers/local_text':
@@ -161,19 +160,19 @@ def main():
     files = set()
     for folder, dirs, names in os.walk(ROOT):
         # Repository/tool internals are not research artifacts and may hold private config.
-        dirs[:] = [d for d in dirs if d not in {'.git', '.codex', '.agents', '.aws', '.venv', 'venv'}]
-        files.update((Path(folder) / name).relative_to(ROOT) for name in names)
+        dirs[:] = [d for d in dirs if d not in {'.git', '.codex', '.agents', '.aws', '.venv', 'venv', '__pycache__'}]
+        files.update((Path(folder) / name).relative_to(ROOT) for name in names
+                     if Path(name).suffix not in {'.pyc', '.pyo'})
     files.add(TARGET.relative_to(ROOT))
     groups = {}
     for path in sorted(files, key=lambda p: p.as_posix().lower()):
         groups.setdefault(path.parent.as_posix(), []).append((path, describe(path)))
-    cache_count = sum('__pycache__' in p.parts or p.suffix == '.pyc' for p in files)
     lines = ['# Indeks setiap berkas research\n\n',
              'Dibuat oleh `python research/document_tree.py`. Ini daftar berkas saat generator terakhir dijalankan; '
              'tanggal riset dan pembaruan ada pada masing-masing dokumen. '
              '[Panduan hubungan folder](STRUKTUR_FOLDER.md) memberi penjelasan alur kerja.\n\n',
-             f'Tercatat **{len(files)} berkas**, termasuk {cache_count} cache Python. '
-             'Cache tidak dihitung sebagai data penelitian. Metadata internal .git, konfigurasi alat tersembunyi '
+             f'Tercatat **{len(files)} berkas**. '
+             'Cache bytecode Python, metadata internal .git, konfigurasi alat tersembunyi '
              'dan lingkungan virtual tidak diindeks. Deskripsi sumber menyatakan tingkat akses, '
              'bukan jaminan kebenaran klaim paper.\n']
     for parent, records in groups.items():
@@ -182,7 +181,7 @@ def main():
         for path, purpose in records:
             lines.append(f'| [{path.name}]({path.as_posix()}) | {purpose} |\n')
     TARGET.write_text(''.join(lines), encoding='utf-8')
-    print(f'Wrote {TARGET}: {len(files)} files, {cache_count} Python caches')
+    print(f'Wrote {TARGET}: {len(files)} files; Python bytecode caches excluded')
 
 
 if __name__ == '__main__':

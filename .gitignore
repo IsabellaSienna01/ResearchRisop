@@ -1,0 +1,4 @@
+# Regenerable Python bytecode; keep source, datasets and research evidence tracked.
+__pycache__/
+*.pyc
+*.pyo
