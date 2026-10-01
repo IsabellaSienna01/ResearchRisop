@@ -1,0 +1,573 @@
+Ceylon Journal of Science 48(1) 2019: 19-29
+DOI: http://doi.org/10.4038/cjs.v48i1.7584
+
+     RESEARCH ARTICLE
+
+An efficient alternative approach to solve a transportation problem
+
+Z.A.M.S. Juman1,* and N.G.S.A. Nawarathne1
+
+Department of Mathematics, Faculty of Science, University of Peradeniya, Peradeniya 20400, Sri Lanka
+1
+
+
+
+Received: 19/04/2018 ; Accepted: 15/08/2018
+
+Abstract: Determination of an Initial Feasible Solution (IFS) to      Product from Several Sources to Numerous Localities”
+a transportation problem plays an important role in obtaining a       where he formulated an algorithm for the transportation
+minimal total transportation cost solution. Better initial feasible   problem similar to the primal simplex algorithm. In
+solution can result less number of iterations in attaining the        1949, Koopmans has presented an independent study not
+minimal total cost solution. Recently, an efficient method denoted    related to Hitchcock’s, and called “Optimum utilization
+by JHM (Juman and Hoque’s Method) was proposed to obtain              of transportation systems. The two contributions which
+a better initial feasible solution to a transportation problem.       developed by Hitchcock and Koopmans helped in the
+In JHM only column penalties are considered. In this paper, a         development of transportation methods which involve
+new approach is proposed with row penalties to find an IFS to         a number of plants and a number of destinations. After
+a transportation problem. The new method is illustrated with a        that Charnes, and Cooper (1954), have published the
+numerical example. A comparative study on a set of benchmark          stepping stone method of explaining linear programming
+instances shows that the new method provides the same or better       calculations in transportation problems. In 1951, Dantzig
+initial feasible solution to all the problems except one. Thus, our   applied the concept of Linear Programming in solving the
+new method can be considered as an alternative technique of           Transportation models. Reinfeld and Vogel (1958) have
+attaining an initial feasible solution to a transportation problem.   published a book named Mathematical Programming. In
+                                                                      this book, they proposed a method to find the initial basic
+Keywords: Transportation Problem; Initial feasible solution;          feasible solution for a transportation problem. Dantzig
+minimal total cost solution.                                          (1963) has published book named Linear Programming
+                                                                      Extensions. Hoffman (1963) has given a necessary and
+INTRODUCTION                                                          sufficient condition under which a family of O(mn)-time
+                                                                      greedy algorithms solve the classical two dimensional
+An essential component of our modern life is the shipping             transportation problem with m sources and n destinations.
+of goods from where they are produced to markets                      Then Hammer (1969), Szwarc (1971), Garfinkel and Rao
+worldwide. Nationally, companies spend billions of dollars            (1971), Bhatia, Kanti Swaroop and Puri (1976) studied
+annually in transporting goods. The transportation problem            about time minimizing transportation problem. A paper
+(TP) is a special class of network optimization problem               which is named by “Cost operator algorithms for the
+that deals with transporting a homogeneous product from               transportation problem” was published by Sirinivasan,
+multiple sources (e.g., factories) to multiple destinations           and Thompson in 1977. After few years Shimshak, Kaslik
+(e.g., warehouses). The aim of the TP is to find a way of             and Barclay (1981) proposed a Modification of Vogel’s
+carrying out this transfer of goods at minimum total cost.            approximation method through the use of heuristic.
+    The TP was formalized by the French mathematician                 Moreover, Many research works have been carried out
+Gaspard Monge (1781). Major advances were made in the                 on the Vogel’s approximation method (Juman and Hoque,
+field during World War II by the Russian mathematician                2012; Juman and Hoque, 2013a; Juman and Hoque, 2013b;
+and economist Leonid Kantorovich. Tolstoi was the one of              Juman and Hoque, 2014b; Juman and Perera, 2015b).
+the first to study the transportation problem mathematically.         Adlakha and Kowalski (1999) proposed an alternative
+An article named “Method of finding of finding the minimal            solution algorithm for certain transportation problems.
+total kilometrage in Cargo transportation planning in space,              In the beginning of the 20th century, Veena Adlakha
+in the collection of transportation planning”; volume I of            and Krzysztof Kowalski (2000) introduced an alternative
+the national commissariat of transportation of the Soviet             solutions analysis for transportation problems. Also Gen,
+Union was published by Tolstoi (1930). In 1939, Leonid                Choi and Ida (2000) improved genetic algorithm for
+Kantorovich was formulated the transportation problem                 generalized transportation problem. In the same year Sharma
+as linear programming problem and he published a book                 and Sharma have proposed a new dual based procedure for
+named “Mathematical methods in the Organization and                   the transportation problem. In 2003, Adlakha and Kowalski
+planning of Production”. After few years United States                introduced a simple heuristic for solving small fixed charge
+of American mathematician Frank Lauren Hitchcock                      transportation problems. Sharma and Prasad (2003) studied
+(1941) has published a paper “The Distribution of a                   about obtaining a good primal solution to the uncapacitated
+
+                                                                                      *Corresponding Author’s Email: zams@pdn.ac.lk
+                                                                                                  http://orcid.org/0000-0003-4116-9809
+                  This article is published under the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/),
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+20                                                                                  Ceylon Journal of Science 48(1) 2019: 19-29
+
+transportation problem. Winston (2004) published a book               the transportation problem. Deshmukh (2012) presented a
+which named Operation Research; Applications and                      method for solving transportation problem. Ramadan and
+Algorithms. After few years Imam, Elsharawy, Gomahand                 Ramadan (2012) proposed a hybrid two-stage algorithm
+Samy (2009) introduced a method to solving transportation             for solving transportation problem. Also in 2012, Samuel
+problem using object oriented model. Pargar, Javadian and             improved zero point method for the transportation
+Ganji (2009) formulated a heuristic for obtaining an initial          problems. Juman, et al. (2013) studied about a sensitivity
+solution for the transportation problem with experimental             analysis and an implementation of the well-known
+analysis.                                                             Vogel’s approximation method for solving an unbalanced
+    Kulkarni and Datar (2010) published a paper which is              transportation problem. In 2014, Kowalski, Lev, Shen
+named “on solution to modified unbalanced transportation              and Tu obtained a fast and simple branching algorithm
+problem”. In the same year Pandian and Natarajan obtained             for solving small scale fixed-charge transportation
+a new algorithm for finding a fuzzy optimal solution for              problem. Juman and Hoque (2014) developed a heuristic
+fuzzy transportation problems. Sen et al. (2010) published            solution technique to attain the minimal total cost bounds
+a paper named a study of transportation problem for an                to the transportation problem with varying demands and
+essential item of southern part of north eastern region               supplies. Juman and Hoque (2015a) presented an efficient
+of India as an OR model and use of object oriented                    heuristic to obtain a better initial feasible solution to the
+programming. Schrenk, Finke and Cung (2011) studied                   transportation problem. They demonstrated a deficiency of
+about two classical transportation problems revisited:                recently developed method and they developed the method
+pure constant fixed charges and the paradox. Pandian and              to obtain a better initial feasible basic solution. In 2016
+Natarajan (2011) introduced a new method for solving                  Speranza discussed the trends in transportation logistics.
+bottleneck-cost transportation problems. Korukoglu and                    The classical transportation problem is concerned with
+Balli (2011) improved Vogel’s approximation method for                a set of nodes or places called plants (S1, S2, S3, …,Sm) which
+
+Table 1: Transportation Tableau.
+
+                             Destination                                                               Supply
+                                            D1       D2       D3                   Dn-1       Dn
+                    Plants                                                                            quantity
+
+                              S1            x11      x12      x13          …       x1,m-1     x1,n       s1
+                              S2            x21      x22      x23          …       x2,m-1     x2,n       s2
+                              S3            x31      x32      x33          …       x3,m-1     x3,n       s3
+                                             .        .        .                     .         .         .
+                                             .        .        .                     .         .         .
+                                             .        .        .                     .         .         .
+                             Sm-1          xm-1,1   xm-1,2   xm-1,3        …      xm-1,n-1   xm-1,n     sm-1
+                              Sm            xn,1     xn,2     xn,3         …       xm,n-1    xm,n        sm
+                    Demand quantity         d1       d2       d3           …       dn-1       dn
+
+
+
+
+Figure 1: Network representation of general transportation problem
+Z.A.M.S. Juman and N.G.S.A. Nawarathne                                                                                                  21
+have a commodity available for shipment, and another set                       • North – West Corner Rule (2004)
+of places called destinations (D1, D2, D3, … , Dn) which                       • Minimum Cost Method (2004)
+require this commodity. The data consists of availability
+at each plant (s1,s2, s3, … , sm), the requirement at each                     • Vogel’s Approximation Method (1958)
+destination (d1,d2,d3, … , dn), and the cost of transporting the               • Juman and Hoque Method (2015)
+commodity per unit from each plant to each destination,
+Cij.. The problem is to determine the quantity to be                               After finding the Initial Feasible Solution (IFS) for a
+transported from each plant to each destination, xij , so as to                transportation problem using one of the above methods,
+meet the requirements at minimum total shipping cost. The                      a minimal total cost solution technique can be applied to
+tableau (Table 1) and the network diagram (Figure 1) of the                    attain the Minimum Total Cost Solution (MTCS).
+transportation problem are provided.                                           Minimum Total Cost Solution to the Transportation
+Mathematical Formulation for a classical                                       problem
+Transportation Problem                                                         The transportation problem is solved by using transportation
+In this section we further discuss about the mathematical                      algorithm. The transportation algorithm consists with two
+formulation of the transportation problem (TP). The                            steps.
+following notations are used in formulating the TP.                            Step 1: Determine an initial feasible solution (IFS) for the
+Notations                                                                              problem
+                                                                               Step 2: Test for optimality of the IFS by the well-known
+si Supply quantity (in units) from i th supply node
+                                                                                       Stepping Stone method or Modified Distribution
+d j The demand in units per unit time                                                  method
+ci j Unit transportation cost from i                     supply node to j th
+                                                    th
+                                                                               Objective of this Research
+demand node
+                                                                               The main objective of this research is to develop an
+xi j Number of units transported from i th supply node to
+                                                                               alternative method especially, for the Juman and Hoque
+j demand node
+ th
+
+                                                                               (2015)’s Method of finding an Initial Feasible Solution for
+m Total number of supply nodes (suppliers)                                     a balanced transportation problem.
+n Total number of demand nodes (buyers)                                        METHODOLOGY
+The basic problem (sometimes called as the general,
+classical or Hitchcock transportation problem) can be                          An Alternative Method to find an IFS for a TP
+stated mathematically as follows.                                              We have here developed a New Method (NM) to obtain an
+                                                                               efficient IFS (optimum or very near optimum) to solve the
+      m     n                                                                  conventional transportation problem. The steps involved in
+Min ∑∑ c x
+                                                                               NM in producing the initial feasible solution are described
+                  ij   ij
+      i =1 j =1
+                        n
+Subject to                                                                     below:
+                       ∑x
+                       j =1
+                              ij   ≤ si ,    i = 1, 2, ... , m      (1)
+                        m                                                      Algorithm for New Method
+                       ∑x
+                       i =1
+                              ij   ≥ dj ,   j =1, 2, ... , n
+                                                                               Step 1: Check whether the problem is balanced or not. If
+                       where xi j ≥ 0 ∀ i, j .                                         it is unbalanced, then add dummy demander or
+                                                                                       dummy supplier to make the problem balanced
+                                                                                       with zero transportation cost.
+    A necessary and sufficient condition for the existence of                  Step 2: For each row of the transportation matrix, identify
+a feasible solution to the transportation problem is;                                  the least cost cell. Assign the respective supply
+                                                                                       quantities there.
+                                                                               Step 3: For assigned allocation in each of columns (without
+                                                                                        taking into account any crossed column, if exist)
+                                                                                        check whether the column sum is less than or
+    This means that the total supply is equal to total demand.                          equal to the respective demand quantity. If so, go
+Then the Transportation problem is called as a Balanced                                 to step 10
+Transportation Problem. If not the problem is called as an
+Unbalanced Transportation Problem. Although, TP can be                         Step 4: for each of the allocations in an unmet column
+solved by the simplex algorithm, the specialized algorithm                             considering the row containing that allocation
+for this problem is much more efficient due to its special                             determine the difference between the second least
+structure.                                                                             and the least unit cost, and identify the smallest
+                                                                                       of them (in case of tie, identify the smallest with
+Methods of solving a Transportation Problem                                            the largest unit cost) Else identify the smallest
+                                                                                       difference for each of them separately and go to
+There are several methods to find the initial feasible
+                                                                                       step 5
+solution for a transportation problem. Few of them are
+22                                                                                     Ceylon Journal of Science 48(1) 2019: 19-29
+
+Step 5: check whether there exist a cell (or cells) in an                Step 10: Stop, and take the current solution as the initial
+        unmet column not containing the second least unit                        feasible basic solution.
+        cost corresponding to the smallest of the difference
+                                                                         Benefit of New Method over VAM
+        between the second least and the least unit cost
+        in a row for each of the allocation in an another                 1. Only row penalties are calculated in New Method
+        unmet column. If such a column exists, identify                  whereas both row and column penalties are calculated in
+        the former unmet column go to step 8                             VAM.
+Step 6: pick up any two unmet columns. For each of them,                   2. In the former, in each of the iteration row penalties are
+        find differences between the 2nd least and the least             calculated for the rows with allocations only whereas in
+        unit cost of that unmet column.                                  this latter row penalties are calculated for all rows.
+Let the smallest of the differences for an unmet column                   3. The tie breaking feature is incorporated in New Method
+        corresponds to the least unit cost            , and the          also.
+        smallest of the differences for the other unmet
+        column corresponds to the smallest unit cost                     Differences between JHM and New Method
+        . Let        ,          and        be the 1st, 2ndand 3rd        1. In JHM, only column penalties are calculated. But in
+        least unit costs in a row and          ,       and                  New Method only row penalties are calculated.
+        be the 1st, 2nd and 3rd least unit cost in another row.
+                                                                         2. For the unbalanced transportation problem (i.e. total
+If (      -     )> (      -    ), then identify the unmet                   supply >total demand) New Method needs balancing by
+         column containing the least unit cost      . Else                  adding dummy destination whereas the JHM does not
+         identify the other unmet column (containing the                    need such balancing.
+         least unit cost    )
+                                                                         Similarities of JHM and New Method
+Step 7:Pick up any two unmet column for each of them.
+        If there is no such connection between the two                   1. If total demand > total supply, both JHM and New
+        columns, then select the column with minimum                        Method follow the same way of balancing for find an
+        difference. And go to step 8                                        initial solution.
+Step 8: Considering the identified unmet column in step 4,               2. Both methods are incorporated with tie breaking feature.
+        5, 6 or 7 and corresponding to the smallest of the
+        differences between the second least and the least               Illustration of a numerical example problem by New
+        unit cost in a row for each of the allocations in this           Method
+        column, transfer the maximum possible amount                     Consider the following numerical example problem
+        of excess demand quantity which can make next                    provided in Table 2.
+        column met, from the least unit cost cell to the
+        next least unit cost cell in a row. (If the demand                  In this problem, the total supply > total demand.
+        value is smaller than the value of the allocation in             Therefore, it is unbalanced problem. Then we must add
+        the unmet column, transfer the full amount of the                dummy destination to balance the problem.
+        allocation)
+         If there remains more excess demand in the
+         selected column, do the same for the next smallest
+         difference of the second least and least unit costs
+         and continue the transferring process until the
+         selected unmet column become met.
+Step 9: Cross of the column that has completely been
+       satisfied by removal of excess demand quantity
+       just made, and go to step 3
+
+Table 2 : A numerical example problem data.
+
+                                                     D1             D2        D3      Supply
+                                        S1           3              4         6       100
+                                        S2           7              3         8       80
+                                        S3           6              4         5       90
+                                        S4           7              5         2       120
+                                                                                            390
+                                        Demand       110            110       60
+                                                                                      280
+Z.A.M.S. Juman and N.G.S.A. Nawarathne                                                                                                         23
+
+Table 3: The balanced transportation problem with an unmet column D4.
+
+                                  D1                      D2              D3                 D4                    Supply            Penalty
+                     S1           3                       4               6                  0                     100               3-0=3
+                                                                                                       100
+                     S2           7                       3               8                  0                     80                3-0=3
+                                                                                                        80
+                     S3           6                       4               5                  0                     90                4-0=4
+                                                                                                        90
+                     S4           7                       5               2                  0                     120               2-0=2
+                                                                                                       120
+                 Demand           110                     110             60                 110                              390
+                                                                                                                   390
+                                  Met column              Met column Met column              Unmet column
+
+Table 4: Transportation table with an allocation in S4 - D3 of the met column.
+
+                             D1                   D2                  D3                 D4                       Supply            Penalty
+                   S1        3                    4                   6                  0                        100               3-0=3
+                                                                                                      100
+                   S2        7                    3                   8                  0                        80                3-0=3
+                                                                                                       80
+                   S3        6                    4                   5                  0                        90                4-0=4
+                                                                                                       90
+                   S4        7                    5                   2                  0                        120
+                                                                               60                      60
+                Demand       110                  110                 60                 110
+                             Met column           Met column          Met column         Unmet column
+
+Table 5: Transportation table with allocations in S4 - D3 and S1 – D1 of the met columns.
+
+                                      D1                   D2                 D3                  D4                    Supply      Penalty
+                        S1            3                    4                  6                   0                     100
+                                            100
+                        S2            7                    3                  8                   0                     80          3-0=3
+                                                                                                             80
+                        S3            6                    4                  5                   0                     90          4-0=4
+                                                                                                             90
+                        S4            7                    5                  2                   0                     120
+                                                                                    60                       60
+                  Demand              110                  110                60                  110
+                                      Met column           Met column         Met column          Unmet column
+
+Table 6: Transportation table with an unmet column D2.
+
+                             D1                       D2                       D3                  D4                  Supply       Penalty
+
+                             3                                                                     0                   100
+                    S1                                4                        6
+                                      100
+                    S2                                3                                            0
+                             7                                                 8                                       80           7-3=4
+                                                                 80
+                                                      4                                            0
+                    S3       6                                                 5                                       90           6-4=2
+                                                                 40                                         50
+                                                                               2                   0
+                    S4       7                        5                                                                120
+                                                                                    60                      60
+
+                 Demand      110                      110                      60                  110
+
+                             Met column               Unmet column             Met column          Met column
+24                                                                                        Ceylon Journal of Science 48(1) 2019: 19-29
+
+Table 7: IFS obtained from NM– New Method of this paper.
+
+                                                D1           D2          D3          D4         Supply
+                                                3                                    0          100
+                                     S1                      4           6
+                                                    100
+                                     S2                      3                       0
+                                                7                        8                      80
+                                                                  80
+                                                6            4                       0
+                                     S3                                  5                      90
+                                                     10           30                      50
+                                                                         2           0
+                                     S4         7            5                                  120
+                                                                              60        60
+                                                110
+                                Demand                       110         60          110
+                                                Met          Met         Met         Met
+                                                column       column      column      column
+Table 8: Performance measure of NM over VAM and JHM for 9 benchmark instances.
+
+ Problem chosen from        Initial cost with an IFS by                  % decrease in          Minimal     % increase from the
+                                                                         TCIFS by NM over       T. cost (by minimal total cost by
+                                                                         VAM and JHM            Lingo)
+                            VAM             JHM             NM           VAM         JHM                       VAM       JHM      NM
+ Sirinivasan and               955              880              880         7.85        0.00        880        8.52       0.00    0.00
+ Thompson
+ Sen et al.                 2,164,000       2,146,750       2,146,750        0.80        0.00    2,146,750      0.80       0.00    0.00
+ Deshmukh                      779              743              743         4.62        0.00        743        4.85       0.00    0.00
+ Ramadan and Ramadan          5,600             5,600         5,600          0.00        0.00        5,600      0.00       0.00    0.00
+ Kulkarni and Datar            880              840              840         4.55        0.00        840        4.76       0.00    0.00
+ Schrenk et al.                 59               59              59          0.00        0.00         59        0.00       0.00    0.00
+ Samuel                         28               28              28          0.00        0.00         28        0.00       0.00    0.00
+ Imam et al.                   475              460              435         8.42        5.43        435        9.20       5.75    0.00
+ Adlakha and Kowalski          390              390              390         0.00        0.00        390        0.00       0.00    0.00
+
+Table 9: Performance measure of NM over VAM and JHM for 7 benchmark instances from Juman and Hoque (2015).
+
+                  Problem   Initial cost with an            % decrease in           Minimal     % increase from the
+                  No.       IFS by                          TCIFS by NM             T. cost     minimal total cost by
+                                                            over VAM and            (by
+                                                            JHM                     Lingo)
+                            VAM       JHM        NM         VAM         JHM                     VAM          JHM    NM
+                  1         5,125     4,525         4,525    11.71       0.00        4,525       13.26       0.00      0.00
+                  2         3,520     3,460         3,460    1.70        0.00        3,460       1.73        0.00      0.00
+                  3          960          920       920      4.17        0.00         920        4.35        0.00      0.00
+                  4          849          809       809      4.71        0.00         809        4.94        0.00      0.00
+                  5          465          417       465      0.00        11.51        417        11.51       0.00      11.51
+                  6         3,663     3,458         3,458    6.00        0.00        3,458       5.93        0.00      0.00
+                  7          109          109       109      0.00        0.00         109        0.00        0.00      0.00
+
+   The cost associated with an IFS obtained by NM is                      Hoque (2015)’s Method (JHM) and New Method (NM).
+Z = 840, along with X11=100, X22=80, X31=10, X32=30,                      Comparison among these three methods is performed using
+X33=60. It should be noted that the initial cost obtained by              the solutions of 16 numerical example problems chosen
+NM for the problem is 840 which is an optimal and zero                    from the literature. Data for these 16 instances are provided
+additional iterations are required to get the optimal solution.           in Appendix A and Appendix B. The Stepping Stone
+   Comparative study among VAM, JHM and New                               Method (SSM) is then used to obtain the minimal total cost
+Method (NM) of 16 benchmark instances are discussed in                    solution (MTCS) starting from the initial feasible solution
+next section.                                                             (IFS) which is obtaining from VAM, JHM or New Method
+                                                                          throughout this section.
+Comparative study
+                                                                              The performance measure and the comparison on the
+In this section, a comparative study is done for Vogel                    iteration numbers of these three methods are provided in
+(1958)’s Approximation Method (VAM), Juman and                            Tables 8-11 and the Fig. 2-7.
+Z.A.M.S. Juman and N.G.S.A. Nawarathne                                                                                     25
+
+Comparison on the iteration numbers
+
+
+Table 10: Comparative study on the iteration number taken by SSM coupled with NM, VAM and JHM for 9 benchmark instances.
+
+                          Problem Chosen from
+                                                            Iterations taken by SSM to obtain MTCS by
+                                                                  starting with an IFS obtained by
+                                                              VAM               JHM                  NM
+                     Srinivasan and Thompson(1977)      1                  0                  0
+                     Sen et al. (2010)                  2                  0                  0
+                     Deshmukh (2012)                    1                  0                  0
+                     Ramadan and Ramadan (2012)         0                  0                  0
+                     Kulkarni and Datar (2010)          2                  0                  0
+                     Schrenket al. (2011)               0                  0                  0
+                     Samuel (2012)                      0                  0                  0
+                     Imam et al. (2009)                 1                  1                  0
+                     Adlakha and Kowalski (2009)        0                  0                  0
+Table 11: Comparative study on the iteration number taken by SSM coupled with NM, VAM and JHM for 7 benchmark instances
+from Juman and Hoque (2015).
+
+
+                 Instance     Iterations taken by SSM to obtain MTCS by starting with an IFS obtained by
+                 No.          VAM                      JHM                          NM
+                 1            1                        0                            0
+                 2            2                        0                            0
+                 3            1                        0                            0
+                 4            1                        0                            0
+                 5            1                        0                            1
+                 6            2                        0                            0
+                 7            0                        0                            0
+
+
+
+
+Figure 2: Bar chart of initial cost vs. benchmark instances in case of solving by VAM, JHM and NM.
+26                                                                             Ceylon Journal of Science 48(1) 2019: 19-29
+
+
+
+
+Figure 3: Bar chart of initial cost vs. 7 benchmark instances from Juman and Hoque (2015) in case of solving by VAM, JHM and
+NM.
+
+
+
+
+Figure 4: Percentage decreases in total cost for IFS by NM over VAM and JHM for 9 benchmark instances.
+
+
+
+
+Figure 5: Percentage decreases in total cost for IFS by NM over VAM and JHM 7 benchmark instances from Juman and Hoque (2015).
+Z.A.M.S. Juman and N.G.S.A. Nawarathne                                                                                     27
+
+
+
+
+Figure 6: Number of Iterations taken by SSM to obtain MTCS by starting with an IFS obtained by VAM, JHM and NM for 9
+benchmark instances.
+
+
+
+
+Figure 7: Number of Iterations taken by SSM to obtain MTCS by starting with an IFS obtained by VAM, JHM and NM for 7
+benchmark instances from Juman and Hoque (2015).
+
+    It can be easily observed from the Tables 8-11 and the      a state of the art initial solution providers available in the
+Figures 2-7 that our new method provides the same or            literature (refer to Juman and Hoque, 2015). In this research,
+better IFS to all the studied benchmark instances except        a new alternative method is developed to attain an efficient
+one. Thus, our new method developed in this paper can           initial feasible solution to the transportation problems. In
+be considered as an alternative approach to determine the       the development of our new method only row penalties
+IFS to a transportation problem.                                containing allocations are incorporated whereas JHM is
+                                                                incorporated only with columns containing allocations. A
+CONCLUSION
+                                                                comparative study shows that the new method gives the
+Finding an initial feasible solution is the prime requirement   minimal total cost solution to 15 out of 16 benchmark
+to obtain a minimal total cost solution to a transportation     instances. For the remaining problem, the number of
+problem. Based on this initial feasible solution of the         iterations taken to obtaining the optimal solution by Vogel’s
+problem, the number of iterations to get the minimum            Approximation Method (VAM) and new method are the
+total cost solution can be changed. If an initial feasible      same. However, for this problem JHM provides a better
+solution becomes close to the minimum total cost, the           near-optimal cost solution compared to our new method.
+minimum total cost solution can obtained with lesser            Similarly, our new method provides a minimum total cost
+number of iterations. There are several methods to obtain       solution to a problem (Imam et al., 2009) whereas the VAM
+IFS. Among them, Vogel’s Approximation Method (1958)            and JHM does not. Thus, JHM Solution Algorithm and
+and JHM Solution algorithm (2015) can be considered as          our new proposed method are two of the best available
+                                                                methods in finding the IFS to the transportation problem.
+28                                                                          Ceylon Journal of Science 48(1) 2019: 19-29
+
+    Future research might be carried out to develop                Conference on Industrial Engineering and Operations
+this method for the case of large number of plants and             Management Bali, Indonesia, January 7 - 9
+destinations. Throughout this research supply and demand       Juman, Z.A.M.S., Hoque, M.A. and Buhari, M.I.A.
+quantities are all fixed. But in real world supply and             (2013). Sensitivity analysis and an implementation
+demand quantities may vary. This research considers linear         of the well-known Vogel’s approximation method for
+transportation problems. But the transportation problem            solving unbalanced transportation problems. Malaysian
+can become nonlinear also. In those cases the current              Journal of Science 32(1): 66-72.
+method cannot be applied. Thus the new proposed method         Juman, Z.A.M.S., Hoque, M.A. and Buhari, M.I.A. (2013).
+can be extended to include those variations. We intend to          A Study of Transportation Problem and Use of Object
+devote ourselves in this direction of future research.             Oriented Programming. 3rd International Conference
+                                                                   on Applied Mathematics and Pharmaceutical Sciences
+REFERENCES
+                                                                   (ICAMPS’2013b), Singapore; 353-354.
+Adlakha, V. and Kowalski, K. (2009). Alternate solutions       Juman, Z.A.M.S. and Perera, A.K.S.S. (2015). When can
+   analysis for transportation problems. Journal of                VAM with Balanced Feature Provide an Improved
+   Business & Economics Research 7(11): 41-49.                     Solution to an Unbalanced Transportation Problem?.
+Adlakha, V. and Kowalski, K. (2003). A simple heuristic            European Journal of Scientific Research 135(3): 268-
+   for solving small fixed-charge transportation problem.          275.
+   Omega 31(3): 205-211.                                       Korukoglu, S. and Balli, S. (2011). A improved Vogel’s
+Adlakha, V., Kowalski, K. and Lev, B. (2010). A branching          Approximation Method for the Transportation Problem.
+   method for the fixed-charge transportation problem.             Mathematical and Computational Applications 16(2):
+   Omega 38(5): 393-397.                                           370-381.
+Ahmed, M.M., Khan, A.R., Uddin, M.S. and Ahmed,                Kulkarni, S.S. and Datar, H.G. (2010). On solution to
+   F. (2016). A New Approach to Solve Transportation               modified unbalanced transportation problem. Bulletin
+   Problems. Open Journal of Optimization 5: 22-30.                of the Marathwada Mathematical Society 11(2): 20-26.
+Deshmukh, N.M. (2012). An Innovative method for                Ramadan, S.Z. and Ramadan, I.Z. (2012). Hybrid two-
+   solving transportation problem. International Journal           stage algorithm for solving transportation problem.
+   of Physics and Mathematical Sciences 2(3): 86-91.               International Journal of Physics and Mathematical
+Gupta, A. and Kumar, A. (2012). A new method for solving           Sciences 6(4): 12-22.
+   linear multi-objective transportation problems with         Samuel, A.E. (2012). Improved zero point method (IZPM)
+   fuzzy parameters. Applied Mathematical Modeling                 for the transportation problems. Applied Mathematical
+   36(4): 1421-1430.                                               Sciences 6: 5421-5426.
+Hakim, M.A. (2012). An Alternative Method to Find Initial      Schrenk, S., Finke, G., Cung, V. D. (2011). Two classical
+   Basic Feasible Solution of a Transportation Problem.            transportation problems revisited: pure constant fixed
+   Annals of Pure and Applied Mathematics 1(2): 203-209.           charges and the paradox. Mathematical and Computer
+Imam, T., Elsharawy, G., Gomah, M. and Samy, I. (2009).            Modelling 54: 2306-2315.
+   Solving transportation problem using object-oriented        Sen, N., Som, T. and Sinha, B. (2010). A study of
+   model. IJCSNS International Journal of Computer                 transportation problem for an essential item of southern
+   Science and Network Security 9(2): 353-361.                     part of north eastern region of India as an OR model
+Javaid, S., Quddoos, A. and Khalid, M.M. (2012). A                 and use of object oriented programming. IJCSNS
+   New Method for Finding an Optimal Solution for                  International Journal of Computer Science and
+   Transportation Problems. International Journal on               Network Security 10(4): 78-86.
+   Computer Science and Engineering (IJCSE) 4(7):              Sharma, K. and Prasad, S. (2003). Obtaining a good primal
+   1271-1274.                                                      solution to the uncapacitated transportation problem.
+Juman, Z.A.M.S. and Hoque, M.A. (2015). An efficient               European Journal of Operational Research 144(3):
+   heuristic to obtain a better initial feasible solution to       560-564.
+   the transportation problem. Applied Soft Computing 34:      Srinivasan, V. and Thompson, G.L. (1977). Cost operator
+   813-826.                                                        algorithms for the transportation problem. Mathematical
+Juman, Z.A.M.S. and Hoque, M.A. (2014). A heuristic                Programming 12: 372-391.
+   solution technique to attain the minimal total cost         Vannan, S.E. and Rekha, S. (2013). A New Method for
+   bounds of transporting a homogeneous product with               Obtaining an Optimal Solution for Transportation
+   varying demands and supplies. European Journal of               Problems. International Journal of Engineering and
+   Operational Research 239: 146-156.                              Advanced Technology (IJEAT) 2(5): 369-371
+Juman, Z.A.M.S. and Hoque, M.A. (2012). A multi-source         Venkatachalapathy, M. and Samuel, A.E. (2011).
+   multi-destination integrated transportation-inventory           Modified Vogel’s Approximation Method for Fuzzy
+   system. Proceeding of the International Conference              Transportation Problems. Applied Mathematical
+   of Institution of Engineering and Technology (IET),             Sciences 28: 1367-137.
+   Brunei Darussalam, September 17-18.
+Juman, Z.A.M.S. and Hoque, M.A. (2014). An Efficient
+   Heuristic Approach for Solving the Transportation
+   Problem. Proceedings of the 2014 International
+Z.A.M.S. Juman and N.G.S.A. Nawarathne                       29
+APPENDIX A
+
+Numerical Example (Srinivasan and Thompson, 1977)
+
+[   ] 3×4= [3 6 3 4; 6 5 11 15; 1 3 10 5]
+[ ] 3×1= [80, 90, 55]
+[ ] 1×4= [70, 60, 35, 60]
+Numerical Example(Sen et al., 2010)
+[ ] 5×4 = [60 120 75 180; 58 100 60 165; 62 110 65 170; 65
+115 80 175; 70 135 85 195]
+[ ] 5×1= [8000, 9200, 6250, 4900, 6100]
+[ ] 1×4= [5000, 2000, 10000, 6000]
+Numerical Example (Deshmukh, 2012)
+[   ] 3×4= [19 30 50 10; 70 30 40 60; 40 8 70 20]
+[ ] 3×1= [7, 9, 18]
+[ ] 1×4= [40, 8, 7, 14]
+Numerical Example (Ramadan and Ramadan, 2012)
+[   ] 3×3= [32 40 120; 60 68 104; 200 80 60]
+[ ] 3×1= [20, 30, 45]
+[ ] 1×3= [30, 35, 30]
+Numerical Example (Kulkarni and Datar, 2010)
+[   ] 4×3= [3 4 6; 7 3 8; 6 4 5; 7 5 2]
+[ ] 4×1= [100, 80, 90, 120]
+[ ] 1×3= [110, 110, 60]
+Numerical Example (Schrenket al., 2011)
+[   ] 3×4= [3 6 1 5; 7 9 2 7; 2 4 2 1]
+[ ] 3×1= [6, 6, 6]
+[ ] 1×4= [4, 5, 4, 5]
+Numerical Example (Samuel, 2012)
+[   ] 3×4= [1 2 3 4;4 3 2 0; 0 2 2 1]
+[ ] 3×1= [6, 8, 10]
+[ ] 1×4= [4, 6, 8, 6]
+Numerical Example (Imam et al. , 2009)
+[   ] 3×4= [10 2 20 11;12 7 9 20; 4 14 16 18]
+[ ] 3×1= 15, 25, 10]
+[ ] 1×4= [5, 15, 15, 15]
+Numerical Example (Adlakha and Kowalski, 2009)
+[   ] 4×5= [2 1 3 2 2; 3 2 1 1 1; 5 4 2 1 3; 7 5 5 3 1]
+[ ] 4×1= [20, 70, 30, 60]
+[ ] 1×5= [50, 30, 30, 50, 20]
+

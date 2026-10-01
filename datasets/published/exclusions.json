@@ -1,0 +1,30 @@
+[
+  {
+    "source": "E01",
+    "cases": "Examples 8-15",
+    "reason": "Complete fixed cost matrices/seeds unavailable."
+  },
+  {
+    "source": "E09",
+    "cases": "C02",
+    "reason": "Supply [7,9,10] conflicts with source example [7,9,18] and total demand 34",
+    "raw": "[Cij]3x4\n  = [19 30 50 10; 70 30 40 60; 40 8 70 20] [Si]3x1\n  = [7 9 10] [Dj]1x4\n  = [5 8 7 14]"
+  },
+  {
+    "source": "E09",
+    "cases": "C12",
+    "reason": "Incomplete or malformed matrix/vector text",
+    "raw": "[Cij]5x5\n  = [82 10 16\n  15 66; 91 28 98\n  43 4; 13 55 96\n  92 85; 92 96 49\n  80 94; 64 97 81\n  96 68] [Si]5x1\n  = [2, 3, 5, 7,\n  9] [Dj]1x5\n  = [1, 4, 6, 8,\n  7"
+  },
+  {
+    "source": "E09",
+    "cases": "C18",
+    "reason": "('5 7 9 6; s6\\n  7 10 5; 7 6 8 1', '12, 14,\\n  10', '10, 6, 8,\\n  12')",
+    "raw": "[Cij]3x4\n  = [5 7 9 6; s6\n  7 10 5; 7 6 8 1] [Si]3x1\n  = [12, 14,\n  10] [Dj]1x4\n  = [10, 6, 8,\n  12]"
+  },
+  {
+    "source": "E15",
+    "cases": "HDTP-1, HDTP-2, HDTP-4",
+    "reason": "Browser text has merged entries/missing supply line or questionable separators. Require visual original-page verification before transcription."
+  }
+]

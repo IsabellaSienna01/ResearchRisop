@@ -1,0 +1,6 @@
+numpy
+scipy
+pandas
+PyMuPDF
+beautifulsoup4
+matplotlib

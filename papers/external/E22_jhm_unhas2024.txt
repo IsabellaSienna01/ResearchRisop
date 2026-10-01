@@ -1,0 +1,889 @@
+PAGE 1
+ 
+ 
+PERBANDINGAN METODE JUMAN-HOQUE DAN SUMATHI-SATHIYA 
+DALAM MEMINIMUMKAN BIAYA DISTRIBUSI AIR MINUM DALAM 
+KEMASAN 
+ 
+ 
+ 
+ 
+ 
+SULFINA EKA RAHAYU 
+H011201046 
+ 
+ 
+ 
+ 
+PROGRAM STUDI MATEMATIKA 
+FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM 
+UNIVERSITAS HASANUDDIN 
+MAKASSAR 
+2024 
+
+PAGE 2
+ii 
+ 
+PERBANDINGAN METODE JUMAN-HOQUE DAN SUMATHI-SATHIYA 
+DALAM MEMINIMUMKAN BIAYA DISTRIBUSI AIR MINUM DALAM 
+KEMASAN 
+ 
+HALAMAN JUDUL 
+ 
+ 
+SULFINA EKA RAHAYU 
+H011201046 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PROGRAM STUDI MATEMATIKA  
+FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM 
+UNIVERSITAS HASANUDDIN 
+MAKASSAR 
+2024 
+
+PAGE 3
+iii 
+ 
+PERBANDINGAN METODE JUMAN-HOQUE DAN SUMATHI-SATHIYA 
+DALAM MEMINIMUMKAN BIAYA DISTRIBUSI AIR MINUM DALAM 
+KEMASAN 
+PERNYATAAN PENGAJUAN 
+ 
+SULFINA EKA RAHAYU 
+H011201046 
+ 
+ 
+ 
+Skripsi 
+ 
+ 
+sebagai salah satu syarat untuk mencapai gelar sarjana 
+ 
+ 
+Program Studi Matematika 
+ 
+ 
+ 
+pada 
+ 
+ 
+ 
+PROGRAM STUDI MATEMATIKA  
+DEPARTEMEN MATEMATIKA 
+FAKULTAS MATEMATIKA DAN ILMU PENGETAHUAN ALAM 
+UNIVERSITAS HASANUDDIN 
+MAKASSAR 
+2024 
+
+PAGE 4
+iv 
+ 
+\SKRIPSI 
+PERBANDINGAN METODE JUMAN-HOQUE DAN SUMATHI-SATHIYA 
+DALAM MEMINIMUMKAN BIAYA DISTRIBUSI AIR MINUM DALAM 
+KEMASAN 
+HALAMAN PENGESAHAN 
+SULFINA EKA RAHAYU 
+H011201046 
+ 
+ 
+Skripsi, 
+ 
+ 
+telah dipertahankan di depan Panitia Ujian Sarjana Sains pada tanggal 11 
+Juni 2024 dan dinyatakan telah memenuhi syarat kelulusan 
+pada 
+ 
+ 
+Program Studi Matematika 
+Departemen Matematika 
+Fakultas Matematika dan Ilmu Pengetahuan Alam 
+Universitas Hasanuddin 
+Makassar 
+ 
+ 
+Mengesahkan: 
+Pembimbing tugas akhir, 
+ 
+ 
+Prof. Dr. Syamsuddin Toaha, M.Sc 
+NIP. 19680114 199412 1 001 
+Mengetahui: 
+Ketua Program Studi 
+ 
+ 
+Dr. Firman, S.Si, M.Si 
+NIP. 19680429 200212 1 001 
+
+PAGE 5
+v 
+ 
+PERNYATAAN KEASLIAN SKRIPSI  
+DAN PELIMPAHAN HAK CIPTA 
+Dengan ini saya menyatakan bahwa, skripsi berjudul “Perbandingan Metode Juman-
+Hoque dan Sumathi-Sathiya dalam Meminimumkan Biaya Distribusi Air Minum dalam 
+Kemasan” adalah benar karya saya dengan arahan dari Bapak Prof. Dr. Syamsuddin 
+Toaha, M.Sc. sebagai Pembimbing. Karya ilmiah ini belum diajukan dan tidak sedang 
+diajukan dalam bentuk apa pun kepada perguruan tinggi mana pun. Sumber informasi 
+yang berasal atau dikutip dari karya yang diterbitkan maupun tidak diterbitkan dari 
+penulis lain telah disebutkan dalam teks dan dicantumkan dalam Daftar Pustaka skripsi 
+ini. Apabila di kemudian hari terbukti atau dapat dibuktikan bahwa sebagian atau 
+keseluruhan skripsi ini adalah karya orang lain, maka saya bersedia menerima sanksi 
+atas perbuatan tersebut berdasarkan aturan yang berlaku. 
+  
+Dengan ini saya melimpahkan hak cipta (hak ekonomis) dari karya tulis saya berupa 
+skripsi ini kepada Universitas Hasanuddin.  
+ 
+ 
+Makassar, 11 Juni 2024  
+ 
+ 
+ 
+Sulfina Eka Rahayu 
+NIM H011201046 
+ 
+ 
+ 
+
+PAGE 6
+vi 
+ 
+UCAPAN TERIMA KASIH 
+Segala puji dan syukur kehadirat Allah Swt. atas segala karunia kesehatan dan 
+keselamatan 
+sehingga 
+penulis 
+dapat 
+menyelesaikan 
+skripsi 
+yang 
+berjudul 
+“Perbandingan Metode Juman-Hoque dan Sumathi-Sathiya dalam Meminimumkan 
+Biaya Distribusi Air Minum dalam Kemasan” dengan baik. Penulis menyadari 
+penyelesaian skripsi ini tidak dapat terlepas dari bantuan dan bimbingan berbagai 
+pihak. Oleh karena itu, penulis mengucapkan terima kasih yang sebesar-besarnya, 
+terutama kepada kedua orang tua penulis yang senantiasa memberikan dukungan, 
+cinta, kasih sayang, dan doa yang tiada hentinya.  Dalam kesempatan ini pula, penulis 
+ingin menyampaikan rasa terima kasih kepada: 
+1. Bapak Prof. Dr. Ir. Jamaluddin Jompa, M.Sc. selaku Rektor Universitas 
+Hasanuddin, Bapak Dr. Eng Amiruddin, S.Si., M.Si. selaku Dekan Fakultas 
+Matematika dan Ilmu Pengetahuan Alam, serta Bapak Dr. Firman, S.Si., M.Si. 
+selaku Ketua Departemen Matematika. 
+2. Seluruh Dosen dan Staf Departemen Matematika yang telah memberikan ilmunya 
+kepada penulis selama menjadi mahasiswa di Departemen Matematika. 
+3. Bapak Prof. Dr. Syamsuddin Toaha, M.Sc. selaku dosen pembimbing utama atas 
+kesedian dan kesabarannya dalam membimbing dan memberikan arahan kepada 
+penulis, serta meluangkan banyak waktu sehingga penulis dapat menyelesaikan 
+skripsi ini. 
+4. Bapak Prof. Dr. Jeffry Kusuma, Ph.D. selaku penasehat akademik sekaligus 
+dosen penguji serta Ibu Prof. Aidawayati Rangkuti, M.S. selaku dosen penguji 
+yang telah memberikan saran dan arahan kepada penulis dalam penyusunan 
+skripsi ini. 
+5. Pihak perusahaan CV Matahari Terbit yang telah melayani penulis dengan baik 
+selama proses pengambilan data penelitian. 
+6. Sahabat penulis Lisa, Mona, Wulan, Ica, dan Ummul yang senantiasa menjadi 
+pendengar seluruh keluh kesah dan bersedia membantu penulis dalam hal apapun. 
+7. Teman-teman Matematika 2020 dan MIPA 2020 yang telah mendukung dan 
+berjuang bersama selama masa perkuliahan. 
+8. Seluruh pihak yang tidak dapat penulis sebutkan satu per satu, yang telah 
+membantu dan memberikan dukungan dalam bentuk apapun. 
+Akhir kata, penulis berharap semoga segala bentuk kebaikan yang telah diberikan 
+bernilai ibadah dan mendapat balasan dari Allah Swt.  Semoga skripsi ini dapat 
+bermanfaat bagi siapa saja yang membacanya. 
+ 
+Penulis, 
+ 
+ 
+ 
+ 
+Sulfina Eka Rahayu 
+
+PAGE 7
+vii 
+ 
+ABSTRAK 
+Distribusi merupakan proses penyaluran barang atau jasa dari sumber (produsen) ke 
+suatu tujuan (konsumen). Proses ini membutuhkan perencanaan yang baik, untuk 
+menghindari pengeluaran biaya yang tidak perlu. Solusi terbaik yang diketahui untuk 
+meningkatkan efisiensi sekaligus meminimumkan biaya adalah dengan menggunakan 
+metode transportasi. Metode transportasi merupakan metode yang digunakan untuk 
+mengatur distribusi dari sumber-sumber yang menyediakan produk yang sama ke 
+berbagai daerah tujuan secara optimal. Untuk memperolah biaya distribusi minimum 
+masalah transportasi, dimulai dengan penentuan solusi awal yang dilanjutkan dengan 
+menentukan solusi optimal. Pada penelitian ini dilakukan perbandingan antara dua 
+metode penentuan solusi awal yaitu metode Juman-Hoque dan Sumathi-Sathiya yang 
+dilanjutkan dengan menentukan solusi optimal dengan metode Modified Distribution. 
+Tujuan dari penelitian ini untuk memperoleh biaya distribusi minimum serta untuk 
+mengetahui metode yang memberikan hasil lebih baik dalam penyelesaian masalah 
+transportasi Air Minum dalam Kemasan pada CV Matahari Terbit. Dari hasil perhitungan 
+diperoleh total biaya minimum yang diperoleh dengan menggunakan metode Juman-
+Hoque adalah sebesar Rp 7.302.000 dan metode Sumathi-Sathiya adalah sebesar Rp 
+7.232.500. Dalam masalah transportasi pada CV Matahari Terbit metode Sumathi-
+Sathiya memberikan biaya distribusi yang lebih minimum dibandingkan metode Juman-
+Hoque. 
+ 
+Kata kunci: metode transportasi; metode Juman-Hoque; metode Sumathi-Sathiya 
+ 
+ 
+ 
+
+PAGE 8
+viii 
+ 
+ABSTRACT 
+ 
+Distribution is the process of channeling goods or services from a source (producer) to 
+a destination (consumer). This process requires good planning, to avoid unnecessary 
+costs. The best known solution to improve efficiency while minimizing costs is to use 
+transportation methods. The transportation method is a method used to optimally 
+organize the distribution of sources that provide the same product to various destination 
+areas. To obtain the minimum distribution cost of transportation problems, starting with 
+determining the initial solution followed by determining the optimal solution. In this study, 
+a comparison was made between two methods of determining the initial solution, 
+namely the Juman-Hoque and Sumathi-Sathiya methods followed by determining the 
+optimal solution using the Modified Distribution method. The purpose of this study is to 
+obtain the minimum distribution cost and to find out which method gives better results 
+in solving the problem of bottled drinking water transportation at CV Matahari Terbit. 
+From the calculation results, the total minimum cost obtained using the Juman-Hoque 
+method is Rp 7.302.000 and the Sumathi-Sathiya method is Rp 7.232.500. In the 
+transportation problem at CV Matahari Terbit, the Sumathi-Sathiya method provides a 
+minimum distribution cost compared to the Juman-Hoque method. 
+ 
+Keywords: transportation method; Juman-Hoque method; Sumathi-Sathiya method 
+ 
+ 
+
+PAGE 9
+ix 
+ 
+DAFTAR ISI 
+Halaman 
+HALAMAN JUDUL ......................................................................................................... ii 
+PERNYATAAN PENGAJUAN ........................................................................................ iii 
+HALAMAN PENGESAHAN ........................................................................................... iv 
+PERNYATAAN KEASLIAN SKRIPSI  DAN PELIMPAHAN HAK CIPTA ....................... v 
+UCAPAN TERIMA KASIH ............................................................................................. vi 
+ABSTRAK ..................................................................................................................... vii 
+ABSTRACT .................................................................................................................. viii 
+DAFTAR ISI .................................................................................................................. ix 
+DAFTAR TABEL ........................................................................................................... xi 
+DAFTAR GAMBAR ....................................................................................................... xii 
+BAB I PENDAHULUAN .................................................................................................. 1 
+ Latar Belakang ..................................................................................................... 1 
+ Rumusan Masalah ................................................................................................ 2 
+ Tujuan Penelitian .................................................................................................. 2 
+ Batasan Masalah .................................................................................................. 2 
+ Manfaat Penelitian ................................................................................................ 3 
+ Landasan Teori ..................................................................................................... 3 
+1.6.1  Riset Operasi ............................................................................................... 3 
+1.6.2 Program Linear .............................................................................................. 4 
+1.6.3 Metode Transportasi ...................................................................................... 5 
+1.6.4 Metode Juman-Hoque ................................................................................... 9 
+1.6.5 Metode Sumathi-Sathiya ............................................................................. 10 
+1.6.6 Modified Distribution (MODI) ....................................................................... 11 
+BAB II METODOLOGI PENELITIAN ........................................................................... 13 
+
+PAGE 10
+x 
+ 
+ Jenis Penelitian .................................................................................................. 13 
+ Jenis dan Sumber Data ...................................................................................... 13 
+ Teknik Analisis Data ........................................................................................... 13 
+ Alur Kerja ............................................................................................................ 15 
+BAB III HASIL DAN PEMBAHASAN ............................................................................ 16 
+ Hasil Penelitian ................................................................................................... 17 
+3.1.1  Penyelesaian dengan Metode Juman-Hoque ............................................ 21 
+3.1.2 Penyelesaian dengan Metode Sumathi-Sathiya .......................................... 27 
+ Pembahasan ...................................................................................................... 40 
+BAB IV KESIMPULAN ................................................................................................. 41 
+ Kesimpulan ......................................................................................................... 41 
+ Saran .................................................................................................................. 41 
+DAFTAR PUSTAKA ..................................................................................................... 42 
+ 
+ 
+
+PAGE 11
+xi 
+ 
+DAFTAR TABEL 
+Nomor Urut  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      Halaman 
+1. Tabel Transportasi ..................................................................................................... 7 
+2. Rata-rata Persediaan AMDK per Bulan ................................................................... 17 
+3. Rata-rata Permintaan Konsumen AMDK per Bulan ................................................ 18 
+4. Data Biaya Distribusi AMDK per Kardus (Rp) ......................................................... 18 
+5. Tabel Transportasi Pendistribusian AMDK .............................................................. 19 
+6. Identifikasi Biaya Terkecil Setiap Kolom .................................................................. 21 
+7. Pengalokasian Awal ................................................................................................. 21 
+8. Identifikasi Baris Terpenuhi ...................................................................................... 22 
+9. Selisih Biaya Terkecil ............................................................................................... 22 
+10. Transfer kuantitas pada kolom 1 ............................................................................ 23 
+11. Identifikasi Kembali Baris Tak Terpenuhi............................................................... 23 
+12. Tabel Transportasi Awal dengan Metode Juman-Hoque ...................................... 25 
+13. Tabel Transportasi Awal ........................................................................................ 27 
+14. Jumlah Biaya Setiap Baris dan Kolom ................................................................... 28 
+15. Jumlah Biaya Terkecil ............................................................................................ 28 
+16. Iterasi 1 .................................................................................................................. 29 
+17. Iterasi 2 .................................................................................................................. 29 
+18. Iterasi 3 .................................................................................................................. 29 
+19. Iterasi 4 .................................................................................................................. 30 
+20. Iterasi 5 .................................................................................................................. 30 
+21. Iterasi 6 .................................................................................................................. 31 
+22. Iterasi 7 .................................................................................................................. 31 
+23. Iterasi 8 .................................................................................................................. 32 
+24. Iterasi 9 .................................................................................................................. 32 
+25. Iterasi 10 ................................................................................................................ 32 
+26. Iterasi 11 ................................................................................................................ 33 
+27. Iterasi 12 ................................................................................................................ 33 
+28. Hasil Iterasi Metode Sumathi-Sathiya .................................................................... 34 
+29. Penentuan nilai Xij dan Yij ..................................................................................... 34 
+30. Hasil Pengalokasian dengan Metode Sumathi-Sathiya ......................................... 35 
+31. Tabel Transportasi Awal dengan Metode Sumathi-Sathiya ................................... 36 
+32. Alokasi Perbaikan pada I23 ................................................................................... 37 
+33. Hasil Perbaikan pada I23 ....................................................................................... 38 
+34. Perbandingan Metode Juman-Hoque dan Sumathi-Sathiya ................................. 40 
+ 
+ 
+
+PAGE 12
+xii 
+ 
+DAFTAR GAMBAR 
+Nomor urut 
+ 
+ 
+ 
+ 
+ 
+       
+ 
+     Halaman 
+1. Transportasi dari Sumber ke Tujuan .......................................................................... 6 
+2. Alur Kerja Penelitian ................................................................................................. 15 
+3. Peta Tujuan Pendistribusian AMDK ......................................................................... 16 
+4. Alur Pendistribusian ................................................................................................. 19 
+ 
+ 
+
+PAGE 13
+1 
+ 
+ 
+BAB I 
+PENDAHULUAN 
+ 
+Latar Belakang 
+Distribusi diartikan sebagai proses penyaluran barang atau jasa dari sumber 
+(produsen) ke suatu tujuan (konsumen) (Ibnas et al., 2019). Dalam proses penyaluran 
+ini, terdapat biaya yang dikeluarkan baik itu untuk alat transportasi maupun biaya 
+operasional dalam proses pendistribusian. Proses ini memiliki dampak yang cukup 
+signifikan dalam keseluruhan operasional perusahaan, sehingga membutuhkan 
+perencanaan yang baik, untuk menghindari pengeluaran biaya yang tidak perlu. 
+Perencanaan pendistribusian sering kali hanya mengandalkan penilaian dan 
+pengalaman pribadi, sehingga pendekatan ini dianggap tidak optimal karena bersifat 
+subjektif dan dapat menimbulkan adanya perbedaan pendapat (Rangkuti, A. 2022). 
+Beberapa keterbatasan dari metode ini meliputi kurang mampu dalam mengatasi kasus 
+yang lebih kompleks, serta tidak adanya pencegahan munculnya suatu masalah, 
+biasanya hanya mampu menangani masalah yang mungkin saja memerlukan biaya 
+yang lebih besar lagi. Pemanfaatan teknologi dan matematika dalam melakukan 
+pendistribusian dapat memberikan hasil lebih efektif dan efisien. Solusi terbaik yang 
+diketahui untuk meningkatkan efisiensi sekaligus mengurangi atau meminimalkan biaya 
+adalah dengan menggunakan metode transportasi (Sumathi & Bama, 2019). 
+Menurut Febriansah & Prasojo (2018) metode transportasi merupakan metode 
+yang digunakan untuk mengatur distribusi dari sumber-sumber yang menyediakan 
+produk yang sama (komoditas tunggal) ke berbagai daerah tujuan secara optimal 
+dengan biaya termurah. Karena biaya yang dikeluarkan dalam pengiriman barang dari 
+suatu sumber tertentu ke tujuan tertentu tidak sama, maka pengiriman barang harus 
+diatur sedemikian rupa agar biaya distribusi dapat lebih minimum. Untuk menyelesaikan 
+masalah transportasi ini terdapat beberapa model penyelesaian, yang masing-masing 
+memiliki tujuan untuk mengoptimalkan nilai minimum maupun nilai maksimum. Untuk 
+memperolah biaya distribusi minimum masalah transportasi, dimulai dengan 
+menentukan solusi awal (initial feasible solution). Dengan demikian, solusi layak awal 
+bertindak sebagai fondasi bagi teknik solusi biaya distribusi minimum untuk masalah ini 
+(Juman & Hoque, 2015). Penyelesaian solusi awal dapat menggunakan beberapa 
+metode seperti North West Corner (NWC), biaya terendah (Least Cost), Vogel’s 
+Approximation Method (VAM). Sedangkan untuk memperoleh solusi optimal dapat 
+menggunakan metode Stepping Stone dan metode Modified Distribution (MODI). 
+Pada 2015, Juman dan Hoque mengusulkan suatu metode untuk mendapatkan 
+solusi awal yang memberikan hasil lebih optimal, dengan nama metode Juman-Hoque. 
+Indrawan et al., (2021) menerapkan metode tersebut dan menemukan bahwa solusi 
+awal dengan metode Juman-Hoque cenderung mendekati bahkan sama dengan nilai 
+
+PAGE 14
+2 
+ 
+ 
+solusi optimal setelah dilakukan uji optimalitas dengan metode uji potensial. Selain itu, 
+pada 2019 P. Sumathi dan C.V.Sathiya Bama juga mengusulkan suatu metode 
+penentuan solusi awal yang kemudian dikenal dengan nama metode Sumathi-Sathiya. 
+Penelitian terkait metode tersebut dilakukan Alfian et al., (2023) yang memperoleh 
+solusi awal dengan Sumathi-Sathiya memberikan solusi yang lebih minimum 
+dibandingkan dengan metode lainnya setelah dioptimalkan dengan MODI. Berdasarkan 
+penelitian, metode Juman-Hoque dan Sumathi-Sathiya, keduanya memberikan hasil 
+yang mendekati solusi optimal. Untuk itu, dilakukan perbandingan antara kedua metode 
+tersebut untuk mengetahui metode yang memberikan biaya distribusi paling minimum 
+dalam penyelesaian masalah transportasi. Kemudian dilakukan uji optimal dengan 
+menggunakan metode Modified Distribution untuk memastikan solusi yang diperoleh 
+dari kedua metode tersebut. 
+Berdasarkan uraian tersebut, maka dilakukan penelitian untuk mencari biaya 
+distribusi minimum dengan metode Juman-Hoque dan Sumathi-Sathiya dalam satu 
+penelitian yang membahas tentang pendistribusian Air Minum dalam Kemasan 
+(AMDK). Penelitian ini akan dituangkan dalam Tugas Akhir berjudul “Perbandingan 
+Metode Juman-Hoque dan Sumathi-Sathiya dalam Meminimumkan Biaya 
+Distribusi Air Minum dalam Kemasan” 
+ 
+Rumusan Masalah 
+Berdasarkan uraian latar belakang di atas menimbulkan rumusan masalah 
+sebagai berikut: 
+1. Bagaimana penerapan metode Juman-Hoque dan Sumathi-Sathiya dalam 
+meminimumkan biaya distribusi AMDK pada CV Matahari Terbit? 
+2. Berapa perbandingan total biaya minimum yang dihasilkan dari metode Juman-
+Hoque dan Sumathi-Sathiya dalam menyelesaikan masalah transportasi pada 
+CV Matahari Terbit? 
+ 
+Tujuan Penelitian 
+Tujuan dari penelitian ini yaitu:  
+1. Menerapkan metode Juman-Hoque dan Sumathi-Sathiya untuk meminimumkan 
+biaya distribusi AMDK pada CV Matahari Terbit. 
+2. Memperoleh hasil perbandingan total biaya minimum dengan menggunakan 
+metode Juman-Hoque dan Sumathi-Sathiya dalam meminimumkan biaya 
+distribusi AMDK pada CV Matahari terbit 
+ 
+ 
+Batasan Masalah 
+Adapun batasan masalah dari penelitian ini adalah sebagai berikut: 
+1. Penelitian ini menggunakan data pendistribusian rata-rata produk AMDK pada 
+CV Matahari Terbit dalam kurun waktu satu bulan. 
+
+PAGE 15
+3 
+ 
+ 
+2. Uji optimal dengan metode Modified Distribution (MODI). 
+3. Analisis perbandingan yang digunakan pada metode ini berdasarkan total biaya 
+minimum yang dihasilkan. 
+ 
+Manfaat Penelitian 
+Tugas akhir ini diharapkan dapat memberikan manfaat sebagai berikut: 
+1. Bagi peneliti, dapat meningkatkan pengetahuan dan pemahaman tentang 
+penerapan metode transportasi dalam pengoptimalan biaya distribusi, khususnya 
+dengan menggunakan metode Juman-Hoque dan Sumathi-Sathiya. 
+2. Bagi pembaca, dapat digunakan sebagai sumber informasi, referensi, dan bahan 
+perbandingan untuk penelitian lain yang sejenis. 
+3. Bagi perusahaan, dapat digunakan sebagai informasi tambahan dan masukan 
+dalam pengoptimalan biaya distribusi untuk mendapatkan keuntungan 
+maksimum. 
+ 
+Landasan Teori 
+1.6.1 
+Riset Operasi 
+Riset operasi pertama kali diperkenalkan di Inggris tepatnya di Bowsdey pada 
+tahun 1940 oleh Mc Closky dan Trefthen sebagai hasil studi operasi militer selama 
+Perang Dunia II. Riset Operasi berkembang dengan cepat di Amerika Serikat setelah 
+terjadinya Perang Dunia II. Hal ini terjadi karena adanya beberapa ahli yang 
+berkontribusi dalam pemecahan masalah riset operasi secara matematis dan muncul 
+beberapa peralatan riset operasi standar yaitu metode simpleks untuk memecahkan 
+masalah program linear (Meflinda & Mahyarni, 2011). 
+Secara harfiah, riset operasi terdiri dari dua kata yaitu riset dan operasi. 
+Research (riset) diartikan sebagai suatu proses yang terorganisasi dalam mencari 
+kebenaran akan masalah, sedangkan operations (operasi) diartikan sebagai tindakan-
+tindakan yang diterapkan pada suatu masalah. Terdapat beberapa ahli yang telah 
+mendefiniskan riset operasi, sebagai berikut: 
+1) Morse dan Kimball (1951), mendefinisikan riset operasi sebagai metode ilmiah yang 
+memungkinkan para manajer mengambil keputusan mengenai kegiatan yang 
+mereka tangani dengan dasar kuantitatif.  
+2) Churchman, Arkoff, dan Arnoff (1957) mengemukakan pengertian riset operasi 
+sebagai aplikasi metode-metode, teknik-teknik, dan peralatan-peralatan ilmiah 
+dalam menghadapi masalah-masalah yang timbul di dalam operasi perusahaan 
+dengan tujuan ditemukannya pemecahan yang optimum masalah-masalah 
+tersebut. 
+3) Miller dan M.K. Star (1960) mengartikan riset operasi sebagai peralatan 
+manajemen yang menyatukan ilmu pengetahuan, matematika, dan logika dalam 
+
+PAGE 16
+4 
+ 
+ 
+kerangka pemecahan masalah-masalah yang dihadapi sehari-hari, sehingga 
+akhirnya permasalahan tersebut dapat dipecahkan secara optimal. 
+Dari definisi tersebut, dapat disimpulkan bahwa riset operasi merupakan suatu 
+sistem yang digunakan dalam pengambilan keputusan optimal dalam penyusunan 
+model dari sistem-sistem baik deterministic maupun probabilistic yang berasal dari 
+kehidupan nyata (Meflinda & Mahyarni, 2011). 
+Menurut Khurdi, et al., (2024) langkah-langkah dalam memecahkan masalah 
+riset operasi adalah sebagai berikut: 
+1. Merumuskan masalah 
+Penyelesaian suatu masalah selalu dimulai dengan mendefinisikan atau 
+merumuskan permasalahan. Hal ini harus dilakukan dengan baik, jika tidak 
+demikian akan menyebabkan tidak adanya penyelesaian masalah ataupun 
+penyelesaian menjadi tidak tepat. 
+2. Pembentukan model 
+Pembentukan model harus model yang paling cocok untuk mewakili sistem yang 
+bersangkutan. Model tersebut menjadi ekspresi kuantitatif dari tujuan dan batasan-
+batasan persoalan dalam bentuk variabel keputusan. Biasanya menggunakan 
+model analitik yang merupakan model matematik yang menghasilkan persamaan, 
+namun jika situasi yang dihadapi rumit maka dikembangkan model simulasi. 
+3. Pemecahan model 
+Penyelesaian suatu model merupakan penerapan dari satu atau lebih teknik-teknik 
+terhadap model. Seringkali, solusi terhadap model merupakan nilai-nilai variabel 
+keputusan yang mengoptimumkan salah satu tujuan dengan nilai fungsi tujuan lain 
+yang dapat diterima. 
+4. Validasi model 
+Model dikatakan valid jika dengan input yang serupa dapat menghasilkan kembali 
+hasil seperti sebelumnya. Metode yang biasa digunakan untuk menguji validitas 
+dari suatu model adalah dengan membandingkan kinerjanya dengan data masa 
+lalu yang tersedia.  
+5. Implementasi hasil akhir 
+Tahap akhir adalah mengimplementasikan hasil model yang telah diuji. Hal ini 
+membutuhkan penjelasan yang hati-hati mengenai solusi yang digunakan dan 
+hubungannya dengan realitas. 
+ 
+1.6.2 
+Program Linear 
+Menurut Syaifuddin (2011), program linear merupakan suatu teknik yang dapat 
+digunakan untuk membantu pengambilan keputusan alokasi sumber daya-sumber daya 
+yang terbatas dan langka secara optimum. Program linear di antara setiap bidang 
+
+PAGE 17
+5 
+ 
+ 
+memiliki perbedaan, namun ada empat hal secara umum yang dimiliki oleh semua 
+program linear yaitu: 
+1) Tujuan dari setiap masalah adalah maksimisasi atau minimisasi 
+2) Memiliki constraint (fungsi batasan) untuk mencapai tujuan yang diinginkan (fungsi 
+tujuan) 
+3) Terdapat alternatif untuk penyelesaian masalah  
+4) Hubungan matematis adalah linear (Syaifuddin, 2011). 
+Untuk memecahkan masalah-masalah dengan teknik program linear maka 
+digunakan bentuk dan susunan yang disebut model program linear. Model program 
+linear mempunyai tiga unsur utama, yaitu: 
+1) Variabel keputusan (decision variables), yaitu variabel persoalan yang berpengaruh 
+pada nilai tujuan yang akan dicapai.  
+2) Fungsi tujuan (objective function), yaitu fungsi yang menjadi tujuan dalam 
+penyelesaian masalah program linear, berkaitan dengan cara mengatur sumber 
+daya yang ada agar optimal untuk memperoleh keuntungan maksimal atau biaya 
+minimum. Disimbolkan dengan Z dan hanya ada dua kemungkinan, yaitu: 
+a. Maksimumkan 𝑍= 𝑓(𝑋1, 𝑋2, … , 𝑋𝑛) 
+b. Minimumkan 𝑍= 𝑓(𝑋1, 𝑋2, … , 𝑋𝑛) 
+3) Fungsi batasan atau kendala (construction function), yaitu bentuk penyajian 
+batasan kapasitas yang ada dan akan dialokasikan ke berbagai tujuan secara 
+optimal dalam bentuk yang matematis (Meflinda & Mahyarni, 2011). 
+ 
+1.6.3 
+Metode Transportasi 
+Rangkuti, A. (2022) menyebutkan bahwa persoalan dasar transportasi pada 
+mulanya dikembangkan oleh F. L. Hitchcock pada tahun 1941 dalam studinya yang 
+berjudul: The distribution of a product from several source to numerous locations. 
+Kemudian disusul oleh T. C. Koopmans pada awal tahun 1947, yang secara terpisah 
+menerbitkan suatu hasil studi mengenai:  Optimal utilization of the transportation 
+system. 
+Metode transportasi (Transportation) merupakan salah satu bagian dari 
+program linear. Metode transportasi ini membahas tentang bagaimana mengalokasikan 
+pengiriman dari tempat asal ke berbagai tempat tujuan agar biaya distribusi minimum. 
+Karakteristik metode transportasi, yaitu: 
+1) Pemindahan barang dari beberapa sumber ke tempat tujuan dengan biaya 
+seminimum mungkin 
+2) Setiap sumber dapat mengirimkan barang dengan jumlah tetap dan setiap tujuan 
+mempunyai permintaan yang tetap (harus memenuhi permintaan setiap sumber 
+tanpa melebihi kapasitas produksi) (Meflinda & Mahyarni, 2011). 
+
+PAGE 18
+6 
+ 
+ 
+Persyaratan yang perlu dipenuhi dalam penggunaan metode transportasi, 
+yaitu: 
+1) Tempat asal, berupa pabrik, kapasitas produksi, karyawan, sumber dana, dan 
+sebagainya sesuai dengan masalah yang dihadapi. 
+2) Tempat tujuan, berupa gudang wilayah pemasaran, skedul permintaan, pekerjaan, 
+proyek, dan sebagainya. 
+3) Kapasitas tempat asal dan tempat tujuan. 
+4) Biaya dari tempat asal ke tempat tujuan. 
+5) Adanya keseimbangan kapasitas tempat asal dan tempat tujuan (Meflinda & 
+Mahyarni, 2011). 
+Berikut proses transportasi antara permintaan (demand) dan penawaran (supply) dapat 
+dilihat pada gamba 2.1 berikut 
+ 
+Gambar 1. Transportasi dari Sumber ke Tujuan 
+Gambar 1 memperlihatkan jaringan dengan sumber (𝑚) dan tujuan (𝑛) yang 
+merupakan sebuah model transportasi. Sebuah node mewakili sumber dan tujuan, 
+kemudian sumber dan tujuan ini dihubungkan dengan busur (Rangkuti, A. 2022). 
+1) Masing-masing sumber mempunyai kapasitas 𝑎𝑖, 𝑖= 1, 2, 3, … , 𝑚  
+2) Masing-masing tujuan mempunyai kapasitas 𝑏𝑖, 𝑖= 1, 2, 3, … , 𝑛 
+3) 𝑥𝑖𝑗 : jumlah satuan unit yang dikirim dari sumber 𝑖 ke tujuan 𝑗 
+4) 𝑐𝑖𝑗 : biaya pengiriman per unit dari sumber 𝑖 ke tujuan 𝑗 (Rangkuti, A. 2022). 
+Secara umum, model dalam permasalahan transportasi dapat digambarkan 
+dalam suatu tabel yang menunjukkan sisi penawaran (asal) dan sisi permintaan 
+(tujuan), kapasitas penawaran dan jumlah permintaan serta biaya distribusi dari 
+masing-masing sumber ke masing-masing tujuan, sebagaimana dalam tabel 1 berikut 
+
+PAGE 19
+7 
+ 
+ 
+Tabel 1. Tabel Transportasi 
+ 
+Menurut Meflinda & Mahyarni (2011) formulasi model transportasi adalah sebagai 
+berikut: 
+1) Fungsi tujuan 𝑍  
+: mewakili total biaya distribusi untuk setiap rute 
+2) Fungsi kendala I 
+: mewakili supply 
+3) Fungsi kendala II 
+: mewakili demand 
+Permasalahan transportasi tersebut dapat dirumuskan dalam bentuk matematika, 
+sebagai berikut: 
+Fungsi tujuan:   
+ 
+Minimumkan Z = ∑∑cijxij
+n
+j=1
+m
+i=1
+ 
+(1) 
+Dengan batasan: 
+ 
+∑xij = ai, i = 1, 2, … , m
+m
+i=1
+ 
+(2) 
+ 
+∑xij = bj, j = 1, 2, … , n
+n
+j=1
+ 
+(3) 
+
+PAGE 20
+8 
+ 
+ 
+ 
+𝑥𝑖𝑗≥0, untuk semua 𝑖 dan 𝑗 
+ 
+Dimana: 
+𝑍  = biaya total distribusi 
+𝑋𝑖𝑗 = jumlah barang yang harus diangkut dari 𝑖 ke 𝑗 
+𝐶𝑖𝑗  = biaya angkut per unit barang dari 𝑖 ke 𝑗 
+𝑎𝑖  = banyaknya barang yang tersedia di tempat asal 𝑖  
+𝑏𝑗  = banyaknya permintaan barang di tempat tujuan 𝑗 
+𝑚  = jumlah tempat asal 
+𝑛  = jumlah tempat tujuan 
+Dari persamaan (2.2) ditetapkan bahwa jumlah pengiriman dari suatu sumber 
+tidak dapat melebihi penawarannya. Dengan demikian persamaan (2.3) mengharuskan 
+bahwa jumlah pengirim ke sebuah tujuan tidak dapat melebihi permintaannya. Jadi, 
+batasan tersebut menyiratkan bahwa penawaran total sama dengan permintaan total 
+(Rangkuti, A. 2022). 
+Dalam penyelesaian masalah transportasi, terdapat suatu kasus dimana 
+jumlah 
+supply 
+dan 
+demand 
+tidak 
+sama 
+atau 
+biasa 
+dinamakan 
+dengan 
+ketidakseimbangan supply dan demand. Karena jumlah supply dan demand harus 
+sama, maka perlu ditambahkan baris atau kolom dummy. Dummy pada tabel 
+transportasi ini pada dasarnya adalah buatan (tidak riil). Sehingga, biaya distribusi dari 
+dummy ini adalah nol (Rangkuti, A. 2022). 
+Menurut Rangkuti, A. (2022) penyelesaian masalah transportasi pada 
+umumnya terdiri atas 4 tahapan, yaitu: 
+1) Menerjemahkan permasalahan ke bentuk tabel 
+2) Menentukan solusi awal (initial fisible value).  
+3) Melakukan perbaikan pada solusi awal hingga kemungkinan perbaikan tidak 
+mungkin dilakukan lagi (solusi optimal telah tercapai) 
+4) Mengidentifikasi dan mengevaluasi solusi akhir. 
+Menurut (Rangkuti, A. 2022) dalam situasi praktik, aplikasi metode 
+transpportasi dapat menghadapi dua kasus, yaitu ketidakseimbangan supply dan 
+demand serta degeneracy. 
+ 
+a) Ketidakseimbangan Supply dan Demand 
+Bila supply lebih besar daripada demand, persoalan ini diselesaikan dengan 
+menyeimbangkan supply dan demand dengan cara menetapkan dummy pada 
+
+PAGE 21
+9 
+ 
+ 
+tujuan (kolom) yang memiliki demand sebesar ∑𝑎𝑖−∑𝑏𝑗. Dummy pada kolom 
+tabel transportasi pada dasarnya buatan (tidak rill). Dengan demikian, biaya 
+distribusi dari sumber ke dummy ini adalah nol. Jika supply lebih kecil daripada 
+demand, maka harus diseimbangkan kembali supply dan demand dengan 
+menetapkan dummy sumber yang memiliki supply sebesar kelebihan demand atas 
+supply ∑𝑏𝑗−∑𝑎𝑖. Dummy sumber pada baris tabel transportasi pada dasarnya 
+adalah sumber buatan (tidak riil). Dengan demikian, biaya distribusi dari dummy ke 
+tujuan ini adalah nol. 
+b) Kasus Degeneracy 
+Kasus degenerate dalam metode transportasi terjadi jika jumlah sel yang mendapat 
+alokasi (basis cell) dalam tabel transportasi kurang dari jumlah baris ditambah 
+jumlah kolom dikurangi satu (𝑚+ 𝑛−1). Akibat dari kasus degeneracy ini adalah 
+metode batu loncatan (stepping stone) dan metode danzing (modified distribution) 
+tidak dapat diaplikasikan, sehingga perlu prosedur tambahan untuk menyelesaikan 
+persoalan degeneracy ini. Prosedur yang dimaksud adalah dengan menetapkan 
+salah satu dari sel kosong dan menempatkan aloasi bernilai nol pada sel tersebut 
+sehingga persyaratan jumlah sel yang mendapat alokasi sebanyak 𝑚+ 𝑛−
+1 terpenuhi. Pemilihan sel dilakukan secara sembarang sepanjang evaluasi dengan 
+metode batu loncatan (stepping stone) dan danzing (modified distribution) dapat 
+dilakukan. Selanjutnya diasumsikan sel yang telah terpilih ini sebagai sel yang 
+mendapatkan alokasi. Kasus degeneracy bisa terjadi setelah tabel transportasi 
+awal diperoleh. Hal ini karena adanya eliminasi dua sel pada aplikasi metode batu 
+loncatan (stepping stone). Akibatnya, jumlah sel yang mendapatan alokasi tidak 
+sesuai dengan aturan 𝑚+ 𝑛−1. Solusi atas persoalan ini pada hakekatnya adalah 
+sama dengan prosedur yang digunakan sebelumnya. 
+Dalam menyelesaikan solusi awal (initial fisible value) terdapat beberapa 
+metode yang dapat digunakan, diantaranya North West Corner (NWC), biaya terendah 
+(Least Cost), Vogel’s Approximation Method (VAM), dan lain sebagainya. Setelah solusi 
+awal ditemukan, selanjutnya adalah menentukan solusi optimal, yang dapat 
+menggunakan metode Stepping Stone dan metode Modified Distribution (MODI). 
+Namun, dalam penelitian ini menggunakan suatu metode yang berbeda yaitu metode 
+Juman-Hoque dan Sumathi-Sathiya untuk menemukan solusi awal dan metode MODI 
+untuk memperoleh solusi optimalnya. 
+1.6.4 
+Metode Juman-Hoque 
+Metode Juman-Hoque merupakan suatu metode yang digunakan untuk 
+mencari solusi awal. Metode ini dapat digunakan dalam penyelesaian masalah 
+transportasi yang seimbang ataupun tidak seimbang. Ciri khas dari metode ini ada pada 
+proses pengalokasian awal yang dimulai pada sel dengan biaya terkecil dalam masing-
+masing kolom sebanyak kantitas permintaan. Setelah itu, pada setiap baris dilakukan 
+pengidentifikasian terpenuhi atau tidak terpenuhi dengan melihat jumlah alokasi pada 
+setiap baris terhadap kuantitas masing-masing persediaan (Indrawan et al., 2021). 
+
+PAGE 22
+10 
+ 
+ 
+Menurut Indrawan et al., (2021), langkah-langkah pada metode Juman-Hoque 
+untuk menentukan solusi awal adalah sebagai berikut: 
+1. Mengidentifikasi sel dengan biaya terendah pada setiap kolom, kemudian 
+alokasikan setiap permintaan ke sel yang teridentifikasi. 
+2. Mengidentifikasi apakah baris terpenuhi atau tidak dengan memperhatikan jumlah 
+alokasi pada setiap baris. 
+3. Mengidentifikasi kolom dengan selisih paling kecil, yaitu dengan menghitung selisih 
+antara biaya terkecil dan biaya terkecil kedua pada setiap kolom. 
+4. Melakukan transfer maksimum dari persediaan yang berlebih pada sel unit biaya 
+terkecil ke sel unit biaya terkecil berikutnya dalam kolom, berdasar pada baris yang 
+teridentifikasi sampai tidak ada lagi kelebihan persediaan di baris tersebut. 
+5. Menghapus baris terpenuhi, setelahnya lakukan hal yang sama hingga setiap baris 
+terpenuhi. 
+6. Hitung total biaya distribusi dalam tabel akhir. 
+ 
+1.6.5 
+Metode Sumathi-Sathiya 
+Metode Sumathi-Sathiya adalah salah satu metode yang digunakan untuk 
+mendapatkan solusi awal untuk menemukan biaya optimum dari suatu masalah 
+transportasi. Metode dilakukan dengan memilih nilai biaya minimum pada setiap baris 
+dan kolom dengan tujuan mendapatkan solusi layak awal. Nama metode Sumathi-
+Sathiya sendiri diambil dari nama penulis jurnal yang membuat metode tersebut, yaitu 
+P.Sumathi dan C.V.Sathiya Bama. (Alfian et al., 2023) 
+Adapun langkah-langkah pada metode Sumathi-Sathiya untuk menentukan 
+solusi awal menurut Muhtarulloh et al., (2022) adalah sebagai berikut: 
+1. Membuat tabel transportasi dari masalah yang ada.Periksa apakah jumlah 
+persediaan sama dengan jumlah permintaan (∑𝑎𝑖= ∑𝑏𝑗), jika seimbang maka 
+lanjutkan pada langkah selanjutnya. Jika tidak sama, maka tambahkan dummy 
+dengan biaya distribusi 0. 
+2. Jumlahkan nilai total untuk setiap baris dan kolom kemudian letakkann di sisi tabel. 
+3. Pilih jumlah biaya terkecil sesuaikan baris dan kolom kemudian simpan di samping 
+nilai yang ditempatkan. 
+4. Periksa apakah jumlah biaya dan sel dengan biaya terkecil bernilai tunggal atau 
+tidak, jika tunggal maka lanjutkan pada langkah selanjutnya. Jika tidak tunggal 
+maka hitung selisih demand dan supply kemudian pilih jumlah dan sel biaya yang 
+memiliki selisih paling minimum. 
+5. Alokasikan sel biaya terkecil dengan memaksimalkan biaya alokasi yang 
+memungkinkan. 
+6. Pilih 𝑋𝑖𝑗= biaya terkecil dari sel kosong pada baris ke 𝑖 kolom ke 𝑗, 𝑌𝑖𝑗= 𝐶𝑖𝑗 dari 
+biaya alokasi maksimum yang ditempati. 
+
+PAGE 23
+11 
+ 
+ 
+7. Perhatikan nilai biaya 𝑋𝑖𝑗 dan 𝑌𝑖𝑗. Jika nilai biaya  𝑋𝑖𝑗< 𝑌𝑖𝑗, maka tukarkan nilai 𝑋𝑖𝑗 
+ke nilai 𝑌𝑖𝑗.Jika nilai 𝑋𝑖𝑗> 𝑌𝑖𝑗 maka pilih nilai maksimum berikutnya yang memenuhi 
+𝑋𝑖𝑗< 𝑌𝑖𝑗.  
+8. Tentukan biaya distribusi sebagai solusi layak awal. 
+ 
+1.6.6 
+Modified Distribution (MODI) 
+Metode Modified Distribution merupakan suatu metode yang digunakan untuk 
+memperoleh solusi optimal dalam menentukan biaya distribusi. Metode MODI 
+mengubah pengalokasian produk dengan menggunakan indeks yang diperhalus 
+berdasarkan nilai tiap baris dan tiap kolom untuk mendapatkan pengalokasian yang 
+optimal (Kurnia et al., 2021). Perbedaan dari kedua metode ini yaitu pada langkah-
+langkah yang digunakan untuk menyelesaikan persoalan yang mana terdapat jejak 
+tertutup yang akan ditelusuri. Metode ini menghitung indeks yang akan ditngkatkan 
+tanpa menggambarkan semua jejak tertutup, cukup menelusuri satu saja jejak tertutup 
+(Soplanit et al., 2019). 
+Adapun langkah-langkah pada metode MODI untuk menentukan solusi optimal 
+menurut Soplanit et al., (2019) adalah sebagai berikut: 
+1. Menguji degenerasi, yaitu dengan menguji apakah (𝒎+ 𝒏−𝟏) sama dengan 
+jumlah sel yang terisi. Apabila jumlah sel yang terisi sama, maka bukan degenerasi. 
+Tapi jika berbeda maka terjadi degenerasi dan penyelesaiannya dilakukan seperti 
+Stepping Stone. 
+2. Menghitung harga indeks baik indeks baris (𝑼𝒊) maupun indeks kolom (𝑽𝒋). Hal ini 
+dilakukan dengan menitikberatkan pada sel yang sudah terisi, dan berlaku rumus 
+ 
+ 
+𝑼𝒊+ 𝑽𝒋= 𝑪𝒊𝒋, 𝒊, 𝒋= 𝟏, 𝟐, 𝟑, … 
+(4) 
+Dimana: 
+𝑈𝑖 = indeks baris 
+𝑉𝑗 = indeks kolom 
+𝐶𝑖𝑗 = harga dari setiap sel (𝑖, 𝑗) yang terisi 
+3. Menghitung indeks yang ditingkatkan atau sel yang tidak terisi. Dilakukan setelah 
+harga baris dan kolom sudah dihitung menggunakan sel yang sudah terisi. Langkah 
+ini dapat dilakukan dengan menggunakan rumus 
+ 
+𝐼𝑖𝑗= 𝐶𝑖𝑗−𝑈𝑖−𝑉𝑗 
+(5) 
+Dimana: 
+𝐼𝑖𝑗 = indeks yang akan ditingkatkan untuk tiap sel yang belum terisi 
+𝐶𝑖𝑗 = biaya pada baris ke i dan kolom ke j 
+
+PAGE 24
+12 
+ 
+ 
+𝑈𝑖 = baris ke i 
+𝑉𝑗 = kolom ke j 
+4. Pilih variabel non basis yang memiliki nilai 𝐼𝑖𝑗 paling negatif yang dapat memberikan 
+penurunan biaya paling besar. Kemudian alokasikan sesuai dengan jalur stepping 
+stone.  
+5. Ulangi langkah tersebut hingga semua nilai 𝐼𝑖𝑗 nol atau tidak ada yang negatif.  
+6. Maka solusi optimal telah dicapai. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

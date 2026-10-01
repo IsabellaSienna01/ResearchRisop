@@ -1,0 +1,10406 @@
+[
+  {
+    "id": "L01_Table2",
+    "costs": [
+      [
+        10,
+        2,
+        20,
+        11
+      ],
+      [
+        12,
+        7,
+        9,
+        20
+      ],
+      [
+        4,
+        14,
+        16,
+        18
+      ]
+    ],
+    "supply": [
+      15,
+      25,
+      10
+    ],
+    "demand": [
+      5,
+      15,
+      15,
+      15
+    ],
+    "source": "L01",
+    "locator": "Table 2; Table 7 P09",
+    "claims": {
+      "VAM": 475,
+      "TDM1": 475,
+      "TOCM_MT": 435,
+      "JHM": 460,
+      "BCE": 435,
+      "optimal": 435
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "c66a5d09829726ba9b9b6d1f9af3e71bd7357cc98e04866c9065f15cc37c3b97",
+    "balanced_sha256": "c66a5d09829726ba9b9b6d1f9af3e71bd7357cc98e04866c9065f15cc37c3b97"
+  },
+  {
+    "id": "L02_Table3",
+    "costs": [
+      [
+        4,
+        6,
+        5,
+        2
+      ],
+      [
+        6,
+        4,
+        1,
+        4
+      ],
+      [
+        5,
+        2,
+        3,
+        1
+      ],
+      [
+        4,
+        6,
+        7,
+        8
+      ]
+    ],
+    "supply": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "demand": [
+      9,
+      16,
+      10,
+      7
+    ],
+    "source": "L02",
+    "locator": "Tables 3-6; N09",
+    "claims": {
+      "RBSM": 111,
+      "optimal": 111
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636",
+    "balanced_sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636"
+  },
+  {
+    "id": "L02_Table7",
+    "costs": [
+      [
+        10,
+        8,
+        4,
+        3
+      ],
+      [
+        12,
+        14,
+        20,
+        2
+      ],
+      [
+        6,
+        9,
+        23,
+        25
+      ]
+    ],
+    "supply": [
+      500,
+      400,
+      300
+    ],
+    "demand": [
+      250,
+      350,
+      600,
+      150
+    ],
+    "source": "L02",
+    "locator": "Table 7; N06",
+    "claims": {
+      "RBSM": 7750,
+      "BCE": 8350,
+      "optimal": 7750
+    },
+    "note": "Zero-cost dummy source of 150 required.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "7df656f7587c616db4b82dc8a5352c7db2bc30e87247b5a5392b2033150fd6a4",
+    "balanced_sha256": "7a5e46c559a068fd54eb0c7d765ae24717aba440ff3862c71e8faef316da9410"
+  },
+  {
+    "id": "L03_Table2",
+    "costs": [
+      [
+        13,
+        21,
+        14
+      ],
+      [
+        8,
+        12,
+        21
+      ],
+      [
+        15,
+        17,
+        19
+      ]
+    ],
+    "supply": [
+      13,
+      20,
+      5
+    ],
+    "demand": [
+      12,
+      15,
+      11
+    ],
+    "source": "L03",
+    "locator": "Tables 2-5; Table 7 P26",
+    "claims": {
+      "SSM": 465,
+      "LCM": 473,
+      "VAM": 473,
+      "JHM": 475,
+      "TOCM_MT": 475,
+      "BCE": 475,
+      "optimal": 465
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5",
+    "balanced_sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5"
+  },
+  {
+    "id": "L04_Example1",
+    "costs": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        3,
+        2,
+        6
+      ],
+      [
+        3,
+        5,
+        4
+      ]
+    ],
+    "supply": [
+      5,
+      8,
+      7
+    ],
+    "demand": [
+      5,
+      5,
+      10
+    ],
+    "source": "L04",
+    "locator": "Example 1; Table 9",
+    "claims": {
+      "NWCM": 57,
+      "LCM": 55,
+      "VAM": 61,
+      "AIP_MT": 61,
+      "optimal": 61,
+      "AIP_worked": 55
+    },
+    "note": "Published worked feasible cost 55 contradicts Table 9 optimal 61; reduced table has errors.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "75962d50dc9bc2c80ecda6a571542bb5c6f3a2bfc79b3f588d617f1fdcfbc6a4",
+    "worked_allocation": [
+      [
+        0,
+        0,
+        5
+      ],
+      [
+        3,
+        5,
+        0
+      ],
+      [
+        2,
+        0,
+        5
+      ]
+    ],
+    "balanced_sha256": "75962d50dc9bc2c80ecda6a571542bb5c6f3a2bfc79b3f588d617f1fdcfbc6a4"
+  },
+  {
+    "id": "L04_Example2",
+    "costs": [
+      [
+        2,
+        3,
+        7,
+        11
+      ],
+      [
+        0,
+        12,
+        5,
+        6
+      ],
+      [
+        14,
+        1,
+        3,
+        9
+      ],
+      [
+        10,
+        2,
+        5,
+        8
+      ]
+    ],
+    "supply": [
+      150,
+      125,
+      75,
+      50
+    ],
+    "demand": [
+      100,
+      20,
+      80,
+      200
+    ],
+    "source": "L04",
+    "locator": "Example 2; Table 9",
+    "claims": {
+      "NWCM": 2215,
+      "LCM": 1995,
+      "VAM": 2245,
+      "AIP_MT": 2360,
+      "optimal": 1945,
+      "AIP_worked": 1995
+    },
+    "note": "Worked proposed cost 1995 differs from summary proposed cost 2360; reduced table has errors.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "9921b1f93dd107d42ba4248caecb42efb4b2ad13d8bb296d8593834fc7319885",
+    "worked_allocation": [
+      [
+        100,
+        20,
+        30,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        125
+      ],
+      [
+        0,
+        0,
+        50,
+        25
+      ],
+      [
+        0,
+        0,
+        0,
+        50
+      ]
+    ],
+    "balanced_sha256": "9921b1f93dd107d42ba4248caecb42efb4b2ad13d8bb296d8593834fc7319885"
+  },
+  {
+    "id": "L05_Example1",
+    "costs": [
+      [
+        6,
+        3,
+        1,
+        4
+      ],
+      [
+        7,
+        6,
+        2,
+        1
+      ],
+      [
+        10,
+        4,
+        5,
+        9
+      ],
+      [
+        7,
+        7,
+        7,
+        3
+      ]
+    ],
+    "supply": [
+      50,
+      55,
+      75,
+      60
+    ],
+    "demand": [
+      90,
+      65,
+      30,
+      55
+    ],
+    "source": "L05",
+    "locator": "Example 1",
+    "claims": {
+      "VAM": 1095,
+      "LDVAM": 1095,
+      "THP": 1045,
+      "optimal": 985
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "1b019ba889e1696afeabd9f935518c1444ceb3518e9410a597972ff1de02ca51",
+    "balanced_sha256": "1b019ba889e1696afeabd9f935518c1444ceb3518e9410a597972ff1de02ca51"
+  },
+  {
+    "id": "L05_Example2",
+    "costs": [
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        7,
+        11,
+        11
+      ],
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    "supply": [
+      150,
+      175,
+      275
+    ],
+    "demand": [
+      200,
+      100,
+      300
+    ],
+    "source": "L05",
+    "locator": "Example 2",
+    "claims": {
+      "VAM": 5125,
+      "LDVAM": 5125,
+      "THP": 4525,
+      "optimal": 4525
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502",
+    "balanced_sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502"
+  },
+  {
+    "id": "L05_Example3",
+    "costs": [
+      [
+        70,
+        37,
+        6,
+        76,
+        17
+      ],
+      [
+        59,
+        90,
+        93,
+        5,
+        10
+      ],
+      [
+        93,
+        62,
+        77,
+        47,
+        62
+      ],
+      [
+        54,
+        55,
+        26,
+        9,
+        84
+      ],
+      [
+        53,
+        20,
+        84,
+        15,
+        9
+      ]
+    ],
+    "supply": [
+      18,
+      17,
+      19,
+      13,
+      15
+    ],
+    "demand": [
+      16,
+      18,
+      20,
+      14,
+      14
+    ],
+    "source": "L05",
+    "locator": "Example 3",
+    "claims": {
+      "VAM": 2388,
+      "LDVAM": 2388,
+      "THP": 2366,
+      "optimal": 2366
+    },
+    "note": "",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "174e2af9793ff7854abb7c79226ed1d36cddcb2f25ae050a9426b85027358e81",
+    "balanced_sha256": "174e2af9793ff7854abb7c79226ed1d36cddcb2f25ae050a9426b85027358e81"
+  },
+  {
+    "id": "E01_Example1",
+    "costs": [
+      [
+        20,
+        22,
+        17,
+        4
+      ],
+      [
+        24,
+        37,
+        9,
+        7
+      ],
+      [
+        32,
+        37,
+        20,
+        15
+      ]
+    ],
+    "supply": [
+      120,
+      70,
+      50
+    ],
+    "demand": [
+      60,
+      40,
+      30,
+      110
+    ],
+    "source": "E01",
+    "locator": "Example 1; Tables 3 or 7",
+    "claims": {
+      "NWCM": 3680,
+      "LCM": 3670,
+      "VAM": 3520,
+      "TDM1": 3570,
+      "TDSM": 3710
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643",
+    "balanced_sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643"
+  },
+  {
+    "id": "E01_Example2",
+    "costs": [
+      [
+        3,
+        5,
+        7,
+        6
+      ],
+      [
+        2,
+        5,
+        8,
+        2
+      ],
+      [
+        3,
+        6,
+        9,
+        2
+      ]
+    ],
+    "supply": [
+      50,
+      75,
+      25
+    ],
+    "demand": [
+      20,
+      20,
+      50,
+      60
+    ],
+    "source": "E01",
+    "locator": "Example 2; Tables 3 or 7",
+    "claims": {
+      "NWCM": 670,
+      "LCM": 650,
+      "VAM": 650,
+      "TDM1": 630,
+      "TDSM": 610
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "dc63f6ca4a5a7dc882444fca1f34f5929f97500932bc1b635c529c8a89d8548f",
+    "balanced_sha256": "dc63f6ca4a5a7dc882444fca1f34f5929f97500932bc1b635c529c8a89d8548f"
+  },
+  {
+    "id": "E01_Example3",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        10
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        8,
+        70,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      9,
+      18
+    ],
+    "demand": [
+      5,
+      8,
+      7,
+      14
+    ],
+    "source": "E01",
+    "locator": "Example 3; Tables 3 or 7",
+    "claims": {
+      "NWCM": 1015,
+      "LCM": 814,
+      "VAM": 779,
+      "TDM1": 779,
+      "TDSM": 781
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55",
+    "balanced_sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55"
+  },
+  {
+    "id": "E01_Example4",
+    "costs": [
+      [
+        41,
+        46,
+        14,
+        49
+      ],
+      [
+        46,
+        32,
+        28,
+        8
+      ],
+      [
+        7,
+        5,
+        48,
+        49
+      ]
+    ],
+    "supply": [
+      7,
+      9,
+      18
+    ],
+    "demand": [
+      5,
+      8,
+      7,
+      14
+    ],
+    "source": "E01",
+    "locator": "Example 4; Tables 3 or 7",
+    "claims": {
+      "NWCM": 1451,
+      "VAM": 490,
+      "TDM1": 490,
+      "TDSM": 490
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4044fcd8cd097a6ef868b95cc0b1c74b27fbf829113b8c7a9d185df150fbb8db",
+    "balanced_sha256": "4044fcd8cd097a6ef868b95cc0b1c74b27fbf829113b8c7a9d185df150fbb8db"
+  },
+  {
+    "id": "E01_Example5",
+    "costs": [
+      [
+        82,
+        10,
+        16,
+        15,
+        66
+      ],
+      [
+        91,
+        28,
+        98,
+        43,
+        4
+      ],
+      [
+        13,
+        55,
+        96,
+        92,
+        85
+      ],
+      [
+        92,
+        96,
+        49,
+        80,
+        94
+      ],
+      [
+        64,
+        97,
+        81,
+        96,
+        68
+      ]
+    ],
+    "supply": [
+      2,
+      3,
+      5,
+      7,
+      9
+    ],
+    "demand": [
+      1,
+      4,
+      6,
+      8,
+      7
+    ],
+    "source": "E01",
+    "locator": "Example 5; Tables 3 or 7",
+    "claims": {
+      "NWCM": 1853,
+      "VAM": 1401,
+      "TDM1": 1401,
+      "TDSM": 1661
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "36aaeeca5766f5339cd14476e03e416191a7a6eff7d3ed01b9fc30515e4beb37",
+    "balanced_sha256": "36aaeeca5766f5339cd14476e03e416191a7a6eff7d3ed01b9fc30515e4beb37"
+  },
+  {
+    "id": "E01_Example6",
+    "costs": [
+      [
+        17,
+        4,
+        14,
+        15,
+        9,
+        6,
+        16
+      ],
+      [
+        19,
+        20,
+        1,
+        1,
+        8,
+        14,
+        6
+      ],
+      [
+        3,
+        20,
+        17,
+        6,
+        16,
+        14,
+        11
+      ],
+      [
+        19,
+        10,
+        19,
+        1,
+        16,
+        4,
+        14
+      ],
+      [
+        13,
+        17,
+        14,
+        2,
+        4,
+        3,
+        18
+      ],
+      [
+        2,
+        3,
+        16,
+        17,
+        10,
+        10,
+        20
+      ],
+      [
+        6,
+        9,
+        15,
+        14,
+        9,
+        20,
+        11
+      ],
+      [
+        11,
+        19,
+        8,
+        7,
+        13,
+        7,
+        3
+      ],
+      [
+        20,
+        16,
+        14,
+        20,
+        15,
+        12,
+        3
+      ],
+      [
+        20,
+        20,
+        4,
+        1,
+        16,
+        5,
+        6
+      ]
+    ],
+    "supply": [
+      6,
+      8,
+      11,
+      13,
+      23,
+      5,
+      20,
+      13,
+      14,
+      16
+    ],
+    "demand": [
+      14,
+      24,
+      28,
+      33,
+      4,
+      12,
+      14
+    ],
+    "source": "E01",
+    "locator": "Example 6; Tables 3 or 7",
+    "claims": {
+      "NWCM": 1651,
+      "VAM": 740,
+      "TDM1": 712,
+      "TDSM": 712
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "7347427aea8e90fc406cd93ab46d406a5031a3a6873d40698ef3e6c1d8c9c73f",
+    "balanced_sha256": "7347427aea8e90fc406cd93ab46d406a5031a3a6873d40698ef3e6c1d8c9c73f"
+  },
+  {
+    "id": "E01_Example7",
+    "costs": [
+      [
+        25,
+        29,
+        13,
+        21,
+        9,
+        14,
+        22,
+        29,
+        27
+      ],
+      [
+        28,
+        29,
+        28,
+        23,
+        2,
+        12,
+        23,
+        11,
+        29
+      ],
+      [
+        4,
+        5,
+        24,
+        23,
+        3,
+        23,
+        9,
+        18,
+        17
+      ],
+      [
+        28,
+        30,
+        29,
+        12,
+        25,
+        24,
+        21,
+        7,
+        5
+      ],
+      [
+        19,
+        29,
+        20,
+        20,
+        21,
+        6,
+        20,
+        23,
+        5
+      ],
+      [
+        3,
+        15,
+        2,
+        6,
+        10,
+        15,
+        5,
+        8,
+        8
+      ],
+      [
+        9,
+        25,
+        26,
+        22,
+        29,
+        14,
+        4,
+        16,
+        26
+      ],
+      [
+        17,
+        5,
+        29,
+        1,
+        2,
+        20,
+        15,
+        21,
+        8
+      ]
+    ],
+    "supply": [
+      16,
+      18,
+      10,
+      13,
+      11,
+      15,
+      22,
+      23
+    ],
+    "demand": [
+      13,
+      21,
+      15,
+      8,
+      10,
+      12,
+      20,
+      13,
+      16
+    ],
+    "source": "E01",
+    "locator": "Example 7; Tables 3 or 7",
+    "claims": {
+      "NWCM": 2251,
+      "VAM": 844,
+      "TDM1": 935,
+      "TDSM": 979
+    },
+    "note": "TDSM exponent theta=2 is the tested square specialization; paper also allows 1<theta<=2.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "55c35b2df858909a75d4063a1409d93a898eeb9c4c9ee22df61a250e71246f80",
+    "balanced_sha256": "55c35b2df858909a75d4063a1409d93a898eeb9c4c9ee22df61a250e71246f80"
+  },
+  {
+    "id": "RBSM_N01",
+    "costs": [
+      [
+        32,
+        40,
+        120
+      ],
+      [
+        60,
+        68,
+        104
+      ],
+      [
+        200,
+        80,
+        60
+      ]
+    ],
+    "supply": [
+      20,
+      30,
+      45
+    ],
+    "demand": [
+      30,
+      35,
+      30
+    ],
+    "source": "E02",
+    "locator": "rbsm_n01.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66",
+    "balanced_sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66"
+  },
+  {
+    "id": "RBSM_N02",
+    "costs": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        4,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1
+      ]
+    ],
+    "supply": [
+      6,
+      8,
+      10
+    ],
+    "demand": [
+      4,
+      6,
+      8,
+      6
+    ],
+    "source": "E02",
+    "locator": "rbsm_n02.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672",
+    "balanced_sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672"
+  },
+  {
+    "id": "RBSM_N03",
+    "costs": [
+      [
+        73,
+        40,
+        9,
+        79,
+        20
+      ],
+      [
+        62,
+        93,
+        96,
+        8,
+        13
+      ],
+      [
+        96,
+        65,
+        80,
+        50,
+        65
+      ],
+      [
+        57,
+        58,
+        29,
+        12,
+        87
+      ],
+      [
+        56,
+        23,
+        87,
+        18,
+        12
+      ]
+    ],
+    "supply": [
+      8,
+      7,
+      9,
+      3,
+      5
+    ],
+    "demand": [
+      6,
+      8,
+      10,
+      4,
+      4
+    ],
+    "source": "E02",
+    "locator": "rbsm_n03.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "9999508a4f2e904be05e17b537147f3cf5ff074e9930af09f63c2ccde181d84e",
+    "balanced_sha256": "9999508a4f2e904be05e17b537147f3cf5ff074e9930af09f63c2ccde181d84e"
+  },
+  {
+    "id": "RBSM_N04",
+    "costs": [
+      [
+        6,
+        4,
+        1
+      ],
+      [
+        3,
+        8,
+        7
+      ],
+      [
+        4,
+        4,
+        2
+      ]
+    ],
+    "supply": [
+      50,
+      40,
+      60
+    ],
+    "demand": [
+      20,
+      95,
+      35
+    ],
+    "source": "E02",
+    "locator": "rbsm_n04.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "38607603a1ec4da8f32228e25d0388912775df63bc7befe0a657a4559dfec49c",
+    "balanced_sha256": "38607603a1ec4da8f32228e25d0388912775df63bc7befe0a657a4559dfec49c"
+  },
+  {
+    "id": "RBSM_N05",
+    "costs": [
+      [
+        7,
+        5,
+        9,
+        11
+      ],
+      [
+        4,
+        3,
+        8,
+        6
+      ],
+      [
+        3,
+        8,
+        10,
+        5
+      ],
+      [
+        2,
+        6,
+        7,
+        3
+      ]
+    ],
+    "supply": [
+      30,
+      25,
+      20,
+      15
+    ],
+    "demand": [
+      30,
+      30,
+      20,
+      10
+    ],
+    "source": "E02",
+    "locator": "rbsm_n05.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274",
+    "balanced_sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274"
+  },
+  {
+    "id": "RBSM_N06",
+    "costs": [
+      [
+        10,
+        8,
+        4,
+        3
+      ],
+      [
+        12,
+        14,
+        20,
+        2
+      ],
+      [
+        6,
+        9,
+        23,
+        25
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "supply": [
+      500,
+      400,
+      300,
+      150
+    ],
+    "demand": [
+      250,
+      350,
+      600,
+      150
+    ],
+    "source": "E02",
+    "locator": "rbsm_n06.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "7a5e46c559a068fd54eb0c7d765ae24717aba440ff3862c71e8faef316da9410",
+    "balanced_sha256": "7a5e46c559a068fd54eb0c7d765ae24717aba440ff3862c71e8faef316da9410"
+  },
+  {
+    "id": "RBSM_N07",
+    "costs": [
+      [
+        6,
+        1,
+        9,
+        3
+      ],
+      [
+        11,
+        5,
+        2,
+        8
+      ],
+      [
+        10,
+        12,
+        4,
+        7
+      ]
+    ],
+    "supply": [
+      70,
+      55,
+      90
+    ],
+    "demand": [
+      85,
+      35,
+      50,
+      45
+    ],
+    "source": "E02",
+    "locator": "rbsm_n07.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb",
+    "balanced_sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb"
+  },
+  {
+    "id": "RBSM_N08",
+    "costs": [
+      [
+        5,
+        7,
+        9,
+        6
+      ],
+      [
+        6,
+        7,
+        10,
+        5
+      ],
+      [
+        7,
+        6,
+        8,
+        1
+      ]
+    ],
+    "supply": [
+      12,
+      14,
+      10
+    ],
+    "demand": [
+      10,
+      6,
+      8,
+      12
+    ],
+    "source": "E02",
+    "locator": "rbsm_n08.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "a54cca597a8d7af13fb00d1b736005b2e8d47e21e7395209dda1b2729d2731be",
+    "balanced_sha256": "a54cca597a8d7af13fb00d1b736005b2e8d47e21e7395209dda1b2729d2731be"
+  },
+  {
+    "id": "RBSM_N09",
+    "costs": [
+      [
+        4,
+        6,
+        5,
+        2
+      ],
+      [
+        6,
+        4,
+        1,
+        4
+      ],
+      [
+        5,
+        2,
+        3,
+        1
+      ],
+      [
+        4,
+        6,
+        7,
+        8
+      ]
+    ],
+    "supply": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "demand": [
+      9,
+      16,
+      10,
+      7
+    ],
+    "source": "E02",
+    "locator": "rbsm_n09.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636",
+    "balanced_sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636"
+  },
+  {
+    "id": "RBSM_N10",
+    "costs": [
+      [
+        20,
+        2,
+        20,
+        11
+      ],
+      [
+        24,
+        7,
+        9,
+        20
+      ],
+      [
+        8,
+        14,
+        16,
+        18
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      20
+    ],
+    "demand": [
+      10,
+      30,
+      30,
+      30
+    ],
+    "source": "E02",
+    "locator": "rbsm_n10.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "193df7ecbdb7b2d4afbbb6e8c81161160350f72bc78b380ffe338f50d5f4ed75",
+    "balanced_sha256": "193df7ecbdb7b2d4afbbb6e8c81161160350f72bc78b380ffe338f50d5f4ed75"
+  },
+  {
+    "id": "RBSM_N11",
+    "costs": [
+      [
+        10,
+        2,
+        20,
+        22
+      ],
+      [
+        12,
+        7,
+        9,
+        40
+      ],
+      [
+        4,
+        14,
+        16,
+        32
+      ]
+    ],
+    "supply": [
+      60,
+      100,
+      40
+    ],
+    "demand": [
+      20,
+      60,
+      60,
+      60
+    ],
+    "source": "E02",
+    "locator": "rbsm_n11.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "012fd64a54d0ec3c484fff4216697b2c43728094a6c0db9ab11b1c8a654cce33",
+    "balanced_sha256": "012fd64a54d0ec3c484fff4216697b2c43728094a6c0db9ab11b1c8a654cce33"
+  },
+  {
+    "id": "RBSM_N12",
+    "costs": [
+      [
+        15,
+        7,
+        25
+      ],
+      [
+        8,
+        12,
+        14
+      ],
+      [
+        17,
+        19,
+        21
+      ]
+    ],
+    "supply": [
+      12,
+      17,
+      7
+    ],
+    "demand": [
+      12,
+      10,
+      14
+    ],
+    "source": "E02",
+    "locator": "rbsm_n12.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0",
+    "balanced_sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0"
+  },
+  {
+    "id": "RBSM_N13",
+    "costs": [
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        7,
+        11,
+        11
+      ],
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    "supply": [
+      150,
+      175,
+      275
+    ],
+    "demand": [
+      200,
+      100,
+      300
+    ],
+    "source": "E02",
+    "locator": "rbsm_n13.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502",
+    "balanced_sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502"
+  },
+  {
+    "id": "RBSM_N14",
+    "costs": [
+      [
+        4,
+        6,
+        8,
+        8
+      ],
+      [
+        6,
+        8,
+        6,
+        7
+      ],
+      [
+        5,
+        7,
+        6,
+        8
+      ]
+    ],
+    "supply": [
+      40,
+      60,
+      50
+    ],
+    "demand": [
+      20,
+      30,
+      50,
+      50
+    ],
+    "source": "E02",
+    "locator": "rbsm_n14.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0143b5d1cc24038c267ae2d5b0cdfc1b85914e0eb9f1b8f851208602fc70d92d",
+    "balanced_sha256": "0143b5d1cc24038c267ae2d5b0cdfc1b85914e0eb9f1b8f851208602fc70d92d"
+  },
+  {
+    "id": "RBSM_N15",
+    "costs": [
+      [
+        4,
+        6,
+        9,
+        5
+      ],
+      [
+        2,
+        6,
+        4,
+        1
+      ],
+      [
+        5,
+        7,
+        2,
+        9
+      ]
+    ],
+    "supply": [
+      16,
+      12,
+      15
+    ],
+    "demand": [
+      12,
+      14,
+      9,
+      8
+    ],
+    "source": "E02",
+    "locator": "rbsm_n15.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "455545b77ad0ff5c767b39673c0f842dd089622a434605768b3a93a09e6f061e",
+    "balanced_sha256": "455545b77ad0ff5c767b39673c0f842dd089622a434605768b3a93a09e6f061e"
+  },
+  {
+    "id": "RBSM_N16",
+    "costs": [
+      [
+        22,
+        17,
+        25,
+        15
+      ],
+      [
+        13,
+        10,
+        16,
+        20
+      ],
+      [
+        16,
+        19,
+        9,
+        5
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      50
+    ],
+    "demand": [
+      30,
+      30,
+      50,
+      20
+    ],
+    "source": "E02",
+    "locator": "rbsm_n16.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "791a4531c7396f8af842720fcb047e33cec7431074da4e683f9209dab5587253",
+    "balanced_sha256": "791a4531c7396f8af842720fcb047e33cec7431074da4e683f9209dab5587253"
+  },
+  {
+    "id": "RBSM_N17",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        10
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        8,
+        70,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      9,
+      18
+    ],
+    "demand": [
+      5,
+      8,
+      7,
+      14
+    ],
+    "source": "E02",
+    "locator": "rbsm_n17.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55",
+    "balanced_sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55"
+  },
+  {
+    "id": "RBSM_N18",
+    "costs": [
+      [
+        6,
+        10,
+        14,
+        0
+      ],
+      [
+        12,
+        19,
+        21,
+        0
+      ],
+      [
+        15,
+        14,
+        17,
+        0
+      ]
+    ],
+    "supply": [
+      50,
+      50,
+      50
+    ],
+    "demand": [
+      30,
+      40,
+      55,
+      25
+    ],
+    "source": "E02",
+    "locator": "rbsm_n18.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "d045e85d7a717508090f62991b3b67c62a0f93fa3f3eecfb79fe70fde442c281",
+    "balanced_sha256": "d045e85d7a717508090f62991b3b67c62a0f93fa3f3eecfb79fe70fde442c281"
+  },
+  {
+    "id": "RBSM_N21",
+    "costs": [
+      [
+        135,
+        71,
+        260
+      ],
+      [
+        81,
+        126,
+        144
+      ],
+      [
+        170,
+        189,
+        201
+      ]
+    ],
+    "supply": [
+      12,
+      17,
+      7
+    ],
+    "demand": [
+      12,
+      10,
+      14
+    ],
+    "source": "E02",
+    "locator": "rbsm_n21.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4c95716824ce39207a8c950b9991f2ffbfd80f17b7bd2771a18664593c3fb758",
+    "balanced_sha256": "4c95716824ce39207a8c950b9991f2ffbfd80f17b7bd2771a18664593c3fb758"
+  },
+  {
+    "id": "RBSM_N22",
+    "costs": [
+      [
+        11,
+        13,
+        17,
+        14
+      ],
+      [
+        16,
+        18,
+        14,
+        10
+      ],
+      [
+        21,
+        24,
+        13,
+        10
+      ]
+    ],
+    "supply": [
+      250,
+      300,
+      400
+    ],
+    "demand": [
+      200,
+      225,
+      275,
+      250
+    ],
+    "source": "E02",
+    "locator": "rbsm_n22.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "ebfe7f57472c26ecd9e80a59716a73e8d521eb9f26ec238ecc30edec3c8b7998",
+    "balanced_sha256": "ebfe7f57472c26ecd9e80a59716a73e8d521eb9f26ec238ecc30edec3c8b7998"
+  },
+  {
+    "id": "RBSM_N23",
+    "costs": [
+      [
+        7,
+        2,
+        3,
+        7
+      ],
+      [
+        1,
+        5,
+        4,
+        5
+      ],
+      [
+        7,
+        2,
+        4,
+        5
+      ]
+    ],
+    "supply": [
+      2,
+      1,
+      3
+    ],
+    "demand": [
+      2,
+      1,
+      1,
+      2
+    ],
+    "source": "E02",
+    "locator": "rbsm_n23.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "9058ef7ade6769c633b99c18d36b1a2ce101c328f61dae542b07dceab74b90db",
+    "balanced_sha256": "9058ef7ade6769c633b99c18d36b1a2ce101c328f61dae542b07dceab74b90db"
+  },
+  {
+    "id": "RBSM_N24",
+    "costs": [
+      [
+        20,
+        22,
+        17,
+        4
+      ],
+      [
+        24,
+        37,
+        9,
+        7
+      ],
+      [
+        32,
+        37,
+        20,
+        15
+      ]
+    ],
+    "supply": [
+      120,
+      70,
+      50
+    ],
+    "demand": [
+      60,
+      40,
+      30,
+      110
+    ],
+    "source": "E02",
+    "locator": "rbsm_n24.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643",
+    "balanced_sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643"
+  },
+  {
+    "id": "RBSM_N25",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        12
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        10,
+        60,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      10,
+      18
+    ],
+    "demand": [
+      5,
+      7,
+      8,
+      15
+    ],
+    "source": "E02",
+    "locator": "rbsm_n25.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "38161767b7f3ebfd317d1cba59c949a6adf4a6d6870c0b54d959b4877f04cfd7",
+    "balanced_sha256": "38161767b7f3ebfd317d1cba59c949a6adf4a6d6870c0b54d959b4877f04cfd7"
+  },
+  {
+    "id": "RBSM_N26",
+    "costs": [
+      [
+        20,
+        4,
+        6,
+        8,
+        9
+      ],
+      [
+        4,
+        10,
+        8,
+        18,
+        8
+      ],
+      [
+        9,
+        11,
+        20,
+        40,
+        6
+      ],
+      [
+        7,
+        6,
+        9,
+        14,
+        16
+      ]
+    ],
+    "supply": [
+      20,
+      30,
+      15,
+      13
+    ],
+    "demand": [
+      40,
+      6,
+      8,
+      18,
+      6
+    ],
+    "source": "E02",
+    "locator": "rbsm_n26.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "43a0428ca967e18217aba2d7e5850e696e07d7e37230ae1f82ba00fe25c8d239",
+    "balanced_sha256": "43a0428ca967e18217aba2d7e5850e696e07d7e37230ae1f82ba00fe25c8d239"
+  },
+  {
+    "id": "RBSM_N27",
+    "costs": [
+      [
+        46,
+        74,
+        9,
+        28,
+        99
+      ],
+      [
+        12,
+        75,
+        6,
+        36,
+        48
+      ],
+      [
+        35,
+        199,
+        4,
+        5,
+        71
+      ],
+      [
+        61,
+        81,
+        44,
+        88,
+        9
+      ],
+      [
+        85,
+        60,
+        14,
+        25,
+        79
+      ]
+    ],
+    "supply": [
+      461,
+      277,
+      356,
+      488,
+      393
+    ],
+    "demand": [
+      278,
+      60,
+      461,
+      116,
+      1060
+    ],
+    "source": "E02",
+    "locator": "rbsm_n27.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "1da9d098d10a664d4a391e10c46638804cd4ede032e4afab49838845ede041a8",
+    "balanced_sha256": "1da9d098d10a664d4a391e10c46638804cd4ede032e4afab49838845ede041a8"
+  },
+  {
+    "id": "RBSM_N28",
+    "costs": [
+      [
+        3,
+        1,
+        7,
+        4
+      ],
+      [
+        2,
+        6,
+        5,
+        9
+      ],
+      [
+        8,
+        3,
+        3,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "supply": [
+      300,
+      400,
+      270,
+      370
+    ],
+    "demand": [
+      250,
+      350,
+      290,
+      450
+    ],
+    "source": "E02",
+    "locator": "rbsm_n28.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "63b208d736521ab82c401b95bb3b2375bc2f383c6e4b4381ffbf54eda92367fc",
+    "balanced_sha256": "63b208d736521ab82c401b95bb3b2375bc2f383c6e4b4381ffbf54eda92367fc"
+  },
+  {
+    "id": "RBSM_N29",
+    "costs": [
+      [
+        15,
+        1,
+        42,
+        33
+      ],
+      [
+        80,
+        42,
+        26,
+        81
+      ],
+      [
+        90,
+        40,
+        66,
+        60
+      ]
+    ],
+    "supply": [
+      23,
+      44,
+      33
+    ],
+    "demand": [
+      23,
+      31,
+      16,
+      30
+    ],
+    "source": "E02",
+    "locator": "rbsm_n29.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f89c35a4257357e50c50596a45588f2dcd0933d8630d7c1a0498c0785d5021c3",
+    "balanced_sha256": "f89c35a4257357e50c50596a45588f2dcd0933d8630d7c1a0498c0785d5021c3"
+  },
+  {
+    "id": "RBSM_N30",
+    "costs": [
+      [
+        13,
+        21,
+        14
+      ],
+      [
+        8,
+        12,
+        21
+      ],
+      [
+        15,
+        17,
+        19
+      ]
+    ],
+    "supply": [
+      13,
+      20,
+      5
+    ],
+    "demand": [
+      12,
+      15,
+      11
+    ],
+    "source": "E02",
+    "locator": "rbsm_n30.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5",
+    "balanced_sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5"
+  },
+  {
+    "id": "RBSM_N31",
+    "costs": [
+      [
+        15,
+        27,
+        13,
+        19
+      ],
+      [
+        18,
+        21,
+        24,
+        14
+      ],
+      [
+        21,
+        15,
+        16,
+        17
+      ]
+    ],
+    "supply": [
+      40,
+      40,
+      20
+    ],
+    "demand": [
+      30,
+      20,
+      30,
+      20
+    ],
+    "source": "E02",
+    "locator": "rbsm_n31.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "58bd7bb61285460b8914a2ce49dff9d8383edbc3e3db8b7ef5f003b5f1c656e6",
+    "balanced_sha256": "58bd7bb61285460b8914a2ce49dff9d8383edbc3e3db8b7ef5f003b5f1c656e6"
+  },
+  {
+    "id": "RBSM_N32",
+    "costs": [
+      [
+        4,
+        4,
+        9,
+        10,
+        13
+      ],
+      [
+        7,
+        9,
+        8,
+        10,
+        4
+      ],
+      [
+        9,
+        3,
+        7,
+        10,
+        6
+      ],
+      [
+        11,
+        4,
+        10,
+        6,
+        9
+      ]
+    ],
+    "supply": [
+      100,
+      90,
+      80,
+      70
+    ],
+    "demand": [
+      60,
+      40,
+      90,
+      70,
+      80
+    ],
+    "source": "E02",
+    "locator": "rbsm_n32.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10",
+    "balanced_sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10"
+  },
+  {
+    "id": "RBSM_N33",
+    "costs": [
+      [
+        3,
+        3,
+        5
+      ],
+      [
+        6,
+        5,
+        4
+      ],
+      [
+        6,
+        10,
+        7
+      ]
+    ],
+    "supply": [
+      90,
+      80,
+      100
+    ],
+    "demand": [
+      70,
+      120,
+      80
+    ],
+    "source": "E02",
+    "locator": "rbsm_n33.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "e80ec051698e87cc302d8cb96e1a439135d09f72bd08fc0b0da4de7d96dbfe33",
+    "balanced_sha256": "e80ec051698e87cc302d8cb96e1a439135d09f72bd08fc0b0da4de7d96dbfe33"
+  },
+  {
+    "id": "RBSM_N34",
+    "costs": [
+      [
+        7,
+        6,
+        4,
+        5,
+        9
+      ],
+      [
+        8,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        6,
+        8,
+        9,
+        6,
+        5
+      ],
+      [
+        5,
+        7,
+        7,
+        8,
+        6
+      ]
+    ],
+    "supply": [
+      40,
+      30,
+      20,
+      10
+    ],
+    "demand": [
+      30,
+      30,
+      15,
+      20,
+      5
+    ],
+    "source": "E02",
+    "locator": "rbsm_n34.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0b9ce45bcea992d9f2681e325947384edaa4a6428c823a1c8ea33834f6041149",
+    "balanced_sha256": "0b9ce45bcea992d9f2681e325947384edaa4a6428c823a1c8ea33834f6041149"
+  },
+  {
+    "id": "RBSM_N35",
+    "costs": [
+      [
+        1,
+        6,
+        5,
+        9
+      ],
+      [
+        3,
+        2,
+        4,
+        15
+      ],
+      [
+        8,
+        9,
+        3,
+        10
+      ]
+    ],
+    "supply": [
+      20,
+      25,
+      15
+    ],
+    "demand": [
+      15,
+      15,
+      10,
+      20
+    ],
+    "source": "E02",
+    "locator": "rbsm_n35.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "5b25021affc589681c37a92f6c1c0d437a5098f93f427e7a54f8f2a53750fba1",
+    "balanced_sha256": "5b25021affc589681c37a92f6c1c0d437a5098f93f427e7a54f8f2a53750fba1"
+  },
+  {
+    "id": "RBSM_S1",
+    "costs": [
+      [
+        27,
+        27,
+        9,
+        33,
+        9
+      ],
+      [
+        36,
+        15,
+        33,
+        30,
+        15
+      ],
+      [
+        18,
+        21,
+        27,
+        36,
+        33
+      ],
+      [
+        33,
+        36,
+        21,
+        24,
+        9
+      ],
+      [
+        27,
+        9,
+        9,
+        21,
+        15
+      ]
+    ],
+    "supply": [
+      150,
+      240,
+      135,
+      300,
+      285
+    ],
+    "demand": [
+      270,
+      195,
+      210,
+      270,
+      165
+    ],
+    "source": "E02",
+    "locator": "rbsm_S1.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "bc7aca5ca984c98fbf70b8c193e4dce1d3d6c1e6b0942f7dd8be1ef7d8ed8f4d",
+    "balanced_sha256": "bc7aca5ca984c98fbf70b8c193e4dce1d3d6c1e6b0942f7dd8be1ef7d8ed8f4d"
+  },
+  {
+    "id": "RBSM_S2",
+    "costs": [
+      [
+        80,
+        80,
+        20,
+        100,
+        20
+      ],
+      [
+        110,
+        40,
+        100,
+        90,
+        40
+      ],
+      [
+        50,
+        60,
+        80,
+        110,
+        100
+      ],
+      [
+        100,
+        110,
+        60,
+        70,
+        20
+      ],
+      [
+        80,
+        20,
+        20,
+        60,
+        40
+      ]
+    ],
+    "supply": [
+      400,
+      700,
+      350,
+      900,
+      850
+    ],
+    "demand": [
+      800,
+      550,
+      600,
+      800,
+      450
+    ],
+    "source": "E02",
+    "locator": "rbsm_S2.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "7419710d724e5981339a75d74498b08aa51421a3defe2be2e943178cc2841f7f",
+    "balanced_sha256": "7419710d724e5981339a75d74498b08aa51421a3defe2be2e943178cc2841f7f"
+  },
+  {
+    "id": "RBSM_S3",
+    "costs": [
+      [
+        3,
+        156,
+        159,
+        162,
+        165,
+        168,
+        171,
+        174,
+        177,
+        180,
+        183,
+        36
+      ],
+      [
+        189,
+        42,
+        195,
+        198,
+        201,
+        204,
+        207,
+        210,
+        213,
+        216,
+        219,
+        222
+      ],
+      [
+        225,
+        228,
+        81,
+        234,
+        237,
+        240,
+        243,
+        246,
+        249,
+        252,
+        255,
+        258
+      ],
+      [
+        261,
+        264,
+        267,
+        120,
+        273,
+        276,
+        279,
+        282,
+        285,
+        288,
+        291,
+        294
+      ],
+      [
+        297,
+        300,
+        303,
+        306,
+        159,
+        312,
+        315,
+        318,
+        321,
+        324,
+        327,
+        330
+      ],
+      [
+        333,
+        336,
+        339,
+        342,
+        345,
+        198,
+        351,
+        354,
+        357,
+        360,
+        363,
+        366
+      ],
+      [
+        369,
+        372,
+        375,
+        378,
+        381,
+        384,
+        237,
+        390,
+        393,
+        396,
+        399,
+        402
+      ],
+      [
+        405,
+        408,
+        411,
+        414,
+        417,
+        420,
+        423,
+        276,
+        429,
+        432,
+        435,
+        438
+      ],
+      [
+        441,
+        444,
+        447,
+        450,
+        453,
+        456,
+        459,
+        462,
+        315,
+        468,
+        471,
+        474
+      ],
+      [
+        477,
+        480,
+        483,
+        486,
+        489,
+        492,
+        495,
+        498,
+        501,
+        354,
+        507,
+        510
+      ],
+      [
+        513,
+        516,
+        519,
+        522,
+        525,
+        528,
+        531,
+        534,
+        537,
+        540,
+        393,
+        546
+      ]
+    ],
+    "supply": [
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330,
+      360,
+      390,
+      420,
+      930
+    ],
+    "demand": [
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330,
+      360,
+      390,
+      420,
+      450,
+      480
+    ],
+    "source": "E02",
+    "locator": "rbsm_S3.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "24d1055a63e14e04c4f41122542d95895a3b5cfab411fcd1190147e98fae8d67",
+    "balanced_sha256": "24d1055a63e14e04c4f41122542d95895a3b5cfab411fcd1190147e98fae8d67"
+  },
+  {
+    "id": "RBSM_S4",
+    "costs": [
+      [
+        13,
+        35,
+        30,
+        36,
+        35,
+        30,
+        30,
+        33,
+        31,
+        36,
+        15,
+        39
+      ],
+      [
+        39,
+        30,
+        25,
+        32,
+        28,
+        13,
+        11,
+        32,
+        34,
+        27,
+        14,
+        25
+      ],
+      [
+        12,
+        39,
+        15,
+        11,
+        13,
+        30,
+        30,
+        31,
+        12,
+        25,
+        32,
+        13
+      ],
+      [
+        33,
+        10,
+        14,
+        38,
+        38,
+        12,
+        12,
+        15,
+        13,
+        15,
+        37,
+        14
+      ],
+      [
+        37,
+        11,
+        25,
+        10,
+        14,
+        35,
+        29,
+        14,
+        33,
+        14,
+        37,
+        37
+      ],
+      [
+        79,
+        88,
+        70,
+        70,
+        83,
+        71,
+        92,
+        93,
+        77,
+        95,
+        82,
+        77
+      ],
+      [
+        80,
+        98,
+        98,
+        84,
+        73,
+        91,
+        88,
+        86,
+        81,
+        78,
+        73,
+        73
+      ],
+      [
+        83,
+        94,
+        77,
+        94,
+        76,
+        91,
+        81,
+        70,
+        85,
+        91,
+        99,
+        84
+      ],
+      [
+        78,
+        75,
+        78,
+        81,
+        79,
+        81,
+        81,
+        98,
+        83,
+        95,
+        88,
+        77
+      ],
+      [
+        99,
+        81,
+        79,
+        87,
+        89,
+        81,
+        76,
+        74,
+        76,
+        78,
+        89,
+        94
+      ],
+      [
+        91,
+        83,
+        80,
+        92,
+        97,
+        97,
+        80,
+        89,
+        92,
+        71,
+        83,
+        99
+      ]
+    ],
+    "supply": [
+      200,
+      106,
+      139,
+      137,
+      249,
+      171,
+      172,
+      113,
+      230,
+      241,
+      199
+    ],
+    "demand": [
+      315,
+      309,
+      41,
+      43,
+      110,
+      162,
+      274,
+      184,
+      70,
+      201,
+      125,
+      123
+    ],
+    "source": "E02",
+    "locator": "rbsm_S4.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "74a78d98103f2bda745ce41df71265ee5c98cb66f16b6374d9e69387aa1289fc",
+    "balanced_sha256": "74a78d98103f2bda745ce41df71265ee5c98cb66f16b6374d9e69387aa1289fc"
+  },
+  {
+    "id": "RBSM_S5",
+    "costs": [
+      [
+        1,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        12
+      ],
+      [
+        63,
+        14,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      [
+        75,
+        76,
+        27,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      [
+        87,
+        88,
+        89,
+        40,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      [
+        99,
+        100,
+        101,
+        102,
+        53,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      [
+        111,
+        112,
+        113,
+        114,
+        115,
+        66,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        79,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      [
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        92,
+        143,
+        144,
+        145,
+        146
+      ],
+      [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        105,
+        156,
+        157,
+        158
+      ],
+      [
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        118,
+        169,
+        170
+      ],
+      [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        131,
+        182
+      ]
+    ],
+    "supply": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      310
+    ],
+    "demand": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160
+    ],
+    "source": "E02",
+    "locator": "rbsm_S5.txt",
+    "claims": {},
+    "note": "Public author file. Some instances already contain dummy rows/columns.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d",
+    "balanced_sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d"
+  },
+  {
+    "id": "CSM_N01",
+    "costs": [
+      [
+        32,
+        40,
+        120
+      ],
+      [
+        60,
+        68,
+        104
+      ],
+      [
+        200,
+        80,
+        60
+      ]
+    ],
+    "supply": [
+      20,
+      30,
+      45
+    ],
+    "demand": [
+      30,
+      35,
+      30
+    ],
+    "source": "E12",
+    "locator": "Data document N01",
+    "claims": {
+      "optimal": 5600
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66",
+    "balanced_sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66"
+  },
+  {
+    "id": "CSM_N02",
+    "costs": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        4,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1
+      ]
+    ],
+    "supply": [
+      6,
+      8,
+      10
+    ],
+    "demand": [
+      4,
+      6,
+      8,
+      6
+    ],
+    "source": "E12",
+    "locator": "Data document N02",
+    "claims": {
+      "optimal": 28
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672",
+    "balanced_sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672"
+  },
+  {
+    "id": "CSM_N03",
+    "costs": [
+      [
+        73,
+        40,
+        9,
+        79,
+        20
+      ],
+      [
+        62,
+        93,
+        96,
+        8,
+        13
+      ],
+      [
+        96,
+        65,
+        80,
+        50,
+        65
+      ],
+      [
+        57,
+        58,
+        29,
+        12,
+        87
+      ],
+      [
+        56,
+        23,
+        87,
+        18,
+        1
+      ]
+    ],
+    "supply": [
+      8,
+      7,
+      9,
+      3,
+      5
+    ],
+    "demand": [
+      6,
+      8,
+      10,
+      4,
+      4
+    ],
+    "source": "E12",
+    "locator": "Data document N03",
+    "claims": {
+      "optimal": 1102
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "c46f8a6ca69f7e144d0fe9fc1a83c836d4a18a20d67dc83b32ba8343e63bbf4f",
+    "balanced_sha256": "c46f8a6ca69f7e144d0fe9fc1a83c836d4a18a20d67dc83b32ba8343e63bbf4f"
+  },
+  {
+    "id": "CSM_N04",
+    "costs": [
+      [
+        6,
+        4,
+        4,
+        7,
+        5
+      ],
+      [
+        5,
+        6,
+        7,
+        4,
+        8
+      ],
+      [
+        3,
+        4,
+        6,
+        3,
+        4
+      ]
+    ],
+    "supply": [
+      100,
+      125,
+      175
+    ],
+    "demand": [
+      60,
+      80,
+      85,
+      105,
+      70
+    ],
+    "source": "E12",
+    "locator": "Data document N04",
+    "claims": {
+      "optimal": 1580
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "c22697fdf87ba1324fb0be107632ccfa354eb5b7db39a0511aacc6220fb89ea7",
+    "balanced_sha256": "c22697fdf87ba1324fb0be107632ccfa354eb5b7db39a0511aacc6220fb89ea7"
+  },
+  {
+    "id": "CSM_N05",
+    "costs": [
+      [
+        7,
+        5,
+        9,
+        11
+      ],
+      [
+        4,
+        3,
+        8,
+        6
+      ],
+      [
+        3,
+        8,
+        10,
+        5
+      ],
+      [
+        2,
+        6,
+        7,
+        3
+      ]
+    ],
+    "supply": [
+      30,
+      25,
+      20,
+      15
+    ],
+    "demand": [
+      30,
+      30,
+      20,
+      10
+    ],
+    "source": "E12",
+    "locator": "Data document N05",
+    "claims": {
+      "optimal": 410
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274",
+    "balanced_sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274"
+  },
+  {
+    "id": "CSM_N06",
+    "costs": [
+      [
+        3,
+        1,
+        7,
+        4
+      ],
+      [
+        2,
+        6,
+        5,
+        9
+      ],
+      [
+        8,
+        3,
+        3,
+        2
+      ]
+    ],
+    "supply": [
+      300,
+      400,
+      500
+    ],
+    "demand": [
+      250,
+      350,
+      400,
+      200
+    ],
+    "source": "E12",
+    "locator": "Data document N06",
+    "claims": {
+      "optimal": 2850
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "53b66343aa10d7ae77da570af39554d3986b703d36de65d6ea2b2f3a4d2346d0",
+    "balanced_sha256": "53b66343aa10d7ae77da570af39554d3986b703d36de65d6ea2b2f3a4d2346d0"
+  },
+  {
+    "id": "CSM_N07",
+    "costs": [
+      [
+        6,
+        1,
+        9,
+        3
+      ],
+      [
+        11,
+        5,
+        2,
+        8
+      ],
+      [
+        10,
+        12,
+        4,
+        7
+      ]
+    ],
+    "supply": [
+      70,
+      55,
+      90
+    ],
+    "demand": [
+      85,
+      35,
+      50,
+      45
+    ],
+    "source": "E12",
+    "locator": "Data document N07",
+    "claims": {
+      "optimal": 1160
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb",
+    "balanced_sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb"
+  },
+  {
+    "id": "CSM_N09",
+    "costs": [
+      [
+        4,
+        6,
+        5,
+        2
+      ],
+      [
+        6,
+        4,
+        1,
+        4
+      ],
+      [
+        5,
+        2,
+        3,
+        1
+      ],
+      [
+        4,
+        6,
+        7,
+        8
+      ]
+    ],
+    "supply": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "demand": [
+      9,
+      16,
+      10,
+      7
+    ],
+    "source": "E12",
+    "locator": "Data document N09",
+    "claims": {
+      "optimal": 111
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636",
+    "balanced_sha256": "45f1baf5888533706fe4a72c761ad51961793593fd29bbbd62a4bad7b9720636"
+  },
+  {
+    "id": "CSM_N10",
+    "costs": [
+      [
+        20,
+        2,
+        20,
+        11
+      ],
+      [
+        24,
+        7,
+        9,
+        20
+      ],
+      [
+        8,
+        14,
+        16,
+        18
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      20
+    ],
+    "demand": [
+      10,
+      30,
+      30,
+      30
+    ],
+    "source": "E12",
+    "locator": "Data document N10",
+    "claims": {
+      "optimal": 910
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "193df7ecbdb7b2d4afbbb6e8c81161160350f72bc78b380ffe338f50d5f4ed75",
+    "balanced_sha256": "193df7ecbdb7b2d4afbbb6e8c81161160350f72bc78b380ffe338f50d5f4ed75"
+  },
+  {
+    "id": "CSM_N11",
+    "costs": [
+      [
+        10,
+        2,
+        20,
+        22
+      ],
+      [
+        12,
+        7,
+        9,
+        40
+      ],
+      [
+        4,
+        14,
+        16,
+        32
+      ]
+    ],
+    "supply": [
+      60,
+      100,
+      40
+    ],
+    "demand": [
+      20,
+      60,
+      60,
+      60
+    ],
+    "source": "E12",
+    "locator": "Data document N11",
+    "claims": {
+      "optimal": 2460
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "012fd64a54d0ec3c484fff4216697b2c43728094a6c0db9ab11b1c8a654cce33",
+    "balanced_sha256": "012fd64a54d0ec3c484fff4216697b2c43728094a6c0db9ab11b1c8a654cce33"
+  },
+  {
+    "id": "CSM_N12",
+    "costs": [
+      [
+        15,
+        7,
+        25
+      ],
+      [
+        8,
+        12,
+        14
+      ],
+      [
+        17,
+        19,
+        21
+      ]
+    ],
+    "supply": [
+      12,
+      17,
+      7
+    ],
+    "demand": [
+      12,
+      10,
+      14
+    ],
+    "source": "E12",
+    "locator": "Data document N12",
+    "claims": {
+      "optimal": 425
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0",
+    "balanced_sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0"
+  },
+  {
+    "id": "CSM_N13",
+    "costs": [
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        7,
+        11,
+        11
+      ],
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    "supply": [
+      150,
+      175,
+      275
+    ],
+    "demand": [
+      200,
+      100,
+      300
+    ],
+    "source": "E12",
+    "locator": "Data document N13",
+    "claims": {
+      "optimal": 4525
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502",
+    "balanced_sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502"
+  },
+  {
+    "id": "CSM_N14",
+    "costs": [
+      [
+        4,
+        6,
+        8,
+        8
+      ],
+      [
+        6,
+        8,
+        6,
+        7
+      ],
+      [
+        5,
+        7,
+        6,
+        8
+      ]
+    ],
+    "supply": [
+      40,
+      60,
+      50
+    ],
+    "demand": [
+      20,
+      30,
+      50,
+      50
+    ],
+    "source": "E12",
+    "locator": "Data document N14",
+    "claims": {
+      "optimal": 920
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0143b5d1cc24038c267ae2d5b0cdfc1b85914e0eb9f1b8f851208602fc70d92d",
+    "balanced_sha256": "0143b5d1cc24038c267ae2d5b0cdfc1b85914e0eb9f1b8f851208602fc70d92d"
+  },
+  {
+    "id": "CSM_N15",
+    "costs": [
+      [
+        4,
+        6,
+        9,
+        5
+      ],
+      [
+        2,
+        6,
+        4,
+        1
+      ],
+      [
+        5,
+        7,
+        2,
+        9
+      ]
+    ],
+    "supply": [
+      16,
+      12,
+      15
+    ],
+    "demand": [
+      12,
+      14,
+      9,
+      8
+    ],
+    "source": "E12",
+    "locator": "Data document N15",
+    "claims": {
+      "optimal": 156
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "455545b77ad0ff5c767b39673c0f842dd089622a434605768b3a93a09e6f061e",
+    "balanced_sha256": "455545b77ad0ff5c767b39673c0f842dd089622a434605768b3a93a09e6f061e"
+  },
+  {
+    "id": "CSM_N16",
+    "costs": [
+      [
+        22,
+        17,
+        25,
+        15
+      ],
+      [
+        13,
+        10,
+        16,
+        20
+      ],
+      [
+        16,
+        19,
+        9,
+        5
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      50
+    ],
+    "demand": [
+      30,
+      30,
+      50,
+      20
+    ],
+    "source": "E12",
+    "locator": "Data document N16",
+    "claims": {
+      "optimal": 1510
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "791a4531c7396f8af842720fcb047e33cec7431074da4e683f9209dab5587253",
+    "balanced_sha256": "791a4531c7396f8af842720fcb047e33cec7431074da4e683f9209dab5587253"
+  },
+  {
+    "id": "CSM_N17",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        10
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        8,
+        70,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      9,
+      18
+    ],
+    "demand": [
+      5,
+      8,
+      7,
+      14
+    ],
+    "source": "E12",
+    "locator": "Data document N17",
+    "claims": {
+      "optimal": 743
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55",
+    "balanced_sha256": "f30eea4980738292a0590f7a050b07dd528ede84dcf6f9c94999fe832ff27b55"
+  },
+  {
+    "id": "CSM_N18",
+    "costs": [
+      [
+        2,
+        5,
+        4
+      ],
+      [
+        6,
+        1,
+        2
+      ],
+      [
+        4,
+        5,
+        2
+      ]
+    ],
+    "supply": [
+      4,
+      6,
+      6
+    ],
+    "demand": [
+      3,
+      7,
+      6
+    ],
+    "source": "E12",
+    "locator": "Data document N18",
+    "claims": {
+      "optimal": 29
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6041fc47a273549ba8b279d2f62302dc65385f889864c092b3e9c0c3eb9caf1b",
+    "balanced_sha256": "6041fc47a273549ba8b279d2f62302dc65385f889864c092b3e9c0c3eb9caf1b"
+  },
+  {
+    "id": "CSM_N21",
+    "costs": [
+      [
+        135,
+        71,
+        260
+      ],
+      [
+        81,
+        126,
+        144
+      ],
+      [
+        170,
+        189,
+        201
+      ]
+    ],
+    "supply": [
+      12,
+      17,
+      7
+    ],
+    "demand": [
+      12,
+      10,
+      14
+    ],
+    "source": "E12",
+    "locator": "Data document N21",
+    "claims": {
+      "optimal": 4205
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4c95716824ce39207a8c950b9991f2ffbfd80f17b7bd2771a18664593c3fb758",
+    "balanced_sha256": "4c95716824ce39207a8c950b9991f2ffbfd80f17b7bd2771a18664593c3fb758"
+  },
+  {
+    "id": "CSM_N22",
+    "costs": [
+      [
+        11,
+        13,
+        17,
+        14
+      ],
+      [
+        16,
+        18,
+        14,
+        10
+      ],
+      [
+        21,
+        24,
+        13,
+        10
+      ]
+    ],
+    "supply": [
+      250,
+      300,
+      400
+    ],
+    "demand": [
+      200,
+      225,
+      275,
+      250
+    ],
+    "source": "E12",
+    "locator": "Data document N22",
+    "claims": {
+      "optimal": 12075
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "ebfe7f57472c26ecd9e80a59716a73e8d521eb9f26ec238ecc30edec3c8b7998",
+    "balanced_sha256": "ebfe7f57472c26ecd9e80a59716a73e8d521eb9f26ec238ecc30edec3c8b7998"
+  },
+  {
+    "id": "CSM_N23",
+    "costs": [
+      [
+        7,
+        2,
+        3,
+        7
+      ],
+      [
+        1,
+        5,
+        4,
+        5
+      ],
+      [
+        7,
+        2,
+        4,
+        5
+      ]
+    ],
+    "supply": [
+      2,
+      1,
+      3
+    ],
+    "demand": [
+      2,
+      1,
+      1,
+      2
+    ],
+    "source": "E12",
+    "locator": "Data document N23",
+    "claims": {
+      "optimal": 23
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "9058ef7ade6769c633b99c18d36b1a2ce101c328f61dae542b07dceab74b90db",
+    "balanced_sha256": "9058ef7ade6769c633b99c18d36b1a2ce101c328f61dae542b07dceab74b90db"
+  },
+  {
+    "id": "CSM_N24",
+    "costs": [
+      [
+        20,
+        22,
+        17,
+        4
+      ],
+      [
+        24,
+        37,
+        9,
+        7
+      ],
+      [
+        32,
+        37,
+        20,
+        15
+      ]
+    ],
+    "supply": [
+      120,
+      70,
+      50
+    ],
+    "demand": [
+      60,
+      40,
+      30,
+      110
+    ],
+    "source": "E12",
+    "locator": "Data document N24",
+    "claims": {
+      "optimal": 3460
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643",
+    "balanced_sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643"
+  },
+  {
+    "id": "CSM_N25",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        12
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        10,
+        60,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      10,
+      18
+    ],
+    "demand": [
+      5,
+      7,
+      8,
+      15
+    ],
+    "source": "E12",
+    "locator": "Data document N25",
+    "claims": {
+      "optimal": 809
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "38161767b7f3ebfd317d1cba59c949a6adf4a6d6870c0b54d959b4877f04cfd7",
+    "balanced_sha256": "38161767b7f3ebfd317d1cba59c949a6adf4a6d6870c0b54d959b4877f04cfd7"
+  },
+  {
+    "id": "CSM_N26",
+    "costs": [
+      [
+        20,
+        4,
+        6,
+        8,
+        9
+      ],
+      [
+        4,
+        10,
+        8,
+        18,
+        8
+      ],
+      [
+        9,
+        11,
+        20,
+        40,
+        6
+      ],
+      [
+        7,
+        6,
+        9,
+        14,
+        16
+      ]
+    ],
+    "supply": [
+      20,
+      30,
+      15,
+      13
+    ],
+    "demand": [
+      40,
+      6,
+      8,
+      18,
+      6
+    ],
+    "source": "E12",
+    "locator": "Data document N26",
+    "claims": {
+      "optimal": 490
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "43a0428ca967e18217aba2d7e5850e696e07d7e37230ae1f82ba00fe25c8d239",
+    "balanced_sha256": "43a0428ca967e18217aba2d7e5850e696e07d7e37230ae1f82ba00fe25c8d239"
+  },
+  {
+    "id": "CSM_N27",
+    "costs": [
+      [
+        46,
+        74,
+        9,
+        28,
+        99
+      ],
+      [
+        12,
+        75,
+        6,
+        36,
+        48
+      ],
+      [
+        35,
+        199,
+        4,
+        5,
+        71
+      ],
+      [
+        61,
+        81,
+        44,
+        88,
+        9
+      ],
+      [
+        85,
+        60,
+        14,
+        25,
+        79
+      ]
+    ],
+    "supply": [
+      461,
+      277,
+      356,
+      488,
+      393
+    ],
+    "demand": [
+      278,
+      60,
+      461,
+      116,
+      1060
+    ],
+    "source": "E12",
+    "locator": "Data document N27",
+    "claims": {
+      "optimal": 59356
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "1da9d098d10a664d4a391e10c46638804cd4ede032e4afab49838845ede041a8",
+    "balanced_sha256": "1da9d098d10a664d4a391e10c46638804cd4ede032e4afab49838845ede041a8"
+  },
+  {
+    "id": "CSM_N28",
+    "costs": [
+      [
+        2,
+        7,
+        8,
+        8,
+        3
+      ],
+      [
+        5,
+        6,
+        5,
+        5,
+        6
+      ],
+      [
+        5,
+        7,
+        8,
+        8,
+        3
+      ]
+    ],
+    "supply": [
+      2,
+      3,
+      5
+    ],
+    "demand": [
+      3,
+      1,
+      1,
+      2,
+      3
+    ],
+    "source": "E12",
+    "locator": "Data document N28",
+    "claims": {
+      "optimal": 40
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "330b5eaee7ddf1ada77b6e6d792cf358ecbbaf362484bc02764dd4a103692ad0",
+    "balanced_sha256": "330b5eaee7ddf1ada77b6e6d792cf358ecbbaf362484bc02764dd4a103692ad0"
+  },
+  {
+    "id": "CSM_N29",
+    "costs": [
+      [
+        15,
+        1,
+        42,
+        33
+      ],
+      [
+        80,
+        42,
+        26,
+        81
+      ],
+      [
+        90,
+        40,
+        66,
+        60
+      ]
+    ],
+    "supply": [
+      23,
+      44,
+      33
+    ],
+    "demand": [
+      23,
+      31,
+      16,
+      30
+    ],
+    "source": "E12",
+    "locator": "Data document N29",
+    "claims": {
+      "optimal": 3857
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f89c35a4257357e50c50596a45588f2dcd0933d8630d7c1a0498c0785d5021c3",
+    "balanced_sha256": "f89c35a4257357e50c50596a45588f2dcd0933d8630d7c1a0498c0785d5021c3"
+  },
+  {
+    "id": "CSM_N30",
+    "costs": [
+      [
+        13,
+        21,
+        14
+      ],
+      [
+        8,
+        12,
+        21
+      ],
+      [
+        15,
+        17,
+        19
+      ]
+    ],
+    "supply": [
+      13,
+      20,
+      5
+    ],
+    "demand": [
+      12,
+      15,
+      11
+    ],
+    "source": "E12",
+    "locator": "Data document N30",
+    "claims": {
+      "optimal": 465
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5",
+    "balanced_sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5"
+  },
+  {
+    "id": "CSM_N31",
+    "costs": [
+      [
+        15,
+        27,
+        13,
+        19
+      ],
+      [
+        18,
+        21,
+        24,
+        14
+      ],
+      [
+        21,
+        15,
+        16,
+        17
+      ]
+    ],
+    "supply": [
+      40,
+      40,
+      20
+    ],
+    "demand": [
+      30,
+      20,
+      30,
+      20
+    ],
+    "source": "E12",
+    "locator": "Data document N31",
+    "claims": {
+      "optimal": 1480
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "58bd7bb61285460b8914a2ce49dff9d8383edbc3e3db8b7ef5f003b5f1c656e6",
+    "balanced_sha256": "58bd7bb61285460b8914a2ce49dff9d8383edbc3e3db8b7ef5f003b5f1c656e6"
+  },
+  {
+    "id": "CSM_N32",
+    "costs": [
+      [
+        4,
+        4,
+        9,
+        10,
+        13
+      ],
+      [
+        7,
+        9,
+        8,
+        10,
+        4
+      ],
+      [
+        9,
+        3,
+        7,
+        10,
+        6
+      ],
+      [
+        11,
+        4,
+        10,
+        6,
+        9
+      ]
+    ],
+    "supply": [
+      100,
+      90,
+      80,
+      70
+    ],
+    "demand": [
+      60,
+      40,
+      90,
+      70,
+      80
+    ],
+    "source": "E12",
+    "locator": "Data document N32",
+    "claims": {
+      "optimal": 348
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10",
+    "balanced_sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10"
+  },
+  {
+    "id": "CSM_N33",
+    "costs": [
+      [
+        400,
+        510,
+        800,
+        270
+      ],
+      [
+        600,
+        450,
+        750,
+        500
+      ]
+    ],
+    "supply": [
+      200,
+      100
+    ],
+    "demand": [
+      100,
+      100,
+      75,
+      25
+    ],
+    "source": "E12",
+    "locator": "Data document N33",
+    "claims": {
+      "optimal": 151750
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b3fd43070fe9b46d549e1e6a90380c6e44313909801aa19809d7945a8487afce",
+    "balanced_sha256": "b3fd43070fe9b46d549e1e6a90380c6e44313909801aa19809d7945a8487afce"
+  },
+  {
+    "id": "CSM_N34",
+    "costs": [
+      [
+        7,
+        6,
+        4,
+        5,
+        9
+      ],
+      [
+        8,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        6,
+        8,
+        9,
+        6,
+        5
+      ],
+      [
+        5,
+        7,
+        7,
+        8,
+        6
+      ]
+    ],
+    "supply": [
+      40,
+      30,
+      20,
+      10
+    ],
+    "demand": [
+      30,
+      30,
+      15,
+      20,
+      5
+    ],
+    "source": "E12",
+    "locator": "Data document N34",
+    "claims": {
+      "optimal": 510
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0b9ce45bcea992d9f2681e325947384edaa4a6428c823a1c8ea33834f6041149",
+    "balanced_sha256": "0b9ce45bcea992d9f2681e325947384edaa4a6428c823a1c8ea33834f6041149"
+  },
+  {
+    "id": "CSM_N35",
+    "costs": [
+      [
+        13,
+        18,
+        30,
+        8
+      ],
+      [
+        55,
+        20,
+        25,
+        40
+      ],
+      [
+        30,
+        6,
+        50,
+        10
+      ]
+    ],
+    "supply": [
+      8,
+      10,
+      11
+    ],
+    "demand": [
+      4,
+      7,
+      6,
+      12
+    ],
+    "source": "E12",
+    "locator": "Data document N35",
+    "claims": {
+      "optimal": 417
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "ab3ac4a692c6ed3215ead6bf7889b1abfa8a788b0f6037cbf312fdd5abe9edfd",
+    "balanced_sha256": "ab3ac4a692c6ed3215ead6bf7889b1abfa8a788b0f6037cbf312fdd5abe9edfd"
+  },
+  {
+    "id": "CSM_S1",
+    "costs": [
+      [
+        27,
+        27,
+        9,
+        33,
+        9
+      ],
+      [
+        36,
+        15,
+        33,
+        30,
+        15
+      ],
+      [
+        18,
+        21,
+        27,
+        36,
+        33
+      ],
+      [
+        33,
+        36,
+        21,
+        24,
+        9
+      ],
+      [
+        27,
+        9,
+        9,
+        21,
+        15
+      ]
+    ],
+    "supply": [
+      150,
+      240,
+      135,
+      300,
+      285
+    ],
+    "demand": [
+      270,
+      195,
+      210,
+      270,
+      165
+    ],
+    "source": "E12",
+    "locator": "Data document S1",
+    "claims": {
+      "optimal": 18855
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "bc7aca5ca984c98fbf70b8c193e4dce1d3d6c1e6b0942f7dd8be1ef7d8ed8f4d",
+    "balanced_sha256": "bc7aca5ca984c98fbf70b8c193e4dce1d3d6c1e6b0942f7dd8be1ef7d8ed8f4d"
+  },
+  {
+    "id": "CSM_S2",
+    "costs": [
+      [
+        80,
+        80,
+        20,
+        100,
+        20
+      ],
+      [
+        110,
+        40,
+        100,
+        90,
+        40
+      ],
+      [
+        50,
+        60,
+        80,
+        110,
+        100
+      ],
+      [
+        100,
+        110,
+        60,
+        70,
+        20
+      ],
+      [
+        80,
+        20,
+        20,
+        60,
+        40
+      ]
+    ],
+    "supply": [
+      400,
+      700,
+      350,
+      900,
+      850
+    ],
+    "demand": [
+      800,
+      550,
+      600,
+      800,
+      450
+    ],
+    "source": "E12",
+    "locator": "Data document S2",
+    "claims": {
+      "optimal": 2790
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "7419710d724e5981339a75d74498b08aa51421a3defe2be2e943178cc2841f7f",
+    "balanced_sha256": "7419710d724e5981339a75d74498b08aa51421a3defe2be2e943178cc2841f7f"
+  },
+  {
+    "id": "CSM_S3",
+    "costs": [
+      [
+        1,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        12
+      ],
+      [
+        63,
+        14,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      [
+        75,
+        76,
+        27,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      [
+        87,
+        88,
+        89,
+        40,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      [
+        99,
+        100,
+        101,
+        102,
+        53,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      [
+        111,
+        112,
+        113,
+        114,
+        115,
+        66,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        79,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      [
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        92,
+        143,
+        144,
+        145,
+        146
+      ],
+      [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        105,
+        156,
+        157,
+        158
+      ],
+      [
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        118,
+        169,
+        170
+      ],
+      [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        131,
+        182
+      ]
+    ],
+    "supply": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      310
+    ],
+    "demand": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160
+    ],
+    "source": "E12",
+    "locator": "Data document S3",
+    "claims": {
+      "optimal": 1044180
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d",
+    "balanced_sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d"
+  },
+  {
+    "id": "CSM_S4",
+    "costs": [
+      [
+        13,
+        35,
+        30,
+        36,
+        35,
+        30,
+        30,
+        33,
+        31,
+        36,
+        15,
+        39
+      ],
+      [
+        39,
+        30,
+        25,
+        32,
+        28,
+        13,
+        11,
+        32,
+        34,
+        27,
+        14,
+        25
+      ],
+      [
+        12,
+        39,
+        15,
+        11,
+        13,
+        30,
+        30,
+        31,
+        12,
+        25,
+        32,
+        13
+      ],
+      [
+        33,
+        10,
+        14,
+        38,
+        38,
+        12,
+        12,
+        15,
+        13,
+        15,
+        37,
+        14
+      ],
+      [
+        37,
+        11,
+        25,
+        10,
+        14,
+        35,
+        29,
+        14,
+        33,
+        14,
+        37,
+        37
+      ],
+      [
+        79,
+        88,
+        70,
+        70,
+        83,
+        71,
+        92,
+        93,
+        77,
+        95,
+        82,
+        77
+      ],
+      [
+        80,
+        98,
+        98,
+        84,
+        73,
+        91,
+        88,
+        86,
+        81,
+        78,
+        73,
+        73
+      ],
+      [
+        83,
+        94,
+        77,
+        94,
+        76,
+        91,
+        81,
+        70,
+        85,
+        91,
+        99,
+        84
+      ],
+      [
+        78,
+        75,
+        78,
+        81,
+        79,
+        81,
+        81,
+        98,
+        83,
+        95,
+        88,
+        77
+      ],
+      [
+        99,
+        81,
+        79,
+        87,
+        89,
+        81,
+        76,
+        74,
+        76,
+        78,
+        89,
+        94
+      ],
+      [
+        91,
+        83,
+        80,
+        92,
+        97,
+        97,
+        80,
+        89,
+        92,
+        71,
+        83,
+        99
+      ]
+    ],
+    "supply": [
+      200,
+      106,
+      139,
+      137,
+      249,
+      171,
+      172,
+      113,
+      230,
+      241,
+      199
+    ],
+    "demand": [
+      315,
+      309,
+      41,
+      43,
+      110,
+      162,
+      274,
+      184,
+      70,
+      201,
+      125,
+      123
+    ],
+    "source": "E12",
+    "locator": "Data document S4",
+    "claims": {
+      "optimal": 92212
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "74a78d98103f2bda745ce41df71265ee5c98cb66f16b6374d9e69387aa1289fc",
+    "balanced_sha256": "74a78d98103f2bda745ce41df71265ee5c98cb66f16b6374d9e69387aa1289fc"
+  },
+  {
+    "id": "CSM_S5",
+    "costs": [
+      [
+        1,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        12
+      ],
+      [
+        63,
+        14,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      [
+        75,
+        76,
+        27,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      [
+        87,
+        88,
+        89,
+        40,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      [
+        99,
+        100,
+        101,
+        102,
+        53,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      [
+        111,
+        112,
+        113,
+        114,
+        115,
+        66,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        79,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      [
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        92,
+        143,
+        144,
+        145,
+        146
+      ],
+      [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        105,
+        156,
+        157,
+        158
+      ],
+      [
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        118,
+        169,
+        170
+      ],
+      [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        131,
+        182
+      ]
+    ],
+    "supply": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      310
+    ],
+    "demand": [
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160
+    ],
+    "source": "E12",
+    "locator": "Data document S5",
+    "claims": {
+      "optimal": 116020
+    },
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_synthetic",
+    "balanced": true,
+    "sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d",
+    "balanced_sha256": "db5180ac913ccb2563d0d448608d566efb33c30d8f07822353ea1b9e1a37fe4d"
+  },
+  {
+    "id": "CSM_Real1",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      308252,
+      138801
+    ],
+    "demand": [
+      3852,
+      4759,
+      1312,
+      3451,
+      7537,
+      2827,
+      3878,
+      15224,
+      2530,
+      5690,
+      2494,
+      2383,
+      32901,
+      7314,
+      2486,
+      0,
+      249,
+      2735,
+      498,
+      1989,
+      4475,
+      6091,
+      373,
+      5492,
+      17978,
+      4305,
+      23799,
+      1597,
+      2773,
+      2556,
+      48509,
+      3279,
+      4183,
+      1303,
+      795,
+      4024,
+      1381,
+      2597,
+      1666,
+      4848,
+      125,
+      0,
+      0,
+      10192,
+      0,
+      4475,
+      3356,
+      0,
+      2611,
+      2984,
+      1368,
+      0,
+      1119,
+      249,
+      0,
+      9447,
+      2984,
+      2362,
+      125,
+      2984,
+      26599,
+      746,
+      249,
+      0,
+      14055,
+      1437,
+      2283,
+      556,
+      812,
+      5786,
+      2034,
+      5911,
+      5026,
+      524,
+      1133,
+      464,
+      1792,
+      1330,
+      1457,
+      1668,
+      3827,
+      7947,
+      297,
+      759,
+      9074,
+      1436,
+      864,
+      2217,
+      1160,
+      519,
+      4166,
+      614,
+      19405,
+      30392
+    ],
+    "source": "E12",
+    "locator": "Data document Real1",
+    "claims": {},
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_real",
+    "balanced": true,
+    "sha256": "45bb2a6cd54f6d0e897d95819c92e8d2878925cba5367874805af852f7948ee8",
+    "balanced_sha256": "45bb2a6cd54f6d0e897d95819c92e8d2878925cba5367874805af852f7948ee8"
+  },
+  {
+    "id": "CSM_Real2",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      341015,
+      138738
+    ],
+    "demand": [
+      3332,
+      3976,
+      1252,
+      3494,
+      9871,
+      3027,
+      5214,
+      20029,
+      2437,
+      5584,
+      2615,
+      2184,
+      39154,
+      6641,
+      2735,
+      0,
+      249,
+      2984,
+      746,
+      2238,
+      4848,
+      6837,
+      373,
+      4677,
+      17447,
+      4487,
+      24968,
+      1804,
+      3137,
+      2538,
+      50087,
+      3445,
+      4375,
+      1444,
+      919,
+      4024,
+      1389,
+      2960,
+      1660,
+      5221,
+      125,
+      0,
+      0,
+      11063,
+      0,
+      4972,
+      3729,
+      125,
+      2859,
+      5096,
+      1492,
+      0,
+      871,
+      249,
+      125,
+      10129,
+      3232,
+      2735,
+      249,
+      12554,
+      28961,
+      746,
+      125,
+      0,
+      12664,
+      1382,
+      2405,
+      479,
+      724,
+      6258,
+      1924,
+      5195,
+      5217,
+      536,
+      924,
+      385,
+      2053,
+      1111,
+      1340,
+      1712,
+      3630,
+      8300,
+      321,
+      679,
+      8954,
+      1385,
+      862,
+      2372,
+      1225,
+      480,
+      4369,
+      556,
+      20814,
+      27658
+    ],
+    "source": "E12",
+    "locator": "Data document Real2",
+    "claims": {},
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_real",
+    "balanced": true,
+    "sha256": "1eb2f83000ab530c3cdf9c9c36b613c52449cdab2ff351731a8b27cbfc8a46ab",
+    "balanced_sha256": "1eb2f83000ab530c3cdf9c9c36b613c52449cdab2ff351731a8b27cbfc8a46ab"
+  },
+  {
+    "id": "CSM_Real3",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      280110,
+      138801
+    ],
+    "demand": [
+      3300,
+      4628,
+      1250,
+      2852,
+      8202,
+      2916,
+      3912,
+      16157,
+      2695,
+      5526,
+      2699,
+      2271,
+      41855,
+      7074,
+      1616,
+      0,
+      125,
+      1741,
+      373,
+      1243,
+      2859,
+      3854,
+      249,
+      5151,
+      17117,
+      4368,
+      24291,
+      1560,
+      2679,
+      2952,
+      42223,
+      3585,
+      4182,
+      1423,
+      838,
+      3282,
+      1491,
+      2324,
+      1553,
+      3108,
+      125,
+      0,
+      125,
+      6464,
+      0,
+      2859,
+      2238,
+      0,
+      1616,
+      2921,
+      871,
+      0,
+      498,
+      125,
+      0,
+      6091,
+      1865,
+      1616,
+      125,
+      2921,
+      17029,
+      498,
+      249,
+      0,
+      13885,
+      1516,
+      2480,
+      410,
+      799,
+      6616,
+      1980,
+      5900,
+      4721,
+      584,
+      1032,
+      419,
+      1702,
+      1290,
+      1536,
+      1725,
+      3455,
+      7792,
+      341,
+      632,
+      9100,
+      1269,
+      897,
+      2333,
+      1296,
+      452,
+      3957,
+      487,
+      20317,
+      32228
+    ],
+    "source": "E12",
+    "locator": "Data document Real3",
+    "claims": {},
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_real",
+    "balanced": true,
+    "sha256": "51d0baabf08af223266817cce6b6ab4e9399e5bf0d021a8855d679751ab52546",
+    "balanced_sha256": "51d0baabf08af223266817cce6b6ab4e9399e5bf0d021a8855d679751ab52546"
+  },
+  {
+    "id": "CSM_Real4",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      350910,
+      142165
+    ],
+    "demand": [
+      3512,
+      4300,
+      1291,
+      3477,
+      9394,
+      3031,
+      4597,
+      22500,
+      1776,
+      5384,
+      2824,
+      2530,
+      42638,
+      7341,
+      2735,
+      0,
+      249,
+      2984,
+      746,
+      2238,
+      4848,
+      6837,
+      3737,
+      5858,
+      16806,
+      4210,
+      24717,
+      1715,
+      2549,
+      2520,
+      50440,
+      3185,
+      4359,
+      1437,
+      914,
+      3120,
+      1551,
+      2109,
+      1578,
+      5345,
+      125,
+      0,
+      0,
+      11187,
+      0,
+      4972,
+      3729,
+      125,
+      2859,
+      8452,
+      1492,
+      0,
+      871,
+      249,
+      125,
+      10317,
+      3232,
+      2735,
+      249,
+      8452,
+      29085,
+      746,
+      373,
+      0,
+      13607,
+      1421,
+      2068,
+      554,
+      877,
+      6207,
+      1844,
+      6259,
+      4824,
+      610,
+      1175,
+      403,
+      1840,
+      1110,
+      1389,
+      1739,
+      3546,
+      8113,
+      348,
+      753,
+      8366,
+      1329,
+      970,
+      2121,
+      1181,
+      530,
+      3778,
+      497,
+      19912,
+      34947
+    ],
+    "source": "E12",
+    "locator": "Data document Real4",
+    "claims": {},
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_real",
+    "balanced": true,
+    "sha256": "e93fd66b430c02490165f37e2be43ba28708c79367a40b9268b0aa516dead838",
+    "balanced_sha256": "e93fd66b430c02490165f37e2be43ba28708c79367a40b9268b0aa516dead838"
+  },
+  {
+    "id": "CSM_Real5",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      359746,
+      138801
+    ],
+    "demand": [
+      3269,
+      4456,
+      1277,
+      2783,
+      8888,
+      3679,
+      4621,
+      18426,
+      2745,
+      5940,
+      2408,
+      2437,
+      48268,
+      5585,
+      3108,
+      0,
+      249,
+      3356,
+      746,
+      2486,
+      5594,
+      7707,
+      373,
+      4944,
+      19086,
+      3758,
+      27005,
+      1884,
+      3139,
+      2275,
+      48013,
+      3411,
+      4479,
+      1386,
+      911,
+      3405,
+      1402,
+      3198,
+      1657,
+      5967,
+      249,
+      0,
+      0,
+      12678,
+      0,
+      5594,
+      4226,
+      125,
+      3232,
+      7955,
+      1616,
+      0,
+      995,
+      373,
+      125,
+      11560,
+      3605,
+      3108,
+      249,
+      7955,
+      32938,
+      871,
+      249,
+      0,
+      13500,
+      1377,
+      2189,
+      589,
+      752,
+      5974,
+      1588,
+      6085,
+      4578,
+      512,
+      1056,
+      452,
+      2240,
+      1138,
+      1268,
+      1818,
+      3634,
+      8274,
+      300,
+      703,
+      8162,
+      1308,
+      901,
+      2438,
+      1088,
+      454,
+      4199,
+      613,
+      19521,
+      29812
+    ],
+    "source": "E12",
+    "locator": "Data document Real5",
+    "claims": {},
+    "note": "Data and result documents have label/matrix inconsistencies; do not join by label alone.",
+    "kind": "author_real",
+    "balanced": true,
+    "sha256": "53343726094c9f897545674f0aa529183f13239af533dd1b605c2f9ab181e485",
+    "balanced_sha256": "53343726094c9f897545674f0aa529183f13239af533dd1b605c2f9ab181e485"
+  },
+  {
+    "id": "EDM_C01",
+    "costs": [
+      [
+        6,
+        10,
+        14
+      ],
+      [
+        12,
+        19,
+        21
+      ],
+      [
+        15,
+        14,
+        17
+      ]
+    ],
+    "supply": [
+      50,
+      50,
+      50
+    ],
+    "demand": [
+      30,
+      40,
+      55
+    ],
+    "source": "E09",
+    "locator": "C01 (Goyal,\n  1984)",
+    "claims": {
+      "optimal": 1650
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "883c9a3a9a9bae85bea99d41a6f1022afb06b75cefb93d55b1153bd4a1a291b3",
+    "balanced_sha256": "d045e85d7a717508090f62991b3b67c62a0f93fa3f3eecfb79fe70fde442c281"
+  },
+  {
+    "id": "EDM_C03",
+    "costs": [
+      [
+        32,
+        40,
+        120
+      ],
+      [
+        60,
+        68,
+        104
+      ],
+      [
+        200,
+        80,
+        60
+      ]
+    ],
+    "supply": [
+      20,
+      30,
+      45
+    ],
+    "demand": [
+      30,
+      35,
+      30
+    ],
+    "source": "E09",
+    "locator": "C03 (Ramadan\n  & Ramadan, 2012)",
+    "claims": {
+      "optimal": 5600
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66",
+    "balanced_sha256": "b98a06e146f2918c8c731858ddbd0c8a6286743c73445beca6917e7dac538f66"
+  },
+  {
+    "id": "EDM_C04",
+    "costs": [
+      [
+        6,
+        3,
+        5,
+        4
+      ],
+      [
+        5,
+        9,
+        2,
+        7
+      ],
+      [
+        5,
+        7,
+        8,
+        6
+      ]
+    ],
+    "supply": [
+      22,
+      15,
+      8
+    ],
+    "demand": [
+      7,
+      12,
+      17,
+      9
+    ],
+    "source": "E09",
+    "locator": "C04 (Uddin\n  et al., 2016)",
+    "claims": {
+      "optimal": 149
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "49535760d0f5c6dfdf9b4a0961d48354b555e34f82e98b563667a49d2323ee95",
+    "balanced_sha256": "49535760d0f5c6dfdf9b4a0961d48354b555e34f82e98b563667a49d2323ee95"
+  },
+  {
+    "id": "EDM_C05",
+    "costs": [
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        4,
+        3,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1
+      ]
+    ],
+    "supply": [
+      6,
+      8,
+      10
+    ],
+    "demand": [
+      4,
+      6,
+      8,
+      6
+    ],
+    "source": "E09",
+    "locator": "C05 (Samuel,\n  2012)",
+    "claims": {
+      "optimal": 28
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672",
+    "balanced_sha256": "777bd958ff59d76826f964808530b081a859c555bd35710b038cadb476d25672"
+  },
+  {
+    "id": "EDM_C06",
+    "costs": [
+      [
+        20,
+        22,
+        17,
+        4
+      ],
+      [
+        24,
+        37,
+        9,
+        7
+      ],
+      [
+        32,
+        37,
+        20,
+        15
+      ]
+    ],
+    "supply": [
+      120,
+      70,
+      50
+    ],
+    "demand": [
+      60,
+      40,
+      30,
+      110
+    ],
+    "source": "E09",
+    "locator": "C06 (Hosseini,\n  2017)",
+    "claims": {
+      "optimal": 3460
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643",
+    "balanced_sha256": "3a8273d2d21bc5688e2836116b782fa18bfb550715dd56702c752d99fbfda643"
+  },
+  {
+    "id": "EDM_C07",
+    "costs": [
+      [
+        19,
+        30,
+        50,
+        12
+      ],
+      [
+        70,
+        30,
+        40,
+        60
+      ],
+      [
+        40,
+        10,
+        60,
+        20
+      ]
+    ],
+    "supply": [
+      7,
+      10,
+      18
+    ],
+    "demand": [
+      5,
+      8,
+      7,
+      15
+    ],
+    "source": "E09",
+    "locator": "C07 (Uddin\n  et al., 2016)",
+    "claims": {
+      "optimal": 799
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "61d75002f08f03a60c44b4b645e1b44edfed0ea789f81ef018be3b5aacf2ea02",
+    "balanced_sha256": "61d75002f08f03a60c44b4b645e1b44edfed0ea789f81ef018be3b5aacf2ea02"
+  },
+  {
+    "id": "EDM_C08",
+    "costs": [
+      [
+        50,
+        30,
+        220
+      ],
+      [
+        90,
+        45,
+        170
+      ],
+      [
+        250,
+        200,
+        50
+      ]
+    ],
+    "supply": [
+      1,
+      3,
+      4
+    ],
+    "demand": [
+      4,
+      2,
+      2
+    ],
+    "source": "E09",
+    "locator": "C08 (Morade,\n  2017)",
+    "claims": {
+      "optimal": 820
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "c2965109f82392ee4e94aa9dca6983738147fc4e49974c44ed4b0901ffb030de",
+    "balanced_sha256": "c2965109f82392ee4e94aa9dca6983738147fc4e49974c44ed4b0901ffb030de"
+  },
+  {
+    "id": "EDM_C09",
+    "costs": [
+      [
+        7,
+        8,
+        7
+      ],
+      [
+        18,
+        8,
+        12
+      ],
+      [
+        8,
+        12,
+        12
+      ]
+    ],
+    "supply": [
+      13,
+      14,
+      8
+    ],
+    "demand": [
+      14,
+      8,
+      13
+    ],
+    "source": "E09",
+    "locator": "C09 (Amaliah\n  et al., 2019)",
+    "claims": {
+      "optimal": 291
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "26a1a599a03e1748acdfc6e135f6473d8195d6d2fac927ad5f8af40a07e1a651",
+    "balanced_sha256": "26a1a599a03e1748acdfc6e135f6473d8195d6d2fac927ad5f8af40a07e1a651"
+  },
+  {
+    "id": "EDM_C10",
+    "costs": [
+      [
+        6,
+        8,
+        10
+      ],
+      [
+        7,
+        11,
+        11
+      ],
+      [
+        4,
+        5,
+        12
+      ]
+    ],
+    "supply": [
+      150,
+      175,
+      275
+    ],
+    "demand": [
+      200,
+      100,
+      300
+    ],
+    "source": "E09",
+    "locator": "C10 (Juman\n  & Hoque, 2015)",
+    "claims": {
+      "optimal": 4525
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502",
+    "balanced_sha256": "30c43f7f779b0fa168e5ec89001cabe05a6a1c4401ea17485a9be57427117502"
+  },
+  {
+    "id": "EDM_C11",
+    "costs": [
+      [
+        9,
+        12,
+        9,
+        6,
+        9,
+        10
+      ],
+      [
+        7,
+        3,
+        7,
+        7,
+        5,
+        5
+      ],
+      [
+        6,
+        5,
+        9,
+        11,
+        3,
+        11
+      ],
+      [
+        6,
+        8,
+        11,
+        2,
+        2,
+        10
+      ]
+    ],
+    "supply": [
+      2,
+      5,
+      6,
+      9
+    ],
+    "demand": [
+      2,
+      2,
+      4,
+      4,
+      4,
+      6
+    ],
+    "source": "E09",
+    "locator": "C11 (Juman\n  & Hoque, 2015)",
+    "claims": {
+      "optimal": 109
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0c397f63bd622a47da416b172f9bf4ca12bf90a999ab72c3e00e18496dc8b405",
+    "balanced_sha256": "0c397f63bd622a47da416b172f9bf4ca12bf90a999ab72c3e00e18496dc8b405"
+  },
+  {
+    "id": "EDM_C13",
+    "costs": [
+      [
+        12,
+        4,
+        9,
+        5
+      ],
+      [
+        8,
+        1,
+        6,
+        6
+      ],
+      [
+        1,
+        2,
+        4,
+        7
+      ]
+    ],
+    "supply": [
+      55,
+      40,
+      30
+    ],
+    "demand": [
+      40,
+      20,
+      45,
+      20
+    ],
+    "source": "E09",
+    "locator": "C13 (Nath\n  Mondal et al., 2015)",
+    "claims": {
+      "optimal": 605
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "d361720de8b57d05a6710cc572939718864b153b1f0d739598b5ee6e88bfa617",
+    "balanced_sha256": "d361720de8b57d05a6710cc572939718864b153b1f0d739598b5ee6e88bfa617"
+  },
+  {
+    "id": "EDM_C14",
+    "costs": [
+      [
+        15,
+        7,
+        25
+      ],
+      [
+        8,
+        12,
+        14
+      ],
+      [
+        17,
+        19,
+        21
+      ]
+    ],
+    "supply": [
+      12,
+      17,
+      7
+    ],
+    "demand": [
+      12,
+      10,
+      14
+    ],
+    "source": "E09",
+    "locator": "C14 (Ahmed\n  et al., 2015)",
+    "claims": {
+      "optimal": 425
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0",
+    "balanced_sha256": "4a8e96d284e1136fbc06a337763e7434fbb46a76cd7f871e5ac92f8c817358f0"
+  },
+  {
+    "id": "EDM_C15",
+    "costs": [
+      [
+        13,
+        21,
+        14
+      ],
+      [
+        8,
+        12,
+        21
+      ],
+      [
+        15,
+        17,
+        19
+      ]
+    ],
+    "supply": [
+      13,
+      20,
+      5
+    ],
+    "demand": [
+      12,
+      15,
+      11
+    ],
+    "source": "E09",
+    "locator": "C15 (Ahmed\n  et al., 2015)",
+    "claims": {
+      "optimal": 465
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5",
+    "balanced_sha256": "6bbb5e17049d6f27a14822fe2d8b32d7b3c2d26d69f44dc64fbbbcbfaf7a1ad5"
+  },
+  {
+    "id": "EDM_C16",
+    "costs": [
+      [
+        1,
+        2,
+        1,
+        4
+      ],
+      [
+        4,
+        2,
+        5,
+        9
+      ],
+      [
+        20,
+        40,
+        30,
+        10
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      20
+    ],
+    "demand": [
+      20,
+      40,
+      30,
+      10
+    ],
+    "source": "E09",
+    "locator": "C16 (Uddin\n  et al., 2016)",
+    "claims": {
+      "optimal": 450
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "0047104dcdbf2eeefa3eebb84fe86ce6ab6915b0c2a56aac5e8e556d311ef163",
+    "balanced_sha256": "0047104dcdbf2eeefa3eebb84fe86ce6ab6915b0c2a56aac5e8e556d311ef163"
+  },
+  {
+    "id": "EDM_C17",
+    "costs": [
+      [
+        6,
+        1,
+        9,
+        3
+      ],
+      [
+        11,
+        5,
+        2,
+        8
+      ],
+      [
+        10,
+        12,
+        4,
+        7
+      ]
+    ],
+    "supply": [
+      70,
+      55,
+      90
+    ],
+    "demand": [
+      85,
+      35,
+      50,
+      45
+    ],
+    "source": "E09",
+    "locator": "C17 (Das\n  et al., 2014)",
+    "claims": {
+      "optimal": 1160
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb",
+    "balanced_sha256": "43fa0a854497916396de2b350f3f006d5d4e5094d71c5009b6c62fc11adb0dcb"
+  },
+  {
+    "id": "EDM_C19",
+    "costs": [
+      [
+        3,
+        4,
+        6
+      ],
+      [
+        7,
+        3,
+        8
+      ],
+      [
+        6,
+        4,
+        5
+      ],
+      [
+        7,
+        5,
+        2
+      ]
+    ],
+    "supply": [
+      100,
+      80,
+      90,
+      120
+    ],
+    "demand": [
+      110,
+      110,
+      60
+    ],
+    "source": "E09",
+    "locator": "C19 (Kulkarni\n  & Datar, 2010)",
+    "claims": {
+      "optimal": 840
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "7f549f8a72991f3cd6090e5999bb5cef4eaa5854a9b0828576d10236255eae47",
+    "balanced_sha256": "fda197a9288f5c11ae5ed5a12176f4b2cfd61ae25ccc99fa13c7a6866cec8780"
+  },
+  {
+    "id": "EDM_C20",
+    "costs": [
+      [
+        3,
+        6,
+        1,
+        5
+      ],
+      [
+        7,
+        9,
+        2,
+        7
+      ],
+      [
+        2,
+        4,
+        2,
+        1
+      ]
+    ],
+    "supply": [
+      6,
+      6,
+      6
+    ],
+    "demand": [
+      4,
+      5,
+      4,
+      5
+    ],
+    "source": "E09",
+    "locator": "C20 (Schrenk\n  et al., 2011)",
+    "claims": {
+      "optimal": 59
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "52f50b208fd842fe75f482bc8662fa9e88d31451961466edf9058684a4cc3dba",
+    "balanced_sha256": "52f50b208fd842fe75f482bc8662fa9e88d31451961466edf9058684a4cc3dba"
+  },
+  {
+    "id": "EDM_C21",
+    "costs": [
+      [
+        10,
+        2,
+        20,
+        11
+      ],
+      [
+        12,
+        7,
+        9,
+        20
+      ],
+      [
+        4,
+        14,
+        16,
+        18
+      ]
+    ],
+    "supply": [
+      15,
+      25,
+      10
+    ],
+    "demand": [
+      5,
+      15,
+      15,
+      15
+    ],
+    "source": "E09",
+    "locator": "C21 (Imam\n  et al., 2009)",
+    "claims": {
+      "optimal": 435
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "c66a5d09829726ba9b9b6d1f9af3e71bd7357cc98e04866c9065f15cc37c3b97",
+    "balanced_sha256": "c66a5d09829726ba9b9b6d1f9af3e71bd7357cc98e04866c9065f15cc37c3b97"
+  },
+  {
+    "id": "EDM_C22",
+    "costs": [
+      [
+        2,
+        1,
+        3,
+        2,
+        2
+      ],
+      [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        5,
+        4,
+        2,
+        1,
+        3
+      ],
+      [
+        7,
+        5,
+        5,
+        3,
+        1
+      ]
+    ],
+    "supply": [
+      20,
+      70,
+      30,
+      60
+    ],
+    "demand": [
+      50,
+      30,
+      30,
+      50,
+      20
+    ],
+    "source": "E09",
+    "locator": "C22 (Adlakha,\n  2009)",
+    "claims": {
+      "optimal": 390
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "78758f11a1dbcc428be7858f135c73bc8b56746f2501f801de04f4cc00d94dee",
+    "balanced_sha256": "78758f11a1dbcc428be7858f135c73bc8b56746f2501f801de04f4cc00d94dee"
+  },
+  {
+    "id": "EDM_R1",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      308252,
+      138801
+    ],
+    "demand": [
+      3852,
+      4759,
+      1312,
+      3451,
+      7537,
+      2827,
+      3878,
+      15224,
+      2530,
+      5690,
+      2494,
+      2383,
+      32901,
+      7314,
+      2486,
+      0,
+      249,
+      2735,
+      498,
+      1989,
+      4475,
+      6091,
+      373,
+      5492,
+      17978,
+      4305,
+      23799,
+      1597,
+      2773,
+      2556,
+      48509,
+      3279,
+      4183,
+      1303,
+      795,
+      4024,
+      1381,
+      2597,
+      1666,
+      4848,
+      125,
+      0,
+      0,
+      10192,
+      0,
+      4475,
+      3356,
+      0,
+      2611,
+      2984,
+      1368,
+      0,
+      1119,
+      249,
+      0,
+      9447,
+      2984,
+      2362,
+      125,
+      2984,
+      26599,
+      746,
+      249,
+      0,
+      14055,
+      1437,
+      2283,
+      556,
+      812,
+      5786,
+      2034,
+      5911,
+      5026,
+      524,
+      1133,
+      464,
+      1792,
+      1330,
+      1457,
+      1668,
+      3827,
+      7947,
+      297,
+      759,
+      9074,
+      1436,
+      864,
+      2217,
+      1160,
+      519,
+      4166,
+      614,
+      19405,
+      30392
+    ],
+    "source": "E09",
+    "locator": "R1 Real\n  1",
+    "claims": {
+      "optimal": 12928429
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "45bb2a6cd54f6d0e897d95819c92e8d2878925cba5367874805af852f7948ee8",
+    "balanced_sha256": "45bb2a6cd54f6d0e897d95819c92e8d2878925cba5367874805af852f7948ee8"
+  },
+  {
+    "id": "EDM_R2",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      341015,
+      138738
+    ],
+    "demand": [
+      3332,
+      3976,
+      1252,
+      3494,
+      9871,
+      3027,
+      5214,
+      20029,
+      2437,
+      5584,
+      2615,
+      2184,
+      39154,
+      6641,
+      2735,
+      0,
+      249,
+      2984,
+      746,
+      2238,
+      4848,
+      6837,
+      373,
+      4677,
+      17447,
+      4487,
+      24968,
+      1804,
+      3137,
+      2538,
+      50087,
+      3445,
+      4375,
+      1444,
+      919,
+      4024,
+      1389,
+      2960,
+      1660,
+      5221,
+      125,
+      0,
+      0,
+      11063,
+      0,
+      4972,
+      3729,
+      125,
+      2859,
+      5096,
+      1492,
+      0,
+      871,
+      249,
+      125,
+      10129,
+      3232,
+      2735,
+      249,
+      12554,
+      28961,
+      746,
+      125,
+      0,
+      12664,
+      1382,
+      2405,
+      479,
+      724,
+      6258,
+      1924,
+      5195,
+      5217,
+      536,
+      924,
+      385,
+      2053,
+      1111,
+      1340,
+      1712,
+      3630,
+      8300,
+      321,
+      679,
+      8954,
+      1385,
+      862,
+      2372,
+      1225,
+      480,
+      4369,
+      556,
+      20814,
+      27658
+    ],
+    "source": "E09",
+    "locator": "R2 Real\n  2",
+    "claims": {
+      "optimal": 13657053
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "1eb2f83000ab530c3cdf9c9c36b613c52449cdab2ff351731a8b27cbfc8a46ab",
+    "balanced_sha256": "1eb2f83000ab530c3cdf9c9c36b613c52449cdab2ff351731a8b27cbfc8a46ab"
+  },
+  {
+    "id": "EDM_R3",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      280110,
+      138801
+    ],
+    "demand": [
+      3300,
+      4628,
+      1250,
+      2852,
+      8202,
+      2916,
+      3912,
+      16157,
+      2695,
+      5526,
+      2699,
+      2271,
+      41855,
+      7074,
+      1616,
+      0,
+      125,
+      1741,
+      373,
+      1243,
+      2859,
+      3854,
+      249,
+      5151,
+      17117,
+      4368,
+      24291,
+      1560,
+      2679,
+      2952,
+      42223,
+      3585,
+      4182,
+      1423,
+      838,
+      3282,
+      1491,
+      2324,
+      1553,
+      3108,
+      125,
+      0,
+      125,
+      6464,
+      0,
+      2859,
+      2238,
+      0,
+      1616,
+      2921,
+      871,
+      0,
+      498,
+      125,
+      0,
+      6091,
+      1865,
+      1616,
+      125,
+      2921,
+      17029,
+      498,
+      249,
+      0,
+      13885,
+      1516,
+      2480,
+      410,
+      799,
+      6616,
+      1980,
+      5900,
+      4721,
+      584,
+      1032,
+      419,
+      1702,
+      1290,
+      1536,
+      1725,
+      3455,
+      7792,
+      341,
+      632,
+      9100,
+      1269,
+      897,
+      2333,
+      1296,
+      452,
+      3957,
+      487,
+      20317,
+      32228
+    ],
+    "source": "E09",
+    "locator": "R3 Real\n  3",
+    "claims": {
+      "optimal": 12296587
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "51d0baabf08af223266817cce6b6ab4e9399e5bf0d021a8855d679751ab52546",
+    "balanced_sha256": "51d0baabf08af223266817cce6b6ab4e9399e5bf0d021a8855d679751ab52546"
+  },
+  {
+    "id": "EDM_R4",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      350910,
+      142165
+    ],
+    "demand": [
+      3512,
+      4300,
+      1291,
+      3477,
+      9394,
+      3031,
+      4597,
+      22500,
+      1776,
+      5384,
+      2824,
+      2530,
+      42638,
+      7341,
+      2735,
+      0,
+      249,
+      2984,
+      746,
+      2238,
+      4848,
+      6837,
+      3737,
+      5858,
+      16806,
+      4210,
+      24717,
+      1715,
+      2549,
+      2520,
+      50440,
+      3185,
+      4359,
+      1437,
+      914,
+      3120,
+      1551,
+      2109,
+      1578,
+      5345,
+      125,
+      0,
+      0,
+      11187,
+      0,
+      4972,
+      3729,
+      125,
+      2859,
+      8452,
+      1492,
+      0,
+      871,
+      249,
+      125,
+      10317,
+      3232,
+      2735,
+      249,
+      8452,
+      29085,
+      746,
+      373,
+      0,
+      13607,
+      1421,
+      2068,
+      554,
+      877,
+      6207,
+      1844,
+      6259,
+      4824,
+      610,
+      1175,
+      403,
+      1840,
+      1110,
+      1389,
+      1739,
+      3546,
+      8113,
+      348,
+      753,
+      8366,
+      1329,
+      970,
+      2121,
+      1181,
+      530,
+      3778,
+      497,
+      19912,
+      34947
+    ],
+    "source": "E09",
+    "locator": "R4 Real\n  4",
+    "claims": {
+      "optimal": 14117586
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "e93fd66b430c02490165f37e2be43ba28708c79367a40b9268b0aa516dead838",
+    "balanced_sha256": "e93fd66b430c02490165f37e2be43ba28708c79367a40b9268b0aa516dead838"
+  },
+  {
+    "id": "EDM_R5",
+    "costs": [
+      [
+        22,
+        38,
+        32,
+        17,
+        31,
+        15,
+        23,
+        25,
+        25,
+        20,
+        33,
+        30,
+        18,
+        12,
+        23,
+        18,
+        26,
+        20,
+        15,
+        18,
+        15,
+        25,
+        28,
+        23,
+        16,
+        18,
+        21,
+        28,
+        20,
+        20,
+        25,
+        18,
+        18,
+        18,
+        25,
+        27,
+        21,
+        25,
+        23,
+        26,
+        33,
+        38,
+        29,
+        17,
+        38,
+        17,
+        39,
+        39,
+        22,
+        22,
+        35,
+        25,
+        28,
+        31,
+        33,
+        20,
+        36,
+        31,
+        23,
+        27,
+        25,
+        35,
+        30,
+        31,
+        28,
+        27,
+        28,
+        30,
+        27,
+        54,
+        43,
+        52,
+        56,
+        46,
+        59,
+        53,
+        40,
+        58,
+        44,
+        51,
+        40,
+        43,
+        45,
+        49,
+        48,
+        57,
+        46,
+        46,
+        60,
+        61,
+        66,
+        59,
+        55,
+        56
+      ],
+      [
+        26,
+        41,
+        36,
+        21,
+        35,
+        20,
+        27,
+        30,
+        28,
+        25,
+        38,
+        34,
+        23,
+        15,
+        20,
+        15,
+        23,
+        18,
+        14,
+        17,
+        13,
+        23,
+        25,
+        25,
+        17,
+        23,
+        23,
+        33,
+        18,
+        19,
+        28,
+        23,
+        20,
+        18,
+        25,
+        31,
+        20,
+        25,
+        25,
+        23,
+        39,
+        36,
+        28,
+        12,
+        33,
+        14,
+        38,
+        38,
+        20,
+        28,
+        33,
+        28,
+        26,
+        28,
+        31,
+        17,
+        38,
+        30,
+        30,
+        25,
+        22,
+        33,
+        26,
+        29,
+        31,
+        34,
+        28,
+        33,
+        31,
+        49,
+        38,
+        49,
+        52,
+        43,
+        56,
+        49,
+        36,
+        54,
+        40,
+        46,
+        36,
+        39,
+        41,
+        46,
+        44,
+        54,
+        41,
+        43,
+        57,
+        57,
+        62,
+        55,
+        52,
+        51
+      ]
+    ],
+    "supply": [
+      359746,
+      138801
+    ],
+    "demand": [
+      3269,
+      4456,
+      1277,
+      2783,
+      8888,
+      3679,
+      4621,
+      18426,
+      2745,
+      5940,
+      2408,
+      2437,
+      48268,
+      5585,
+      3108,
+      0,
+      249,
+      3356,
+      746,
+      2486,
+      5594,
+      7707,
+      373,
+      4944,
+      19086,
+      3758,
+      27005,
+      1884,
+      3139,
+      2275,
+      48013,
+      3411,
+      4479,
+      1386,
+      911,
+      3405,
+      1402,
+      3198,
+      1657,
+      5967,
+      249,
+      0,
+      0,
+      12678,
+      0,
+      5594,
+      4226,
+      125,
+      3232,
+      7955,
+      1616,
+      0,
+      995,
+      373,
+      125,
+      11560,
+      3605,
+      3108,
+      249,
+      7955,
+      32938,
+      871,
+      249,
+      0,
+      13500,
+      1377,
+      2189,
+      589,
+      752,
+      5974,
+      1588,
+      6085,
+      4578,
+      512,
+      1056,
+      452,
+      2240,
+      1138,
+      1268,
+      1818,
+      3634,
+      8274,
+      300,
+      703,
+      8162,
+      1308,
+      901,
+      2438,
+      1088,
+      454,
+      4199,
+      613,
+      19521,
+      29812
+    ],
+    "source": "E09",
+    "locator": "R5 Real\n  5",
+    "claims": {
+      "optimal": 14017419
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "53343726094c9f897545674f0aa529183f13239af533dd1b605c2f9ab181e485",
+    "balanced_sha256": "53343726094c9f897545674f0aa529183f13239af533dd1b605c2f9ab181e485"
+  },
+  {
+    "id": "EDM_S1",
+    "costs": [
+      [
+        7,
+        2,
+        10,
+        4
+      ],
+      [
+        12,
+        6,
+        3,
+        9
+      ],
+      [
+        11,
+        13,
+        5,
+        8
+      ]
+    ],
+    "supply": [
+      70,
+      55,
+      90
+    ],
+    "demand": [
+      85,
+      35,
+      50,
+      45
+    ],
+    "source": "E09",
+    "locator": "S1 Synthesis\n  1",
+    "claims": {
+      "optimal": 1375
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6ba4eba73ca25c3a27497b1d222107f1ec61a214fd41a913201e5ccc08851f5f",
+    "balanced_sha256": "6ba4eba73ca25c3a27497b1d222107f1ec61a214fd41a913201e5ccc08851f5f"
+  },
+  {
+    "id": "EDM_S2",
+    "costs": [
+      [
+        7,
+        2,
+        10,
+        4
+      ],
+      [
+        12,
+        6,
+        3,
+        9
+      ],
+      [
+        11,
+        13,
+        5,
+        8
+      ]
+    ],
+    "supply": [
+      70,
+      55,
+      90
+    ],
+    "demand": [
+      85,
+      35,
+      50,
+      45
+    ],
+    "source": "E09",
+    "locator": "S2 Synthesis\n  2",
+    "claims": {
+      "optimal": 172
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "6ba4eba73ca25c3a27497b1d222107f1ec61a214fd41a913201e5ccc08851f5f",
+    "balanced_sha256": "6ba4eba73ca25c3a27497b1d222107f1ec61a214fd41a913201e5ccc08851f5f"
+  },
+  {
+    "id": "EDM_S3",
+    "costs": [
+      [
+        7,
+        3,
+        8,
+        6
+      ],
+      [
+        4,
+        2,
+        5,
+        10
+      ],
+      [
+        2,
+        6,
+        5,
+        1
+      ]
+    ],
+    "supply": [
+      6,
+      10,
+      4
+    ],
+    "demand": [
+      2,
+      5,
+      5,
+      8
+    ],
+    "source": "E09",
+    "locator": "S3 Synthesis\n  3",
+    "claims": {
+      "optimal": 73
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "bb35fd87e9c0bc858835e54164f56f540154acfae79020bfa5672ab6325f481f",
+    "balanced_sha256": "bb35fd87e9c0bc858835e54164f56f540154acfae79020bfa5672ab6325f481f"
+  },
+  {
+    "id": "EDM_S4",
+    "costs": [
+      [
+        5,
+        5,
+        10
+      ],
+      [
+        6,
+        6,
+        15
+      ],
+      [
+        10,
+        12,
+        17
+      ],
+      [
+        8,
+        8,
+        10
+      ]
+    ],
+    "supply": [
+      4,
+      3,
+      5,
+      1
+    ],
+    "demand": [
+      3,
+      4,
+      6
+    ],
+    "source": "E09",
+    "locator": "S4 Synthesis\n  4",
+    "claims": {
+      "optimal": 127
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "e39d46b7bf8fe296166aaf4da65337d442bffafe6dfbf60bf16d1735396a500d",
+    "balanced_sha256": "e39d46b7bf8fe296166aaf4da65337d442bffafe6dfbf60bf16d1735396a500d"
+  },
+  {
+    "id": "EDM_S5",
+    "costs": [
+      [
+        7,
+        8,
+        7,
+        10,
+        22
+      ],
+      [
+        11,
+        8,
+        12,
+        14,
+        31
+      ],
+      [
+        10,
+        12,
+        12,
+        8,
+        32
+      ],
+      [
+        14,
+        10,
+        13,
+        5,
+        35
+      ]
+    ],
+    "supply": [
+      25,
+      25,
+      50,
+      20
+    ],
+    "demand": [
+      30,
+      30,
+      30,
+      10,
+      20
+    ],
+    "source": "E09",
+    "locator": "S5 Synthesis\n  5",
+    "claims": {
+      "optimal": 1380
+    },
+    "note": "Secondary author dataset; original reference not necessarily accessed.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "40a8a86e8105d2840ae3cc55b7654f6271bedb1ef3239bb21287ad3538e48131",
+    "balanced_sha256": "40a8a86e8105d2840ae3cc55b7654f6271bedb1ef3239bb21287ad3538e48131"
+  },
+  {
+    "id": "E11_Table3",
+    "costs": [
+      [
+        4,
+        4,
+        9,
+        10,
+        13
+      ],
+      [
+        7,
+        9,
+        8,
+        10,
+        4
+      ],
+      [
+        9,
+        3,
+        7,
+        10,
+        6
+      ],
+      [
+        11,
+        4,
+        10,
+        6,
+        9
+      ]
+    ],
+    "supply": [
+      100,
+      90,
+      80,
+      70
+    ],
+    "demand": [
+      60,
+      40,
+      90,
+      70,
+      80
+    ],
+    "source": "E11",
+    "locator": "Tables III-VII, worked N32",
+    "claims": {
+      "CSM": 1780,
+      "SSM": 1820,
+      "optimal": 1780
+    },
+    "note": "Worked paper matrix independently confirms the supplement N32 matrix, not its printed optimum 348.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10",
+    "balanced_sha256": "b5588e86cc5423c1049c848ca55f6264d35d472acd8f161f309f5f7a768aea10"
+  },
+  {
+    "id": "MRM_BTP1",
+    "costs": [
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        3,
+        8,
+        4
+      ],
+      [
+        6,
+        5,
+        2
+      ]
+    ],
+    "supply": [
+      50,
+      70,
+      45
+    ],
+    "demand": [
+      40,
+      65,
+      60
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP1",
+    "claims": {
+      "NWCM": 770,
+      "LCM": 605,
+      "VAM": 490,
+      "MRM": 475,
+      "optimal": 475
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "57b5f1e46d525644ce9a124787be71919c0c0f92fa79e65dc712af79939b1873",
+    "balanced_sha256": "57b5f1e46d525644ce9a124787be71919c0c0f92fa79e65dc712af79939b1873"
+  },
+  {
+    "id": "MRM_BTP2",
+    "costs": [
+      [
+        6,
+        4,
+        1
+      ],
+      [
+        3,
+        8,
+        7
+      ],
+      [
+        4,
+        4,
+        2
+      ]
+    ],
+    "supply": [
+      50,
+      40,
+      60
+    ],
+    "demand": [
+      20,
+      95,
+      35
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP2",
+    "claims": {
+      "NWCM": 730,
+      "LCM": 555,
+      "VAM": 555,
+      "MRM": 555,
+      "optimal": 555
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "38607603a1ec4da8f32228e25d0388912775df63bc7befe0a657a4559dfec49c",
+    "balanced_sha256": "38607603a1ec4da8f32228e25d0388912775df63bc7befe0a657a4559dfec49c"
+  },
+  {
+    "id": "MRM_BTP3",
+    "costs": [
+      [
+        9,
+        8,
+        5,
+        7
+      ],
+      [
+        4,
+        6,
+        8,
+        7
+      ],
+      [
+        5,
+        8,
+        9,
+        5
+      ]
+    ],
+    "supply": [
+      12,
+      14,
+      16
+    ],
+    "demand": [
+      8,
+      18,
+      13,
+      3
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP3",
+    "claims": {
+      "NWCM": 320,
+      "LCM": 248,
+      "VAM": 240,
+      "MRM": 248,
+      "optimal": 240
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "3aca023c19b80030573e34ef60ab0d2ca24411b8ad46a199408a546ea1e644d1",
+    "balanced_sha256": "3aca023c19b80030573e34ef60ab0d2ca24411b8ad46a199408a546ea1e644d1"
+  },
+  {
+    "id": "MRM_BTP4",
+    "costs": [
+      [
+        3,
+        1,
+        7,
+        4
+      ],
+      [
+        2,
+        6,
+        5,
+        9
+      ],
+      [
+        8,
+        3,
+        3,
+        2
+      ]
+    ],
+    "supply": [
+      300,
+      400,
+      500
+    ],
+    "demand": [
+      250,
+      350,
+      400,
+      200
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP4",
+    "claims": {
+      "NWCM": 4400,
+      "LCM": 2900,
+      "VAM": 2850,
+      "MRM": 2850,
+      "optimal": 2850
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "53b66343aa10d7ae77da570af39554d3986b703d36de65d6ea2b2f3a4d2346d0",
+    "balanced_sha256": "53b66343aa10d7ae77da570af39554d3986b703d36de65d6ea2b2f3a4d2346d0"
+  },
+  {
+    "id": "MRM_BTP5",
+    "costs": [
+      [
+        7,
+        5,
+        9,
+        11
+      ],
+      [
+        4,
+        3,
+        8,
+        6
+      ],
+      [
+        3,
+        8,
+        10,
+        5
+      ],
+      [
+        2,
+        6,
+        7,
+        3
+      ]
+    ],
+    "supply": [
+      30,
+      25,
+      20,
+      15
+    ],
+    "demand": [
+      30,
+      30,
+      20,
+      10
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP5",
+    "claims": {
+      "NWCM": 540,
+      "LCM": 435,
+      "VAM": 470,
+      "MRM": 415,
+      "optimal": 410
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274",
+    "balanced_sha256": "fffc9b0843caaf62f8081417012a9851966ab953918593c0cbdbf7bcc1210274"
+  },
+  {
+    "id": "MRM_BTP6",
+    "costs": [
+      [
+        50,
+        60,
+        100,
+        50
+      ],
+      [
+        80,
+        40,
+        70,
+        50
+      ],
+      [
+        90,
+        70,
+        30,
+        50
+      ]
+    ],
+    "supply": [
+      20,
+      38,
+      16
+    ],
+    "demand": [
+      10,
+      18,
+      22,
+      24
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP6",
+    "claims": {
+      "NWCM": 4160,
+      "LCM": 3500,
+      "VAM": 3320,
+      "MRM": 3320,
+      "optimal": 3320
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "13d3c70cad37047162fafd1dbe2652fea2c27b658caffe1efcbdee2014471e27",
+    "balanced_sha256": "13d3c70cad37047162fafd1dbe2652fea2c27b658caffe1efcbdee2014471e27"
+  },
+  {
+    "id": "MRM_BTP7",
+    "costs": [
+      [
+        4,
+        3,
+        5
+      ],
+      [
+        6,
+        5,
+        4
+      ],
+      [
+        8,
+        10,
+        7
+      ]
+    ],
+    "supply": [
+      90,
+      80,
+      100
+    ],
+    "demand": [
+      70,
+      120,
+      80
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP7",
+    "claims": {
+      "NWCM": 1500,
+      "LCM": 1450,
+      "VAM": 1500,
+      "MRM": 1390,
+      "optimal": 1390
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "30bad25ca43298366cb05f9d9cc94f5922cbb131bfab1099f74b6a8ff27e29cb",
+    "balanced_sha256": "30bad25ca43298366cb05f9d9cc94f5922cbb131bfab1099f74b6a8ff27e29cb"
+  },
+  {
+    "id": "MRM_BTP8",
+    "costs": [
+      [
+        5,
+        7,
+        8
+      ],
+      [
+        4,
+        4,
+        6
+      ],
+      [
+        6,
+        7,
+        7
+      ]
+    ],
+    "supply": [
+      70,
+      30,
+      50
+    ],
+    "demand": [
+      65,
+      42,
+      43
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP8",
+    "claims": {
+      "NWCM": 830,
+      "LCM": 890,
+      "VAM": 830,
+      "MRM": 830,
+      "optimal": 830
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "f660baf9a55a8713d05238a813ffa81a943f0f3e89733bf273ed0c56cf168ecc",
+    "balanced_sha256": "f660baf9a55a8713d05238a813ffa81a943f0f3e89733bf273ed0c56cf168ecc"
+  },
+  {
+    "id": "MRM_BTP9",
+    "costs": [
+      [
+        1,
+        2,
+        1,
+        4,
+        5,
+        2
+      ],
+      [
+        3,
+        3,
+        2,
+        1,
+        4,
+        3
+      ],
+      [
+        4,
+        2,
+        5,
+        9,
+        6,
+        2
+      ],
+      [
+        3,
+        1,
+        7,
+        3,
+        4,
+        6
+      ]
+    ],
+    "supply": [
+      30,
+      50,
+      75,
+      20
+    ],
+    "demand": [
+      20,
+      40,
+      30,
+      10,
+      50,
+      25
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP9",
+    "claims": {
+      "NWCM": 740,
+      "LCM": 470,
+      "VAM": 450,
+      "MRM": 450,
+      "optimal": 430
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "d4848ac8d4c005c9e60c25867fda6e0374f034df1a17ef51e7bd0fbed02822ed",
+    "balanced_sha256": "d4848ac8d4c005c9e60c25867fda6e0374f034df1a17ef51e7bd0fbed02822ed"
+  },
+  {
+    "id": "MRM_BTP10",
+    "costs": [
+      [
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        10,
+        8,
+        5,
+        4
+      ],
+      [
+        7,
+        6,
+        6,
+        8
+      ]
+    ],
+    "supply": [
+      3,
+      7,
+      5
+    ],
+    "demand": [
+      4,
+      3,
+      4,
+      4
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 BTP10",
+    "claims": {
+      "NWCM": 93,
+      "LCM": 79,
+      "VAM": 68,
+      "MRM": 68,
+      "optimal": 68
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": true,
+    "sha256": "496c8d2f32271e78c5a4d12d954e24b88191edfd2b676f920ac9c0d13c6ff6e5",
+    "balanced_sha256": "496c8d2f32271e78c5a4d12d954e24b88191edfd2b676f920ac9c0d13c6ff6e5"
+  },
+  {
+    "id": "MRM_UTP1",
+    "costs": [
+      [
+        10,
+        8,
+        4,
+        3
+      ],
+      [
+        12,
+        14,
+        20,
+        2
+      ],
+      [
+        6,
+        9,
+        23,
+        25
+      ]
+    ],
+    "supply": [
+      500,
+      400,
+      300
+    ],
+    "demand": [
+      250,
+      350,
+      600,
+      150
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 UTP1",
+    "claims": {
+      "NWCM": 18800,
+      "LCM": 8800,
+      "VAM": 8350,
+      "MRM": 7750,
+      "optimal": 7750
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "7df656f7587c616db4b82dc8a5352c7db2bc30e87247b5a5392b2033150fd6a4",
+    "balanced_sha256": "7a5e46c559a068fd54eb0c7d765ae24717aba440ff3862c71e8faef316da9410"
+  },
+  {
+    "id": "MRM_UTP2",
+    "costs": [
+      [
+        12,
+        10,
+        6,
+        13
+      ],
+      [
+        19,
+        8,
+        16,
+        25
+      ],
+      [
+        17,
+        15,
+        15,
+        20
+      ],
+      [
+        23,
+        22,
+        26,
+        12
+      ]
+    ],
+    "supply": [
+      150,
+      200,
+      600,
+      225
+    ],
+    "demand": [
+      300,
+      500,
+      75,
+      100
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 UTP2",
+    "claims": {
+      "NWCM": 14725,
+      "LCM": 14625,
+      "VAM": 13225,
+      "MRM": 12475,
+      "optimal": 12475
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "2fb2232196d3353173c4f14130c91506b18b4bd9a82c23c0c6cf8985313a10cb",
+    "balanced_sha256": "b61dfc2aee08293a67459e7d1ff7b67b8d90528be3388b835e4f6c081cfe4c8c"
+  },
+  {
+    "id": "MRM_UTP3",
+    "costs": [
+      [
+        5,
+        8,
+        6,
+        6,
+        3
+      ],
+      [
+        4,
+        7,
+        7,
+        6,
+        5
+      ],
+      [
+        8,
+        4,
+        6,
+        6,
+        4
+      ]
+    ],
+    "supply": [
+      800,
+      500,
+      900
+    ],
+    "demand": [
+      400,
+      400,
+      500,
+      400,
+      800
+    ],
+    "source": "E15",
+    "locator": "Tables 42/45/46 UTP3",
+    "claims": {
+      "NWCM": 13100,
+      "LCM": 9800,
+      "VAM": 9200,
+      "MRM": 9200,
+      "optimal": 9200
+    },
+    "note": "Author-uploaded full text accessed through browser; local direct PDF unavailable.",
+    "kind": "literature",
+    "balanced": false,
+    "sha256": "90796f031a9c6809a5dbdc826c41e8f8c75810d23ba9b9daeccc588e1266d0d9",
+    "balanced_sha256": "5cd1bfea12a825482865cf2538911f523a830b2fb86effab99f894b266aa020b"
+  },
+  {
+    "id": "MRM_HDTP3",
+    "costs": [
+      [
+        7,
+        5,
+        9,
+        8,
+        6,
+        4,
+        3,
+        6,
+        5,
+        9,
+        7
+      ],
+      [
+        6,
+        8,
+        7,
+        5,
+        9,
+        11,
+        10,
+        3,
+        6,
+        7,
+        4
+      ],
+      [
+        8,
+        6,
+        5,
+        7,
+        9,
+        10,
+        4,
+        11,
+        8,
+        5,
+        6
+      ],
+      [
+        4,
+        7,
+        8,
+        6,
+        5,
+        9,
+        11,
+        10,
+        4,
+        7,
+        6
+      ],
+      [
+        5,
+        9,
+        6,
+        4,
+        8,
+        7,
+        10,
+        12,
+        6,
+        5,
+        8
+      ],
+      [
+        7,
+        5,
+        9,
+        6,
+        8,
+        4,
+        11,
+        10,
+        12,
+        7,
+        5
+      ],
+      [
+        8,
+        7,
+        5,
+        9,
+        6,
+        4,
+        12,
+        11,
+        5,
+        8,
+        7
+      ],
+      [
+        6,
+        8,
+        7,
+        9,
+        5,
+        11,
+        4,
+        6,
+        9,
+        5,
+        8
+      ],
+      [
+        4,
+        9,
+        5,
+        8,
+        7,
+        10,
+        6,
+        3,
+        9,
+        5,
+        7
+      ],
+      [
+        5,
+        8,
+        7,
+        6,
+        4,
+        10,
+        12,
+        9,
+        7,
+        8,
+        6
+      ],
+      [
+        7,
+        6,
+        8,
+        5,
+        9,
+        11,
+        4,
+        5,
+        7,
+        10,
+        8
+      ],
+      [
+        6,
+        7,
+        9,
+        4,
+        5,
+        8,
+        10,
+        11,
+        6,
+        7,
+        5
+      ]
+    ],
+    "supply": [
+      60,
+      80,
+      40,
+      70,
+      50,
+      60,
+      70,
+      40,
+      80,
+      50,
+      70,
+      50
+    ],
+    "demand": [
+      60,
+      70,
+      50,
+      60,
+      80,
+      40,
+      50,
+      70,
+      40,
+      50,
+      60
+    ],
+    "source": "E15",
+    "locator": "Table 43 HDTP-3",
+    "claims": {},
+    "note": "",
+    "kind": "author_synthetic",
+    "balanced": false,
+    "sha256": "1b4f3f0b996373e33a9f159805730ff191a4c4f90498fb38af6e6e8a2d86b5e9",
+    "balanced_sha256": "6d8832bc224090c6d0fb27dbb4d3561d7611492fc8312f71ff788a251781aee0"
+  }
+]

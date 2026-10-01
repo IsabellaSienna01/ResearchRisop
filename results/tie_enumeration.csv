@@ -1,0 +1,7 @@
+problem,method,published,status,reachable,states,published_reachable
+L04_Example1,LCM,55,exhaustive,[61.0],5,False
+L04_Example2,LCM,1995,exhaustive,"[2310.0, 2360.0]",9,False
+E01_Example2,TDM1,630,exhaustive,"[610.0, 650.0]",12,False
+E01_Example5,TDSM,1661,exhaustive,[1465.0],14,False
+E01_Example6,TDM1,712,exhaustive,"[558.0, 606.0]",27,False
+E01_Example7,TDM1,935,exhaustive,"[830.0, 844.0]",25,False

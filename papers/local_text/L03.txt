@@ -1,0 +1,722 @@
+                                                                 Expert Systems With Applications 203 (2022) 117399
+
+
+                                                                       Contents lists available at ScienceDirect
+
+
+                                                           Expert Systems With Applications
+                                                              journal homepage: www.elsevier.com/locate/eswa
+
+
+
+
+A Supply Selection Method for better Feasible Solution of balanced
+transportation problem
+Bilqis Amaliah a, *, Chastine Fatichah a, Erma Suryani b
+a
+    Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Institut Teknologi Sepuluh Nopember, Surabaya 60111, Indonesia
+b
+    Department of Information Systems, Faculty of Intelligent Electrical and Informatics Technology, Institut Teknologi Sepuluh Nopember, Surabaya 60111, Indonesia
+
+
+
+
+A R T I C L E I N F O                                         A B S T R A C T
+
+Keywords:                                                     Transportation Problem (TP) is correlated with product distribution between supply locations and demand lo­
+Transportation problem                                        cations. TP aims to minimize the total transportation cost, and TP is one of the most important challenges in
+Initial basic feasible solution                               optimization. To solve the TP, Initial Basic Feasible Solution (IBFS) is a crucial step to determine the Optimal
+Optimal solution
+                                                              Solution. However, some developed methods of IBFS do not always produce a good initial solution. This study
+Vogel’s Approximation Method
+                                                              uses a new method called Supply Selection Method (SSM), which is proposed to the get better initial solution for
+                                                              balanced TP. It was compared with other IBFS methods, including Vogel’s Approximation Method (VAM), Juman
+                                                              Hoque Method (JHM), Total Opportunity Cost Matrix – Minimal Total (TOCM-MT), and Bilqis Chastine Erma
+                                                              method (BCE) to evaluate the performance. The new method was examined with 45 total cases consisting of 31
+                                                              cases from some journals, 4 cases generated randomly, and 10 samples of real data from XYZ company. The study
+                                                              results show that SSM provided a better initial basic solution than other methods, with 41 of 45 cases reached the
+                                                              Optimal Solution. The evaluation shows that SSM provided more outcomes with lower total minimal cost than
+                                                              LCM, VAM, JHM, TOCM-MT, and BCE.
+
+
+
+
+1. Introduction                                                                                     initial solution value influences the optimal solution, it is important to
+                                                                                                    begin with an IBFS to achieve the optimum solution (Amaliah, Fatichah,
+    The Transportation Problem (TP) deals with moving a certain                                     & Suryani, 2020a; Hosseini, 2017). Therefore, it is critical for TP to start
+quantity of product from numerous sources to different locations to                                 with an IBFS (Karagul & Sahin, 2020).
+achieve the minimum total cost, while satisfying the supply and demand                                  Many methods have been proposed in studies to IBFS. The popular
+conditions (Juman & Hoque, 2015). TP can help increase profit in the                                methods to get the IBFS are North West Corner Rule (NWC), Least Cost
+real world, especially in the industrial sector, by minimizing the ship­                            Method (LCM), and Vogel’s Approximation Method (VAM) (Babu et al.,
+ping cost (Ahmed et al., 2016a). TP has become one of the most crucial                              2014). A heuristic method to get IBFS named Total Opportunity-cost
+subjects since many companies spend billions of dollars just for shipping                           Method (TOM) was proposed by Kirca and Satir (Kirca & Şatir, 1990).
+commodities or goods every year (Juman & Nawarathne, 2019). In                                      An improvement of unbalanced TP for VAM with the additional
+1941, the basic transportation problem was first developed by Hitchcock                             maximum cost for the dummy was studied by Goyal (1984). Babu et al.
+(Hitchcock, 1941). Since then, many researchers have done studies on                                proposed the Implied Cost Method (ICM) by calculating the implied cost
+this field. The TP concept, which is essentially a linear programming                               for each cell (Babu et al., 2014). Islam et al. developed a new procedure,
+problem, may be used for various practical applications, including: in­                             Total Opportunity Cost Table (TOCT), which calculated the distribution
+ventory control, work schedules, staff assignment, even cash flow, and                              indicators (DI) and used them as penalties (Islam et al., 2012). Khan
+so on (Jude, 2016).                                                                                 et al. presented a new approach called TOCM-SUM, by using additional
+    To find the optimal solution of TP, two stages must be completed.                               operations for each row and column to choose priority cells for cost
+Starting with Initial Basic Feasible Solution (IBFS) as the first step                              allocation (Khan et al., 2015). Mathirajan and Meenakshi combined
+required (Hosseini, 2017). Once the IBFS is obtained, the following step                            VAM with the Total Opportunity Cost Method (TOM) (Mathirajan &
+is using Stepping Stone or Modified Distribution (MODI) to achieve the                              Meenakshi, 2004).
+final result of TP (Amaliah, Fatichah, and Suryani, 2019). Because the                                  Another author discusses the Transportation Problem (TP) from
+
+
+    * Corresponding author at: Informatics Department Building, Jln. Teknik Kimia, Kampus ITS, Keputih, Sukolilo, Surabaya 60111, Indonesia.
+      E-mail address: bamaliah@gmail.com (B. Amaliah).
+
+https://doi.org/10.1016/j.eswa.2022.117399
+Received 1 November 2021; Received in revised form 29 March 2022; Accepted 25 April 2022
+Available online 27 April 2022
+0957-4174/© 2022 Elsevier Ltd. All rights reserved.
+B. Amaliah et al.                                                                                              Expert Systems With Applications 203 (2022) 117399
+
+
+Table 1
+The Transportation problem matrix.
+                     Demand 1                           Demand 2                               …..            Demand n                                  Supply
+
+  Supply 1           C11                [X11]           C12                     [X12]          …..            C1n                   [X1n]               S1
+  Supply 2           C21                [X21]           C22                     [X22]          …..            C2n                   [X2n]               S2
+                     .                                  .                                      …..            .
+                     .                                  .                                                     .
+  Supply m           Cm1                [Xm1]           Cm2                     [Xm2]          …..            Cmm                   [Xmm]               Sm
+  Demand             D1                                 D2                                     …..            Dn
+
+
+
+different perspectives. Galic discussed that unbalance TP affects differ­        intuitionistic fuzzy sets, known as Neutrosophic Environment (Pratihar
+ences between the result of popular IBFS and optimal solutions (Galić           et al., 2020).
+et al., 2019). Pratihar proposed a Modified Vogel’s approximation                    Besides the classical transportation problem, there is the fixed cost
+method for uncertain environments, which used an interval type 2 fuzzy           transportation problem. Calvete et al. proposed the metaheuristic
+set for the value of cost, demand, and supply (Pratihar et al., 2021).           approach for the two-stage fixed-charge transportation problem (TS-
+Galic removed the imperfection of the mathematical model for deliv­              FCTP) by presenting a combination of evolutionary algorithm and
+ering vast amounts of asphalt mix to solve TP (Galić et al., 2016).             optimization techniques (Calvete et al., 2018). Furthermore, Cosma
+Bhoopalam studied the truck platooning for TP cost saving (Bhoopalam             et al. developed a parallel heuristic algorithm for solving TS-FCTP in a
+et al., 2018). Pratihar discussed TP in crisp sets, fuzzy sets, and              real-world problem. This algorithm reduced the solution search domain
+
+
+
+
+                                                              Fig. 1. The SSM flowchart.
+
+                                                                            2
+B. Amaliah et al.                                                                                                Expert Systems With Applications 203 (2022) 117399
+
+
+into a subdomain (Cosma, Pop, & Danciulescu, 2020a). Cosma et al.                                                            ⎫
+presented a heuristic algorithm that added linear programming opti­                                                          ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+mization to the genetic algorithm, including a robust local search                                                           ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+                                                                                 Minimize                                    ⎪
+                                                                                                                             ⎪
+technique that can fine-tune the global search for solving TS-FCTP                   ∑m ∑n                                   ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+(Cosma, Pop, & Dănciulescu, 2020b).                                             Z=     i=1 j=1
+                                                                                                Cij Xij                      ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+                                                                                                                             ⎪
+    Juman and Hoque introduced a Juman and Hoque’s Method (JHM)                  Subjects to the constraints :               ⎪
+                                                                                                                             ⎬
+that uses the excess unit of an unmet row to be transferred to another           ∑n                                                                            (1)
+                                                                                         Xij = Si    for i = 1, 2, ⋯..     ⎪
+                                                                                                                           ⎪
+row to satisfy demand (Juman & Hoque, 2015). JHM can reached the                     j=1                                   ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                    ∑m                                     ⎪
+optimal solution for 16 of 18 cases. Bilqis et al. improved the JHM by           m i=1 Xij = Dj        for j = 1, 2, ⋯.. n ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+checking the module between supply and cost to transfer the excess unit.                                                   ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                 Xij ≥ 0          for all i and j          ⎪
+BCE can reach the optimal solution for 31 of 35 cases (Amaliah, Fati­                                                      ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎪
+                                                                                                                           ⎭
+chah, & Suryani, 2020a). Das et al. presented a procedure named
+‘‘Advanced Vogel’s Approximation Method (AVAM)” to solve the issue
+that occurs when more than one lowest cost exists throughout the VAM             Where
+method (Das et al., 2014b). Sudhakar et al. introduced a method called               Si Supply quantity of origin i.
+Zero Suffix Method (ZSM) (Sudhakar et al., 2012). Pandian and Natar­                 Dj Demand quantity of origin j.
+ajan proposed a “Zero Point Method” for fuzzy transportation problems                m Total number of supplies.
+using trapezoidal fuzzy numbers (Pandian & Natarajan, 2010). Edward                  n Total number of demands.
+Samuel did an improvement for the Zero Point Method called “Improved                 Ci,j Transportation cost per unit from supply i to demand j.
+Zero Point Method” (Samuel, 2012). Ahmed et al. invented an iterative                Xi,j Number of unit to be shipped from supply i to demand j.
+technique called Allocation Table Method (ATM) that uses a table to                  Supply (Si), demand (Dj), cost (Cij), and unit (Xij) are considered as an
+help select allocated cost with the help of Minimum Odd Cost (MOC)               integer. The TP can be considered balanced if the total supply equals the
+(Ahmed et al., 2016b). Jude et al. developed a method for balanced               total demand, as shown in Eq. (2).
+Transportation problems named Inverse Coefficient of Variation Method
+                                                                                 ∑
+                                                                                 m            ∑
+                                                                                              m
+(ICVM) (Jude et al., 2017). Karagul and Sahin introduced a heuristic                   Si =         Dj                                                         (2)
+method called Karagul-Sahin Approximation Method (KSAM) for                      i=1          j=1
+balanced and unbalanced TP (Karagul & Sahin, 2020).
+    Among all previous heuristic methods for achieving IBFS, not all of          3. Supply selection method
+them can always produce a good IBFS solution. In this article, a new
+heuristic approach known as Supply Selection Method (SSM) is pre­                   This section elaborates the proposed method, Supply Selection
+sented to improve the feasible solution of balanced TP. Because several          Method (SSM) to solve the IBFS of TP. The flowchart of SSM is shown in
+rules were added throughout the allocation transfer procedure, SSM               Fig. 1, and the procedure of SSM can be described as follows:
+usually comes up with the best answer. This SSM model depends on the                Step 1: Create the m × n matrix of Transportation Problem (TP) with
+cost density, which mean that it is not guarantee to obtain the optimal          costs Cij, supplies Si for i = 1,2, …m and demands Dj for j = 1, 2, …, n. If
+solution. In order to obtain the optimal solution, it is necessary to pro­       TP is not balanced, make it become balanced transportation problem.
+ceed with the stepping stone method. The performance of SSM was                     Step 2: Determine First Least Cost (FLC), the cells with the smallest
+evaluated using 45 Numerical Examples (NE). This method was then                 cost in each column of the TP as shown in Eq. (3). Allocate Xij = Di into
+compared with others like LCM (Uddin & Khan, 2016), VAM (Das et al.,             FLC.
+2014a), TOCM-MT (Amaliah, Fatichah, & Suryani, 2019), JHM (Juman
+                                                                                 FLC = min(Cij )                                                               (3)
+& Hoque, 2015), and BCE (Amaliah, Fatichah, & Suryani, 2020a).
+    The following is how this article is structured. Section 2 illustrates          Step 3: Calculate the total amount of the allocation unit (T.Alloc) for
+the TP’s mathematical model. Section 3 explains the proposed method              every row as shown in Eq. (4). Check whether there is an Excess Row
+with steps and numerical examples. Section 4 displays the comparative            (ER), a row with a total allocation unit more than the corresponding
+results of performance percentages between SSM, LCM, VAM, TOCM-                  supply quantity. If there is an ER, continue to step 4, else go to step 9.
+MT, JHM, and BCE. The conclusion of the comparative study is
+                                                                                               ∑
+                                                                                               n
+described in Section 5.                                                          T.Alloc =           Xij                                                       (4)
+                                                                                               j=1
+2. Mathematical model of transportation problem
+                                                                                     Step 4: For every cell in ER, calculate the differences (Diff) between
+                                                                                 the FLC and the Second Least Cost (SLC) or the second smallest cost (the
+    The general representation of the Transportation Problem (TP)
+                                                                                 SLC must not be from an ER) as shown in Eq. (5). Choose the smallest
+network is shown in Table 1 (Ahmed et al., 2016a). The row consists of m
+                                                                                 Diff (SDiff) as shown in Eq. (6).
+Source (Si) and the column consists of n Demand (Dj). Each cell contains
+the value of transportation cost per unit (Cij) and the number of units          Diff = |FLC − − SLC|                                                          (5)
+shipped (Xij). The main goal of the problem is to obtain the Xij variables
+that minimize the total cost of TP, which is represented in Eq. (1).             SDiff = min(Diff )                                                            (6)
+    The mathematics formulation of TP is illustrated as follows (Amaliah
+                                                                                     Step 5: If there are 2 or more SDiff with the same value, choose the
+et al., 2020b):
+                                                                                 cell with the largest allocation unit.
+                                                                                     Step 6: Check the FLC supply and the SLC supply. If the FLC supply
+                                                                                 are the same with the SLC supply, then go to step 7, else check the
+                                                                                 amount of ER:
+
+                                                                                 a. If there is only one ER, compare between FLC supply and SLC supply;
+                                                                                    if FLC supply is smaller than SLC supply, then satisfy FLC row
+                                                                                    (allocate the maximum number of units Xij to FLC and move the units
+                                                                                    that are still available to SLC, then cross out the FLC row), else satisfy
+
+
+                                                                             3
+B. Amaliah et al.                                                                                                               Expert Systems With Applications 203 (2022) 117399
+
+
+Table 2                                                                                    Table 4
+The Numerical example with three supplies and three demands.                               Allocation of 5 units to cell X32.
+                               D1              D2               D3          Supply                          D1                  D2                      D3                Supply
+
+  S1                           13              21               14          13               S1             13                  21                      14    [11]        13
+  S2                           8               12               21          20               S2             8       [12]        12         [10]         21                20
+  S3                           15              17               19          5                S3             15                  17         [5]          19                5
+  Demand                       12              15               11                           Demand         12                  15                      11
+
+
+
+
+Table 3                                                                                    Table 5
+Allocation of demand in FLC for each column.                                               Allocation of 2 units to cell X11.
+                    D1                    D2               D3               Supply                          D1                  D2                      D3                Supply
+
+  S1                13                    21               14        [11]   13               S1             13      [2]         21         [0]          14    [11]        13
+  S2                8              [12]   12        [15]   21               20               S2             8       [10]        12         [10]         21    [0]         20
+  S3                15                    17               19               5                S3             15      [0]         17         [5]          19    [0]         5
+  Demand            12                    15               11                                Demand         12                  15                      11
+
+
+
+   SLC row (allocate the maximum number of units Xij from FLC to SLC,                      as shown in Table 3. Second column, the FLC is 12, then allocate 15 units
+   then cross out the SLC row).                                                            of D2 to X22. Third column, the FLC is 14, then allocate 11 units of D3 to
+b. If there is more than one ER, compare between FLC supply and SLC                        X13.
+   supply; if FLC supply is larger than SLC supply then satisfy FLC row,                       Step 3: The total allocation of the first row is 11. The second row’s
+   else satisfy SLC row.
+
+    Step 7: Check whether the FLC row can be made satisfied, then                          Table 6
+satisfy the FLC row. If it is not possible, then check whether the SLC row                 Detailed data of numerical examples.
+can be made satisfied or not.                                                                No    Source                            Name         Problem      Optimal
+                                                                                                                                                  Size         Solution
+a. If the SLC row can be made satisfied, then satisfy the SLC row.                           1     (Srinivasan & Thompson,           P1           3×4          880
+b. If the SLC row cannot be satisfied, then move all allocation units from                         1977)
+   the current FLC to the SLC.                                                               2     (Goyal, 1984)                     P2           3×3          1,650
+                                                                                             3     (Deshmukh, 2012)                  P3           3×4          743
+                                                                                             4     (Ramadan & Ramadan, 2012)         P4           3×4          5,600
+   Step 8: Go back to step 3.                                                                5     (Samuel, 2012)                    P5           3×4          28
+   Step 9: Calculate the total transportation cost (TCost) by multiplying                    6     (Patel et al., 2017)              P6           4×4          49
+each allocated unit with its cost as shown in Eq. (7).                                       7     (Ahmed et al., 2016a)             P7           3×4          156
+                                                                                             8     (Uddin & Khan, 2016)              P8           3×4          149
+           ∑
+           m ∑
+             n
+                                                                                             9     (Uddin & Khan, 2016)              P9           3×4          799
+TCost =                  Cij Xij                                                 (7)         10    (Uddin & Khan, 2016)              P10          3×5          273
+                                                                                             11    (Das et al., 2014a)               P11          3×4          1,160
+           i=1   j=1
+
+                                                                                             12    (Islam et al., 2012)              P12          3×3          131
+    The Supply Selection Method (SSM) is developed from BCE by
+                                                                                             13    (Morade, 2017)                    P13          3×3          820
+changing the transferring technique as follows:                                              14    (Mondal et al., 2015)             P14          3×4          605
+    1. If there are the same Diff, then choose the cell with the highest                     15    (Hosseini, 2017)                  P15          3×4          3,460
+allocation.                                                                                  16    (Hosseini, 2017)                  P16          5×5          1,401
+    2. If there are the same supplies, then satisfy the First Least Cost                     17    (Amaliah et al., 2019)            P17          4×4          2,280
+                                                                                             18    (Amaliah et al., 2019)            P18          3×3          291
+(FLC).                                                                                       19    (Juman & Hoque, 2015)             P19          3×3          4,525
+    3. If there is more than one Excess Row (ER), then satisfy the biggest                   20    (Juman & Hoque, 2015)             P20          3×4          920
+supply between FLC and Second Least Cost (SLC).                                              21    (Juman & Hoque, 2015)             P21          3×4          809
+    The differences between SSM and LCM:                                                     22    (Juman & Hoque, 2015)             P22          3×4          417
+                                                                                             23    (Juman & Hoque, 2015)             P23          4×6          109
+                                                                                             24    (Das et al., 2014a)               P24          4×5          2,070
+ • LCM directly allocated units permanently to the minimum cost cell in                      25    (Ahmed et al., 2015)              P25          3×3          425
+   TP, without any consideration. It will continue this process until all                    26    (Ahmed et al., 2015)              P26          3×3          465
+   units are allocated (Uddin & Khan, 2016).                                                 27    (Uddin & Khan, 2016)              P27          5×7          1,900
+ • SSM has some consideration before allocation unit permanently to                          28    (Uddin & Khan, 2016)              P28          3×5          290
+                                                                                             29    (Uddin & Khan, 2016)              P29          4×4          285
+   the minimum cost cell. SSM will allocated unit non permanently to
+                                                                                             30    (Uddin & Khan, 2016)              P30          3×4          450
+   First Least Cost (FLC) for each column. Next step is finding the Excess                   31    (Uddin & Khan, 2016)              P31          4×6          112
+   Row (ER- a row with a total allocation unit more than the corre­                          32    Synthesis 1                       S1           3×4          23
+   sponding supply), transfer some units from ER to the other row, and                       33    Synthesis 2                       S2           4×3          127
+                                                                                             34    Synthesis 3                       S3           3×4          280
+   allocated units permanently.
+                                                                                             35    Synthesis 4                       S4           3×3          845
+                                                                                             36    Real 1                            R1           2 × 94       12,175,097
+   The Numerical Example from Ahmed (Ahmed et al., 2015), as shown                           37    Real 2                            R2           2 × 94       12,793,609
+in Table 2, is used as an example to obtain IBFS with SSM. There is a                        38    Real 3                            R3           2 × 94       13,243,021
+company with 3 supplies and 3 demands. The quantity of the supplies is                       39    Real 4                            R4           2 × 94       12,928,429
+                                                                                             40    Real 5                            R5           2 × 94       13,657,053
+13, 20, and 5. The quantity of the demands is 12, 15, and 11. The cost of
+                                                                                             41    Real 6                            R6           2 × 94       12,296,587
+the Transportation Problem are represented by the cell entries.                              42    Real 7                            R7           2 × 94       14,117,586
+   First Iteration:                                                                          43    Real 8                            R8           2 × 94       14,017,419
+   Step 1: Create the TP matrix as shown in Table 2.                                         44    Real 9                            R9           2 × 94       13,715,927
+                                                                                             45    Real 10                           R10          2 × 94       13,691,814
+   Step 2: First column, the FLC is 8, then allocate 12 units of D1 to X21
+
+                                                                                       4
+B. Amaliah et al.                                                                                                  Expert Systems With Applications 203 (2022) 117399
+
+
+Table 7
+IBFS Solutions and optimal solution of each method.
+  No            Name        LCM                 VAM                 JHM                   TOCM-MT           BCE                 SSM                    Optimal
+
+  1             P1          1,075               955                 880                   880               880                 880*                   880
+  2             P2          1,695               1,745               1,650                 1,650             1,650               1,650*                 1,650
+  3             P3          814                 779                 743                   743               743                 743*                   743
+  4             P4          5,600               5,600               5,600                 5,600             5,600               5,600*                 5,600
+  5             P5          28                  28                  28                    28                28                  28*                    28
+  6             P6          49                  49                  49                    53                49                  49*                    49
+  7             P7          156                 156                 156                   156               156                 156*                   156
+  8             P8          150                 149                 149                   149               149                 149*                   149
+  9             P9          894                 859                 799                   799               799                 799*                   799
+  10            P10         278                 273                 273                   273               273                 273*                   273
+  11            P11         1,165               1,220               1,170                 1,160             1,170               1,165                  1,160
+  12            P12         131                 131                 131                   131               131                 131*                   131
+  13            P13         855                 820                 820                   820               820                 820*                   820
+  14            P14         615                 605                 605                   605               615                 605*                   605
+  15            P15         3,670               3,520               3,460                 3,460             3,460               3,460*                 3,460
+  16            P16         1,465               1,401               1,465                 1,434             1,465               1,434                  1,401
+  17            P17         2,500               2,400               2,340                 2,400             2,280               2,360                  2,280
+  18            P18         319                 327                 327                   291               291                 291*                   291
+  19            P19         4,550               5,125               4,525                 5,225             4,525               4,525*                 4,525
+  20            P20         960                 960                 920                   930               920                 920*                   920
+  21            P21         894                 849                 809                   809               809                 809*                   809
+  22            P22         510                 465                 417                   417               417                 417*                   417
+  23            P23         115                 109                 112                   109               109                 109*                   109
+  24            P24         2,070               2,130               2,120                 2,130             2,120               2,090                  2,070
+  25            P25         433                 425                 439                   439               439                 425*                   425
+  26            P26         473                 473                 475                   475               475                 465*                   465
+  27            P27         1,900               1,930               1,900                 2,040             1,900               1,900*                 1,900
+  28            P28         295                 290                 290                   290               290                 290*                   290
+  29            P29         310                 285                 285                   285               285                 285*                   285
+  30            P30         450                 450                 590                   450               590                 450*                   450
+  31            P31         112                 112                 114                   112               114                 112*                   112
+  32            S1          23                  23                  23                    23                23                  23*                    23
+  33            S2          133                 127                 133                   133               133                 127*                   127
+  34            S3          320                 320                 280                   280               280                 280*                   280
+  35            S4          845                 845                 845                   845               845                 845*                   845
+  36            R1          12,219,653          12,175,097          12,175,097            12,210,362        12,175,097          12,175,097*            12,175,097
+  37            R2          12,894,901          12,793,609          12,793,609            12,826,647        12,793,609          12,793,609*            12,793,609
+  38            R3          13,375,083          13,243,021          13,243,021            13,277,784        13,243,021          13,243,021*            13,243,021
+  39            R4          13,053,652          12,928,429          12,928,429            12,965,785        12,928,429          12,928,429*            12,928,429
+  40            R5          13,809,464          13,657,053          13,657,053            13,700,907        13,657,053          13,657,053*            13,657,053
+  41            R6          12,352,965          12,296,587          12,296,587            12,322,885        12,296,587          12,296,587*            12,296,587
+  42            R7          14,274,203          14,117,586          14,117,586            14,166,940        14,117,586          14,117,586*            14,117,586
+  43            R8          14,177,901          14,017,419          14,017,419            14,074,887        14,017,419          140,17,419*            14,017,419
+  44            R9          13,872,223          13,715,927          13,715,927            13,770,792        13,715,927          13,715,927*            13,715,927
+  45            R10         13,849,487          13,691,814          13,691,814            13,747,189        13,691,814          13,691,814*            13,691,814
+
+*Optimal Solution.
+
+
+total allocation is 27, which is more than its corresponding supply                     At this step, all rows are satisfied.
+quantity (20); then the second row is ER.                                               Step 9: Calculate the TCost as follows: (13 × 2) + (14 × 11) + (8 ×
+    Step 4: First column, the FLC is 8 and SLC is 13, then the Diff is |8-13|        10) + (12 × 10) + (17 × 5) = 465.
+= 5. Second column, the FLC is 12 and SLC is 17, the Diff is 5. There are               Table 5 shows the transportation units that have been allocated are
+two SDiff.                                                                           X11 = 2, X13 = 11, X21=10, X22 = 10, and X32 = 5. The Total allocation of
+    Step 5: Because there are two SDiff, choose the cell with the largest            the transportation cost is 465, and it is an optimal solution. The IBFS
+allocation unit. The allocation unit of X21 is 12, and the allocation unit of        results from another method using VAM, JHM, TOCM-MT, and BCE are
+X22 is 15, then choose the cell X22.                                                 473, 475, 475, and 475, respectively. From this numerical method
+    Step 6: Supply of FLC is not the same with the supply of SLC, and                example, only SSM achieved the optimal result.
+there is only one row with ER, and FLC supply is larger than the SLC
+supply, then satisfy SLC supply. Allocate 5 units to cell X32 as shown in            4. Experiment results
+Table 4. The third row now becomes a satisfied row.
+    Second Iteration:                                                                    This section presents comparison results between LCM, VAM, JHM,
+    Step 3: The total allocation of the first row is 11. The second row’s            TOCM-MT, BCE, and the proposed Supply Selection Method (SSM)
+total allocation is 22, which is more than its corresponding supply                  method. 45 Numerical Examples (NE) were used in this section to
+quantity, then the second row is ER.                                                 examine the performance of the methods. The NE consists of 31 cases
+    Step 4: First column, the FLC is 8 and SLC is 13, then the Diff is |8-13|        from some journals, 4 synthesis data samples that have been made
+= 5. Second column, the FLC is 12 and SLC is 21, then the Diff is |12-21|            randomly, and 10 samples of real data from XYZ company. Table 6
+= 9. First column’s Diff is the smallest.                                            shows the detailed information of each NE. The complete information of
+    Step 6: Supply of FLC is not the same with the supply of SLC, and                each NE can be found at https://netiquetting.blogspot.com. For
+there is only one row with ER, and FLC supply is larger than the SLC                 example, P5 is the fifth sample; it is from Samuel (Samuel, 2012), con­
+supply, then satisfy SLC supply. Allocate 2 units to cell X11 as shown in            sisting of three supplies and four demands with a 3 × 4 problem size, and
+Table 5. The first and second row now becomes the satisfied row.                     the optimal solution was 28. All of the methods were coded into a
+
+                                                                                 5
+B. Amaliah et al.                                                                                                    Expert Systems With Applications 203 (2022) 117399
+
+
+Table 8                                                                         Table 9
+The Improvement Percentage (%) of SSM over LCM, VAM, JHM, TOCM-MT, and          The total of positive, negative, and zero number from improvement percentage
+BCE.                                                                            and performance comparison between SSM and other Methods.
+  No        Name    LCM      VAM        JHM       TOCM-MT       BCE              No    Method       Total of                            Performance Comparison (%)
+
+  1         P1       18.14     7.85       0.00      0.00          0.00                              Positive     Negative      Zero     Positive   Negative     Zero
+  2         P2        2.65     5.44       0.00      0.00          0.00
+                                                                                 1     LCM          33           1             11       73         2            25
+  3         P3        8.72     4.62       0.00      0.00          0.00
+                                                                                 2     VAM          16           1             28       36         2            62
+  4         P4        0.00     0.00       0.00      0.00          0.00
+                                                                                 3     JHM          10           1             34       22         2            76
+  5         P5        0.00     0.00       0.00      0.00          0.00
+                                                                                 4     TOCM-MT      19           1             25       42         2            56
+  6         P6        0.00     0.00       0.00      7.55          0.00
+                                                                                 5     BCE          9            1             35       20         2            78
+  7         P7        0.00     0.00       0.00      0.00          0.00
+  8         P8        0.67     0.00       0.00      0.00          0.00
+  9         P9       10.63     6.98       0.00      0.00          0.00
+  10        P10       1.80     0.00       0.00      0.00          0.00
+                                                                                Table 10
+  11        P11       0.00     4.51       0.43    − 0.43          0.43
+  12        P12       0.00     0.00       0.00      0.00          0.00
+                                                                                The deviation percentage (%) of LCM, VAM, JHM, TOCM-MT, BCE, and SSM
+  13        P13       4.09     0.00       0.00      0.00          0.00          from optimal solution.
+  14        P14       1.63     0.00       0.00      0.00          1.63           No     Name      LCM          VAM         JHM        TOCM-MT          BCE      SSM
+  15        P15       5.72     1.70       0.00      0.00          0.00
+  16        P16       2.12   − 2.36       2.12      0.00          2.12           1       P1       22.16         8.52        0.00       0.00             0.00    0.00
+  17        P17       5.60     1.67     − 0.85      1.67        − 3.51           2       P2        2.73         5.76        0.00       0.00             0.00    0.00
+  18        P18       8.78    11.01      11.01      0.00          0.00           3       P3        9.56         4.85        0.00       0.00             0.00    0.00
+  19        P19       0.55    11.71       0.00     13.40          0.00           4       P4        0.00         0.00        0.00       0.00             0.00    0.00
+  20        P20       4.17     4.17       0.00      1.08          0.00           5       P5        0.00         0.00        0.00       0.00             0.00    0.00
+  21        P21       9.51     4.71       0.00      0.00          0.00           6       P6        0.00         0.00        0.00       8.16             0.00    0.00
+  22        P22      18.24    10.32       0.00      0.00          0.00           7       P7        0.00         0.00        0.00       0.00             0.00    0.00
+  23        P23       5.22     0.00       2.68      0.00          0.00           8       P8        0.67         0.00        0.00       0.00             0.00    0.00
+  24        P24     − 0.97     1.88       1.42      1.88          1.42           9       P9       11.89         7.51        0.00       0.00             0.00    0.00
+  25        P25       1.85     0.00       3.19      3.19          3.19           10      P10       1.83         0.00        0.00       0.00             0.00    0.00
+  26        P26       1.69     1.69       2.11      2.11          2.11           11      P11       0.43         5.17        0.86       0.00             0.86    0.43
+  27        P27       0.00     1.55       0.00      6.86          0.00           12      P12       0.00         0.00        0.00       0.00             0.00    0.00
+  28        P28       1.69     0.00       0.00      0.00          0.00           13      P13       4.27         0.00        0.00       0.00             0.00    0.00
+  29        P29       8.06     0.00       0.00      0.00          0.00           14      P14       1.65         0.00        0.00       0.00             1.65    0.00
+  30        P30       0.00     0.00      23.73      0.00         23.73           15      P15       6.07         1.73        0.00       0.00             0.00    0.00
+  31        P31       0.00     0.00       1.75      0.00          1.75           16      P16       4.57         0.00        4.57       2.36             4.57    2.36
+  32        S1        0.00     0.00       0.00      0.00          0.00           17      P17       9.65         5.26        2.63       5.26             0.00    3.51
+  33        S2        4.51     0.00       4.51      4.51          4.51           18      P18       9.62        12.37       12.37       0.00             0.00    0.00
+  34        S3       12.50    12.50       0.00      0.00          0.00           19      P19       0.55        13.26        0.00      15.47             0.00    0.00
+  35        S4        0.00     0.00       0.00      0.00          0.00           20      P20       4.35         4.35        0.00       1.09             0.00    0.00
+  36        R1        0.36     0.00       0.00      0.29          0.00           21      P21      10.51         4.94        0.00       0.00             0.00    0.00
+  37        R2        0.79     0.00       0.00      0.26          0.00           22      P22      22.30        11.51        0.00       0.00             0.00    0.00
+  38        R3        0.99     0.00       0.00      0.26          0.00           23      P23       5.50         0.00        2.75       0.00             0.00    0.00
+  39        R4        0.96     0.00       0.00      0.29          0.00           24      P24       0.00         2.90        2.42       2.90             2.42    0.97
+  40        R5        1.10     0.00       0.00      0.32          0.00           25      P25       1.88         0.00        3.29       3.29             3.29    0.00
+  41        R6        0.46     0.00       0.00      0.21          0.00           26      P26       1.72         1.72        2.15       2.15             2.15    0.00
+  42        R7        1.10     0.00       0.00      0.35          0.00           27      P27       0.00         1.58        0.00       7.37             0.00    0.00
+  43        R8        1.13     0.00       0.00      0.41          0.00           28      P28       1.72         0.00        0.00       0.00             0.00    0.00
+  44        R9        1.13     0.00       0.00      0.40          0.00           29      P29       8.77         0.00        0.00       0.00             0.00    0.00
+  45        R10       1.14     0.00       0.00      0.40          0.00           30      P30       0.00         0.00       31.11       0.00            31.11    0.00
+                                                                                 31      P31       0.00         0.00        1.79       0.00             1.79    0.00
+                                                                                 32      S1        0.00         0.00        0.00       0.00             0.00    0.00
+                                                                                 33      S2        4.72         0.00        4.72       4.72             4.72    0.00
+program in C language. The optimal solutions were obtained using
+                                                                                 34      S3       14.29        14.29        0.00       0.00             0.00    0.00
+software called TORA (Taha, 2007).                                               35      S4        0.00         0.00        0.00       0.00             0.00    0.00
+    The IBFS result and optimal solution of each method are shown in             36      R1        0.37         0.00        0.00       0.29             0.00    0.00
+Table 7. It shows that in most cases, SSM comes up with the optimal              37      R2        0.79         0.00        0.00       0.26             0.00    0.00
+solution because several rules have been added during the allocation             38      R3        1.00         0.00        0.00       0.26             0.00    0.00
+                                                                                 39      R4        0.97         0.00        0.00       0.29             0.00    0.00
+transfer process. SSM can get the optimal solution for 41 out of 45 NE.
+                                                                                 40      R5        1.12         0.00        0.00       0.32             0.00    0.00
+For example, P26, the IBFS solution of SSM is 465, which equals to the           41      R6        0.46         0.00        0.00       0.21             0.00    0.00
+optimal solution.                                                                42      R7        1.11         0.00        0.00       0.35             0.00    0.00
+    The Improvement Percentage (Ip) is shown in Table 8, which was               43      R8        1.14         0.00        0.00       0.41             0.00    0.00
+calculated using Eq. (8) (Amaliah, Fatichah, & Suryani, 2020a). The              44      R9        1.14         0.00        0.00       0.40             0.00    0.00
+                                                                                 45      R10       1.15         0.00        0.00       0.40             0.00    0.00
+improvement percentage table consists of the improvement percentage              Average          3.79          2.35        1.53       1.24             1.17    0.16
+of SSM over the other methods; LCM, VAM, JHM, TOCM-MT, and BCE.
+The positive number signifies that SSM generates a smaller total cost
+than other methods being compared. In other words, the performance of               Table 9 gives the idea about the total of positive, negative, and zero
+SSM was better than other methods. The negative number signifies that           numbers of each NE from Improvement Percentage shown in Table 8. It
+SSM generates a bigger total cost than other methods. Meanwhile, the            also shows the performance comparison between SSM and other
+zero number signifies that SSM produces the same total cost or is equal         methods. The total of positive column, sequentially, are 33, 16, 10, 19,
+with the other methods. For example, P26, the improvement percentage            and 9 NE of SSM, which generates smaller total cost than LCM, VAM,
+of SSM over BCE was 2.11. This positive number indicates that SSM is            JHM, TOCM-MT, and BCE. For the total negative column, one NE of SSM
+better than BCE because, from Table 7, BCE’s result is 475 while SSM is         generates a higher total cost than each of LCM, VAM, JHM, TOCM-MT,
+465, and the optimal solution of this NE is 465.                                and BCE. The zero column means SSM has sequentially 11, 28, 34, 25,
+                                                                                and 35 NE that have the same result with LCM, VAM, JHM, TOCM-MT,
+Ip = (IBFS − (SSM))/IBFS                                              (8)
+                                                                                and BCE. Many cases of SSM produce an equal solution with other
+
+                                                                            6
+B. Amaliah et al.                                                                                              Expert Systems With Applications 203 (2022) 117399
+
+
+                                                                                 Table 11
+                                                                                 The total optimal solution and accuracy percentage of VAM, JHM, TOCM-MT,
+                                                                                 BCE, and SSM.
+                                                                                  No              Method                 Optimal                 Accuracy (%)
+
+                                                                                  1               LCM                    11                      24
+                                                                                  2               VAM                    29                      64
+                                                                                  2               JHM                    34                      76
+                                                                                  3               TOCM-MT                25                      56
+                                                                                  4               BCE                    36                      80
+                                                                                  5               SSM                    41                      91
+
+
+
+
+                                                                                                Fig. 3. Accuracy Percentage of each method.
+
+
+
+                                                                                 Table 12
+                                                                                 The total not optimal solution and error percentage of VAM, JHM, TOCM-MT,
+                                                                                 BCE, and SSM.
+                                                                                  No              Method                 Not Optimal                  Error (%)
+
+                                                                                  1               LCM                    34                           76
+                                                                                  2               VAM                    16                           36
+                                                                                  3               JHM                    11                           24
+                                                                                  4               TOCM-MT                20                           44
+                                                                                  5               BCE                    9                            20
+                                                                                  6               SSM                    4                            9
+
+
+
+
+          Fig. 2. The Deviation Percentage of 45 numerical examples.
+
+
+methods; however, for many others, it produces a smaller total cost than
+other methods. For example, the performance comparison between SSM
+and VAM in the positive column was 36%. It came from 16 total posi­
+tives divided by 45 total of NE.
+    The Deviation Percentage (Dp) is shown in Table 10, which was                                 Fig. 4. Error Percentage of each method.
+calculated using Eq. (9) (Amaliah, Fatichah, & Suryani, 2020a).
+Table 10 shows the deviation percentage of LCM, VAM, JHM, TOCM-                  TOCMT-MT, BCE, and SSM are shown in Table 11 with their Accuracy
+MT, BCE, and SSM from the optimal solution. The zero number im­                  Percentage (Ap), which was calculated using Eq. (10) (Amaliah, Fati­
+plies that the solution of the method is the optimal solution, while the         chah, & Suryani, 2020a). The total IBFS solution of each method which
+positive number means that the solution is not optimal. For example,             is optimal from LCM, VAM, JHM, TOCM-MT, BCE, and SSM, are 11, 29,
+P25, the deviation percentage of SSM was 0.00. This zero number means            34, 25, 36, and 41, respectively; with the accuracy percentage value are
+that the result of SSM was equal to the optimal solution. The average            24%, 64%, 76%, 56%, 80%, and 91%, respectively. The accuracy per­
+deviation percentage of LCM, VAM, JHM, TOCMT-MT, BCE, and SSM                    centage of LCM, VAM, JHM, TOCM-MT, BCE, and SSM is displayed in
+are 3.79, 2.35, 1.53, 1.24, 1.17, and 0.16, respectively. Therefore, the         Fig. 3 with the data from Table 11. Therefore, SSM results in the highest
+average deviation percentage of SSM is the smallest. The deviation               accuracy, i.e., 91%.
+percentage of 45 NE is illustrated in Fig. 2.
+                                                                                        (Total Number of Optimal IBFS from NE)
+       IBFS − (Optimal Solution)                                                 Ap =                                                                      (10)
+Dp =                                                                   (9)                        Total Number of NE
+           Optimal Solution
+                                                                                   Table 12 shows the information about the total NE of each method
+    The total optimal solutions from the 45 NE of LCM, VAM, JHM,                 which is not optimal, along with their error percentage values. In
+
+
+                                                                             7
+B. Amaliah et al.                                                                                                            Expert Systems With Applications 203 (2022) 117399
+
+
+Table 13                                                                                     Table 15
+The time execution (second) of LCM, VAM, JHM, TOCM-MT, BCE, and SSM.                         The IBFS result of JHM.
+  No      Name           LCM            VAM        JHM       TOCM-MT    BCE      SSM                       D1                D2                  D3                   Supply
+
+  1      P1              1.542           2.844     2.380     1.881      2.319    2.353        S1           13          [2]   21                  14        [11]       13
+  2      P2              1.283           2.955     1.527     0.913      1.618    1.564        S2           8           [5]   12       [15]       21                   20
+  3      P3              1.337           1.411     1.528     1.138      1.393    1.568        S3           15          [5]   17                  19                   5
+  4      P4              1.286           1.338     1.502     1.199      1.417    1.624        Demand       12                15                  11
+  5      P5              1.513           2.600     2.122     0.853      1.443    1.766
+  6      P6              1.569           1.427     3.482     0.959      1.423    1.577
+  7      P7              1.708           1.688     1.516     0.906      1.382    1.601          The Numerical Example from Table 2 is used to show the different
+  8      P8              1.362           1.579     1.470     2.495      1.401    1.542       result of IBFS solution between VAM, JHM, TOCM-MT, BCE, and SSM.
+  9      P9              1.468           1.706     1.477     0.961      1.396    1.815
+  10     P10             1.787           1.689     1.510     1.166      1.380    1.590
+                                                                                             As shown in Table 5, the final result of SSM provides the best solution of
+  11     P11             1.553           1.778     1.491     1.194      1.440    1.610       465, which is an optimal solution. The final result of VAM is shown in
+  12     P12             1.274           1.815     1.862     1.183      1.506    1.553       Table 14 with the result of 473, which is not optimal. The final result of
+  13     P13             1.579           1.973     1.484     0.856      1.413    1.584       JHM, TOCM-MT and BCE is 475, as shown in Table 15 and not optimal.
+  14     P14             1.654           1.646     1.511     1.073      1.574    1.586
+  15     P15             1.687           1.695     1.481     0.919      1.424    1.542
+  16     P16             1.612           4.634     1.542     0.922      1.474    1.806       5. Conclusion
+  17     P17             1.575           1.705     1.627     0.907      1.426    1.595
+  18     P18             1.367           1.620     1.498     0.969      1.386    1.545           In order to achieve the optimal solution of the transportation prob­
+  19     P19             1.561           1.549     1.506     0.862      1.414    1.561
+                                                                                             lem, performing a good Initial Basic Feasible Solution (IBFS) is a crucial
+  20     P20             1.399           1.662     1.523     1.128      1.176    1.586
+  21     P21             1.513           1.723     1.483     1.196      1.409    1.593       act. A method called Supply Selection Method (SSM) was presented in
+  22     P22             1.605           1.658     1.175     1.327      1.400    1.531       this paper to get a better IBFS for balanced transportation problem. All
+  23     P23             1.493           1.818     1.547     0.916      1.415    1.601       methods, LCM, VAM, JHM, TOCM-MT, BCE, and SSM, were pro­
+  24     P24             1.653           1.644     1.554     0.930      1.429    1.599       grammed and computed using C language, while TORA software was
+  25     P25             1.929           1.642     3.568     1.048      1.387    1.533
+                                                                                             used to obtain the optimal result.
+  26     P26             1.659           1.577     1.561     0.931      1.404    1.629
+  27     P27             1.457           1.834     1.535     0.993      1.388    1.608           Compared with LCM, VAM, JHM, TOCM-MT, and BCE, the SSM
+  28     P28             1.292           1.739     1.719     1.435      1.445    1.582       showed better performance results because some rules were added.
+  29     P29             1.68            1.616     1.500     0.920      1.361    1.611       Furthermore, the average of SSM’s execution time is relatively faster
+  30     P30             1.59            1.452     1.511     0.909      1.482    1.609
+                                                                                             than VAM and JHM. The performance of SSM was examined using the
+  31     P31             1.488           1.711     1.578     0.997      1.503    1.568
+  32     P32             1.223           1.631     1.526     1.065      1.424    1.619       45 Numerical Examples (NE). Referring to the comparative analysis,
+  33     P33             1.276           1.380     1.462     1.128      1.441    1.579       SSM has 33 better results than LCM, 16 better results than VAM, 10
+  34     P34             1.678           1.262     1.325     0.997      0.942    1.035       better results than JHM, 19 better results than TOCM-MT, and 9 better
+  35     P35             1.827           0.984     0.904     0.902      0.926    1.029       results than BCE. Therefore, SSM is far superior to LCM.
+  36     P36             1.597          12.740     1.816     2.211      2.694    1.788
+                                                                                                 SSM was able to find the optimal solution in most cases. Although
+  37     R1              1.64            9.430     1.868     2.293      2.006    1.918
+  38     R2              1.589           8.497     2.014     2.474      2.065    1.913       SSM has 4 NE, which does not reach the optimal solution, it has the
+  39     R3              1.591           8.461     1.906     2.486      2.082    1.935       lowest error percentage, i.e., 9%. However, SSM can achieve 41 NE of 45
+  40     R4              1.592           8.388     1.955     2.433      2.101    1.984       NE with an optimal solution, which means 91% accuracy. Moreover,
+  41     R5              1.414           6.615     1.917     2.515      2.059    2.018
+                                                                                             from 45 NE, LCM obtained 11 optimal solution (24% accuracy), VAM
+  42     R6              1.517           8.280     2.048     2.525      2.103    2.050
+  43     R7              1.693           8.690     1.980     2.745      2.179    1.970       achieved 29 NE with optimal solution (64% accuracy), JHM obtained 34
+  44     R8              1.607           8.361     1.973     2.440      2.035    1.961       optimal solutions (76% accuracy), TOCM-MT got 25 NE with optimal
+  45     R9              1.524           8.608     1.966     2.747      2.321    1.966       solution (55.56% accuracy), and BCE got 36 optimal results with the
+  Average                1.538           3.357     1.721     1.401      1.587    1.671       accuracy of 80%. From the comparative analysis, it can be concluded
+                                                                                             that SSM is the best method, followed by BCE, JHM, VAM, TOCM-MT,
+                                                                                             and the lowest is LCM. Besides, the average deviation acquired from
+Table 14                                                                                     SSM is the lowest, i.e., 0.16. The average deviation was then followed by
+The IBFS result of VAM.                                                                      other methods with BCE of 1.17, TOCM-MT of 1.24, JHM of 1.53, VAM
+                    D1                        D2                D3              Supply       of 2.35, and LCM with 3.79.
+                                                                                                 A future study might be conducted to develop a better IBFS method
+  S1                13                        21       [2]      14     [11]     13
+  S2                8            [12]         12       [8]      21              20           with a large supply and demand and implement various cases like un­
+  S3                15                        17       [5]      19              5            balanced matrix and decimal type data of transportation cost.
+  Demand            12                        15                11
+
+                                                                                             CRediT authorship contribution statement
+addition, Table 12 shows the total IBFS solution of LCM, VAM, JHM,
+TOCMT-MT, BCE, and SSM which are considered not optimal are 34, 16,                             Bilqis Amaliah: Conceptualization, Methodology, Writing – original
+11, 20, 9, and 4, respectively. The error percentage for LCM, VAM, JHM,                      draft. Chastine Fatichah: Software, Supervision, Writing – review &
+TOCM-MT, BCE, and SSM are 76%, 36%, 24%, 44%, 20%, and 9%,                                   editing. Erma Suryani: Investigation, Visualization.
+respectively. The illustration of the method’s error percentage is dis­
+played as a graph in Fig. 4. From this illustration, SSM has the smallest                    Declaration of Competing Interest
+error percentage while LCM has the highest error percentage.
+   The time executions of the program for each method are displayed in                           The authors declare that they have no known competing financial
+Table 13. The time executions of each NE are recorded in seconds, with                       interests or personal relationships that could have appeared to influence
+the average values are displayed at the end of the table. The average                        the work reported in this paper.
+time executions of LCM, VAM, JHM, TOCM-MT, BCE, and SSM are
+1.538, 3.357, 1.721, 1.401, 1.587, 1.671, respectively. As proven from                       Acknowledgements
+the data collected in the table, the average amount of time needed to
+solve the SSM is less than JHM and VAM.                                                         This work was supported by the Ministry of Education, Culture,
+
+                                                                                         8
+B. Amaliah et al.                                                                                                                         Expert Systems With Applications 203 (2022) 117399
+
+
+Research, and Technology, Indonesia [grant number 867/PKS/ITS/                                      Hosseini, E. (2017). Three new methods to find initial basic feasible solution of
+                                                                                                        transportation problems. Applied Mathematical Sciences, 11(37), 1803–1814. https://
+2021]. We are deeply grateful for PDD (Penelitian Disertasi Doktor)
+                                                                                                        doi.org/10.12988/ams.2017.75178
+2020-2021 Grant, which enabled this research could be done.                                         Islam, A., Khan, A. R., Uddin, M. S., & Malek, M. A. (2012). Determination of basic
+                                                                                                        feasible solution of transportation problem: A new approach. Jahangirnagar
+References                                                                                              University Journal of Science, 35(1), 101–108.
+                                                                                                    Jude, O. (2016). Comparison of existing methods of solving linear transportation
+                                                                                                        problems with a new approach. International Journal of Innovation in Science and
+Ahmed, M. M., Islam, M. A., Katun, M., Yesmin, S., & Uddin, M. S. (2015). New                           Mathematics, 4(5), 158–163. https://www.ijism.org/administrator/components/
+    procedure of finding an initial basic feasible solution of the time minimizing                      com_jresearch/files/publications/IJASM_205_FINAL.pdf.
+    transportation problems. Open Journal of Applied Sciences, 05(10), 634–640. https://            Jude, O., Ifeanyichukwu, O. B., Ihuoma, I. A., & Akpos, E. P. (2017). A new and efficient
+    doi.org/10.4236/ojapps.2015.510062                                                                  proposed approach to find initial basic feasible solution of a transportation problem.
+Ahmed, M. M., Khan, A. R., Ahmed, F., & Uddin, S. (2016a). Incessant allocation method                  American Journal of Applied Mathematics and Statistics, 5(2), 54–61. https://doi.org/
+    for solving transportation problems. American Journal of Operations Research, 6                     10.12691/ajams-5-2-3
+    (May), 236–244. https://doi.org/10.4236/ajor.2016.63024                                         Juman, Z. A. M. S., & Hoque, M. A. (2015). An efficient heuristic to obtain a better initial
+Ahmed, M. M., Khan, A. R., Uddin, M. S., & Ahmed, F. (2016b). A new approach to solve                   feasible solution to the transportation problem. Applied Soft Computing Journal, 34,
+    transportation problems. Open Journal of Optimization, 05(01), 22–30. https://doi.                  813–826. https://doi.org/10.1016/j.asoc.2015.05.009
+    org/10.4236/ojop.2016.51003                                                                     Juman, Z. A. M. S., & Nawarathne, N. G. S. A. (2019). An efficient alternative approach to
+Amaliah, B., Fatichah, C., & Suryani, E. (2019). Total opportunity cost matrix – Minimal                solve a transportation problem. Ceylon Journal of Science, 48(1), 19–29. https://doi.
+    total: A new approach to determine initial basic feasible solution of a transportation              org/10.4038/cjs.v48i1.7584
+    problem. Egyptian Informatics Journal, 20(2), 131–141. https://doi.org/10.1016/j.               Karagul, K., & Sahin, Y. (2020). A novel approximation method to obtain initial basic
+    eij.2019.01.002                                                                                     feasible solution of transportation problem. Journal of King Saud University –
+Amaliah, B., Fatichah, C., & Suryani, E. (2020a). A new heuristic method of finding the                 Engineering Sciences, 32(3), 211–218. https://doi.org/10.1016/j.jksues.2019.03.003
+    initial basic feasible solution to solve the transportation problem. Journal of King            Khan, A., Vilcu, A., Sultana, N., & Ahmed, S. (2015). Determination of Initial Basic
+    Saud University – Computer and Information Sciences. https://doi.org/10.1016/j.                     Feasible Solution of a Transportation Problem: A TOCM-SUM Approach. Buletinul
+    jksuci.2020.07.007                                                                                  Institutului Politehnic Din Iasi, LXI(Lxv), 39–49. https://www.researchgate.net/publi
+Amaliah, B., Fatichah, C., Suryani, E., & Muswar, A. (2020b). Total opportunity cost                    cation/280917975_Determination_of_Initial_Basic_Feasible_Solution_of_a_Tra
+    matrix - Supreme cell: A new method to obtain initial basic feasible solution of                    nsportation_Problem_A_TOCM-SUM_Approach.
+    transportation problems. ACM International Conference Proceeding Series, 151–156.               Kirca, Ö., & Şatir, A. (1990). A heuristic for obtaining an initial solution for the
+    https://doi.org/10.1145/3411174.3411198                                                             transportation problem. Journal of the Operational Research Society. https://doi.org/
+Babu, A., Helal, A., Hasan, M. S., & Das, U. K. (2014). Implied cost method (ICM): An                   10.1057/jors.1990.124
+    alternative approach to find the feasible solution of transportation problem. Global            Mathirajan, M., & Meenakshi, B. (2004). Experimental Analysis of Some Variants of
+    Journal of Science Frontier Research: F Mathematics and Decision Sciences, 14(1), 5–13.             Vogel’S Approximation Method. Asia-Pacific Journal of Operational Research
+    https://www.researchgate.net/publication/263733308.                                                 (APJOR), 21(04), 447–462. https://doi.org/10.1142/S0217595904000333
+Bhoopalam, A. K., Agatz, N., & Zuidwijk, R. (2018). Planning of truck platoons: A                   Mondal, R. N., Rashid, F., Shaha, P. R., & Roy, R. (2015). An innovative method for
+    literature review and directions for future research. Transportation Research Part B:               unraveling transportation problems with mixed constraints. American Journal of
+    Methodological, 107, 212–228. https://doi.org/10.1016/j.trb.2017.10.016                             Mathematics and Statistics, 5(4), 190–195. https://doi.org/10.5923/j.
+Calvete, H. I., Galé, C., Iranzo, J. A., & Toth, P. (2018). A matheuristic for the two-stage           ajms.20150504.04
+    fixed-charge transportation problem. Computers and Operations Research, 95,                     Morade, N. M. (2017). New method to find initial basic feasible solution of
+    113–122. https://doi.org/10.1016/j.cor.2018.03.007                                                  transportation problem using MSDM. Inernational Journal of Computer Science and
+Cosma, O., Pop, P. C., & Danciulescu, D. (2020a). A parallel algorithm for solving a two-               Engineering, 5(12), 223–226. http://ijcseonline.org/pdf_paper_view.php?paper_i
+    stage fixed-charge transportation problem. Informatica (Netherlands), 31(4),                        d=1606&35-IJCSE-02638.pdf.
+    681–706. https://doi.org/10.15388/20-INFOR432                                                   Pandian, P., & Natarajan, G. (2010). A new algorithm for finding a fuzzy optimal solution
+Cosma, O., Pop, P. C., & Dănciulescu, D. (2020b). A novel matheuristic approach for a                  for fuzzy transportation problems. Applied Mathematical Sciences, 4(2), 79–90. http
+    two-stage transportation problem with fixed costs associated to the routes. Computers               s://pdfs.semanticscholar.org/dac4/8f41dfcfaee2d609b9a1c10692d85f747999.pdf.
+    and Operations Research, 118. https://doi.org/10.1016/j.cor.2020.104906                         Pratihar, J., Kumar, R., Dey, A., & Said, B. (2020). Transportation problem in
+Das, U., Babu, A., Khan, A., Helal, A., & Uddin, S. (2014a). Logical development Of                     neutrosophic environment. In F. Smarandache, & S. Broumi (Ed.), Neutrosophic graph
+    Vogel’s approximation method (LD-VAM): An approach to find basic feasible                           theory and algorithms (pp. 180–212). IGI Global. https://doi.org/10.4018/978-1-
+    solution of transportation problem. International Journal of Scientific & Technology                7998-1313-2.ch007.
+    Research, 3(2), 42–48. www.ijstr.org.                                                           Pratihar, J., Kumar, R., Edalatpanah, S. A., & Dey, A. (2021). Modified Vogel’s
+Das, U., Babu, A., Khan, A. R., & Uddin, S. (2014b). Advanced Vogel’s Approximation                     approximation method for transportation problem under uncertain environment.
+    Method (AVAM): A new approach to determine penalty cost for better feasible                         Complex & Intelligent Systems, 7(1), 29–40. https://doi.org/10.1007/s40747-020-
+    solution of transportation problem. International Journal of Engineering Research &                 00153-4
+    Technology, 3(1), 182–187.                                                                      Ramadan, S. Z., & Ramadan, I. Z. (2012). Hybrid two-stage algorithm for solving
+Deshmukh, N. M. (2012). An innovative method for solving transportation problem.                        transportation problem. Modern Applied Science, 6(4), 12–22. https://doi.org/
+    International Journal of Physics and Mathematical Sciences, 2(3), 86–91. http://www.                10.5539/mas.v6n4p12
+    cibtech.org/J-PHYSICS-MATHEMATICAL-SCIENCES/PUBLICATIONS/2012/Vol_2_                            Samuel, A. E. (2012). Improved Zero Point Method (IZPM) for the Transportation
+    No._3/11...021...Deshmukh...An...Innovative...Problem.pdf.                                          Problems. Applied Mathematical Sciences, 6(109), 5421–5426. http://m-hikari.com/
+Patel, G. R., Bhathawala, D. P. H., & Patel, S. D. B. . (2017). An alternate approach to find           ams/ams-2012/ams-109-112-2012/samuelAMS109-112-2012.pdf.
+    an optimal solution of a transportation problem. IOSR Journal of Mathematics, 13                Srinivasan, V., & Thompson, G. L. (1977). Cost operator algorithms for the transportation
+    (01), 01–05. https://doi.org/10.9790/5728-1301030105.                                               problem. Mathematical Programming, 12(1), 372–391. https://doi.org/10.1007/
+Galić, M., Dolaček-Alduk, Z., & Klanšek, U. (2019). Impact of transportation problem’s               BF01593805
+    unbalance on difference between initial and optimal solution. Tehnicki Vjesnik, 26(3),          Sudhakar, V. J., Arunsankar, N., & Karpagam, T. (2012). A new approach for finding an
+    625–630. https://doi.org/10.17559/TV-20170927100632                                                 optimal solution for transportation problems. European Journal of Scientific Research,
+Galić, M., Završki, I., & Dolaček-Alduk, Z. (2016). Methodology and algorithm for asphalt            68(2), 254–257.
+    supply chain optimization. Technical Gazette, 23(4), 1193–1199. https://doi.org/                Taha, H. A. (2007). Operations research: An introduction (8th ed.). Pearson Prentice Hall.
+    10.17559/TV-20150623140015                                                                      Uddin, S., & Khan, A. R. (2016). Improved least cost method to obtain a better IBFS to the
+Goyal, S. K. (1984). Improving VAM for unbalanced transportation problems. The Journal                  transportation problem. Journal of Applied Mathematics & Bioinformatics, 6(2), 1–20.
+    of the Operational Research Society, 35(12), 1113–1114. https://doi.org/10.1057/                    http://www.scienpress.com/Upload/JAMB/Vol 6_2_1.pdf.
+    jors.1984.217
+Hitchcock, F. L. (1941). The distribution of a product from several sources to numerous
+    localities. Journal of Mathematics and Physics, 20, 224–230. https://doi.org/10.1002/
+    sapm1941201224
+
+
+
+
+                                                                                                9
+

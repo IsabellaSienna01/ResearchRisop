@@ -1,0 +1,1008 @@
+                                                           (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                    Vol. 15, No. 9, 2024
+
+
+A Capacity-Influenced Approach to Find Better Initial
+       Solution in Transportation Problems
+                                   Md. Toufiqur Rahman1, A R M Jalal Uddin Jamali2,
+                               Momta Hena3, Mohammad Mehedi Hassan4, Md Rafiul Hassan5
+                 Department of Mathematics, Khulna University of Engineering and Technology, Bangladesh1, 2, 3
+                College of Computer and Information Science, King Saud University, Riyadh 11543, Saudi Arabia4
+                           Department of Computer Science, University of Maine - Presque Isle, USA5
+
+
+    Abstract—Finding an Initial Basic Feasible Solution (IBFS) is     the general Linear Programming (LP) methods are so tedious
+the first and essential step in obtaining the optimal solution for    and time-consuming [6-8]. Researchers have developed
+any Transportation Problem. Numerous approaches are                   several alternative methods for finding the IBFS by leveraging
+available in the literature to determine the IBFS; however, many      the special (unique) characteristics of TPs [2-6]. The two well-
+of these methods are modifications of Vogel's Approximate             known classical methods, the LCM and VAM are very simple
+Method (VAM) and/or the Least Cost Method (LCM). None of              and can yield better IBFS for TPs [2], [5], [6], [14], etc.
+the existing methods directly consider the capacity of
+distributions among the nodes when selecting the allocation steps.        In LCM, the flow of allocation is directly controlled by the
+While researchers have proposed various approaches and                cost matrix, with a preference for the least cost. Vogel
+demonstrated improved solutions with numerical instances, they        introduced VAM in 1958 as a modification of LCM. In VAM,
+have not thoroughly investigated the underlying causes of these       the flow of allocation is controlled differently, but it still
+results. In this article, we explore the impact of capacity           considers the cost matrix. It begins by developing a control
+distributions among the nodes on the VAM and LCM in an                vector called the DI, formed through the manipulation of the
+experimental domain. The study introduces a novel and unique          cost matrix. Subsequently, the flow of allocation is guided by
+Capacity-Influenced Distribution Indicator (CI-DI) designed to        both the DI and the cost matrix. Based on the LCM and
+control the flow of allocation. Ultimately, we propose a novel        VAM, many researchers proposed several approaches for
+Capacity-Influenced approach that embeds both LCM and VAM
+                                                                      finding IBFS of TPs [2], [5], [6-13], [14], [21], [22], [23], [29-
+to determine the IBFS for Transportation Problems (TPs). The
+                                                                      30], [38-39], [41], [42] etc. For the importance of TPs in real
+novelty of the proposed approach lies in its direct consideration
+of capacity distribution among the nodes in the flow of
+                                                                      life, researchers are continuously devoted to finding better
+allocations, this feature is lacking in LCM, VAM, and other           approaches for solving TPs. It is observed in the literature that
+established approaches. The proposed method develops a novel          most of the approaches are variations of VAM [6-10], [24],
+distribution indicator and a novel cost entry embedded capacity-      etc. A few of the research works related to TPs are pointed out
+based matrix to control the flow of allocations and thereby finds     below.
+the IBFS for the Transportation Problem. We have conducted                In the article [24], the author introduced the Total
+extensive numerical experiments to assess the effectiveness of the
+                                                                      Opportunity Matrix (TOM) by manipulating cost entries rather
+proposed approach. Experimental analysis demonstrates that the
+                                                                      than DI used in VAM to determine the flow of allocations.
+proposed method is more efficient in finding the IBFS than
+existing approaches. Moreover, as it uses a one-time generated        Authors in the article [1] developed Total Opportunity Cost
+Distribution Indicator (DI) for all steps of allocation, it is        (TOC) matrix and after that they formed DI tableau for
+computationally cheaper than VAM, which generates a DI for            allocation by considering TOC. In the article [43], authors
+each step of allocation.                                              proposed an enhanced version of [10] modified VAM for the
+                                                                      unbalanced transportation problem. Both approaches utilize
+   Keywords—Transportation problem; least cost method; Vogel’s        the VAM method, with the modification focused on
+approximate method; cost matrix; transportation tableau; node;        transforming an unbalanced TP into a balanced one. In [44]
+capacity; route; capacity-influenced; weighted opportunity cost       author considered balanced transportation problems, with the
+                                                                      modification applied solely to the manipulation of the cost
+                      I.    INTRODUCTION                              matrix. In [45] authors proposed another embedded modified
+    In Transportation Problem (TP), commodities are                   VAM method called Logical Development of Vogel’s
+transported from a set of sources (called source nodes) to            Approximation Method (LD-VAM) for finding the IBFS in
+destinations (called destination nodes) subject to capacity           TP. In [39] author introduced a modified VAM in which the
+(supply and demand) constraints in such a way that the total          modification is directed toward finding the DI, considering the
+cost of transportation is minimized. TP is a multi-disciplinary       cost matrix as well. Some other modified approaches based on
+field of study [1-3]. It is directly involved with real-life          VAM approach are found in the recent publications of [25],
+problems [1- 4]. The application of the TP extends beyond its         [29] [33], [36].
+traditional domain and finds relevance in various other fields           Besides modification of VAM, some other approaches are
+[4], [8]. These fields include personnel assignment, inventory        available in the literature. Recently, in [46] authors, at first,
+control, employee scheduling, and more [1-8]. It is known that
+
+
+
+                                                                                                                          284 | P a g e
+                                                        www.ijacsa.thesai.org
+                                                            (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                     Vol. 15, No. 9, 2024
+
+developed TOC then they formed DI tableau for allocation by                Additionally, it is observed that in the transportation
+considering the average of TOC of cells along each row                 sector, increasing the amount of goods often reduces
+identified as Row Average Total Opportunity Cost (RATOC)               transportation costs. Based on this observation, we investigate
+and the average of TOC of cells along each column identified           how node capacities influence transportation costs. Notably,
+as Column Average Total Opportunity Cost (CATOC).                      no researchers have yet developed methods that leverage the
+Allocations of costs are started in the cell along the row or          effect of node capacity on the allocation and flow of
+column which has the highest RATOCs or CATOCs. This                    commodities.
+approach is also developed by considering only cost matrix.
+                                                                          In this paper, we extensively examined the impact of
+    In the article [35], author proposed a modified method to          capacity distribution among the nodes on classical well-known
+north-west corner method for finding IBFS. Very recently,              approaches, namely LCM and VAM, considering the problem
+some modified approaches based on LCM are found in the                 mentioned in the existing literature. Next, we developed a
+publications of [7], [26], etc. Some statistical methods are           capacity-blended flow-controlling matrix based on the cost
+found in [36], [40]. In [35] authors have presented an                 matrix. Finally, we proposed a novel capacity-influenced
+alternative method of NWC method by using Statistical tool             approach to find the IBFS of TPs.
+called Coefficient of Range (CoR) by statistically analyzing
+the cost matrix. Author, in [47], introduced a new algorithm               The novelties of the proposed approach are explained in
+for solving TPs. They proposed the Gauss Jordan pivoting               the following:
+method to solve the TPs. They consider only cost matrix and                 We propose a novel approach to find better IBFS for
+iteratively it finds out the solution. This algorithm is faster              the TPs by developing a new, unique distribution
+than Simplex method.                                                         indicator (DI) that combines the capacity vectors and
+    Some heuristic methods of TPs to find out IBFS are found                 DI vector to control the flow of allocation.
+in the articles [3], [9], [11], [12], [20], [21], [37], [48-56]. In         Our approach proposes a more effective solution for
+fuzzy environment, many research publications are found in                   the TPs that can overcome the limitations of existing
+the literature of which some recent publications are included                methods, namely VAM and LCM, by addressing the
+in the articles [13], [23], [27], [32]. Researchers also dedicated           impact of capacity distribution among the nodes.
+to find better IBFS for unbalanced TPs [10], [17], [32], [34].
+A good survey of TP for finding IBFS is observed in [31],                   Proposed approach introduces a capacity-influenced
+[57-58]. On the other hand, [15], [16] and [17] proposed a new               weighted factor and a capacity-influenced Weighted
+technique for controlling the flow of allocation named                       Opportunity Cost (WOC) Matrix to find a more
+Weighted Opportunity Cost (WOC) matrix. The WOC matrix                       suitable IBFS in a computationally efficient way for
+is formed by demand and/or supply as a weight factor                         VAM and LCM.
+corresponding to each transportation cost. Authors in [15],
+                                                                            We extensively verified the impact of capacity
+[16] and [17] also considered some numerical instances to test
+                                                                             distribution and proposed methods have been
+the efficiency of the proposed algorithms. In [59] authors
+                                                                             experimentally verified to evaluate its performance
+considered a fractional objective function rather than a linear
+                                                                             over other approaches using real examples.
+objective to solve TPs. In [60], presented a modified VAM
+specifically designed for maximizing profit, with the flow of              The remainder of the paper is organized as follows.
+allocation controlled by cost entries as well. Moreover, in            Section II explains the mathematical model of TPs. Section III
+recently published articles [61-64], authors have proposed             extensively examines the impact of capacity distribution
+various methods to find the IBFS of TPs in which the flow of           among nodes for both LCM and VAM for TPs. Section IV
+allocations is controlled by manipulating only cost entries.           explains the proposed method of this paper. This section
+                                                                       develops and explains proposed mathematical model named as
+     It is observed that many approaches are available in the
+                                                                       “Capacity influenced weighted factor” to control the flow of
+literature, and researchers are continuously working to
+                                                                       allocations. It also develops the formulation of control matrix
+develop more efficient methods to solve the TPs. But as far as
+                                                                       of the proposed approach. Detailed results of numerical
+it is known, none of the approaches is the best for solving all
+                                                                       experiments to validate the efficiency of the proposed method
+TPs. In our earlier work [15] Jamali also noticed this pitfall
+                                                                       is explained in Section V and conclusion of this study is
+and proposed a newer approach to LCM. Though it [15]
+                                                                       presented in the last section.
+performed better compared to LCM but it frequently obtains
+worse IBFS compared to VAM.                                                 II.    MATHEMATICAL MODEL OF TRANSPORTATION
+   It is known that classical methods like the LCM and VAM                                    PROBLEM
+are relatively less computationally expensive compared to                  By considering the equality characteristics of TPs, it can
+other approaches for finding the Initial Basic Feasible Solution       be represented using a specialized tableau known as the
+[28] (IBFS) of Transportation Problems (TPs) [18]. Although            Transportation Tableau (TT). The typical view of TT is shown
+VAM generally performs better than LCM, there are cases                in Table I. In the TT, Oi indicates the ith source with the
+where LCM outperforms VAM. This raises the question: Is                amount of availability is ai which is shown in the far-right
+the performance variation due to the distribution of node              column. On the other hand, Dj denotes the jth destination with
+capacities?                                                            demand bj, which is shown in the bottom row of TT. In this
+                                                                       table, there is an m×n matrix containing cost entries. The cell
+
+
+
+                                                                                                                           285 | P a g e
+                                                         www.ijacsa.thesai.org
+                                                                                         (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                                                  Vol. 15, No. 9, 2024
+
+in the ith row and jth column is called the Cij cell and the                                             Example 1(c):
+transportation cost is denoted as cij, which represents the unit
+shipping cost from the ith source to the jth destination. So, a                                     TABLE IV.        TRANSPORTATION TABLEAU OF TRANSPORTATION PROBLEM 3
+TT can be viewed as a (m+1) × (n+1) matrix shown in Table I.                                                              D1               D2            D3           Supply
+
+                  TABLE I.           A TT OF A TP WITH M SOURCES AND N DESTINATIONS                 O1               2                5            8             30
+
+                                                     Sinks/Destinations                             O2               6                4            14            20
+
+                                      D1        D2                   Dn-1    Dn          Supply     O3               15               12           13            10
+
+                     O1                                                                             Demand           20               35           5
+
+                     O2
+
+
+
+Origins/Sources
+                                                                                                        TABLE V.      (EX. 1(A) LCM) STEP-BY-STEP FLOW OF ALLOCATIONS OF
+                                                                                                                         LCM AND VAM FOR EX. 1(A) –1(C)
+                     O3
+                                                                                                                               LCM: IBFS of Ex. 1 (a)
+                                                                                                             D1                   D2                D3                    S
+
+                     Om                                                                             O1       2                    5                 8                     20
+                                                                                                             20                   0                 0
+                     Demand
+                                                                                                    O2       6                    4                 14                    20
+                                                                                                             0                    20                0
+                  III.  IMPACT OF THE CAPACITY DISTRIBUTIONS AMONG
+                                                                                                    O3       15                   12                13                    20
+                    NODES ON LEAST COST AND VOGEL’S APPROXIMATION
+                                       METHODS                                                               0                    0                 20
+    First three typical balanced TPs are considered which are                                       D        20                   20                20
+presented in the Examples 1(a) – 1(c) and their corresponding
+comparative analyses are presented in Table II to Table X. It
+                                                                                                        TABLE VI.     (EX 1(A) VAM) STEP-BY-STEP FLOW OF ALLOCATIONS OF
+should be noted that in all three TPs, the cost matrices are                                                             LCM AND VAM FOR EX. 1(A) –1(C)
+identical, and the total capacity remains the same. The only
+                                                                                                                               VAM: IBFS of Ex. 1 (a)
+difference lies in the distribution of capacity among the nodes.
+Numerical experiments have been conducted to investigate the                                                  D1                  D2                D3                S
+effect of capacity on both the LCM and VAM in terms of
+                                                                                                    O1        2                   5                 8                 20
+finding the IBFS and total cost [19].
+                                                                                                              0                   0                 20
+                   Example 1(a):
+                                                                                                    O2        6                   4                 14                20
+TABLE II.                    TRANSPORTATION TABLEAU OF TRANSPORTATION PROBLEM 1                               20                  0                 0
+                                     D1               D2                D3             Supply       O3        15                  12                13                20
+O1                           2              5                    8                20                          0                   20                0
+O2                           6              4                    14               20                D         20                  20                20
+O3                           15             12                   13               20
+
+Demand                       20             20                   20                                     TABLE VII.    (EX. 1(B) LCM) STEP-BY-STEP FLOW OF ALLOCATIONS OF
+                                                                                                                         LCM AND VAM FOR EX. 1(A) –1(C)
+
+                   Example 1(b):                                                                                               LCM: IBFS of Ex. 1 (b)
+                                                                                                              D1                  D2                D3                S
+TABLE III.                   TRANSPORTATION TABLEAU OF TRANSPORTATION PROBLEM 2
+                                                                                                    O1        2                   5                 8                 30
+                                      D1              D2              D3           Supply
+                                                                                                              10                  0                 20
+O1                               2              5               8            30
+                                                                                                    O2        6                   4                 14                20
+O2                               6              4               14           20
+                                                                                                              0                   20                0
+O3                               15             12              13           10
+                                                                                                    O3        15                  12                13                10
+Demand                           10             20              30                                            0                   0                 10
+                                                                                                    D         10                  20                30
+
+
+
+
+                                                                                                                                                              286 | P a g e
+                                                                                       www.ijacsa.thesai.org
+                                                                  (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                           Vol. 15, No. 9, 2024
+
+    TABLE VIII. (EX. 1(B) VAM) STEP-BY-STEP FLOW OF ALLOCATIONS OF           distribution of nodes for each instance is shown in Table XI. It
+                   LCM AND VAM FOR EX. 1(A) –1(C)
+                                                                             is observed that only by a change of capacity distribution
+                          VAM: IBFS of Ex. 1 (b)                             among the nodes, the total transportation cost for each
+          D1                  D2                D3            S              instance produced by LCM is changed significantly.
+                                                                             Similarly, only by a change of capacity distribution among the
+O1        2                   5                     8         30             nodes, the total transportation cost for each instance produced
+          0                   0                 30                           by VAM is changed significantly. It is also observed that the
+O2             6              4                 14            20
+                                                                             IBFSs produced by LCM of the three instances are changed
+                                                                             significantly. Similarly, it is also observed that the IBFSs
+          10                  10                0                            produced by VAM of the three instances are changed
+O3        15                  12                13            10             significantly. It has been observed that in Example 1(a), the
+                                                                             LCM produced a superior IBFS compared to VAM, with a
+          0                   10                0
+                                                                             notable and significant difference between the two solutions.
+D         10                  20                30                           But only the change of capacity distribution, in Example 1(b),
+                                                                             VAM produced a better solution compared to LCM.
+                                                                             Moreover, in Example 1(c), though LCM produced a better
+    TABLE IX.      (EX. 1(C) LCM) STEP-BY-STEP FLOW OF ALLOCATIONS OF
+                      LCM AND VAM FOR EX. 1(A) –1(C)                         solution, but the difference between the two solutions is not
+                                                                             large.
+                           LCM: IBFS of Ex. 1 (c)
+          D1                  D2                D3            S               TABLE XI.        COMPARISON BETWEEN THREE EXAMPLES REGARDING THE
+                                                                                                        EFFECT OF CAPACITY
+O1        2                   5                 8             30
+                                                                                    Ex. 1(a) Equal       Ex. 1(b) Unequal        Ex1 (c) Unequal Capacity
+          20                  10                0                                     capacity               Capacity
+                                                                                                                                       Demand: 30, 20, 10
+O2        6                   4                 14            20                   Demand: 20, 20,      Demand: 30, 20,120
+                                                                                        20                                             Supply: 20, 35, 5
+          0                   20                0                                                       Supply:   10, 20, 30
+                                                                                   Supply: 20, 20,
+O3        15                  12                13            10                         20
+          0                   5                 5                                  T.        IBFS       T.        IBFS            T.            IBFS
+D         20                  35                5                                  Cas                 Cos                       Cos
+                                                                                    t                   t                         t
+                                                                             LC   380 x11→x22          520 x11→ x22→ x13→ 295 x11→x22→x12→
+    TABLE X.       (EX. 1(C) VAM) STEP-BY-STEP FLOW OF ALLOCATIONS OF        M        →x33                 x33                x32→x33
+                      LCM AND VAM FOR EX. 1(A) –1(C)
+                                                                                         20→ 20 →            10 → 20 → 20→             20 → 20→10 → 5 →
+                        VAM: IBFS of Ex. 1 (c)                                           20                  10                        5
+                   D1               D2                  D3         S         VA   520 x13→x21→x3 470 x13→x21→x22→x3 305 x13→x11→x22→x12→x3
+                                                                             M           2                   2                         2
+O1        2                   5                 8             30
+                                                                                         20      →20         30 →10→        10         5 → 20 → 20 → 5 →
+          20                  5                 5                                        →20                 →10                       10
+
+O2        6                   4                 14            20                 We have performed further experiments to examine the
+          0                   20                0                            effect of capacity distribution on the flow of allocations of
+                                                                             both LCM and VAM. For this numerical experiment, we have
+O3        15                  12                13            10             considered some more examples shown in Table XII.
+          0                   10                0                                We have performed both approaches, namely LCM and
+                                                                             VAM to find out IBFS. The experimental result is shown in
+D         20                  35                5
+                                                                             Table XII. It is observed in Table XII that instances 2(a) –2(c)
+                                                                             has the same cost matrix but the capacity distributions are
+    To examine the effect of capacity on LCM and VAM, we                     different. Though instances 2(a) – 2(c) have different
+have first compared the step-by-step flow of allocations. The                distributions of capacity, the total supply/demand is equal for
+intensive comparison of the step-by-step flow of the                         each instance. Similarly, instances 3(a) to 3(c) have identical
+allocations procedure of the two approaches is concisely                     cost matrices, but the capacity distributions vary. Though
+shown in Table XI. It is observed in Table XI that due to the                Examples 2(a) – 2(c) have different capacity distributions but
+change of capacity distribution among the nodes, the pattern                 total supply/demand is equal for each instance. It is observed
+of flow of allocation is changed significantly for both                      for Example 2(a), that VAM produced a better solution which
+approaches. Furthermore, it is observed that the IBFS obtained               is also an optimal solution, but only a change of capacity
+using both methods undergo significant changes for each                      distribution, for Example 2(b) and 2(c), LCM obtained a better
+instance.                                                                    solution compared to VAM. Similarly, it is observed that for
+   Now we have compared IBFSs and Total Transportation                       Example 3(a) LCM produced a better solution which is also an
+Costs (TTC) for each instance. The effect of the capacity                    optimal solution, but only a change of capacity distribution,
+
+
+
+                                                                                                                                             287 | P a g e
+                                                             www.ijacsa.thesai.org
+                                                                 (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                          Vol. 15, No. 9, 2024
+
+for Example 3(c), LCM obtained a better solution compared to                previous section that node capacity also significantly
+VAM, but for Example 3(b) VAM obtained a better solution                    influences allocation flow, alongside cost entries. Therefore, a
+compared to LCM. The experimental results are examined                      novel approach is needed to control the flow of allocations in
+intensively. We have found out significant effects of the                   TPs by combining the weight factor DI with the weight factor
+distribution of capacities on the IBFS of each approach.                    of the corresponding node's capacity. The primary challenge
+                                                                            involves developing a suitable weight factor for the capacity
+    TABLE XII.    SOME MORE EXAMPLES REGARDING LCM AND VAM                  of each node. Subsequently, a new flow of allocation matrix
+Instance    Cost matrix      Capacity     Total    LC    VA      Optim      needs to be formulated, incorporating both the capacity of
+    s                                    Capacit   M     M        al        nodes and DI as a combined weight factor for the
+                                            y                               corresponding cost entries. The first challenge is to find out
+2 (a)      {7,8,7};          S:12, 12,   36        324   276     276        the weight factor to the cost matrix from the capacity of nodes.
+           {18,8,12};        12
+           {8,12,12}         D:12,                                              The WOC matrix is a new concept to control the flow of
+                             12, 12
+                                                                            allocations of TP to find out IBFS. In WOC, amount of
+2 (b)      {7,8,7};          S;          36        326   334     298
+           {18,8,12};        14,14,8                                        supply/demand of each route is a weighted factor
+           {8,12,12}         D:                                             corresponding to the cost entry. The procedures to find out
+                             15,8,13                                        capacity influenced approach is discussed step by step below:
+2 (c)      {7,8,7};          S:25,30,    60        525   555     525
+           {18,8,12};        5                                                  Step 1: Finding cell weight: At first, we have found out the
+           {8,12,12}         D:35,20,                                       maximum possible allocation of the cell Cij , which is (Si , Dj ) ,
+                             5
+3 (a)      {2,5,8};{6,4,14   S:20, 20,   60        480   520     480        where Si denotes total supply at node i and Dj indicates total
+           }; {15,12,18}     20                                             demand at node j. Therefore, sum over of all possible
+                             D:20,                                          allocations is as follow:
+                             20, 20
+3 (b)      {2,5,8};{6,4,14   S:          60        314   308     308                                      p       q
+
+           }; {15,12,18}     43,15,2                                                                      min (S , D )
+                                                                                                         i 1     j 1
+                                                                                                                                               i   j
+                             D:2,53,5
+3 (c)      {2,5,8};{6,4,14   S:10, 10,   30        240   260     240
+           }; {15,12,18}     10                                                 Therefore, for each cell 𝐶𝑖𝑗 its weight will be as follows
+                             D:10,
+                                                                                                    min Si , D j   min Si , D j 
+                                                                                                                              p        q
+                             10, 10
+                                                                                                                             i 1 j 1
+  IV.   OUR PROPOSED METHOD: A NOVEL DISTRIBUTION
+ INDICATOR AND CAPACITY-INFLUENCED APPROACH TO IBFS                             So that total weight becomes one. i.e.,
+            FOR TRANSPORTATION PROBLEMS
+                                                                                                                                                              
+                                                                                        min S , D   min S , D    1
+                                                                                        p    q                                     p       q
+    In classical approaches, like North-West Corner Rule [35],                                                i          j                             i   j
+LCM, the flow of allocation is controlled directly by the cost                         i 1 j 1                                 i 1 j 1                    
+entries only. Once again, in some other classical transportation
+approaches, such as Vogel’s VAM method and all its variants,                  But
+                                                                               p
+                                                                                  since every cell of cost matrix will contain the factor
+                                                                                  q
+
+the flow of allocations is controlled solely by the manipulation            1  min (Si , D j ) , so we have ignored this factor to
+                                                                                i 1 j 1
+of cost entries. Moreover, based on our literature review, it is
+observed that almost all approaches have been developed by                  reduce computational cost. Therefore, for each cell 𝐶𝑖𝑗                                       its
+manipulating cost entries exclusively. None of these                        weight will be just 𝑚𝑖𝑛 (𝑆𝑖 , 𝐷𝑗 ).
+approaches considers the node's capacity when formulating
+the control matrix for the flow of allocation. However, as                     Step 2: The second challenge is to find out the combined
+observed in the previous section of this article, the distribution          weight factor formulated by the weight factor DI and the
+of commodities plays a crucial role in controlling the flow of              weight factor WOC to the cost matrix for each route (cell).
+allocations. In the previous investigation section, it is observed          The proposed modified weight factor, Wijm , for the cell Cij is
+that the distribution of commodities significantly alters the               formulated as follows in equation (1):
+performance of the approaches. In this article, we first
+developed a novel capacity-influenced weighted factor and                                   𝑊𝑖𝑗𝑚 = min{𝑎𝑖 , 𝑏𝑗 } ∙ max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }, }                                 (1)
+then proposed a capacity-influenced WOC Matrix-based                            Where ai is the amount capacity of source node Oi, bj is the
+algorithm to find the IBFS of TPs. These are explained in the               amount of the capacity of destination node Dj. Moreover, 𝐷𝑖𝐼𝑟
+following sections.                                                         is the DI corresponding to the source node i and 𝐷𝑗𝐼𝑐 is the DI
+A. The Proposed Capacity-Influenced Weighted Factor to                      corresponding to the sink node j. Then total weight
+    Control the Flow of Allocation                                          corresponding to all cells will be as in Eq. (2).
+    Vogel's method formulates the DI by calculating the                                            𝑇𝑊 = ∑𝑚        𝑛                     𝐼𝑟    𝐼𝑐
+                                                                                                             𝑖 ∑𝑗 min{𝑎𝑖 , 𝑏𝑗 } ∙ max{{𝐷𝑖 , 𝐷𝑗 } ∀ 𝑖 =
+difference between the smallest and the next-to-smallest cost
+                                                                                                    1,2, … , 𝑚 ; 𝑗 = 1,2, … , 𝑛}                    (2)
+entries for each node (supply/destination). In this formulation,
+DI serves as a weight factor corresponding to the cost entries,                 Then, the actual weight factor corresponding to each route
+controlling the flow of allocations. While existing literature              (cell) Cij is
+emphasizes DI as a controlling tool, it is observed in the
+
+
+
+                                                                                                                                                               288 | P a g e
+                                                               www.ijacsa.thesai.org
+                                                                                     (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                                              Vol. 15, No. 9, 2024
+
+                            min{𝑎𝑖 ,𝑏𝑗 }∙max{{𝐷𝑖𝐼𝑟,𝐷𝑗𝐼𝑐 }                                       B. Proposed Formulation of the Capacity-Influenced Control
+       𝐴𝑊𝑖𝑗𝑚 =                                                      , ∀ 𝑖 = 1,2, … , 𝑚 ; 𝑗 =       Matrix
+                     ∑𝑚  𝑛                    𝐼𝑟 𝐼𝑐
+                      𝑖 ∑𝑗 min{𝑎𝑖 ,𝑏𝑗 }∙max{{𝐷𝑖 ,𝐷𝑗 }
+                                        1,2, … , 𝑛                                      (3)        After development of modified weighted cost factor, we
+                                                                                                can easily formulate the Modified Weighted Cost (MWOC)
+   Here in Eq. (3), max{{𝐷𝑘𝐼𝑟 , 𝐷𝑙𝐼𝑐 } ∀ 𝑖, 𝑗, is fixed and constant
+and also ∑𝑚   𝑛     𝑚                                                                           Matrix[𝑊𝑐𝑚   ] which is as follows:
+          𝑖 ∑𝑗 𝐴𝑊𝑖𝑗 = 1.                                                                                  𝑖𝑗
+
+                                                                                                                                              1
+   But since the term
+                                                             1
+                                                                               is common              If 𝑐𝑖𝑗 ≠ 0; 𝑊𝑐𝑚
+                                                                                                                     𝑖𝑗
+                                                                                                                        =                           min{𝑎𝑖 , 𝑏𝑗 } × max{ 𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }
+                                                                                                                                              𝑐𝑖𝑗
+                                         ∑𝑚  𝑛                    𝐼𝑟 𝐼𝑐
+                                          𝑖 ∑𝑗 min{𝑎𝑖 ,𝑏𝑗 }∙max{{𝐷𝑖 ,𝐷𝑗 }
+to all 𝐴𝑊𝑖𝑗𝑚 ∀𝑖, 𝑗 and as 𝐴𝑊𝑖𝑗𝑚 act as a controller of the flow                                       If 𝑐𝑖𝑗 = 0 and {𝑐𝑝𝑞 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑝, 𝑞} = 𝜑, (i.e. null
+of allocation and it has no any real effect to measure the total                                       set)            then               set             𝑊𝑐𝑚𝑖𝑗
+                                                                                                                                                                =
+transportation cost, so without loss of generality we can ignore                                         max{𝑎𝑖 , 𝑏𝑗 ; ∀𝑖, 𝑗} × min{𝑎𝑖 , 𝑏𝑗 } × max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }
+this factor in flow of allocation matrix.
+                                                                                                      Else if 𝑐𝑝𝑞 = 0 and { 𝑐𝑝𝑞 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑝, 𝑞} ≠ 𝜑 (i.e.
+   Therefore, the weight factor corresponding to the cell Cij                                          not       null     set),       then       set      𝑊𝑐𝑚 =                                 𝑖𝑗
+can be expressed as follows in Eq. (4):                                                                      max{𝑎𝑖 ,𝑏𝑗 ;∀𝑖,𝑗}
+                                                                                                                                     × min{𝑎𝑖 , 𝑏𝑗 } × max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }
+                                                                                                         [min{𝑐𝑖𝑗 :0<𝑐𝑖𝑗 <1,∀𝑖,𝑗}]
+             𝑊𝑖𝑗𝑚 = min{𝑎𝑖 , 𝑏𝑗 } × max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }                                  (4)
+                                                                                                C. Algorithm of Proposed Capacity-Influenced Approach
+    It is noted that this reduces a significant amount of                                          Step 1: Form the MWOC weight factor matrix.
+computational cost. The significance of this weight is that
+larger weight poses larger possibility to flow of allocation.                                       Step 2: Allocate (as much as possible), i.e., min {Si, Di},
+                                                                                                to the cell (route) which has the largest weight factor.
+    Step 3: After the successful formulation of the weight
+factor corresponding to each cell (route), our next task is to                                      Step 3: Update the cost matrix by crossing out exhausted
+formulate the capacity-influenced WOC Matrix. But now we                                        cells and corresponding weight factors.
+have to face a problem regarding the accumulation of this
+                                                                                                   Step 4: Terminate if all demand requirements are satisfied;
+weight factor to any cost entries. Since the cell with a lower
+                                                                                                otherwise, go back to step 2.
+cost has a preference for allocation first, on the other hand, the
+cell with a larger weight factor has a preference for allocation                                    Once all cells are allocated, calculate the total
+first. So, it is not directly possible to formulate a WOC matrix                                transportation cost by multiplying the allocated units with
+just by simply multiplying the weight factor by the cost entry                                  their respective costs and summing up all these products.
+to find out meaningful elements of the WOC matrix. To
+overcome this difficulty and for the formulation of a                                                             V.             NUMERICAL EXPERIMENTATION
+meaningful WOC matrix, we should transform one of the two                                           Now we will implement the proposed method and will
+so that the multiplication of the two will be meaningful. This                                  compare its performance with existing approaches namely
+can be done by inversing the cost elements. Therefore, the                                      LCM and VAM. For the experimental study we have
+weighted opportunity cost corresponding to the cell cost Cij as                                 considered another TP 4 (see Example 4) whose TT is given
+stated in Eq. (5) below:                                                                        in the Table XIII.
+                       1
+       𝑊𝑐𝑚
+          𝑖𝑗
+             =              min{𝑎𝑖 , 𝑏𝑗 } × max{ 𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 } , 𝑐𝑖𝑗 ≠ 0 (5)                         Example 4:
+                      𝑐𝑖𝑗
+
+   Here 𝑊𝑐𝑚 𝑖𝑗
+               and cij denote the modified weighted cost factor                                 TABLE XIII. TRANSPORTATION TABLEAU OF TRANSPORTATION PROBLEM 4
+
+and actual cost entry corresponding to the cell Cij respectively.                                                        D1                         D2                      D3         Supply
+
+   But another problem arises if the cost at any cell is zero.                                  O1                 4                     3                         5                  90
+                            1                                                                   O2                 6                     5                         4                  80
+Since when 𝑐𝑖𝑗 = 0 then        becomes undefined. So, to
+                                                 𝑐𝑖𝑗
+                                                                                                O3                 8                     10                        7                  100
+overcome this difficulty it is needed some more special
+attention. We can overcome this shortcoming by replacing                                        Demand             70                    120                       80
+zero with a significantly large value. So, if there exists any
+cell whose cost entry is zero, then we can formulate the virtual                                 TABLE XIV. MODIFIED WEIGHTED OPPORTUNITY COST MATRIX OF THE
+                                                                                                                         PROBLEM 4
+weighted cost to the cell Cpq as follows:
+                                                                                                                         D1                D2                 D3             Supply            DI
+       If 𝑐𝑝𝑞 = 0 and {𝑐𝑖𝑗 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑖, 𝑗} = 𝜑, (i.e. null
+                                                                                                                        140               180                 80
+        set)           then               set              𝑊𝑐𝑚  =                               O1                                                                          90             1
+                                                             𝑖𝑗                                                          4                  3                 5
+        max{𝑎𝑖 , 𝑏𝑗 ; ∀𝑖, 𝑗} × min{𝑎𝑖 , 𝑏𝑗 } × max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }                                                       140               160                 80
+                                                                                                O2                                                                          80             1
+                                                                                                                         6                  5                 4
+       Else if 𝑐𝑝𝑞 = 0 and {𝑐𝑖𝑗 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑖, 𝑗} ≠ 𝜑 (i.e.                                O3
+                                                                                                                        140               200                 80
+                                                                                                                                                                            100            1
+        not      null     set),       then       set      𝑊𝑐𝑚 =                         𝑖𝑗
+                                                                                                                         8                 10                 7
+            max{𝑎𝑖 ,𝑏𝑗 ;∀𝑖,𝑗}
+                                    × min{𝑎𝑖 , 𝑏𝑗 } × max{{𝐷𝑖𝐼𝑟 , 𝐷𝑗𝐼𝑐 }
+                                                                                                Demand             70                   120              80
+        [min{𝑐𝑖𝑗 :0<𝑐𝑖𝑗 <1,∀𝑖,𝑗}]
+                                                                                                DI                 2                    2                1
+
+
+
+
+                                                                                                                                                                                  289 | P a g e
+                                                                                  www.ijacsa.thesai.org
+                                                                                    (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                                             Vol. 15, No. 9, 2024
+
+    To find the IBFS of the proposed method, we first need to                                   TABLE XVIII. THE THIRD ALLOCATION OF THE PROPOSED METHOD FOR
+                                                                                                                   THE TABLEAU PROBLEM 4
+find out the flow of the control matrix called the Modified
+Weighted Opportunity Cost (MWOC) matrix shown in                                                                    D1            D2                   D3               supply
+Table XIV. To explain how to form the MWOC matrix, let us                                                     140           180            80
+                                                                                                                       4           3                    5
+consider the cell C12. It is observed that the unit cost c12 = 4                               O1              4             3             5                       90
+                                                                                                              ×             90             ×
+which is not zero. Therefore, the algorithm executes case (a)                                                 140           160            80
+                                                                                                                       6           5                    4
+of the proposed method, formally:                                                              O2              6             5             4                       80,50
+                                                                                                              50            30             ×
+                                                                                                              140           200            80
+                            1                                                                                          8          10                    7
+           𝑊𝑐𝑚
+             12
+                =              min{𝑎1 , 𝑏2 } × max{ 𝐷1𝐼𝑟 , 𝐷2𝐼𝑐 }                              O3              8            10
+                                                                                                                            ×
+                                                                                                                                           7                       100
+                           𝑐12
+                                                                                               Demand         70, 20        120 , 30       80
+                   1
+                  = × min{90,120} × max{ 1, 2}
+                   3
+                                                                                                TABLE XIX. THE FOURTH ALLOCATION OF THE PROPOSED METHOD FOR
+                                 1                 180
+                               = × 90 × 2=                                                                        THE TABLEAU PROBLEM 4
+                                 3                     3
+                                                                                                                    D1             D2                      D3           supply
+     TABLE XV.     MODIFIED WEIGHTED OPPORTUNITY COST INCLUDED                                                140           180                 80
+                  TRANSPORTATION TABLEAU PROBLEM 4                                                                      4              3                    5
+                                                                                               O1              4             3                     5                90
+                                                                                                              ×             90                  ×
+                  D1                      D2                D3         supply             DI                  140           160                 80
+                                                                                                                        6              5                    4
+            140                  180               80
+                                                                                               O2              6             5                     4                80,50
+O1                  4                      3                 5        90             1                        50            30                  ×
+             4                    3                5                                                          140           200                 80
+            140                  160               80                                                                   8          10                       7
+O2                  6                      5                 4        80             1         O3              8            10                     7                100, 80
+             6                    5                4                                                          20            ×
+            140                  200               80
+O3                  8                     10                 7        100            1         Demand         70, 20        120 , 30            80
+             8                   10                7
+Demand      70                   120               80
+DI          2                    2                 1                                           TABLE XX.      THE FIFTH ALLOCATION OF THE PROPOSED METHOD FOR THE
+                                                                                                                         TABLEAU PROBLEM 4
+    We can represent the cost matrix and the MWOC matrix in                                                         D1            D2                   D3               supply
+a single tableau as shown in Table XV. In Table XV, the entry                                                 140           180             80
+in the top-left corner of each cell represents the weighted                                                             4              3                    5
+                                                                                               O1             4             3                  5                   90
+opportunity cost factor associated with that cell, while the                                                  ×             90              ×
+                                                                                                              140           160             80
+entry in the top-right corner represents its transportation cost.                                                       6              5                    4
+                                                                                               O2             6             5                  4                   80,50
+The step by step of each allocation’s procedure of the                                                        50
+                                                                                                              140
+                                                                                                                            30
+                                                                                                                            200
+                                                                                                                                            ×
+                                                                                                                                            80
+proposed MWOC-based approach is shown in Tables XVI to                                                                  8          10                       7
+                                                                                               O3             8             10                 7                   100, 80
+XXI. The IBFS of the problem obtained by the proposed                                                         20            ×               80
+method is shown in Table XVI. It is observed that the TTC for                                  Demand         70, 20        120 , 30        80
+finding the IBFS by the proposed method is 1440.
+                                                                                                          TTC = 3×90+6×50+5×30+8×20+7×80 =1440
+TABLE XVI. THE FIRST ALLOCATION OF THE PROPOSED METHOD FOR THE
+                      TABLEAU PROBLEM 4                                                             TABLE XXI. THE IBFS OF THE PROPOSED METHOD FOR THE TABLEAU
+                                                                                                                            PROBLEM 4
+                   D1                     D2                 D3            supply         DI
+            140                  180                   80                                                           D1            D2                   D3              supply
+                       4                   3                     5                                            140           180            80
+O1           4                       3                  5              90                 1                            4           3                   5
+            ×                    90                    ×                                       O1              4             3             5                      90
+            140                  160                   80                                                     ×             90             ×
+O2                     6                   5                     4     80                 1                   140           160            80
+             6                    5                    4                                                               6           5                    4
+            140                  200                   80                                      O2              6             5             4                      80,50
+O3                     8                   10                    7     100                1                   50            30             ×
+             8                       10                 7
+                                                                                                              140           200            80
+Demand      70                   120 , 30              80                                                           8             10                   7
+                                                                                               O3              8            10             7                      100, 80
+                                                                                                              20            ×              80
+DI          2                    2                     1
+                                                                                               Demand         70, 20        120 , 30       80
+ TABLE XVII. THE SECOND ALLOCATION OF THE PROPOSED METHOD FOR
+                    THE TABLEAU PROBLEM 4
+                                                                                                   Now have solved the problem with the existing LCM,
+                                                                                               VAM, and WOC-LCM and compared it with the proposed
+                  D1                      D2                 D3                  supply        method named MWOC-VAM. The comparison is shown in
+            140
+                       4
+                                 180
+                                               3
+                                                       80
+                                                                  5                            Table XXII. It is observed in Table XXII that the proposed
+O1           4                       3                  5                  90                  MWOC-VAM needs the least amount of transportation cost to
+            ×                    90                    ×
+            140
+                                 160
+                                               5
+                                                       80
+                                                                 4                             obtain the IBFS compared to all other approaches namely
+O2                     6             5                  4                  80,50               LCM, VAM, and WOC-LCM. It is also observed that the
+             6                   30
+            140
+                    8
+                                 200
+                                       10
+                                                       80
+                                                                 7
+                                                                                               starting allocation of LCM, WOC-LCM, and MWOC-VAM
+O3           8                   10                     7                  100                 are the same but differ from VAM. It is also observed in the
+                                 ×
+                                                                                               second column of Table XXII that the pattern of the flow of
+Demand      70                   120 , 30              80
+                                                                                               allocation for each approach is different.
+
+
+
+
+                                                                                                                                                                290 | P a g e
+                                                                                 www.ijacsa.thesai.org
+                                                                   (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                            Vol. 15, No. 9, 2024
+
+TABLE XXII. COMPARISON REGARDING THE FLOW OF ALLOCATIONS AND                  Table XXVI that the pattern of the flow of allocation for each
+ TOTAL TRANSPORTATION COST TO FIND OUT THE IBFS OF THE PROBLEM 4
+                                                                              approach is different. Now we have considered another
+     Method            Flow of allocations and IBFS          Total Cost       problem 6 (Example 6) in which one route has zero
+                   x12→x23 →x31→ x32                                          transportation cost and some route’s transportation cost is less
+LCM                                                         1450              than 1 but getter than zero.
+                   90→ 80 →70 → 30
+                   x11→x33 →x12→ x22→ x32
+VAM                                                         1500
+                   70→ 80 →20 → 80 → 20                                            TABLE XXIV. MODIFIED WEIGHTED OPPORTUNITY COST INCLUDED
+                   x12→x23 → x32→ x31                                                         TRANSPORTATION TABLEAU PROBLEM 5
+WOC-LCM                                                     1450
+                   90 → 80 → 30→ 70
+MWOC-VAM           x12→x22 → x21→ x31→ x33                                                             D1               D2                  D3            supply       DI
+                                                            1440
+(proposed)         90→ 30 → 50 → 20 → 80                                                         150              45                   30
+                                                                              O1                        1                16                 17        10               15
+                                                                                                  1               16                   17
+   Now we have considered another problem 5 (Example 5),                      O2                 120 0
+                                                                                                                  12
+                                                                                                                         6
+                                                                                                                                       12
+                                                                                                                                             8        2                6
+whose TT is given in the Table XXIII in which one route has                                                       6                    8
+                                                                                                 3                9                    2
+zero transportation cost.                                                     O3                        3                3                  7         3                0
+                                                                                                 3                3                    7
+                                                                              Demand             10               3                    2
+     Example 5:
+                                                                              DI                 1                3                    1
+     TABLE XXIII. TRANSPORTATION TABLEAU OF TRANSPORTATION
+                          PROBLEM 5
+                                                                              TABLE XXV. COMPARISON REGARDING THE FLOW OF ALLOCATIONS AND
+                                                                               TOTAL TRANSPORTATION COST TO FIND OUT THE IBFS OF THE PROBLEM 5
+                   D1            D2             D3            Supply
+O1            1            16              17           10                            Method                    Flow of allocations and IBFS                 Total Cost
+                                                                                                            x21 → x11 → x32 → x13
+O2            0            6               8            2                     LCM                                                                            51
+                                                                                                            2 → 8 → 3 →2
+O3            3            3               7            3                                                   x11 → x32 → x23
+                                                                              VAM                                                                            35
+                                                                                                            10 → 3 → 2
+Demand        10           3               2                                                                x21 → x11 → x32 → x13
+                                                                              WOC-LCM                                                                        51
+                                                                                                            2 → 8 → 3 → 2
+    We have again represented the cost matrix and the MWOC                    MWOC-VAM                      x11 → x23 → x32
+matrix in a single tableau in Table XXIV. It is observed in                                                                                                  35
+                                                                              (proposed)                    10 → 2 → 3
+Table XXIV that c21 = 0 and its corresponding weight cost
+factor is 120. Once again, let's illustrate how to calculate the                    Example 6:
+weight factor for that unit cost entry. According to the
+                                                                                    TABLE XXVI. TRANSPORTATION TABLEAU OF TRANSPORTATION
+proposed method, since c21 = 0, the algorithm executes case                                             PROBLEM 6
+(b). Formally:
+                                                                                                       D1                 D2                     D3           Supply
+    (b) As 𝑐21 = 0 and {𝑐𝑝𝑞 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑝, 𝑞} = 𝜑, (i.e.
+null set), so                                                                        O1                 0                    3                  0.5                8
+                                                                                     O2                 3                    7                   10                3
+𝑊𝑐𝑚
+  21
+     = max{𝑎𝑖 , 𝑏𝑗 ; ∀𝑖, 𝑗} × min{𝑎2 , 𝑏1 } × max{ 𝐷2𝐼𝑟 , 𝐷1𝐼𝑐 }
+                                                                                     O3                 1                0.7                     11                9
+         =max{10,2,3; 10,3,2} × min{2,10} × 𝑀𝑎𝑥{1,6}                               Demand               6                    6                   8
+                               = 10 × 2 × 6 =120                                  It is observed in the Table XXVI that c11 = 0, c13 = 0.5 and
+    It is observed in the Table XXIV that the weight                          c32 = 0.7. So, to find out the weight cost factor corresponding
+opportunity cost of the cell C21 is 120 corresponding to the                  to the cost entry 0, the algorithm executes the case (c) of the
+minimal cost i.e., c21 = 0 obtained by the case (b) of the                    proposed method. Formally:
+proposed approach. On the other hand, the weight opportunity
+                                                                                  (c) As 𝑐11 = 0                        and         { 𝑐𝑝𝑞 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑝, 𝑞} =
+cost of the cell C11 is 150 corresponding to the cost 1 i.e., c11 =
+1. It is worthwhile to mention here that the weight factor                    {0.5, 0.7} ≠ 𝜑, so
+corresponding to the route (cell C11) is largest though it’s cost             𝑊𝑐𝑚
+                                                                                11
+entry is not minimum. Now we have solved the problem with
+                                                                                          max{𝑎𝑖 , 𝑏𝑗 ; ∀𝑖, 𝑗}
+the proposed MWOC-VAM as well as LCM, VAM, and                                =                                                  × min{𝑎1 , 𝑏1 } × max{ 𝐷1𝐼𝑟 , 𝐷1𝐼𝑐 }
+WOC-LCM. The experimental result is shown in Table XXV.                            [min{𝑐𝑖𝑗 : 0 < 𝑐𝑖𝑗 < 1, ∀𝑖, 𝑗}]
+    It is observed in Table XVI that the proposed MWOC-                                         max{8,3,9, 6,6,8}
+                                                                                            =                         × min{8,6} × max{ 1, 0.5}
+VAM and VAM need the least amount of transportation cost                                         [min{0.5,0.7}]
+to obtain the IBFS compared to all other approaches, LCM                                                          9
+and WOC-LCM. It is observed that the starting allocation of                                                 =          × 6 × 1 =108
+                                                                                                                0.5
+VAM and proposed MWOC-VAM are the same but different                              We have again represented the cost matrix and the MWOC
+from both LCM and WOC-LCM. On the other hand, the                             matrix in a single tableau as Table XXVII. It is observed in
+starting allocation of LCM and proposed WOC-LCM are the                       the Table XXVII that the weight opportunity cost of the cell
+same. Moreover, VAM and MWOC-VAM need fewer steps to                          C11 is 108 corresponding to the minimal cost i.e., c21 = 0
+get IBFS. It is also observed in the second column of                         obtained by the case (c) of the proposed algorithm. Moreover,
+
+
+
+                                                                                                                                                      291 | P a g e
+                                                              www.ijacsa.thesai.org
+                                                                   (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                            Vol. 15, No. 9, 2024
+
+the weight opportunity cost of the cell C13 and C32 are 152 and                 outperforms VAM, while in the remaining instances, both
+19.71 respectively which are calculated according to the case                   approaches yield similar solutions.
+(a) as well. Now we have solved the problem by the proposed
+MWOC-VAM as well as LCM, VAM and WOC-LCM. The                                       The numerical experiments indicate that the proposed
+experimental result is shown in the Table XXVIII.                               MWOC-VAM consistently performs as well as or better than
+                                                                                both VAM and LCM. Furthermore, VAM requires the
+    It is observed in Table XXVIII that the proposed MWOC-                      calculation of the DI at each iteration, which increases its
+VAM and VAM need the least transportation cost to obtain                        computational cost. In contrast, the proposed MWOC-VAM
+the IBFS compared to the other two approaches, LCM and                          only needs to compute the DI and WOC once initially, making
+WOC-LCM. It is observed that the starting allocation of VAM                     it more computationally efficient.
+and proposed MWOC-VAM are the same but different from
+both LCM and WOC-LCM. On the other hand, the starting                            TABLE XXVII.         MODIFIED WEIGHTED OPPORTUNITY COST INCLUDED
+allocation of LCM and proposed WOC-LCM are the same. It                                            TRANSPORTATION TABLEAU PROBLEM 6
+is also observed in the second column of Table XXVIII that                                         D1              D2            D3    supply             DI
+the pattern of the flow of allocation for each approach is                                                  13.8          76
+                                                                                           108 0                    3            .5
+different.                                                                      O1
+                                                                                           ×
+                                                                                                             3            .5          8              0.5
+                                                                                                            ×             8
+                                                                                           12               12            28.5
+    To analyze the performance and effectiveness of the                                             3               7            10
+                                                                                O2             3             7            10          3              4
+proposed method, we considered an additional 10 randomly                                   3                ×             ×
+                                                                                           6                13.8          76
+generated numerical instances. The experimental results are                                         1               .7           11
+                                                                                O3         1                 .7           11          9              .3
+displayed in Table XXIX. It is evident from Table XXIX that                                3                6             ×
+the proposed method consistently outperforms both the                           Demand     6, 3             6             8
+existing LCM and WOC-LCM approaches. Furthermore, in
+                                                                                DI         1                2.3           9.5
+two instances, the proposed method surpasses VAM, while in
+other cases, it yields equivalent total costs compared to VAM.
+It is also observed that the IBFSs obtained by the proposed                      TABLE XXVIII. COMPARISON REGARDING THE FLOW OF ALLOCATIONS
+                                                                                   AND TOTAL TRANSPORTATION COST TO FIND OUT THE IBFS OF THE
+method are optimal or near optimal.                                                                      PROBLEM 6
+    We collected an additional 8 numerical instances from                             Method                 Flow of allocations and IBFS
+                                                                                                                                                      Total
+published international journals/conferences to evaluate the                                                                                          Cost
+efficiency and effectiveness of the proposed method. In                                                 x11→ x13 → x32 → x23 → x33
+                                                                                LCM                                                                  68.2
+                                                                                                        6 →2 →6 →3 →3
+Table XXX, the first column indicates the reference number of                                           x13 → x32 → x31 → x21
+the published article. The data presented in Table XXX show                     VAM                                                                  20.2
+                                                                                                        8 → 6 →3 → 3
+that, except for three instances where all approaches obtained                                          x11 → x13 → x32 → x33 → x23
+                                                                                WOC-LCM                                                              68.2
+optimal solutions, the proposed method consistently                                                     6 → 2 → 6 → 3 → 3
+                                                                                MWOC-VAM                x13 → x32 → x21 → x31
+outperforms both LCM and WOC-LCM. It is noteworthy that,                        Proposed                8 → 6 → 3 → 3
+                                                                                                                                                     20.2
+in four out of eight instances, the proposed method
+
+    TABLE XXIX. COMPARISON AMONG LCM, VAM, WOC-LCM, AND PROPOSED MWOC-VAM REGARDING THE IBFS OF SOME RANDOMLY GENERATED
+                                                  NUMERICAL INSTANCES
+
+Ex. No.                        Problem                            LCM           VAM       WOC-LCM                 MWOC-VAM Proposed              Opt. Sol.
+          Cij:{(9,8,5,7); (4,6,8,7);(5,8,9,5)}
+1                                                            248           248            240                241                            240
+          S: (12,14,16); D: (8,18,13,3)
+          Cij:{(4,3,5);(6,5,4);(8,10,7)}
+2                                                            145           150            145                144                            139
+          S: (9,8,10); D: (7,12,8)
+          Cij:{(2,5,4);(6,1,2);(4,5,2)}
+3                                                            29            29             29                 29                             29
+          S: (4,6,6); D: (3,7,6)
+          Cij:{(14,19,7,5);(16,6,12,9);(6,16,5,20)}
+4                                                            243           243            243                243                            243
+          S: (10,12,18); D: (9,14,7,10)
+          Cij:{(4,2,1);(3,8,4);(6,5,2)}
+5                                                            605           490            605                490                            475
+          S: (50,70,45); D: (40,65,60)
+          Cij:{(21,16,23,13);(17,18,14,23); (32,27,18,41)}
+6                                                            922           796            919                796                            796
+          S: (11,13,19);D: (6,10,12,15)
+          Cij:{(1,16,17);(0,6,8);(3,3,7)}
+7                                                            51            35             51                 35                             35
+          S: (10,2,3); D: (10,3,2)
+          Cij:{( 1,16,17);(0,3,8);(3,3,7)}
+8                                                            60            36             60                 36                             36
+          S: (10,2,3); D: (10,3,2)
+          Cij:{( 1,16,17);(0,6,8);(3,3,7)}
+9                                                            153           105            153                105                            105
+          S: (30,6,9) ;D: (30,9,6)
+
+
+
+
+                                                                                                                                            292 | P a g e
+                                                              www.ijacsa.thesai.org
+                                                                 (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                          Vol. 15, No. 9, 2024
+
+       TABLE XXX.     COMPARISON AMONG LCM, VAM, WOC-LCM, AND PROPOSED MWOC-VAM REGARDING THE IBFS OF THE PUBLISHED NUMERICAL
+                                                             INSTANCES
+
+Ref No.                              Problem                        LCM             VAM          WOC-LCM         MWOC-VAM Proposed             Opt. Sol.
+            Cij:{(10,2,20,11);(12,7,9,20);(4,14,16,18)}
+[3]                                                               475             475           475              475                         435
+            S: (15,25,10); D: (5,15,15,15)
+            Cij:{(6,4,1); (3,8,7);(4,4,2)}
+[26]                                                              555             555           555              555                         555
+            S: (50,40,60); D: (20,95,35)
+            Cij:{(7,5,9,11); (4,3,8,6);(3,8,10,5);(2,6,7,3)}
+[60]                                                              435             470           435              430                         410
+            S: (30,25,20,15); D: (30,30,20,10)
+            Cij:{(4,3,5); (6,5,4);(8,10,7)}
+[61]                                                              1450            1500          1450             1440                        1390
+            S: (90,80,100); D:(70,120,80)
+            Cij:{(4,1,2,4,4);(2,3,2,2,2);(3,5,2,4,4)}
+[26]        S: (60,35,40);                                        305             273           278              273                         273
+            D: (22,45,20,18,30)
+            Cij:{(4,19,22,11); (1,9,14,14);(6,6,16,14)}
+[62]                                                              2090            2170          2160             2090                        2040
+            S: (100,30,70); D: (40,20,60,80)
+            Cij:{(6,1,9,3); (11,5,2,8);(10,12,4,7)}                               1220
+[63]                                                              1165                          1165             1165                        1160
+            S: (70,55,90); D: (85,35,50,45)
+            Cij:{(13,21,14); (8,12,21);(15,17,19)}
+[64]                                                              473             473           473              473                         465
+            S: (13,20,5); D: (12,15,11)
+
+                          VI.       CONCLUSION                              innovative, providing a new perspective or "window" through
+                                                                            which researchers can approach transportation problems and
+    IBFS is crucial for obtaining an optimal solution in TP.                other linear programming challenges. In future work, we aim
+While various approaches exist in the literature to determine               to develop a hybrid algorithm by integrating the proposed
+IBFS, most are formulated by manipulating the cost matrix to                approach with fuzzy-based techniques.
+control allocation flow. In this article, we stand out as perhaps
+the first to consider the impact of node capacity distribution on                                      ACKNOWLEDGMENT
+the flow of allocations in both LCM and VAM. Through
+numerical experiments, we observed significant changes in                      This work was supported by the King Saud University,
+output due to the distribution of capacity among nodes, even                Riyadh, Saudi Arabia, through the Researchers Supporting
+when the cost matrix and total supply and demand remained                   Project under Grant RSP2025R18. Authors also acknowledge
+constant. For example, if the cost matrix is identical, the flow            the support received from the Department of Computer
+of allocations for approaches like NWC, LCM, VAM, etc.,                     Science, University of Maine, USA.
+remains almost unchanged regardless of the distribution of                                                  REFERENCES
+capacity among nodes. However, by addressing this issue in
+                                                                            [1]    B. Amaliah, C. Fatichah, and E. Suryani, “Total opportunity cost
+the formulation of the flow allocation matrix in the proposed                      matrix–Minimal total: A new approach to determine initial basic feasible
+method, the flow of allocations varies significantly. To                           solution of a transportation problem”, Egyptian Informatics
+leverage this effect, we introduced a novel tool to control                        Journal., vol. 20, no. 2, pp. 131-141, 2019.
+allocation flow. To incorporate the influence of node capacity              [2]    B. Amaliah, C. Fatichah, and E. Suryani, “A Supply Selection Method
+distribution, we developed a capacity-influenced allocation                        for better Feasible Solution of balanced transportation problem”, Expert
+control matrix, termed Capacity-Influenced Distribution                            System with Applications., vol. 203, pp. 117399, oct. 2022
+Indicator (CI-DI), along with the distribution indicator defined            [3]    B. Amaliah, C. Fatichah, and E. Suryani, “A new heuristic method of
+                                                                                   finding the initial basic feasible solution to solve the transportation
+by VAM. Subsequently, we proposed a capacity-influenced                            problem,” Journal of King Saud University–Computer and Information
+algorithm for finding IBFS in balanced TP. It is observed from                     science., vol. 34, no. 5, pp. 2298-2307, 2022.
+the numerical experiments that the proposed method is                       [4]    L. Aizemberg et al., “Formulations for a problem of petroleum
+effective to find out better IBFS of TPs. The proposed                             transportation”. European Journal of Operational Research, vol. 237 no.
+approach significantly overcomes the limitations of both LCM                       1, pp. 82-90, 2014.
+and VAM concerning the impact of capacity distribution                      [5]    M. A. Babu et al., “Lowest allocation method (LAM): a new approach to
+among nodes. Additionally, it demonstrates enhanced                                obtain feasible solution of transportation model,” International Journal
+computational efficiency compared to VAM. While VAM                                of Scientific and Engineering Research., vol. 4, no. 11, pp. 1344-1348,
+                                                                                   2013.
+requires the calculation of the DI for each allocation step, the
+                                                                            [6]    M. A. Babu, M. A. Hoque, and M. S. Uddin, “A heuristic for obtaining
+proposed method only needs to compute the Capacity-                                better initial feasible solution to the transportation problem,”
+Influenced Distribution Indicator (CI-DI) matrix once.                             Opsearch., vol. 57, pp. 221-245, 2020.
+Experimental results lead to the conclusion that practitioners              [7]    A. P. Bhadane, and S. D. Manjarekar, “APB’s method for the IBFS of
+in the supply chain and transportation domain should not only                      transportation problems and comparison with least cost method,” 2020.
+consider cost distributions but also recognize the substantial              [8]    M. R. Bordón, J. M. Montagna, and G. Corsano, “Solution approaches
+role of capacity distributions among nodes in controlling                          for solving the log transportation problem,” Applied Mathematical
+allocation flow, leading to the identification of better IBFS.                     Modelling., vol. 98, pp. 611-627, 2021.
+The concept of a capacity-influenced flow of allocation is
+
+
+
+                                                                                                                                          293 | P a g e
+                                                               www.ijacsa.thesai.org
+                                                                        (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                                 Vol. 15, No. 9, 2024
+
+[9]  T. Can, and H. Koçak, “Tuncay Can’s Approximation Method to obtain            [29] R. R. Lekan, L. C. Kavi, and N. A. Neudauer, “Maximum Difference
+     initial basic feasible solution to transport problem,” Applied and                 Extreme Difference Method for Finding the Initial Basic Feasible
+     Computational Mathematics., vol. 5, no. 2, pp. 78-82, 2016.                        Solution of Transportation Problems,” Applications and Applied
+[10] S.K. Goyal, “Improving VAM for Unbalanced Transportation                           Mathematics: An International Journal (AAM)., vol. 16, no. 1, pp. 18,
+     Problems,” J. Oper. Res. Soc., vol. 35, pp. 1113–1114, 1984.                       2021.
+[11] M. A. Hakim, and M. R. Kabir, “An Efficient Approach for Finding an           [30] M. Mathirajan, and B. Meenakshi, “Experimental analysis of some
+     Initial Basic Feasible Solution for Transportation Problems,” Progress in          variants of Vogel's approximation method,” Asia-Pacific Journal of
+     Nonlinear Dynamics and Chaos., vol. 5, no. 1, pp. 17-23, 2017.                     Operational Research., vol. 21, no. 04, pp. 447-462, 2004.
+[12] E. Hosseini, “Three new methods to find initial basic feasible solution of    [31] M. Mathirajan, S. Reddy, and M. V. Rani, “An experimental study of
+     transportation problems,” Applied Mathematical Sciences., vol. 11, no.             newly proposed initial basic feasible solution methods for a
+     37, pp.1803-1814, 2017.                                                            transportation problem,”Opsearch., vol. 59, no. 1, pp. 102-145, 2022.
+[13] M. Hedid, and R. Zitouni, “Solving the four index fully fuzzy                 [32] S. Muthukumar, R. Srinivasan, and V. Vijayan, “An optimal solution of
+     transportation problem,” Croatian Operational Research Review., vol.               unbalanced octagonal fuzzy transportation problem,” Materials Today:
+     11, no. 2, pp. 199-215, 2020.                                                      Proceedings., vol.37, pp. 1218-1220, 2021.
+[14] A. P. P. Htun, and K. T. Kyi, “Analysis of minimizing the transportation      [33] J. Pratihar, et al, “Modified Vogel’s approximation method for
+     cost using least cost and vogel's approximation methods,” Doctoral                 transportation problem under uncertain environment,” Complex &
+     dissertation, MERAL Portal, 2019.                                                  intelligent systems., vol. 7, no. 1, pp. 29-40, 2021.
+[15] A. R. M. J. U. Jamali, F. Jannat and P. Akhtar, “Weighted cost                [34] A. K. M. S. Reza, A. R. M. J. U. Jamali, and B. Biswas, “A modified
+     opportunity based algorithm for initial basic feasible solution: A new             algorithm for solving unbalanced transportation problems,” Journal of
+     approach in transportation problem,” Journal of Engineering Science.,              Engineering., vol. 10, no. 1, pp. 93-101, 2019.
+     vol. 8, no. 1, pp. 63-70, 2017.                                               [35] N. M. Sharma, and A. P. Bhadane, “An alternative method to north-west
+[16] A. R. M. J. U. Jamali, and P. Akhtar, “Find the IBFS of transportation             corner method for solving transportation problem,” International Journal
+     problem by using sequentially updated weighted opportunity cost-based              for Research in Engineering Application & Management, vol. 1, no. 12,
+     algorithm,” GANIT J. Bangladesh Math. Soc., vol. 38, pp. 47-55. 2018.              pp. 1-3, 2016.
+[17] A. R. M. J. U. Jamali, and R. R. Mondal, “Modified Dynamically-               [36] P. Sumathi, and C. S. Bama, “A Tactical Strategy in Transportation
+     updated Weighted Opportunity Cost Based Algorithm for Unbalanced                   Problems using Statistical Process,” Int. j. eng., vol. 7, no. 4, pp. 473-
+     Transportation Problem,” Journal of Engineering Science., vol. 12, no.             475, 2018.
+     2, pp. 119-131, 2021.                                                         [37] V. J. Sudhakar, N. Arunsankar, and T. Karpagam, “A new approach for
+[18] A. R. M. J. U. Jamali, and M. T. Rahman, “Analysis of pitfalls of VAM              finding an optimal solution for transportation problems,” European
+     for solving transportation problem,” A F Mujibur Rahman-Bangladesh                 journal of scientific research., vol. 68, no. 2, pp. 254-257, 2012.
+     Mathematical Society National Mathematics Conference-2022, 2023 PP.           [38] A. S. S. G. A. Tularam, and G. M. Bhayo, “A comparative study of
+     185-186.                                                                           initial basic feasible solution methods for transportation problems,”
+[19] A. R. M. J. U. Jamali, and M. T. Rahman, “Investigating the pitfalls of            2014.
+     the least cost and Vogel's approximate methods: understanding the             [39] M. W. Ullah, M. A. Uddin, and R. Kawser, “A modified Vogel’s
+     impact of cost matrix patterns,” Journal of Engineering., vol. 14, no. 1,          approximation method for obtaining a good primal solution of
+     pp.123-135, 2023.                                                                  transportation      problems,” Annals        of     Pure    and     Applied
+[20] Z. A. M. S. Juman, and M. A. Hoque, “A heuristic solution technique to             Mathematics., vol. 11, no. 1, pp. 63-71, 2016.
+     attain the minimal total cost bounds of transporting a homogeneous            [40] E. R. Wulan, et al, “The New Technique for Solving Transportation
+     product with varying demands and supplies,” European journal of                    Problem,” 2020.
+     operational research., vol. 239, no. 1, pp. 146-156, 2014.                    [41] B. Amaliah, C. Fatichah, and E. Suryani,. “Two Highest Penalties: A
+[21] Z. A. M. S. Juman, and M. A. Hoque, “An efficient heuristic to obtain a            Modified Vogels Approximation Method to Find Initial Basic Feasible
+     better initial feasible solution to the transportation problem,” Applied           Solution of Transportation Problem,” In 2021 13th International
+     Soft Computing., vol. 34, pp. 813-826, 2015.                                       Conference on Information & Communication Technology and System
+[22] O. Jude et al., “A new and efficient proposed approach to find initial             (ICTS), IEEE, October, 2021, pp. 318-323.
+     basic feasible solution of a transportation problem,” American Journal of     [42] Z. S. Mahdi, H. A. Wasi, and M. A. Shiker, “Solving transportation
+     Applied Mathematics and Statistics., vol. 5, no. 2, pp. 54-61, 2017.               problems by using modification to Vogel’s approximation method,”
+[23] F. S. Josephine, A. Saranya, and I. F. Nishandhi, “A dynamic method for            In AIP Conference Proceedings, AIP Publishing, Vol. 2834, No. 1,
+     solving intuitionistic fuzzy transportation problem,” European Journal of          December, 2023.
+     Molecular & Clinical Medicine., vol. 7, no. 11, pp. 5843-5854, 2020.          [43] C. S. Ramakrishnan, “An improvement to Goyal's modified VAM for
+[24] S. Korukoğlu, and S. Ballı, “An improved Vogel's approximation                     the unbalanced transportation problem,” Journal of the Operational
+     method for the transportation problem,” Mathematical and                           Research Society, vol. 39, no. 6, pp.609-610, 1988.
+     Computational Applications., vol. 16, no. 2, pp. 370-381, 2011.               [44] N.Balakrishnan, “Modified Vogel's approximation method for the
+[25] K. Karagul, and Y. Sahin, “A novel approximation method to obtain                  unbalanced transportation problem.,” Applied Mathematics Letters., vol.
+     initial basic feasible solution of transportation problem,” Journal of King        3, no. 2, pp. 9-11, 1990.
+     Saud University-Engineering Sciences., vol. 32, no. 3, pp. 211-218,           [45] U. K. Das et al., “Logical development of Vogel’s approximation
+     2020.                                                                              method (LD-VAM): an approach to find basic feasible solution of
+[26] A. M. Khoso, A. A. Shaikh, and A. S. Qureshi, “Modified LCM’S                      transportation problem,” International Journal of Scientific &
+     Approximation          Algorithm        for     Solving      Transportation        Technology Research (IJSTR)., vol. 3, no. 2, pp. 42-48, 2014.
+     Problems,” Journal of Information Engineering and Applications., vol.         [46] S. M. A. K. Azad, M. B., Hossain, and M. M. Rahman, “An algorithmic
+     10, no. 3, pp. 7-15, 2020.                                                         approach to solve transportation problems with the average total
+[27] G. Krishnaveni, and K. Ganesan, “An effective approach for the solution            opportunity cost method,” International Journal of Scientific and
+     of fully fuzzy transportation problems,” In IOP Conference Series:                 Research Publications., vol. 7, no. 2, pp. 266-270, 2017.
+     Materials Science and Engineering, IOP Publishing, April 2021, Vol.           [47] H. Arsham, and A. B. Kahn, “A simplex-type algorithm for general
+     1130, No. 1, pp. 012065.                                                           transportation problems: an alternative to stepping-stone.” Journal of the
+[28] R. Kumar, R. Gupta, and O. Karthiyayini, “A new approach to find the               Operational Research Society., vol. 40, pp. 581-590, 1989.
+     initial basic feasible solution of a transportation problem,” Int. J. Res.    [48] V. N., Maurya et al., “Progressive Review and Analytical Approach for
+     Granthaalayah., vol. 6, no. 5, pp. 321-325, 2018.                                  Optimal Solution of Stochastic Transportation Problems (STP)
+
+
+
+
+                                                                                                                                                 294 | P a g e
+                                                                    www.ijacsa.thesai.org
+                                                                    (IJACSA) International Journal of Advanced Computer Science and Applications,
+                                                                                                                             Vol. 15, No. 9, 2024
+
+     Involving Multi-Choice Cost,” American journal of modeling and            [57] R. Gupta, and N.Gulati, “Survey of transportation problem,” In 2019
+     optimization, vol. 2, no. 3, pp. 77-83, 2014.                                  International Conference on Machine Learning, Big Data, Cloud and
+[49] A. Akilbasha, G. Natarajan, and P.Pandian, “Optimising fully fuzzy             Parallel Computing (COMITCon), IEEE, February, 2019, pp. 417-422.
+     interval integer transshipment problems,” International Journal of        [58] S. Moslem et al., “A Systematic Review of Analytic Hierarchy Process
+     Operational Research., vol. 46, no. 1, pp. 1-19, 2023.                         Applications to Solve Transportation Problems: From 2003 to
+[50] G. Xin et al., “A new approach for solving fuzzy transportation                2019,” IEEE Access, 2023.
+     problem., In 2014 Fifth International Conference on Intelligent Systems   [59] M. Sivri, I. Emiroglu, C. Guler, and F. Tasci, “A solution proposal to the
+     Design and Engineering Applications, IEEE, June, 2014, pp. 37-39.              transportation problem with Arsham and Khan (1989) the linear
+[51] A. Ebrahimnejad, “On solving transportation problems with triangular           fractional objective function,” In 2011 Fourth International Conference
+     fuzzy numbers: Review with some extensions,” In 2013 13th Iranian              on Modeling, Simulation and Applied Optimization IEEE, April, 2011,
+     Conference on Fuzzy Systems (IFSC) IEEE, August, 2013, pp. 1-4.                pp. 1-9.
+[52] V. Tharakeswari, M. Kameswari, and M. Seenivasan, “A New Approach         [60] S. Madamedon, E. S. Correa, and P. J. Lisboa, “Tiebreaker Vogel’s
+     to the Transportation Problem of the Hexagonal Fuzzy Number,”                  Approximation Method, a Systematic Approach to improve the Initial
+     In 2023 Fifth International Conference on Electrical Computer and              Basic Feasible Solution of Transportation Problems,” In 2022 IEEE 12th
+     Communication Technologies (ICECCT), IEEE, February, 2023 pp. 1-5.             Symposium on Computer Applications & Industrial Electronics
+                                                                                    (ISCAIE), IEEE, May, 2022, pp. 211-216.
+[53] M. Bisht, I. Beg, and R. Dangwal, “Optimal solution of pentagonal
+     fuzzy transportation problem using a new ranking technique,” Yugoslav     [61] M. M. Ahmed, et al. “A new approach to solve transportation
+     Journal of Operations Research., 2023.                                         problems,” Open Journal of Optimization., vol. 5, no. 1, pp. 22-30, 2016.
+[54] M. Fegade, and A. Muley, “Optimal Solution to Transportation Problem      [62] E. EMUSB, et al., “An effective alternative new approach in solving
+     with Heptagonal Fuzzy Numbers,” European Journal of Mathematics                transportation problems,” American Journal of Electrical and Computer
+     and Statistics., vol. 3, no. 4, pp. 1-5, 2022.                                 Engineering., vol. 5, no. 1, pp. 1-8, 2021.
+[55] K. Kaewfak et al., “A risk analysis based on a two-stage model of fuzzy   [63] M.I. Sharma. “A review paper on transportation problem for minimum
+     AHP-DEA for multimodal freight transportation systems,” IEEE                   transportation cost,” IJESC., vol. 10, no. 1, ISSN 2321 3361, 2020.
+     Access., vol. 8, pp. 153756-153773, 2020.                                 [64] M. M. Ahmed, et al “New procedure of finding an initial basic feasible
+[56] G. Sharma et al., “Soft set based intelligent assistive model for              solution of the time minimizing transportation problems,” Open Journal
+     multiobjective and multimodal transportation problem,” IEEE                    of Applied Sciences, vol. 5, no. 10, pp. 634-640, 2015.
+     Access, vol. 8, pp. 102646-102656, 2020.
+
+
+
+
+                                                                                                                                             295 | P a g e
+                                                                 www.ijacsa.thesai.org
+

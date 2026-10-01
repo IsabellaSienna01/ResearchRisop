@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem
+							| Engineering, Technology & Applied Science Research
+			</title>
+
+	
+<link rel="icon" href="https://etasr.com/public/journals/1/favicon_en_US.png" />
+<meta name="generator" content="Open Journal Systems 3.3.0.22" />
+	<link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://etasr.com/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/plugins/generic/citations/css/citations.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/public/journals/1/styleSheet.css?d=" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						
+ <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="						https://etasr.com/index.php/ETASR/index
+					" class="is_img">
+							<img src="https://etasr.com/public/journals/1/pageHeaderLogoImage_en_US.png" width="486" height="87" alt="Engineering, Technology &amp; Applied Science Research" />
+						</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR">
+					HOME
+				</a>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/about">
+					ABOUT
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/submissions">
+										Submissions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/archiving">
+										Archiving
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/editorialTeam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/privacy">
+										Privacy Statement
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/pfee">
+										Publication Fee
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/Payment">
+										Payment Instructions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/ReviewerRewards">
+										Reviewer Rewards
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/contact">
+										Contact
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/policy">
+										Ethics, Terms & Policies
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/faq">
+										Frequently Asked Questions
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/issues">
+					ISSUES
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/issue/current">
+										Current Issue
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/archives">
+										All Issues
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/onlinefirst/view">
+										Online First
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/ds">
+					DATA & STATISTICS
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats">
+										Overall Stats
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats_annual">
+										Annual Stats
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats_info">
+										Metrics Information
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15">
+					TEMPLATE
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/troubleshooting">
+										Troubleshooting & Info
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15">
+										Download Template
+									</a>
+								</li>
+																		</ul>
+							</li>
+			</ul>
+
+				
+
+																						<div class="pkp_navigation_search_wrapper">
+									<a href="https://etasr.com/index.php/ETASR/search" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										Search
+									</a>
+								</div>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://etasr.com/index.php/ETASR/user/register">
+					Register
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://etasr.com/index.php/ETASR/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+
+<link rel="icon" href="https://etasr.com/public/journals/1/favicon_en_US.png" />
+<meta name="generator" content="Open Journal Systems 3.3.0.22" />
+<link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://etasr.com/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/plugins/generic/citations/css/citations.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/public/journals/1/styleSheet.css?d=" type="text/css" />
+<script src="https://etasr.com/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/popper/popper.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/util.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/main.js?v=3.3.0.22" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css?v=3.1.2.1" type="text/css" />
+<div class="deepanbrea">
+	<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol class="breadcrumb">
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/index">
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/issue/archive">
+				Archives
+			</a>
+		</li>
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/issue/view/99">
+				Vol. 16 No. 2 (2026): April, 2026
+			</a>
+		</li>
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/article/view/16468">
+				Article
+			</a>
+		</li>
+		<li class="active">
+				PDF
+		</li>
+	</ol>
+</nav>
+</div>
+
+<style type="text/css">
+.article-full-tpl,
+#article-full-close-row {
+    width: 100%;
+    display: none;
+    background-color: #646464;
+
+}
+.article-full-tpl,
+.article-full-frame {
+    width: 100%;
+    min-height: 80vh;
+    border: none;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.mb-1, .my-1 {
+    margin-bottom: .25rem !important;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.article-full-tpl .article-full-frame {
+    width: 100%;
+    min-height: 80vh;
+    border: none;
+}
+.col-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.btn-group{
+    padding: 0px;
+    margin: 0px;
+}
+.float-right {
+    float: right !important;
+}
+.btn-download {
+    background-color: #646464;
+    border-color: #646464;
+    color: #fff !important;
+}
+.btn-group > .btn-group:not(:last-child) > .btn, .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.article-full-tpl,
+.article-full-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 2000;
+    background-color: white;
+}
+</style>
+
+<div id="container">
+	
+	<div id="inner_container">
+	    <div class="row justify-content-center mb-1">
+            <div class="col-12">
+                <div class="btn-group btn-group-sm float-right">
+                    <a href="https://etasr.com/index.php/ETASR/article/view/16468" class="btn btn-secondary btn-download">
+                        <i class="fas fa-arrow-left"></i>
+                        Return to Article Details
+                    </a>
+                    <a class="btn btn-secondary btn-download galley-link" role="button" href="https://etasr.com/index.php/ETASR/article/download/16468/6350/83362" aria-label="pdf">
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    
+                                Download
+                        </a>
+                    <button id="article-full" class="btn btn-secondary btn-download">
+                        <i class="fas fa-expand-arrows-alt"></i>&nbsp;Full-screen
+                    </button>
+                </div>
+            </div>
+        </div>
+	    <div class="row justify-content-center mb-1">
+            <article class="col-12">
+                <div class="row">
+                    <div class="col-12" id="article-frame-row">
+                        <div id="article-full-close-row" class="text-right">
+                            <button class="btn btn-sm btn-secondary btn-download" id="article-full-close">
+                                <i class="fas fa-times-circle"></i>&nbsp;Close full-screen
+                            </button>
+                        </div>
+                        <iframe id="article-html-frame" class="article-full-frame"  oncontextmenu="return false;"
+                                src="https://etasr.com/plugins/generic/pdfViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fetasr.com%2Findex.php%2FETASR%2Farticle%2Fdownload%2F16468%2F6350%2F83362" width="90%" height="100%" style="min-height: 800px;" allowfullscreen webkitallowfullscreen></iframe>
+    
+                    </div>
+                </div>
+            </article>
+        </div>
+        			</div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#article-full").on('click',function(){
+        $("#article-full-close-row").show();
+        $("#article-frame-row").addClass("article-full-fixed");
+    });
+    $("#article-full-close").on('click',function(){
+        $("#article-full-close-row").hide();
+        $("#article-frame-row").removeClass("article-full-fixed");
+    });
+    
+});
+// Callback function for impression
+function sendImpressionData(pdf_id) {
+	//alert('PDF impression logged for ' + pdf_id);
+}
+
+// Callback function for PDF fully viewed
+function sendFullyViewedData(pdf_id) {
+	//alert(pdf_id + ' has been fully viewed');
+}
+
+</script>
+
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+				<div class="pkp_block block_custom" id="customblock-template">
+	<h2 class="title pkp_screen_reader">template</h2>
+	<div class="content">
+		<p><span class="title"><img src="/public/site/images/etasr_editor/ETASR_COVER.png"><br></span></p>
+<p><a href="https://etasr.com/index.php/ETASR/onlinefirst/view/index"><button style="height: 25px; width: 200px; color: #007ab2;">Online First (Upcoming)</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/archives"><button style="height: 25px; width: 200px; color: #007ab2;">All Issues (2011-Present)</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/faq"><button style="height: 25px; width: 200px; color: #007ab2;">Frequently Asked Questions</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15"><button style="height: 25px; width: 200px; color: #007ab2;">Download the Template</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/about/submissions"><button style="height: 25px; width: 200px; color: #007ab2;">Make a submission</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/stats"><button style="height: 25px; width: 200px; color: #007ab2;">Data &amp; Statistics</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/pfee"><button style="height: 25px; width: 200px; color: #007ab2;">Article Publication Fees</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/policy"><button style="height: 25px; width: 200px; color: #007ab2;">Terms &amp; Policies</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/about/contact"><button style="height: 25px; width: 200px; color: #007ab2;">Contact</button></a></p>
+<p><span class="title">Journal Abbreviation<br></span>Eng. Technol. Appl. Sci. Res.</p>
+<p><span class="title">eISSN<br></span>1792-8036</p>
+<p><span class="title">pISSN<br></span>2241-4487</p>
+<p><span class="title">Crossref Membership<br></span>DOI prefix: 10.48084<br>Direct DOI link:<br><a href="https://doi.org/10.48084/etasr">https://doi.org/10.48084/etasr</a></p>
+<p style="text-align: justify;"><span class="title">Citation Styling<br></span>Available in the official Zotero Style Repository (add it from inside Zotero or <a href="https://www.zotero.org/styles/engineering-technology-and-applied-science-research">download the csl file</a>)&nbsp;</p>
+<p style="text-align: justify;"><span class="title">RIS/BIB Files<br></span>Download links available in each article's abstract page.</p>
+<p><span class="title">Additional Information<br></span><a href="https://etasr.com/index.php/ETASR/information/readers">For Readers</a><br><a href="https://etasr.com/index.php/ETASR/information/authors">For Authors</a><br><a href="https://etasr.com/index.php/ETASR/information/librarians">For Librarians</a></p>
+<p>[ETASR cover artwork created by our late friend, the great N. Tsagkarakis. <a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/22">Download HR here</a>]</p>
+<p>&nbsp;</p>
+<p><a href="https://pubeta.eu/"><img src="https://etasr.com/public/site/images/etasr_editor/pubeta.png" alt="PUBETA" width="605" height="146"></a></p>
+	</div>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<h3 style="text-align: center;">Got questions? <a href="https://etasr.com/index.php/ETASR/faq">Read our FAQ page</a>.</h3>
+			</div>
+		
+		<div style="padding:30px" role="complementary">Open Journal Systems Hosting and Support by: <a href="https://openjournalsystems.com/ojs-hosting">OpenJournalSystems.com</a></div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="https://etasr.com/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/popper/popper.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/util.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/main.js?v=3.3.0.22" type="text/javascript"></script>
+
+
+</body>
+</html>

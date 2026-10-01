@@ -1,0 +1,1 @@
+PASS: 24 exhaustive 3x3 LP comparisons; 21 published anchors; rollout dominance, lower bounds, degeneracy, cycles, both dummy directions.

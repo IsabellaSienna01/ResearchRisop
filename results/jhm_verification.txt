@@ -1,0 +1,1 @@
+PASS: L01 cost 460 matches; L03 higher-unit-cost tie trace gives 473, explicitly mismatching published 475; printed L01 allocation audited; all successful outputs feasible and basic; demand-excess dummy case; same-policy completion never worsens the baseline on matched inputs; unresolved branches excluded explicitly.

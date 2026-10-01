@@ -1,0 +1,293 @@
+RESEARCH ARTICLE | DECEMBER 04 2023
+
+Solving transportation problems by using modification to
+Vogel’s approximation method 
+Zena S. Mahdi; H. A. Wasi; Mushtak A. K. Shiker 
+
+
+
+AIP Conf. Proc. 2834, 080110 (2023)
+https://doi.org/10.1063/5.0161614
+
+
+
+                                                                        CrossMark
+
+                                                     
+                                                    View     Export
+                                                    Online   Citation
+
+
+
+
+                                                                                    05 December 2023 19:44:18
+    Solving Transportation Problems by Using Modification
+              to Vogel's Approximation Method
+              Zena S. Mahdi 1, a), H. A. Wasi 2, b) and                                     Mushtak A. K. Shiker 3, c)
+    1, 3
+           Department of Mathematics, College of Education for Pure Sciences, University of Babylon, Babil- Iraq.
+   2
+       Department of Information Networks, college of information technology, University of Babylon, Babil- Iraq
+                                                              a)
+                                                                   zennasa79@gmail.com
+                                                         b)
+                                                              mathman1972@gmail.com
+
+                   c)
+                        Corresponding author: mmttmmhh@yahoo.com , pure.mushtaq@uobabylon.edu.iq
+
+
+   Abstract. There are various techniques in the literature for finding the initial basic feasible solution (IBFS) for
+
+
+
+
+                                                                                                                                    05 December 2023 19:44:18
+   transportation problems (T.P.). This paper proposes a new (V.A.M.) modification to find (IBFS) of (T.P.). This revised
+   technique delivers a better solution and is really near to the optimal solution (O.S.), and it even gives the perfect solution
+   on a few occasions. Numerical examples that have been solved back up the recommended adjustment. A comparison
+   with the results of traditional methods was also conducted.
+
+
+   Keywords: Linear Programming, initial basic feasible solution, VAM
+
+
+                                                               INTRODUCTION
+
+    Many companies and production industries face many difficulties of economic improvements in our daily lives,
+such as reducing costs to increase profits. Transportation models are an example of these rooted financial
+optimizations. The (TP) is a particular class of linear programming problems (LPP). The (TP) basically cares about
+the most efficient way to move a product from several factories or plants (referred to as supply origins) to a variety
+of warehouses or customers (referred to as demand destinations). Until the best shipment plan is chosen, one that
+minimizes total transportation costs while meeting both (supply) and (demand). Hitchcock [1] introduced the
+fundamental transportation problem in 1941, while Koopmans [2] studied the subject further from 1947-1949.
+There are two stages to finding the (OS) to (TP). The (IBFS) is obtained in the first step by using any of the various
+traditional approaches, such as the “North-West Corner Method” (NWCM), “Least Cost Method” (LCM), and
+“Vogel’s Approximation Method” (VAM). The “Modified Distribution Method” (MODI) was used to find the (OS)
+in the second stage. In new research, the “Stepping Stone Method” was designed by Charnes and Cooper [3] to find
+the (OS) for (IBFS). Goyal [4] proposed a study to solve the unbalanced transportation problem by Modification
+(VAM). In 2002, Ping Ji [5] presented his study “The dual-matrix approach to the transport problem.” In 2006,
+Moriah and Garg [6] Introduced a new technique to find the best assignment table in administrative systems. In
+2010, Pandian et al. [7] suggested different ways to find the (OS) to (TP) directly. Samuel and Venkachalapati [8]
+recently introduced a new technique to modify fuzzy transport problems (VAM). In 2019, Amaliah [9] proposed a
+new approach to determine the initial basic feasible solution to (TP). In this study, we present a proposed
+modification of (VAM) called (MS) to obtain (IBFS) of (TP). The results are close to (OS) (and occasionally more
+petite than the optimal solution) and better or equal to the results of the solution according to (VAM). Anyway, the
+outcomes of our proposed method outperform the traditional methods (NWCM) and (LCM).
+
+
+                         2nd International Conference of Mathematics, Applied Sciences, Information and Communication Technology
+                                        AIP Conf. Proc. 2834, 080110-1–080110-5; https://doi.org/10.1063/5.0161614
+                                                  Published by AIP Publishing. 978-0-7354-4715-8/$30.00
+
+                                                                       080110-1
+                     THE STEPS OF THE NEW ALGORITHM TO FIND IBFS
+
+     Step1: Create a transportation table based on (T.P.) information (if not provided). Ensure that aggregate supply
+meets aggregate demand; if not, balance (T.P.).
+     Step 2: a) Select the smallest cost element in the first column of (T.P.) table and subtract that cost element from
+each element in that column. Repeat this process for all columns in (T.P.) table. As a result, each column in the new
+table will contain at least one zero. This new table is referred to as the (reduced column matrix).
+     b) Select the smallest cost element in the first row of (reduced column matrix). Subtract it from each element in
+that row. Repeat this row in the new table will contain at least one zero. This new table is referred to as the (reduced
+row matrix).
+     Step 3: Locate the locations of the zero cells in the original schedule depending on the location of the zero cells
+in the (reduced row matrix table).
+     Step 4: In the first row of the (reduced row matrix), allocate the uttermost possible units to the max zero cells in
+the chosen 𝑥𝑖𝑗 = 𝑚𝑖𝑛𝑖𝑚𝑢𝑚 (𝑆𝑖 , 𝐷𝑗 ).
+     If the zero cell is satisfied, the remainder of the task is added to a nonzero cell (with the lowest cost) in the same
+row.
+     If the specified row does not contain zero cells, the assignment starts with the nonzero cell (with the lowest cost),
+i.e., minimum (𝑐𝑖𝑗 )
+     Step 5: Repeat step 4 for all rows in (T.P.) table.
+     Step 6: The total cost of (T.P.) can be calculated using the equation below.
+                                                          𝑚    𝑛
+
+                                                   𝑍 = ∑ ∑ 𝑐𝑖𝑗 𝑥𝑖𝑗
+                                                         𝑖=1 𝑗=1
+
+
+                                             NUMERICAL EXAMPLES
+
+
+
+                                                                                                                              05 December 2023 19:44:18
+Example 1. Consider the following schedule for (T.P.):
+
+                                               TABLE 1. Schedule of (T.P.)
+
+                   Sources               𝑫𝟏                   𝑫𝟐               𝑫𝟑               Supply
+
+                      𝑺𝟏                 1                    3                 2                  5
+
+                      𝑺𝟐                 3                    2                 6                  8
+
+                      𝑺𝟑                 3                    5                 4                  7
+                 Demand                 5                  5                10                    20
+The given transportation table is balanced since total supply = total demand = 20.
+
+According to the algorithm of the new technique, we get:
+
+
+
+
+                                                        080110-2
+                                                                                   TABLE 3. Reduced row matrix
+                    TABLE 2. Reduced column matrix
+
+              Sources                                                          Sources        𝑫𝟏       𝑫𝟐          𝑫𝟑
+                                𝑫𝟏         𝑫𝟐            𝑫𝟑
+
+                 𝑺𝟏             0          1              0                      𝑺𝟏           0        1           0
+
+                 𝑺𝟐             4          0              2                      𝑺𝟐           4        0           2
+
+                 𝑺𝟑             2          3              2                      𝑺𝟑           0        1           0
+
+                                                TABLE 4. (IBFS) according to (M. T. )
+
+                      Sources                  𝑫𝟏                     𝑫𝟐                      𝑫𝟑             Supply
+
+                        𝑺𝟏                 1        ×            3         ×              2        5           5
+
+                        𝑺𝟐                 3        3             2        5              6        ×           8
+
+                        𝑺𝟑                 3        2            5         ×              4        5           7
+                     Demand                     5                     5                       10              20
+
+
+The total cost is: 𝑍 = ∑3𝑖=1 ∑3𝑗=1 𝑐𝑖𝑗 𝑥𝑖𝑗
+
+
+
+
+                                                                                                                                 05 December 2023 19:44:18
+𝑍 = (5 × 2) + (3 × 3) + (2 × 5) + (4 × 5) + (3 × 2) = 55 𝑢𝑛𝑖𝑡𝑠
+                    Example 2. Consider the following schedule of supply, demand, and unit costs for (T.P.):
+
+
+                                                        TABLE 5. Schedule of (T.P.)
+
+          Sources                    𝑫𝟏                   𝑫𝟐                       𝑫𝟑                  𝑫𝟒               Supply
+
+            𝑺𝟏                        2                    3                          7                11                150
+
+            𝑺𝟐                        0                   12                          5                 6                125
+
+            𝑺𝟑                       14                    1                          3                 9                75
+
+            𝑺𝟒                       10                    2                          5                 8                50
+         Demand                      100                  20                       80                  200               400
+
+
+The given transportation table is balanced since total supply = total demand = 400.
+
+According to the new algorithm, we get:
+
+
+
+
+                                                                080110-3
+          TABLE 6. Reduced column matrix                                               TABLE 7. Reduced row matrix
+
+Sources       𝑫𝟏       𝑫𝟐             𝑫𝟑      𝑫𝟒                     Sources             𝑫𝟏        𝑫𝟐       𝑫𝟑           𝑫𝟒
+
+  𝑺𝟏          2         2             4        5                          𝑺𝟏              0        0         2              3
+
+  𝑺𝟐          0         13            2        0                          𝑺𝟐              0        13        2              0
+
+  𝑺𝟑          14        0             0        3                          𝑺𝟑             14        0         0              3
+
+  𝑺𝟒          10        1             2        2                          𝑺𝟒              9        0         1              1
+
+
+
+
+                                                        TABLE 8. (IBFS) according to (M. T. )
+
+
+           Sources             𝑫𝟏                   𝑫𝟐                        𝑫𝟑                   𝑫𝟒                Supply
+
+             𝑺𝟏                   2                    3                       7                 11     ×             150
+
+             𝑺𝟐                       ×                    ×                       ×             6 125                125
+
+
+
+
+                                                                                                                                05 December 2023 19:44:18
+                              0                    12                     5
+             𝑺𝟑              14       ×            1       ×              3 50                   9 25                 75
+
+             𝑺𝟒              10       ×            2       ×              5        ×             8 50                 50
+          Demand               100                  20                        80                  200                 400
+
+
+The total cost is: 𝑍 = ∑3𝑖=1 ∑3𝑗=1 𝑐𝑖𝑗 𝑥𝑖𝑗
+𝑍 = (2 × 100) + (3 × 20) + (7 × 30) + (6 × 125) + (3 × 50) + (9 × 25) + (8 × 50)
+
+= 1995 𝑢𝑛𝑖𝑡𝑠
+
+                                                RESULT ANALYSIS
+
+  After getting the (IBFS) using the suggested (M.T.), the results are compared with the results obtained by
+(NWCM), (MCM), and (V.A.M.).
+
+                                             TABLE 9. Comparison of the results
+
+
+            Name             NWCM                  MCM                    VAM                     MT                  OS
+
+            Ex 1.              57                   55                        61                   61                 61
+
+            Ex 2.             2215                 1995                   2245                    2360               1945
+
+
+
+
+                                                               080110-4
+    As shown in Table 9, the suggested (M.T.) provides much better (IBFS) results than the classical methods, which
+are either the (O.S.) or close to the (O.S.). A lot of examples have been solved using our proposed method. And it
+did not yield unsatisfactory results.
+
+                                                   CONCLUSION
+
+   One of the essential stages of getting the (O.S.) for (T.P.) is to find (IBFS). It is worth noting that (V.A.M.) is the
+best way to solve (T.P.) among the classic methods. In this article, a new approach (M.T.) is proposed for finding
+(IBFS) of (T.P.). The results we reached using (M.T.) compared with the solutions provided by the classical
+methods (NWCM), (MCM), and (V.A.M.). The (M.T.) results are the best and sometimes equal or less than the
+(O.S.). The recommended solution has a reasonable possibility of resolving (T.P.). This technique may be preferred
+over current methods.
+
+                                                  REFERENCES
+
+    1.   F. L. Hitchcock, The distribution of a product from several sources to numerous localities. Journal of
+         mathematics and physics, vol. 20, no. 1, pp. 224- 230, (1941).
+    2.   T.C. Koopmans, Optimum utilization of the transportation system. Econometrica: Journal of the
+         Econometric Society, vol.17, pp.136-146, (1949).
+    3.   A. Charnes & W.W. Cooper, The stepping stone method of explaining linear programming calculations in
+         transportation problems. Management Science, vol. 1, no.1, pp. 49-69, (1954).
+    4.   S. K. Goyal, Improving VAM for unbalanced transportation problems. The Journal of the Operational
+         Research Society, vol. 35, no. 12, pp.1113-1114, (1984).
+    5.   J. I., Ping & K. F. Chu, A dual-matrix approach to the transportation problem. Asia-Pacific Journal of
+         Operational Research, vol. 19, no. 1, pp. 35-45, (2002).
+
+
+
+
+                                                                                                                             05 December 2023 19:44:18
+    6.   V. N. Maurya and M. B. Garg, An alternative approach for determining an optimum assignment schedule
+         in management systems. Acta Ciencia Indica Mathematics, vol. 32, no. 3, pp. 10- 17, (2006).
+    7.   P. Pandian and G. Natarajan, A new method for finding an optimal solution for transportation problems,
+         International Journal of Mathematical Sciences & Engineering Applications, vol. 4, pp. 59- 65, (2010).
+    8.   A. E., Samuel & M. Venkatachalapathy, Modified Vogel’s approximation method for fuzzy transportation
+         problems. Applied Mathematical Sciences, vol. 5, no. 28, pp. 1367-1372, (2011).
+    9.   B. Amaliah, C. Fatichah, & E. Suryani, Total opportunity cost matrix–Minimal total: A new approach to
+         determine initial basic feasible solution of a transportation problem. Egyptian Informatics Journal, vol. 20,
+         no. 2, pp. 131-141, (2019).
+
+
+
+
+                                                       080110-5
+

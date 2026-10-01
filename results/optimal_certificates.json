@@ -1,0 +1,10579 @@
+{
+  "L01_Table2": {
+    "cost": 435.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        5.0,
+        0.0,
+        10.0
+      ],
+      [
+        0.0,
+        10.0,
+        15.0,
+        0.0
+      ],
+      [
+        5.0,
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 435.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      5.0,
+      7.0
+    ],
+    "column_duals": [
+      -3.0,
+      2.0,
+      4.0,
+      11.0
+    ],
+    "dummy": null
+  },
+  "L02_Table3": {
+    "cost": 111.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        6.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        0.0
+      ],
+      [
+        0.0,
+        11.0,
+        0.0,
+        1.0
+      ],
+      [
+        9.0,
+        5.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 111.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      1.0,
+      2.0,
+      6.0
+    ],
+    "column_duals": [
+      -2.0,
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "dummy": null
+  },
+  "L02_Table7": {
+    "cost": 7750.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        500.0,
+        0.0
+      ],
+      [
+        0.0,
+        250.0,
+        0.0,
+        150.0
+      ],
+      [
+        250.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        50.0,
+        100.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 7750.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      10.0,
+      5.0,
+      -4.0
+    ],
+    "column_duals": [
+      1.0,
+      4.0,
+      4.0,
+      -8.0
+    ],
+    "dummy": [
+      "row",
+      3
+    ]
+  },
+  "L03_Table2": {
+    "cost": 465.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        2.0,
+        0.0,
+        11.0
+      ],
+      [
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 465.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -5.0,
+      -0.0
+    ],
+    "column_duals": [
+      13.0,
+      17.0,
+      14.0
+    ],
+    "dummy": null
+  },
+  "L04_Example1": {
+    "cost": 55.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        5.0
+      ],
+      [
+        3.0,
+        5.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 55.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      2.0,
+      4.0,
+      4.0
+    ],
+    "column_duals": [
+      -1.0,
+      -2.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "L04_Example2": {
+    "cost": 1945.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        100.0,
+        20.0,
+        5.0,
+        25.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        125.0
+      ],
+      [
+        0.0,
+        0.0,
+        75.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        50.0
+      ]
+    ],
+    "dual_cost": 1945.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -5.0,
+      -4.0,
+      -3.0
+    ],
+    "column_duals": [
+      2.0,
+      3.0,
+      7.0,
+      11.0
+    ],
+    "dummy": null
+  },
+  "L05_Example1": {
+    "cost": 985.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        20.0,
+        0.0,
+        30.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        55.0
+      ],
+      [
+        10.0,
+        65.0,
+        0.0,
+        0.0
+      ],
+      [
+        60.0,
+        0.0,
+        0.0,
+        -0.0
+      ]
+    ],
+    "dual_cost": 985.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      1.0,
+      -0.0,
+      5.0,
+      2.0
+    ],
+    "column_duals": [
+      5.0,
+      -1.0,
+      -0.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "L05_Example2": {
+    "cost": 4525.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        150.0
+      ],
+      [
+        25.0,
+        0.0,
+        150.0
+      ],
+      [
+        175.0,
+        100.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 4525.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      6.0,
+      7.0,
+      4.0
+    ],
+    "column_duals": [
+      -0.0,
+      1.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "L05_Example3": {
+    "cost": 2366.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        18.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        14.0,
+        3.0
+      ],
+      [
+        5.0,
+        14.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        11.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.0,
+        0.0,
+        0.0,
+        11.0
+      ]
+    ],
+    "dual_cost": 2366.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      18.0,
+      59.0,
+      20.0,
+      17.0
+    ],
+    "column_duals": [
+      34.0,
+      3.0,
+      6.0,
+      -13.0,
+      -8.0
+    ],
+    "dummy": null
+  },
+  "E01_Example1": {
+    "cost": 3460.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        60.0,
+        40.0,
+        0.0,
+        20.0
+      ],
+      [
+        0.0,
+        0.0,
+        30.0,
+        40.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        50.0
+      ]
+    ],
+    "dual_cost": 3460.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      3.0,
+      11.0
+    ],
+    "column_duals": [
+      20.0,
+      22.0,
+      6.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "E01_Example2": {
+    "cost": 610.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        50.0,
+        0.0
+      ],
+      [
+        20.0,
+        20.0,
+        -0.0,
+        35.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        25.0
+      ]
+    ],
+    "dual_cost": 610.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      1.0,
+      1.0
+    ],
+    "column_duals": [
+      1.0,
+      4.0,
+      7.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "E01_Example3": {
+    "cost": 743.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        2.0,
+        7.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0,
+        0.0,
+        12.0
+      ]
+    ],
+    "dual_cost": 743.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -10.0,
+      22.0,
+      -0.0
+    ],
+    "column_duals": [
+      29.0,
+      8.0,
+      18.0,
+      20.0
+    ],
+    "dummy": null
+  },
+  "E01_Example4": {
+    "cost": 490.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        7.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        9.0
+      ],
+      [
+        5.0,
+        8.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 490.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -41.0,
+      -0.0
+    ],
+    "column_duals": [
+      7.0,
+      5.0,
+      14.0,
+      49.0
+    ],
+    "dummy": null
+  },
+  "E01_Example5": {
+    "cost": 1401.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        -0.0,
+        0.0,
+        2.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0
+      ],
+      [
+        1.0,
+        4.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        6.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        5.0,
+        4.0
+      ]
+    ],
+    "dual_cost": 1401.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -13.0,
+      4.0,
+      32.0,
+      52.0,
+      68.0
+    ],
+    "column_duals": [
+      -19.0,
+      23.0,
+      -3.0,
+      28.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "E01_Example6": {
+    "cost": 505.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 14,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        7,
+        2
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        6.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        11.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        13.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        11.0,
+        -0.0,
+        12.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        13.0,
+        0.0,
+        0.0,
+        4.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        13.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        14.0
+      ],
+      [
+        0.0,
+        0.0,
+        7.0,
+        9.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 505.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      2.0,
+      -2.0,
+      4.0,
+      1.0,
+      2.0,
+      1.0,
+      7.0,
+      5.0,
+      5.0,
+      1.0
+    ],
+    "column_duals": [
+      -1.0,
+      2.0,
+      3.0,
+      -0.0,
+      2.0,
+      1.0,
+      -2.0
+    ],
+    "dummy": null
+  },
+  "E01_Example7": {
+    "cost": 722.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 16,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        7.0,
+        0.0,
+        0.0,
+        9.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        8.0,
+        0.0
+      ],
+      [
+        4.0,
+        6.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.0,
+        8.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        8.0
+      ],
+      [
+        7.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        15.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 722.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -4.0,
+      -10.0,
+      -8.0,
+      -8.0,
+      -11.0,
+      -5.0,
+      -10.0
+    ],
+    "column_duals": [
+      14.0,
+      15.0,
+      13.0,
+      11.0,
+      6.0,
+      14.0,
+      9.0,
+      15.0,
+      13.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N01": {
+    "cost": 5600.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 4,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        -0.0,
+        20.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        15.0,
+        30.0
+      ]
+    ],
+    "dual_cost": 5600.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      40.0,
+      68.0,
+      80.0
+    ],
+    "column_duals": [
+      -8.0,
+      -0.0,
+      -20.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N02": {
+    "cost": 28.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        6.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.0,
+        6.0
+      ],
+      [
+        4.0,
+        0.0,
+        6.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 28.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -0.0,
+      -0.0
+    ],
+    "column_duals": [
+      -0.0,
+      2.0,
+      2.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N03": {
+    "cost": 1102.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        4.0,
+        3.0
+      ],
+      [
+        5.0,
+        4.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "dual_cost": 1102.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -5.0,
+      13.0,
+      54.0,
+      15.0,
+      12.0
+    ],
+    "column_duals": [
+      42.0,
+      11.0,
+      14.0,
+      -5.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N04": {
+    "cost": 555.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        15.0,
+        35.0
+      ],
+      [
+        20.0,
+        20.0,
+        0.0
+      ],
+      [
+        0.0,
+        60.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 555.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -1.0,
+      3.0,
+      -1.0
+    ],
+    "column_duals": [
+      -0.0,
+      5.0,
+      2.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N05": {
+    "cost": 410.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        10.0,
+        20.0,
+        0.0
+      ],
+      [
+        5.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        5.0,
+        0.0,
+        0.0,
+        10.0
+      ]
+    ],
+    "dual_cost": 410.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      6.0,
+      4.0,
+      3.0,
+      2.0
+    ],
+    "column_duals": [
+      -0.0,
+      -1.0,
+      3.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N06": {
+    "cost": 7750.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        500.0,
+        0.0
+      ],
+      [
+        0.0,
+        250.0,
+        0.0,
+        150.0
+      ],
+      [
+        250.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        50.0,
+        100.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 7750.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      10.0,
+      5.0,
+      -4.0
+    ],
+    "column_duals": [
+      1.0,
+      4.0,
+      4.0,
+      -8.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N07": {
+    "cost": 1160.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        30.0,
+        0.0,
+        40.0
+      ],
+      [
+        0.0,
+        5.0,
+        50.0,
+        0.0
+      ],
+      [
+        85.0,
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 1160.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      4.0
+    ],
+    "column_duals": [
+      6.0,
+      1.0,
+      -2.0,
+      3.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N08": {
+    "cost": 190.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        4.0,
+        0.0,
+        8.0,
+        0.0
+      ],
+      [
+        6.0,
+        6.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        10.0
+      ]
+    ],
+    "dual_cost": 190.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      1.0,
+      -3.0
+    ],
+    "column_duals": [
+      5.0,
+      6.0,
+      9.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N10": {
+    "cost": 910.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        10.0,
+        0.0,
+        20.0
+      ],
+      [
+        0.0,
+        20.0,
+        30.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        0.0,
+        10.0
+      ]
+    ],
+    "dual_cost": 910.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      5.0,
+      7.0
+    ],
+    "column_duals": [
+      1.0,
+      2.0,
+      4.0,
+      11.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N11": {
+    "cost": 2460.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        20.0,
+        0.0,
+        40.0
+      ],
+      [
+        0.0,
+        40.0,
+        60.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0,
+        0.0,
+        20.0
+      ]
+    ],
+    "dual_cost": 2460.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      5.0,
+      10.0
+    ],
+    "column_duals": [
+      -6.0,
+      2.0,
+      4.0,
+      22.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N12": {
+    "cost": 425.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        2.0,
+        10.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        7.0
+      ],
+      [
+        0.0,
+        0.0,
+        7.0
+      ]
+    ],
+    "dual_cost": 425.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      7.0,
+      -0.0,
+      7.0
+    ],
+    "column_duals": [
+      8.0,
+      -0.0,
+      14.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N14": {
+    "cost": 920.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        10.0,
+        30.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        50.0
+      ],
+      [
+        10.0,
+        0.0,
+        40.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 920.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      1.0,
+      1.0
+    ],
+    "column_duals": [
+      4.0,
+      6.0,
+      5.0,
+      6.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N15": {
+    "cost": 156.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        2.0,
+        14.0,
+        0.0,
+        0.0
+      ],
+      [
+        4.0,
+        0.0,
+        0.0,
+        8.0
+      ],
+      [
+        6.0,
+        0.0,
+        9.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 156.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -2.0,
+      1.0
+    ],
+    "column_duals": [
+      4.0,
+      6.0,
+      1.0,
+      3.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N16": {
+    "cost": 1510.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        10.0,
+        0.0,
+        20.0
+      ],
+      [
+        30.0,
+        20.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        50.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1510.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      17.0,
+      10.0,
+      3.0
+    ],
+    "column_duals": [
+      3.0,
+      -0.0,
+      6.0,
+      -2.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N18": {
+    "cost": 1650.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        40.0,
+        5.0,
+        0.0
+      ],
+      [
+        25.0,
+        0.0,
+        0.0,
+        25.0
+      ],
+      [
+        0.0,
+        0.0,
+        50.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1650.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      6.0,
+      3.0
+    ],
+    "column_duals": [
+      6.0,
+      10.0,
+      14.0,
+      -6.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N21": {
+    "cost": 4205.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        2.0,
+        10.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        7.0
+      ],
+      [
+        0.0,
+        0.0,
+        7.0
+      ]
+    ],
+    "dual_cost": 4205.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      54.0,
+      -0.0,
+      57.0
+    ],
+    "column_duals": [
+      81.0,
+      17.0,
+      144.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N22": {
+    "cost": 12075.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        25.0,
+        225.0,
+        0.0,
+        0.0
+      ],
+      [
+        175.0,
+        0.0,
+        0.0,
+        125.0
+      ],
+      [
+        0.0,
+        0.0,
+        275.0,
+        125.0
+      ]
+    ],
+    "dual_cost": 12075.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      5.0,
+      5.0
+    ],
+    "column_duals": [
+      11.0,
+      13.0,
+      8.0,
+      5.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N23": {
+    "cost": 23.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        -0.0,
+        0.0,
+        2.0
+      ]
+    ],
+    "dual_cost": 23.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -6.0,
+      -0.0
+    ],
+    "column_duals": [
+      7.0,
+      2.0,
+      3.0,
+      5.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N25": {
+    "cost": 809.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        2.0,
+        8.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0,
+        13.0
+      ]
+    ],
+    "dual_cost": 809.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -8.0,
+      20.0,
+      -0.0
+    ],
+    "column_duals": [
+      27.0,
+      10.0,
+      20.0,
+      20.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N26": {
+    "cost": 490.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        2.0,
+        18.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        9.0,
+        0.0,
+        0.0,
+        0.0,
+        6.0
+      ],
+      [
+        1.0,
+        6.0,
+        6.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 490.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -0.0,
+      5.0,
+      3.0
+    ],
+    "column_duals": [
+      4.0,
+      3.0,
+      6.0,
+      8.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N27": {
+    "cost": 59356.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        461.0,
+        0.0,
+        0.0
+      ],
+      [
+        277.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        -0.0,
+        116.0,
+        239.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        488.0
+      ],
+      [
+        0.0,
+        60.0,
+        0.0,
+        0.0,
+        333.0
+      ]
+    ],
+    "dual_cost": 59356.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -28.0,
+      -5.0,
+      -67.0,
+      3.0
+    ],
+    "column_duals": [
+      40.0,
+      57.0,
+      9.0,
+      10.0,
+      76.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N28": {
+    "cost": 2090.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        300.0,
+        0.0,
+        0.0
+      ],
+      [
+        250.0,
+        0.0,
+        150.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        270.0
+      ],
+      [
+        0.0,
+        50.0,
+        140.0,
+        180.0
+      ]
+    ],
+    "dual_cost": 2090.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      1.0,
+      -1.0
+    ],
+    "column_duals": [
+      -2.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N29": {
+    "cost": 3857.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        23.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        28.0,
+        16.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.0,
+        0.0,
+        30.0
+      ]
+    ],
+    "dual_cost": 3857.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      42.0,
+      40.0
+    ],
+    "column_duals": [
+      15.0,
+      -0.0,
+      -16.0,
+      20.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N31": {
+    "cost": 1480.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        10.0,
+        0.0,
+        30.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0,
+        0.0,
+        20.0
+      ],
+      [
+        0.0,
+        20.0,
+        -0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1480.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      3.0,
+      3.0
+    ],
+    "column_duals": [
+      15.0,
+      12.0,
+      13.0,
+      11.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N32": {
+    "cost": 1780.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        60.0,
+        40.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        80.0
+      ],
+      [
+        0.0,
+        -0.0,
+        80.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        0.0,
+        70.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1780.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "column_duals": [
+      4.0,
+      4.0,
+      8.0,
+      6.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N33": {
+    "cost": 1250.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        90.0,
+        0.0
+      ],
+      [
+        0.0,
+        30.0,
+        50.0
+      ],
+      [
+        70.0,
+        0.0,
+        30.0
+      ]
+    ],
+    "dual_cost": 1250.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      5.0,
+      8.0
+    ],
+    "column_duals": [
+      -2.0,
+      -0.0,
+      -1.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N34": {
+    "cost": 510.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        -0.0,
+        15.0,
+        20.0,
+        0.0
+      ],
+      [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        15.0,
+        0.0,
+        0.0,
+        0.0,
+        5.0
+      ],
+      [
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 510.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      5.0,
+      4.0,
+      4.0,
+      3.0
+    ],
+    "column_duals": [
+      2.0,
+      1.0,
+      -1.0,
+      -0.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "RBSM_N35": {
+    "cost": 280.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        0.0,
+        0.0,
+        15.0
+      ],
+      [
+        10.0,
+        15.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 280.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      2.0,
+      1.0
+    ],
+    "column_duals": [
+      1.0,
+      -0.0,
+      2.0,
+      9.0
+    ],
+    "dummy": null
+  },
+  "RBSM_S1": {
+    "cost": 18855.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        90.0,
+        0.0,
+        60.0,
+        0.0,
+        0.0
+      ],
+      [
+        45.0,
+        195.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        135.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        135.0,
+        165.0
+      ],
+      [
+        0.0,
+        0.0,
+        150.0,
+        135.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 18855.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      9.0,
+      -9.0,
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      27.0,
+      6.0,
+      9.0,
+      21.0,
+      6.0
+    ],
+    "dummy": null
+  },
+  "RBSM_S2": {
+    "cost": 153500.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        300.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0
+      ],
+      [
+        150.0,
+        550.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        350.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        450.0,
+        450.0
+      ],
+      [
+        0.0,
+        0.0,
+        500.0,
+        350.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 153500.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      30.0,
+      -30.0,
+      10.0,
+      -0.0
+    ],
+    "column_duals": [
+      80.0,
+      10.0,
+      20.0,
+      60.0,
+      10.0
+    ],
+    "dummy": null
+  },
+  "RBSM_S3": {
+    "cost": 1044180.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 12,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        150.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        180.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        210.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        240.0,
+        0.0,
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        270.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        300.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        330.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        360.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        390.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        420.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        450.0,
+        480.0
+      ]
+    ],
+    "dual_cost": 1044180.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -510.0,
+      -324.0,
+      -288.0,
+      -252.0,
+      -216.0,
+      -330.0,
+      -144.0,
+      -258.0,
+      -222.0,
+      -36.0,
+      -0.0
+    ],
+    "column_duals": [
+      513.0,
+      366.0,
+      369.0,
+      372.0,
+      375.0,
+      528.0,
+      381.0,
+      534.0,
+      537.0,
+      390.0,
+      393.0,
+      546.0
+    ],
+    "dummy": null
+  },
+  "RBSM_S4": {
+    "cost": 92212.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 22,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        10,
+        9
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        200.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        106.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        115.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        24.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        61.0,
+        0.0,
+        0.0,
+        0.0,
+        32.0,
+        44.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        141.0,
+        0.0,
+        43.0,
+        63.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        41.0,
+        0.0,
+        0.0,
+        130.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        47.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        125.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        113.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        107.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        123.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        124.0,
+        71.0,
+        46.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        199.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 92212.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -57.0,
+      -59.0,
+      -58.0,
+      -58.0,
+      -57.0,
+      1.0,
+      2.0,
+      2.0,
+      7.0,
+      6.0,
+      -0.0
+    ],
+    "column_duals": [
+      70.0,
+      68.0,
+      69.0,
+      67.0,
+      71.0,
+      70.0,
+      70.0,
+      68.0,
+      70.0,
+      71.0,
+      71.0,
+      70.0
+    ],
+    "dummy": null
+  },
+  "RBSM_S5": {
+    "cost": 116020.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 12,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        60.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        70.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        80.0,
+        0.0,
+        -0.0,
+        0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        90.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        110.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        120.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        130.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        140.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        150.0,
+        160.0
+      ]
+    ],
+    "dual_cost": 116020.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -170.0,
+      -108.0,
+      -96.0,
+      -84.0,
+      -72.0,
+      -110.0,
+      -48.0,
+      -86.0,
+      -74.0,
+      -12.0,
+      -0.0
+    ],
+    "column_duals": [
+      171.0,
+      122.0,
+      123.0,
+      124.0,
+      125.0,
+      176.0,
+      127.0,
+      178.0,
+      179.0,
+      130.0,
+      131.0,
+      182.0
+    ],
+    "dummy": null
+  },
+  "CSM_N03": {
+    "cost": 1079.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        0.0,
+        0.0,
+        4.0,
+        0.0
+      ],
+      [
+        2.0,
+        7.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        4.0
+      ]
+    ],
+    "dual_cost": 1079.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -16.0,
+      9.0,
+      43.0,
+      4.0,
+      1.0
+    ],
+    "column_duals": [
+      53.0,
+      22.0,
+      25.0,
+      -1.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "CSM_N04": {
+    "cost": 1580.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        15.0,
+        85.0,
+        0.0,
+        0.0
+      ],
+      [
+        20.0,
+        0.0,
+        0.0,
+        105.0,
+        0.0
+      ],
+      [
+        40.0,
+        65.0,
+        0.0,
+        0.0,
+        70.0
+      ]
+    ],
+    "dual_cost": 1580.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      2.0,
+      -0.0
+    ],
+    "column_duals": [
+      3.0,
+      4.0,
+      4.0,
+      2.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "CSM_N06": {
+    "cost": 2850.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        300.0,
+        0.0,
+        0.0
+      ],
+      [
+        250.0,
+        0.0,
+        150.0,
+        0.0
+      ],
+      [
+        0.0,
+        50.0,
+        250.0,
+        200.0
+      ]
+    ],
+    "dual_cost": 2850.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      2.0
+    ],
+    "column_duals": [
+      -2.0,
+      1.0,
+      1.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "CSM_N18": {
+    "cost": 29.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 4,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        6.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        6.0
+      ]
+    ],
+    "dual_cost": 29.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      2.0,
+      -2.0,
+      2.0
+    ],
+    "column_duals": [
+      -0.0,
+      3.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "CSM_N28": {
+    "cost": 40.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        1.0,
+        2.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        3.0
+      ]
+    ],
+    "dual_cost": 40.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -3.0,
+      -1.0,
+      -0.0
+    ],
+    "column_duals": [
+      5.0,
+      7.0,
+      6.0,
+      6.0,
+      3.0
+    ],
+    "dummy": null
+  },
+  "CSM_N33": {
+    "cost": 151750.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 4,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        100.0,
+        -0.0,
+        75.0,
+        25.0
+      ],
+      [
+        0.0,
+        100.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 151750.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      60.0,
+      -0.0
+    ],
+    "column_duals": [
+      340.0,
+      450.0,
+      740.0,
+      210.0
+    ],
+    "dummy": null
+  },
+  "CSM_N35": {
+    "cost": 412.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        4.0,
+        0.0,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        4.0,
+        6.0,
+        0.0
+      ],
+      [
+        0.0,
+        3.0,
+        0.0,
+        8.0
+      ]
+    ],
+    "dual_cost": 412.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -2.0,
+      14.0,
+      -0.0
+    ],
+    "column_duals": [
+      15.0,
+      6.0,
+      11.0,
+      10.0
+    ],
+    "dummy": null
+  },
+  "CSM_Real1": {
+    "cost": 12928429.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 87,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        35
+      ],
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        0,
+        50
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        55
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        62
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        70
+      ],
+      [
+        1,
+        71
+      ],
+      [
+        1,
+        72
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        74
+      ],
+      [
+        1,
+        75
+      ],
+      [
+        1,
+        76
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        1,
+        79
+      ],
+      [
+        1,
+        80
+      ],
+      [
+        1,
+        81
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        83
+      ],
+      [
+        1,
+        84
+      ],
+      [
+        1,
+        85
+      ],
+      [
+        1,
+        86
+      ],
+      [
+        1,
+        87
+      ],
+      [
+        1,
+        88
+      ],
+      [
+        1,
+        89
+      ],
+      [
+        1,
+        90
+      ],
+      [
+        1,
+        91
+      ],
+      [
+        1,
+        92
+      ],
+      [
+        1,
+        93
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        47
+      ],
+      [
+        0,
+        51
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        63
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3852.0,
+        4759.0,
+        1312.0,
+        3451.0,
+        7537.0,
+        2827.0,
+        3878.0,
+        15224.0,
+        2530.0,
+        5690.0,
+        2494.0,
+        2383.0,
+        32901.0,
+        7314.0,
+        2486.0,
+        -0.0,
+        249.0,
+        2735.0,
+        498.0,
+        1989.0,
+        4475.0,
+        6091.0,
+        373.0,
+        5492.0,
+        17978.0,
+        4305.0,
+        23799.0,
+        1597.0,
+        2773.0,
+        2556.0,
+        48509.0,
+        3279.0,
+        4183.0,
+        1303.0,
+        795.0,
+        4024.0,
+        1381.0,
+        2597.0,
+        1666.0,
+        4848.0,
+        125.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        4475.0,
+        3356.0,
+        -0.0,
+        2611.0,
+        2984.0,
+        1368.0,
+        -0.0,
+        1119.0,
+        249.0,
+        -0.0,
+        9447.0,
+        2984.0,
+        2362.0,
+        125.0,
+        2984.0,
+        8041.0,
+        746.0,
+        0.0,
+        -0.0,
+        14055.0,
+        1437.0,
+        2283.0,
+        556.0,
+        812.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10192.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        18558.0,
+        0.0,
+        249.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5786.0,
+        2034.0,
+        5911.0,
+        5026.0,
+        524.0,
+        1133.0,
+        464.0,
+        1792.0,
+        1330.0,
+        1457.0,
+        1668.0,
+        3827.0,
+        7947.0,
+        297.0,
+        759.0,
+        9074.0,
+        1436.0,
+        864.0,
+        2217.0,
+        1160.0,
+        519.0,
+        4166.0,
+        614.0,
+        19405.0,
+        30392.0
+      ]
+    ],
+    "dual_cost": 12928429.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      19.0,
+      35.0,
+      29.0,
+      14.0,
+      28.0,
+      12.0,
+      20.0,
+      22.0,
+      22.0,
+      17.0,
+      30.0,
+      27.0,
+      15.0,
+      9.0,
+      20.0,
+      15.0,
+      23.0,
+      17.0,
+      12.0,
+      15.0,
+      12.0,
+      22.0,
+      25.0,
+      20.0,
+      13.0,
+      15.0,
+      18.0,
+      25.0,
+      17.0,
+      17.0,
+      22.0,
+      15.0,
+      15.0,
+      15.0,
+      22.0,
+      24.0,
+      18.0,
+      22.0,
+      20.0,
+      23.0,
+      30.0,
+      35.0,
+      26.0,
+      12.0,
+      33.0,
+      14.0,
+      36.0,
+      36.0,
+      19.0,
+      19.0,
+      32.0,
+      22.0,
+      25.0,
+      28.0,
+      30.0,
+      17.0,
+      33.0,
+      28.0,
+      20.0,
+      24.0,
+      22.0,
+      32.0,
+      26.0,
+      28.0,
+      25.0,
+      24.0,
+      25.0,
+      27.0,
+      24.0,
+      49.0,
+      38.0,
+      49.0,
+      52.0,
+      43.0,
+      56.0,
+      49.0,
+      36.0,
+      54.0,
+      40.0,
+      46.0,
+      36.0,
+      39.0,
+      41.0,
+      46.0,
+      44.0,
+      54.0,
+      41.0,
+      43.0,
+      57.0,
+      57.0,
+      62.0,
+      55.0,
+      52.0,
+      51.0
+    ],
+    "dummy": null
+  },
+  "CSM_Real2": {
+    "cost": 13657053.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 89,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        35
+      ],
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        47
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        0,
+        50
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        55
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        62
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        70
+      ],
+      [
+        1,
+        71
+      ],
+      [
+        1,
+        72
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        74
+      ],
+      [
+        1,
+        75
+      ],
+      [
+        1,
+        76
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        1,
+        79
+      ],
+      [
+        1,
+        80
+      ],
+      [
+        1,
+        81
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        83
+      ],
+      [
+        1,
+        84
+      ],
+      [
+        1,
+        85
+      ],
+      [
+        1,
+        86
+      ],
+      [
+        1,
+        87
+      ],
+      [
+        1,
+        88
+      ],
+      [
+        1,
+        89
+      ],
+      [
+        1,
+        90
+      ],
+      [
+        1,
+        91
+      ],
+      [
+        1,
+        92
+      ],
+      [
+        1,
+        93
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        51
+      ],
+      [
+        0,
+        63
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3332.0,
+        3976.0,
+        1252.0,
+        3494.0,
+        9871.0,
+        3027.0,
+        5214.0,
+        20029.0,
+        2437.0,
+        5584.0,
+        2615.0,
+        2184.0,
+        39154.0,
+        6641.0,
+        2735.0,
+        -0.0,
+        249.0,
+        2984.0,
+        746.0,
+        2238.0,
+        4848.0,
+        6837.0,
+        373.0,
+        4677.0,
+        17447.0,
+        4487.0,
+        24968.0,
+        1804.0,
+        3137.0,
+        2538.0,
+        50087.0,
+        3445.0,
+        4375.0,
+        1444.0,
+        919.0,
+        4024.0,
+        1389.0,
+        2960.0,
+        1660.0,
+        5221.0,
+        125.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        4972.0,
+        3729.0,
+        125.0,
+        2859.0,
+        5096.0,
+        1492.0,
+        -0.0,
+        871.0,
+        249.0,
+        125.0,
+        10129.0,
+        3232.0,
+        2735.0,
+        249.0,
+        12554.0,
+        9671.0,
+        746.0,
+        0.0,
+        -0.0,
+        12664.0,
+        1382.0,
+        2405.0,
+        479.0,
+        724.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        11063.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        19290.0,
+        0.0,
+        125.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6258.0,
+        1924.0,
+        5195.0,
+        5217.0,
+        536.0,
+        924.0,
+        385.0,
+        2053.0,
+        1111.0,
+        1340.0,
+        1712.0,
+        3630.0,
+        8300.0,
+        321.0,
+        679.0,
+        8954.0,
+        1385.0,
+        862.0,
+        2372.0,
+        1225.0,
+        480.0,
+        4369.0,
+        556.0,
+        20814.0,
+        27658.0
+      ]
+    ],
+    "dual_cost": 13657053.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      19.0,
+      35.0,
+      29.0,
+      14.0,
+      28.0,
+      12.0,
+      20.0,
+      22.0,
+      22.0,
+      17.0,
+      30.0,
+      27.0,
+      15.0,
+      9.0,
+      20.0,
+      15.0,
+      23.0,
+      17.0,
+      12.0,
+      15.0,
+      12.0,
+      22.0,
+      25.0,
+      20.0,
+      13.0,
+      15.0,
+      18.0,
+      25.0,
+      17.0,
+      17.0,
+      22.0,
+      15.0,
+      15.0,
+      15.0,
+      22.0,
+      24.0,
+      18.0,
+      22.0,
+      20.0,
+      23.0,
+      30.0,
+      35.0,
+      26.0,
+      12.0,
+      33.0,
+      14.0,
+      36.0,
+      36.0,
+      19.0,
+      19.0,
+      32.0,
+      22.0,
+      25.0,
+      28.0,
+      30.0,
+      17.0,
+      33.0,
+      28.0,
+      20.0,
+      24.0,
+      22.0,
+      32.0,
+      26.0,
+      28.0,
+      25.0,
+      24.0,
+      25.0,
+      27.0,
+      24.0,
+      49.0,
+      38.0,
+      49.0,
+      52.0,
+      43.0,
+      56.0,
+      49.0,
+      36.0,
+      54.0,
+      40.0,
+      46.0,
+      36.0,
+      39.0,
+      41.0,
+      46.0,
+      44.0,
+      54.0,
+      41.0,
+      43.0,
+      57.0,
+      57.0,
+      62.0,
+      55.0,
+      52.0,
+      51.0
+    ],
+    "dummy": null
+  },
+  "CSM_Real3": {
+    "cost": 12296587.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 88,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        35
+      ],
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        0,
+        50
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        55
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        55
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        62
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        70
+      ],
+      [
+        1,
+        71
+      ],
+      [
+        1,
+        72
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        74
+      ],
+      [
+        1,
+        75
+      ],
+      [
+        1,
+        76
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        1,
+        79
+      ],
+      [
+        1,
+        80
+      ],
+      [
+        1,
+        81
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        83
+      ],
+      [
+        1,
+        84
+      ],
+      [
+        1,
+        85
+      ],
+      [
+        1,
+        86
+      ],
+      [
+        1,
+        87
+      ],
+      [
+        1,
+        88
+      ],
+      [
+        1,
+        89
+      ],
+      [
+        1,
+        90
+      ],
+      [
+        1,
+        91
+      ],
+      [
+        1,
+        92
+      ],
+      [
+        1,
+        93
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        47
+      ],
+      [
+        0,
+        51
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        63
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3300.0,
+        4628.0,
+        1250.0,
+        2852.0,
+        8202.0,
+        2916.0,
+        3912.0,
+        16157.0,
+        2695.0,
+        5526.0,
+        2699.0,
+        2271.0,
+        41855.0,
+        7074.0,
+        1616.0,
+        -0.0,
+        125.0,
+        1741.0,
+        373.0,
+        1243.0,
+        2859.0,
+        3854.0,
+        249.0,
+        5151.0,
+        17117.0,
+        4368.0,
+        24291.0,
+        1560.0,
+        2679.0,
+        2952.0,
+        42223.0,
+        3585.0,
+        4182.0,
+        1423.0,
+        838.0,
+        3282.0,
+        1491.0,
+        2324.0,
+        1553.0,
+        3108.0,
+        125.0,
+        -0.0,
+        125.0,
+        0.0,
+        0.0,
+        2859.0,
+        2238.0,
+        -0.0,
+        1616.0,
+        2921.0,
+        871.0,
+        -0.0,
+        498.0,
+        125.0,
+        -0.0,
+        3093.0,
+        1865.0,
+        1616.0,
+        125.0,
+        2921.0,
+        0.0,
+        498.0,
+        0.0,
+        -0.0,
+        13885.0,
+        1516.0,
+        2480.0,
+        410.0,
+        799.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6464.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2998.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17029.0,
+        0.0,
+        249.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6616.0,
+        1980.0,
+        5900.0,
+        4721.0,
+        584.0,
+        1032.0,
+        419.0,
+        1702.0,
+        1290.0,
+        1536.0,
+        1725.0,
+        3455.0,
+        7792.0,
+        341.0,
+        632.0,
+        9100.0,
+        1269.0,
+        897.0,
+        2333.0,
+        1296.0,
+        452.0,
+        3957.0,
+        487.0,
+        20317.0,
+        32228.0
+      ]
+    ],
+    "dual_cost": 12296587.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      19.0,
+      35.0,
+      29.0,
+      14.0,
+      28.0,
+      12.0,
+      20.0,
+      22.0,
+      22.0,
+      17.0,
+      30.0,
+      27.0,
+      15.0,
+      9.0,
+      20.0,
+      15.0,
+      23.0,
+      17.0,
+      12.0,
+      15.0,
+      12.0,
+      22.0,
+      25.0,
+      20.0,
+      13.0,
+      15.0,
+      18.0,
+      25.0,
+      17.0,
+      17.0,
+      22.0,
+      15.0,
+      15.0,
+      15.0,
+      22.0,
+      24.0,
+      18.0,
+      22.0,
+      20.0,
+      23.0,
+      30.0,
+      35.0,
+      26.0,
+      12.0,
+      33.0,
+      14.0,
+      36.0,
+      36.0,
+      19.0,
+      19.0,
+      32.0,
+      22.0,
+      25.0,
+      28.0,
+      30.0,
+      17.0,
+      33.0,
+      28.0,
+      20.0,
+      24.0,
+      22.0,
+      32.0,
+      26.0,
+      28.0,
+      25.0,
+      24.0,
+      25.0,
+      27.0,
+      24.0,
+      49.0,
+      38.0,
+      49.0,
+      52.0,
+      43.0,
+      56.0,
+      49.0,
+      36.0,
+      54.0,
+      40.0,
+      46.0,
+      36.0,
+      39.0,
+      41.0,
+      46.0,
+      44.0,
+      54.0,
+      41.0,
+      43.0,
+      57.0,
+      57.0,
+      62.0,
+      55.0,
+      52.0,
+      51.0
+    ],
+    "dummy": null
+  },
+  "CSM_Real4": {
+    "cost": 14117586.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 89,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        35
+      ],
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        47
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        0,
+        50
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        55
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        62
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        70
+      ],
+      [
+        1,
+        71
+      ],
+      [
+        1,
+        72
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        74
+      ],
+      [
+        1,
+        75
+      ],
+      [
+        1,
+        76
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        1,
+        79
+      ],
+      [
+        1,
+        80
+      ],
+      [
+        1,
+        81
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        83
+      ],
+      [
+        1,
+        84
+      ],
+      [
+        1,
+        85
+      ],
+      [
+        1,
+        86
+      ],
+      [
+        1,
+        87
+      ],
+      [
+        1,
+        88
+      ],
+      [
+        1,
+        89
+      ],
+      [
+        1,
+        90
+      ],
+      [
+        1,
+        91
+      ],
+      [
+        1,
+        92
+      ],
+      [
+        1,
+        93
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        51
+      ],
+      [
+        0,
+        63
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3512.0,
+        4300.0,
+        1291.0,
+        3477.0,
+        9394.0,
+        3031.0,
+        4597.0,
+        22500.0,
+        1776.0,
+        5384.0,
+        2824.0,
+        2530.0,
+        42638.0,
+        7341.0,
+        2735.0,
+        -0.0,
+        249.0,
+        2984.0,
+        746.0,
+        2238.0,
+        4848.0,
+        6837.0,
+        3737.0,
+        5858.0,
+        16806.0,
+        4210.0,
+        24717.0,
+        1715.0,
+        2549.0,
+        2520.0,
+        50440.0,
+        3185.0,
+        4359.0,
+        1437.0,
+        914.0,
+        3120.0,
+        1551.0,
+        2109.0,
+        1578.0,
+        5345.0,
+        125.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        4972.0,
+        3729.0,
+        125.0,
+        2859.0,
+        8452.0,
+        1492.0,
+        -0.0,
+        871.0,
+        249.0,
+        125.0,
+        10317.0,
+        3232.0,
+        2735.0,
+        249.0,
+        8452.0,
+        12271.0,
+        746.0,
+        0.0,
+        -0.0,
+        13607.0,
+        1421.0,
+        2068.0,
+        554.0,
+        877.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        11187.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        16814.0,
+        0.0,
+        373.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6207.0,
+        1844.0,
+        6259.0,
+        4824.0,
+        610.0,
+        1175.0,
+        403.0,
+        1840.0,
+        1110.0,
+        1389.0,
+        1739.0,
+        3546.0,
+        8113.0,
+        348.0,
+        753.0,
+        8366.0,
+        1329.0,
+        970.0,
+        2121.0,
+        1181.0,
+        530.0,
+        3778.0,
+        497.0,
+        19912.0,
+        34947.0
+      ]
+    ],
+    "dual_cost": 14117586.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      19.0,
+      35.0,
+      29.0,
+      14.0,
+      28.0,
+      12.0,
+      20.0,
+      22.0,
+      22.0,
+      17.0,
+      30.0,
+      27.0,
+      15.0,
+      9.0,
+      20.0,
+      15.0,
+      23.0,
+      17.0,
+      12.0,
+      15.0,
+      12.0,
+      22.0,
+      25.0,
+      20.0,
+      13.0,
+      15.0,
+      18.0,
+      25.0,
+      17.0,
+      17.0,
+      22.0,
+      15.0,
+      15.0,
+      15.0,
+      22.0,
+      24.0,
+      18.0,
+      22.0,
+      20.0,
+      23.0,
+      30.0,
+      35.0,
+      26.0,
+      12.0,
+      33.0,
+      14.0,
+      36.0,
+      36.0,
+      19.0,
+      19.0,
+      32.0,
+      22.0,
+      25.0,
+      28.0,
+      30.0,
+      17.0,
+      33.0,
+      28.0,
+      20.0,
+      24.0,
+      22.0,
+      32.0,
+      26.0,
+      28.0,
+      25.0,
+      24.0,
+      25.0,
+      27.0,
+      24.0,
+      49.0,
+      38.0,
+      49.0,
+      52.0,
+      43.0,
+      56.0,
+      49.0,
+      36.0,
+      54.0,
+      40.0,
+      46.0,
+      36.0,
+      39.0,
+      41.0,
+      46.0,
+      44.0,
+      54.0,
+      41.0,
+      43.0,
+      57.0,
+      57.0,
+      62.0,
+      55.0,
+      52.0,
+      51.0
+    ],
+    "dummy": null
+  },
+  "CSM_Real5": {
+    "cost": 14017419.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 89,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        26
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        32
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        35
+      ],
+      [
+        0,
+        36
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        40
+      ],
+      [
+        0,
+        45
+      ],
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        47
+      ],
+      [
+        0,
+        48
+      ],
+      [
+        0,
+        49
+      ],
+      [
+        0,
+        50
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        55
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        59
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        61
+      ],
+      [
+        0,
+        64
+      ],
+      [
+        0,
+        65
+      ],
+      [
+        0,
+        66
+      ],
+      [
+        0,
+        67
+      ],
+      [
+        0,
+        68
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        60
+      ],
+      [
+        1,
+        62
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        70
+      ],
+      [
+        1,
+        71
+      ],
+      [
+        1,
+        72
+      ],
+      [
+        1,
+        73
+      ],
+      [
+        1,
+        74
+      ],
+      [
+        1,
+        75
+      ],
+      [
+        1,
+        76
+      ],
+      [
+        1,
+        77
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        1,
+        79
+      ],
+      [
+        1,
+        80
+      ],
+      [
+        1,
+        81
+      ],
+      [
+        1,
+        82
+      ],
+      [
+        1,
+        83
+      ],
+      [
+        1,
+        84
+      ],
+      [
+        1,
+        85
+      ],
+      [
+        1,
+        86
+      ],
+      [
+        1,
+        87
+      ],
+      [
+        1,
+        88
+      ],
+      [
+        1,
+        89
+      ],
+      [
+        1,
+        90
+      ],
+      [
+        1,
+        91
+      ],
+      [
+        1,
+        92
+      ],
+      [
+        1,
+        93
+      ],
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        44
+      ],
+      [
+        0,
+        51
+      ],
+      [
+        0,
+        63
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3269.0,
+        4456.0,
+        1277.0,
+        2783.0,
+        8888.0,
+        3679.0,
+        4621.0,
+        18426.0,
+        2745.0,
+        5940.0,
+        2408.0,
+        2437.0,
+        48268.0,
+        5585.0,
+        3108.0,
+        -0.0,
+        249.0,
+        3356.0,
+        746.0,
+        2486.0,
+        5594.0,
+        7707.0,
+        373.0,
+        4944.0,
+        19086.0,
+        3758.0,
+        27005.0,
+        1884.0,
+        3139.0,
+        2275.0,
+        48013.0,
+        3411.0,
+        4479.0,
+        1386.0,
+        911.0,
+        3405.0,
+        1402.0,
+        3198.0,
+        1657.0,
+        5967.0,
+        249.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        5594.0,
+        4226.0,
+        125.0,
+        3232.0,
+        7955.0,
+        1616.0,
+        -0.0,
+        995.0,
+        373.0,
+        125.0,
+        11560.0,
+        3605.0,
+        3108.0,
+        249.0,
+        7955.0,
+        15180.0,
+        871.0,
+        0.0,
+        -0.0,
+        13500.0,
+        1377.0,
+        2189.0,
+        589.0,
+        752.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        12678.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17758.0,
+        0.0,
+        249.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5974.0,
+        1588.0,
+        6085.0,
+        4578.0,
+        512.0,
+        1056.0,
+        452.0,
+        2240.0,
+        1138.0,
+        1268.0,
+        1818.0,
+        3634.0,
+        8274.0,
+        300.0,
+        703.0,
+        8162.0,
+        1308.0,
+        901.0,
+        2438.0,
+        1088.0,
+        454.0,
+        4199.0,
+        613.0,
+        19521.0,
+        29812.0
+      ]
+    ],
+    "dual_cost": 14017419.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      -0.0
+    ],
+    "column_duals": [
+      19.0,
+      35.0,
+      29.0,
+      14.0,
+      28.0,
+      12.0,
+      20.0,
+      22.0,
+      22.0,
+      17.0,
+      30.0,
+      27.0,
+      15.0,
+      9.0,
+      20.0,
+      15.0,
+      23.0,
+      17.0,
+      12.0,
+      15.0,
+      12.0,
+      22.0,
+      25.0,
+      20.0,
+      13.0,
+      15.0,
+      18.0,
+      25.0,
+      17.0,
+      17.0,
+      22.0,
+      15.0,
+      15.0,
+      15.0,
+      22.0,
+      24.0,
+      18.0,
+      22.0,
+      20.0,
+      23.0,
+      30.0,
+      35.0,
+      26.0,
+      12.0,
+      33.0,
+      14.0,
+      36.0,
+      36.0,
+      19.0,
+      19.0,
+      32.0,
+      22.0,
+      25.0,
+      28.0,
+      30.0,
+      17.0,
+      33.0,
+      28.0,
+      20.0,
+      24.0,
+      22.0,
+      32.0,
+      26.0,
+      28.0,
+      25.0,
+      24.0,
+      25.0,
+      27.0,
+      24.0,
+      49.0,
+      38.0,
+      49.0,
+      52.0,
+      43.0,
+      56.0,
+      49.0,
+      36.0,
+      54.0,
+      40.0,
+      46.0,
+      36.0,
+      39.0,
+      41.0,
+      46.0,
+      44.0,
+      54.0,
+      41.0,
+      43.0,
+      57.0,
+      57.0,
+      62.0,
+      55.0,
+      52.0,
+      51.0
+    ],
+    "dummy": null
+  },
+  "EDM_C01": {
+    "cost": 1650.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        40.0,
+        5.0,
+        0.0
+      ],
+      [
+        25.0,
+        0.0,
+        0.0,
+        25.0
+      ],
+      [
+        0.0,
+        0.0,
+        50.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1650.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      6.0,
+      3.0
+    ],
+    "column_duals": [
+      6.0,
+      10.0,
+      14.0,
+      -6.0
+    ],
+    "dummy": [
+      "column",
+      3
+    ]
+  },
+  "EDM_C04": {
+    "cost": 149.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        12.0,
+        2.0,
+        8.0
+      ],
+      [
+        0.0,
+        0.0,
+        15.0,
+        0.0
+      ],
+      [
+        7.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "dual_cost": 149.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -3.0,
+      2.0
+    ],
+    "column_duals": [
+      3.0,
+      3.0,
+      5.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "EDM_C07": {
+    "cost": 799.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        5.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        3.0,
+        7.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        0.0,
+        13.0
+      ]
+    ],
+    "dual_cost": 799.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -8.0,
+      20.0,
+      -0.0
+    ],
+    "column_duals": [
+      27.0,
+      10.0,
+      20.0,
+      20.0
+    ],
+    "dummy": null
+  },
+  "EDM_C08": {
+    "cost": 820.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 4,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.0,
+        2.0
+      ]
+    ],
+    "dual_cost": 820.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -145.0,
+      -105.0,
+      50.0
+    ],
+    "column_duals": [
+      195.0,
+      150.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "EDM_C09": {
+    "cost": 291.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        6.0,
+        0.0,
+        7.0
+      ],
+      [
+        0.0,
+        8.0,
+        6.0
+      ],
+      [
+        8.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 291.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      5.0,
+      1.0
+    ],
+    "column_duals": [
+      7.0,
+      3.0,
+      7.0
+    ],
+    "dummy": null
+  },
+  "EDM_C11": {
+    "cost": 109.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.0
+      ],
+      [
+        1.0,
+        2.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        4.0,
+        4.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 109.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -5.0,
+      -0.0,
+      -0.0
+    ],
+    "column_duals": [
+      6.0,
+      5.0,
+      9.0,
+      2.0,
+      2.0,
+      10.0
+    ],
+    "dummy": null
+  },
+  "EDM_C13": {
+    "cost": 605.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        20.0,
+        15.0,
+        20.0
+      ],
+      [
+        10.0,
+        0.0,
+        30.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 605.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -3.0,
+      -10.0
+    ],
+    "column_duals": [
+      11.0,
+      4.0,
+      9.0,
+      5.0
+    ],
+    "dummy": null
+  },
+  "EDM_C16": {
+    "cost": 450.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        -0.0,
+        0.0,
+        30.0,
+        0.0
+      ],
+      [
+        10.0,
+        40.0,
+        0.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        0.0,
+        10.0
+      ]
+    ],
+    "dual_cost": 450.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      3.0,
+      19.0
+    ],
+    "column_duals": [
+      1.0,
+      -1.0,
+      1.0,
+      -9.0
+    ],
+    "dummy": null
+  },
+  "EDM_C19": {
+    "cost": 840.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 7,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        100.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        80.0,
+        0.0,
+        0.0
+      ],
+      [
+        10.0,
+        30.0,
+        0.0,
+        50.0
+      ],
+      [
+        0.0,
+        0.0,
+        60.0,
+        60.0
+      ]
+    ],
+    "dual_cost": 840.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      2.0,
+      3.0,
+      3.0
+    ],
+    "column_duals": [
+      3.0,
+      1.0,
+      -1.0,
+      -3.0
+    ],
+    "dummy": [
+      "column",
+      3
+    ]
+  },
+  "EDM_C20": {
+    "cost": 59.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        4.0,
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.0,
+        4.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 59.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      3.0,
+      -2.0
+    ],
+    "column_duals": [
+      3.0,
+      6.0,
+      -1.0,
+      3.0
+    ],
+    "dummy": null
+  },
+  "EDM_C22": {
+    "cost": 390.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        30.0,
+        30.0,
+        10.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        20.0,
+        10.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        40.0,
+        20.0
+      ]
+    ],
+    "dual_cost": 390.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -4.0,
+      -3.0,
+      -2.0,
+      -0.0
+    ],
+    "column_duals": [
+      6.0,
+      5.0,
+      4.0,
+      3.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "EDM_S1": {
+    "cost": 1375.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        30.0,
+        0.0,
+        40.0
+      ],
+      [
+        0.0,
+        5.0,
+        50.0,
+        0.0
+      ],
+      [
+        85.0,
+        0.0,
+        0.0,
+        5.0
+      ]
+    ],
+    "dual_cost": 1375.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      4.0
+    ],
+    "column_duals": [
+      7.0,
+      2.0,
+      -1.0,
+      4.0
+    ],
+    "dummy": null
+  },
+  "EDM_S3": {
+    "cost": 73.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        2.0,
+        0.0,
+        4.0
+      ],
+      [
+        2.0,
+        3.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        4.0
+      ]
+    ],
+    "dual_cost": 73.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -1.0,
+      -5.0
+    ],
+    "column_duals": [
+      5.0,
+      3.0,
+      6.0,
+      6.0
+    ],
+    "dummy": null
+  },
+  "EDM_S4": {
+    "cost": 127.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        1.0,
+        3.0
+      ],
+      [
+        0.0,
+        3.0,
+        0.0
+      ],
+      [
+        3.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "dual_cost": 127.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      10.0,
+      11.0,
+      17.0,
+      10.0
+    ],
+    "column_duals": [
+      -7.0,
+      -5.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "EDM_S5": {
+    "cost": 1380.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        5.0,
+        0.0,
+        20.0
+      ],
+      [
+        0.0,
+        25.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0,
+        5.0,
+        10.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 1380.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      5.0,
+      6.0
+    ],
+    "column_duals": [
+      5.0,
+      4.0,
+      7.0,
+      -1.0,
+      22.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP1": {
+    "cost": 475.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        50.0,
+        0.0
+      ],
+      [
+        40.0,
+        0.0,
+        30.0
+      ],
+      [
+        0.0,
+        15.0,
+        30.0
+      ]
+    ],
+    "dual_cost": 475.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -2.0,
+      3.0,
+      1.0
+    ],
+    "column_duals": [
+      -0.0,
+      4.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP3": {
+    "cost": 240.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        12.0,
+        0.0
+      ],
+      [
+        0.0,
+        14.0,
+        0.0,
+        0.0
+      ],
+      [
+        8.0,
+        4.0,
+        1.0,
+        3.0
+      ]
+    ],
+    "dual_cost": 240.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      2.0,
+      4.0
+    ],
+    "column_duals": [
+      1.0,
+      4.0,
+      5.0,
+      1.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP6": {
+    "cost": 3320.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        10.0,
+        0.0,
+        0.0,
+        10.0
+      ],
+      [
+        0.0,
+        18.0,
+        6.0,
+        14.0
+      ],
+      [
+        0.0,
+        0.0,
+        16.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 3320.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -0.0,
+      -40.0
+    ],
+    "column_duals": [
+      50.0,
+      40.0,
+      70.0,
+      50.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP7": {
+    "cost": 1390.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        90.0,
+        0.0
+      ],
+      [
+        0.0,
+        30.0,
+        50.0
+      ],
+      [
+        70.0,
+        0.0,
+        30.0
+      ]
+    ],
+    "dual_cost": 1390.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      3.0,
+      5.0,
+      8.0
+    ],
+    "column_duals": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP8": {
+    "cost": 830.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 5,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        65.0,
+        5.0,
+        0.0
+      ],
+      [
+        0.0,
+        30.0,
+        0.0
+      ],
+      [
+        0.0,
+        7.0,
+        43.0
+      ]
+    ],
+    "dual_cost": 830.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      5.0,
+      2.0,
+      5.0
+    ],
+    "column_duals": [
+      -0.0,
+      2.0,
+      2.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP9": {
+    "cost": 430.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 9,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        10.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        10.0,
+        30.0,
+        0.0
+      ],
+      [
+        10.0,
+        40.0,
+        0.0,
+        0.0,
+        0.0,
+        25.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 430.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -1.0,
+      -0.0,
+      2.0,
+      -0.0
+    ],
+    "column_duals": [
+      2.0,
+      -0.0,
+      2.0,
+      1.0,
+      4.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "MRM_BTP10": {
+    "cost": 68.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        3.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        4.0
+      ],
+      [
+        1.0,
+        3.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 68.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      4.0,
+      5.0
+    ],
+    "column_duals": [
+      2.0,
+      1.0,
+      1.0,
+      -0.0
+    ],
+    "dummy": null
+  },
+  "MRM_UTP2": {
+    "cost": 12475.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 8,
+    "degenerate": false,
+    "basis": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        75.0,
+        0.0,
+        75.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        200.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        225.0,
+        300.0,
+        0.0,
+        0.0,
+        75.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        125.0
+      ]
+    ],
+    "dual_cost": 12475.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -5.0,
+      -7.0,
+      -0.0,
+      -0.0
+    ],
+    "column_duals": [
+      17.0,
+      15.0,
+      11.0,
+      12.0,
+      -0.0
+    ],
+    "dummy": [
+      "column",
+      4
+    ]
+  },
+  "MRM_UTP3": {
+    "cost": 9200.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 6,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        800.0
+      ],
+      [
+        400.0,
+        0.0,
+        0.0,
+        100.0,
+        0.0
+      ],
+      [
+        0.0,
+        400.0,
+        500.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0,
+        300.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 9200.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      5.0,
+      6.0,
+      6.0,
+      -0.0
+    ],
+    "column_duals": [
+      -2.0,
+      -2.0,
+      -0.0,
+      -0.0,
+      -2.0
+    ],
+    "dummy": [
+      "row",
+      3
+    ]
+  },
+  "MRM_HDTP3": {
+    "cost": 2600.0,
+    "feasible": true,
+    "basic": true,
+    "positive_cells": 20,
+    "degenerate": true,
+    "basis": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "primal_residual": 0.0,
+    "allocation": [
+      [
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        60.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        0.0,
+        20.0
+      ],
+      [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        40.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        40.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        60.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        40.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        10.0,
+        0.0,
+        0.0
+      ],
+      [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        70.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "dual_cost": 2600.0,
+    "dual_gap": 0.0,
+    "dual_violation": 0.0,
+    "row_duals": [
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "column_duals": [
+      4.0,
+      5.0,
+      5.0,
+      4.0,
+      5.0,
+      4.0,
+      3.0,
+      3.0,
+      4.0,
+      5.0,
+      4.0,
+      -0.0
+    ],
+    "dummy": [
+      "column",
+      11
+    ]
+  }
+}

@@ -1,0 +1,494 @@
+       Engineering, Technology & Applied Science Research                        Vol. 16, No. 2, 2026, 33024-33030                      33024
+
+
+              A Cost Supply Method for Finding an Initial
+              Basic Feasible Solution of the Transportation
+              Problem
+              Rihan Farih Bunyamin
+              Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+              6025241060@student.its.ac.id
+
+              Bilqis Amaliah
+              Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+              bamaliah@gmail.com (corresponding author)
+
+              Ahmad Saikhu
+              Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+              ahmad89saikhu@gmail.com
+                             Received: 24 November 2025 | Revised: 18 December 2025 and 7 January 2026 | Accepted: 17 January 2026
+                            Licensed under a CC-BY 4.0 license | Copyright (c) by the authors | DOI: https://doi.org/10.48084/etasr.16468
+
+                                                                 ABSTRACT
+              The Transportation Problem (TP) allocates shipments from multiple supply points to demand points at
+              minimum cost. Solving the TP begins with an Initial Basic Feasible Solution (IBFS), which affects the Total
+              Cost (TC). Widely used IBFS heuristics, such as Vogel's Approximation Method (VAM), Juman–Hoque
+              Method (JHM), Total Opportunity Cost Matrix–Minimal Total (TOCM-MT), Bilqis–Chastine–Erma
+              (BCE), and the Supply Selection Method (SSM), cannot always deliver a low-cost starting solution. This
+              study proposes the Cost-Supply Method (CSM). The key innovation of CSM is the formulation of the Cost-
+              Supply (CS) variable. Unlike earlier approaches that treat cost and supply separately, CSM combines them
+              to identify "high-impact" rows. Across 42 balanced test cases, CSM attained the highest accuracy
+              (78.57%), defined as instances in which the IBFS matches the known optimal, and the lowest mean
+              percentage deviation (0.87%) from the optimal cost. Compared with VAM, accuracy improved from
+              52.38% to 78.57%, and deviation dropped from 4.21% to 0.87%, indicating that CSM yields lower-cost
+              starting solutions more consistently.
+
+              Keywords-initial basic feasible solution; Vogel approximation method; optimal solution; transportation
+              problem
+
+                     I.   INTRODUCTION                                      needs fewer pivots, leading to shorter runtime and lower
+                                                                            overall computation time.
+    TP concerns the cost-minimizing allocation of shipments
+from multiple sources to multiple destinations under supply                     Existing IBFS heuristics can be classified into two main
+and demand constraints [1, 2]. First formally described in [3],             categories: penalty-driven rules and capacity-aware rules.
+TP continues to appear in logistics planning and other                      Penalty methods, such as VAM and its variants [9-12],
+operational decisions where transportation costs are a                      prioritize allocations based on the potential cost penalty. While
+significant component of expenditure [3-5]. Research also                   this strategy avoids costly early choices, it can overlook scale.
+utilizes TP-style formulations for issues like scheduling,                  A row may exhibit a small penalty but carry a large supply,
+sustainable routing, congestion pricing, and cash-flow                      where subsequent feasible allocations may induce significant
+management [6].                                                             flow through higher-cost routes, thereby increasing the final
+                                                                            TC. Opportunity-cost approaches, such as the Total
+   Optimal solutions are commonly obtained through                          Opportunity Cost Matrix (TOCM) [13-15, 18], shift the
+improvement procedures such as the Modified Distribution                    emphasis from absolute to relative costs. However, they do not
+(MODI) and Stepping Stone methods [7, 8]. In practice, the                  directly incorporate the magnitude of supply into the decision
+speed of these procedures heavily relies on the initial solution.           rule. To address this challenge, researchers have proposed
+When IBFS is near optimal, the improvement phase generally                  weighted or hybrid heuristics [16]. For instance, the method in
+                                                                            [8] creates weighted cost matrix ratios to guide allocations.
+
+       www.etasr.com                         Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+       Engineering, Technology & Applied Science Research                   Vol. 16, No. 2, 2026, 33024-33030               33025
+
+Authors in [17] further hybridized this idea by combining                  and the decision variable , the quantity shipped from
+KSAM with the Total Differences Method (TDM). These
+                                                                        to . The complete mathematical formulation is stated in (1).
+                                                                                                  and minimize the total TP cost ( ).
+approaches are valuable as they reshape the cost landscape to
+reveal "relatively attractive" cells. However, their weighting is       The aim is to determine
+                                                                                               =∑ ∑
+                                                                                                                             ⎫
+primarily embedded in matrix transformation, and they do not
+
+                                                                                      ∑         =        = 1,2, . . ,        ⎪
+explicitly represent the exposure of leaving large remaining
+
+                                                                            subject to ∑         =       = 1,2, . . ,
+supplies in systematically expensive rows until late-stage
+                                                                                                                           ⎬
+                                                                                                                              (1)
+                                                                                                                           ⎪
+allocation.
+    Capacity-based heuristics take the opposite approach.                                          > 0 ∀,                  ⎭
+Methods, such as SSM [18], prioritize sources with larger
+supplies so that major constraints are satisfied earlier. Building      where denotes the total number of sources, denotes the
+on JHM [19] and BCE [18], SSM reallocates surplus by                    total number of destinations;       is the supply ,       is the
+focusing on supply quantities. The limitation is that supply            demand ;      is the transportation cost per unit from to ;
+volume becomes the dominant factor, meaning large-supply                    is the number of units shipped from to       and     cannot
+rows are treated similarly, regardless of whether their unit costs
+are generally low or consistently high. As a result, a method           be negative.
+can appear "efficient" in satisfying quantities while still
+pushing large allocations through costly routes simply because
+the corresponding supply is large.
+    This study proposes CSM to address the specific gap. Its
+key innovation is the CS variable. Unlike BCE, TOCM-MT,
+and earlier methods that treat cost and supply separately, CSM
+combines them to identify rows with high cost and large
+supply. Focusing on these rows helps prevent allocating large
+amounts to costly cells, a common issue in simpler heuristics.
+CSM is not guaranteed to be optimal. Reaching optimality
+requires a follow-up step, such as the stepping-stone procedure.
+CSM sits between cost-matrix weighting approaches and
+purely capacity-based rules. Instead of transforming the cost
+matrix, CSM introduces a new variable (CS = TC × Si) and
+embeds it into SSM-style rebalancing with explicit tie-
+breaking, targeting cases where large supplies coincide with
+systematically high row costs.                                                                  Fig. 1.   TP network.
+    This research evaluates CSM on 42 test cases, including
+                                                                                        III.   COST SUPPLY METHOD
+benchmark instances from literature, synthetic datasets, and
+real-world data from XYZ, a logistics company located in East              The CSM method modifies the SSM method to obtain a
+Java. The scope of this study is strictly limited to Balanced           near-optimal IBFS value. SSM transfers the Excess Row (ER)
+TPs. The performance of CSM is benchmarked against five                 from the First Least Cost (FLC) row to the Second Least Cost
+established alternatives: VAM, JHM, TOCM-MT, BCE, and                   (SLC) row by comparing supply only. The contribution of
+SSM, with a focus on both the accuracy of hitting the optimal           CSM is to add the TC variable, multiply it by the supply, and
+solution and the minimization of deviation from optimality.             then compare the results. The first step is to create an m x n
+                                                                        matrix and then add a column to calculate the CS, which is the
+               II.   MATHEMATICAL MODEL                                 product of the TC and the row's supply. Priority is given to the
+   The conventional matrix form of the TP is outlined in                row with the largest CS. Figure 2 shows the flowchart of the
+Figure 1 and Table I.                                                   CSM method. The followed steps are:
+                                                                        1. Step 1: Create an m x n matrix for the TP with cost Cij,
+                         TABLE I.       TP MATRIX
+                                                                           supply Si, and demand Dj. If the problem is unbalanced,
+            Demand1        Demand2       …     Demandn      Supply         change the TP by adding a dummy row (if Demand >
+ Supply1    C11    X11     C12    X12   … …    C1n    X1n     S1           Supply) or a dummy column (if Supply > Demand) with
+ Supply2    C21    X21     C22    X22   … …    C2n    X2n     S2
+                                                                           zero unit costs. Then proceed to Step 2.
+   …        …      …       …      …     … …    …      …       …
+ Supplym    Cm1 Xm1        Cm2 Xm2      … …    Cmn Xmn        Sm        2. Step 2: Create two new columns: the first column for TC
+ Demand         D1             D2        …         Dn
+                                                                           and the second for CS. TC is the sum of all costs in each
+                                                                           row, while CS is the product of TC and that row's supply.
+demands . Each cell ( , ) records the unit transportation cost
+   Rows index the     sources    and columns index the
+                                                                           Calculate TC as shown in (2) and CS as shown in (3)/TC
+                                                                           and CS as shown in:
+
+
+
+       www.etasr.com                          Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+        Engineering, Technology & Applied Science Research                 Vol. 16, No. 2, 2026, 33024-33030             33026
+
+
+
+
+                                                       Fig. 2.     CSM flowchart.
+
+   +     = ∑                                           (2)             8. Step 8: Calculate the TA for each row i. Check the status
+       , = +    ×
+                                                                          of each row. If there is still an ER, go back to step 5.
+                                                       (3)                Otherwise, proceed to step 9.
+3. Step 3: Find the FLC for each column and the allocation             9. Step 9: Calculate the TTC using (8) by multiplying the cost
+   demand in FLC. FLC is the smallest cost in the Dj column               of Cij and the allocation of units Xij:
+                                                                           ++ = ∑       ∑
+   (column-minima) and can be calculated as:
+   ./     =         0 , 1, . . .   2
+                                                                                                                              (8)
+                                                       (4)
+                                                                           Derived from SSM, CSM modifies the transfer procedure
+4. Step 4: Calculate the Total Allocation (TA) for each row i.         in the following ways:
+   Create a new column next to the CS column, labeled
+   'status'. There are three types of statuses: Satisfy (S), Not        Ties among FLC/SLC candidates: If two (or more) cells tie
+
+                                                                         highest + (i.e., higher aggregate unit costs).
+   Satisfy (NS), and ER. If the TA is equal to the supply, then          as FLC/SLC in a column, select the one whose row has the
+   the status is S; if the TA is smaller than the supply, then
+   the NS state/the status is NS; if the TA is greater than the         Ties in smallest differences (SDiff): If there are two SDiff,
+   Supply, then the status of the row is changed to ER. If               choose the option that minimizes; if still tied, choose the
+   there is an ER status, proceed to step 5; otherwise, proceed          option with the lower unit cost.
+   to step 9. TA can be calculated by:
+   +3 = ∑
+                                                                        Row satisfaction (FLC versus SLC): If the two rows have
+                                                       (5)               equal supplies, ensure that the FLC row is satisfied.
+
+                                                                         + × , ).
+                                                                         Otherwise, satisfy the row with the largest      (larger
+5. Step 5: For each cell in the ER row, obtain the difference
+   (Diff) value by subtracting FLC from SLC. SLC refers to
+   the second lowest cost value in a column after the smallest            Table II presents the modifications and the step-by-step
+   FLC. SLC cannot be derived from an ER row. If there is              process, while emphasizing the differences between CSM and
+   more than one SLC, then select the SLC with the largest             SSM.
+   TC. Then select the Smallest Difference (SD) from the                   SSM transfers decisions solely on supply comparisons,
+   existing diffs. Diff and SD are calculated using:
+   diff = |FLC − SLC|
+                                                                       ignoring the row's cost [18]. With heterogeneous unit costs, this
+                                                       (6)             can direct flow toward rows that seem feasible but increase TC.
+
+   SD = min (diff)
+                                                                       CSM addresses this by introducing a straightforward cost-
+                                                       (7)             aware transfer rule that utilizes a CS variable. This makes the
+                                                                       rule sensitive to both supply and TC, thereby aligning with TP's
+6. Step 6: Check the number of SD candidates:
+                                                                       primary goal of minimizing cost. Additionally, SSM leaves
+ If a unique SD exists, proceed directly to Step 7.                   several tie situations underdefined (e.g., equal Diff, equal
+                                                                       supplies, or multiple FLC/SLC candidates), creating ambiguity
+ If multiple candidates share the same SD value (a tie),              during implementation. CSM provides explicit tiebreakers for
+  calculate the potential cost increase for each candidate by          these cases. The detailed pseudocode of the proposed CSM,
+  multiplying the quantity to be transferred by the unit cost of       including the initialization and rebalancing logic, is presented
+  the destination cell. Then choose the smallest increase and          in Figure 3.
+  proceed to step 7.
+ If it remains the same, choose the option with the smallest
+  unit cost (Cij) and proceed to Step 7.
+7. Step 7: Check if the FLC supply matches the SLC. If so,
+   satisfy the FLC; if not, satisfy the row with the largest CS.
+
+        www.etasr.com                     Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+       Engineering, Technology & Applied Science Research                           Vol. 16, No. 2, 2026, 33024-33030              33027
+         TABLE II.         COMPARISON BETWEEN SSM AND CSM                        rows/columns are required. The algorithm calculates the TC
+      Difference                 SSM                           CSM               and CS for each row.
+                          Standard TP matrix    Addition of the new TC and
+   TP initial matrix
+                          (with no additions)              CS columns                               TABLE III.   TP MATRIX FROM (N32)
+                                                   Choose the FLCs and/or
+   Searching for FLC                                                                        D1          D2       D3     D4        D5        S
+                                                SLCs that have a greater TC
+       and/or SLC                                                                  S1       4           4         9     10        13       100
+                                   None                       value.
+(if there are two values                                                           S2       7           9         8     10         4       90
+                                                 If still the same, choose the
+   of the same value)                                                              S3       9           3         7     10         6       80
+                                                          smallest index
+                                                  Determine the number of          S4       11          4        10      6         9       70
+                         Select the option that    units to be moved, then         D        60          40       90     70        80
+  If there is more than
+                             has the greatest    calculate the cost increase,
+one SD, select the SD.                                                            Row S1: TC=40, CS=4000
+                                allocation      and select the move with the
+                                                     smallest cost increase
+                           If there is only one                                   Row S2: TC=38, CS=3420
+                          ER, then satisfy the
+                         row with the smallest
+                                                   Selecting the largest CS       Row S3: TC=35, CS=2800
+    ER moving rules                              (result of the multiplication
+                           supply; otherwise,
+                          satisfy the row with
+                                                   of the TC by the supply)       Row S4: TC=40, CS=2800
+                            the largest supply                                       An initial allocation based on the FLC rule yields a
+                                                                                 preliminary TC of 1820. However, the status check reveals a
+                                                                                 discrepancy: Row S3 has an ER, while rows S1 and S2 are NS,
+                                                                                 as portrayed on Table IV.
+
+                                                                                        TABLE IV.      STATUS OF EACH ROW AFTER ALLOCATION
+                                                                                      D1     D2     D3    D4   D5    S       TC     CS    Status
+                                                                                  S1 4 (60)    4      9   10   13   100      40    4000    NS
+                                                                                  S2    7      9      8   10 4 (80) 90       38    3420    NS
+                                                                                  S3    9   3 (40) 7 (90) 10    6   80       35    2800    ER
+                                                                                  S4   11      4     10 6 (70)  9   70       40    2800     S
+                                                                                  D    60     40     90   70   80
+
+
+                                                                                 2) Steps 5-7: Rebalancing (Transfer)
+                                                                                    The algorithm enters the rebalancing loop to resolve the
+                                                                                 excess in row S3.
+                                                                                  Iteration 1 (S3-S2): The algorithm checks possible transfers
+                                                                                   from the ER (S3) to the deficit rows (S1 or S2). This shows
+                                                                                   a tie in the cost-difference values for columns D2 and D3.
+                                                                                   To resolve it, a multiplication tie-breaker is used, which
+                                                                                   selects the option with the smaller cost increase. Moving
+                                                                                   along D2 would increase the cost by 160 (40 x 4), while
+                                                                                   moving along D3 would increase it by 80 (10 x 8). Since
+                                                                                   (80 < 160), D3 is chosen as the SD column. Based on this
+                                                                                   decision, the algorithm transfers 10 units from S3 to S2. As
+                                                                                   shown in Table V, this adjustment is necessary because it
+                                                                                   assigns flow to a lower-cost cell earlier, thereby reducing
+                                                                                   the likelihood that later allocations are forced into higher-
+                                                                                   cost cells under the remaining constraints.
+
+                                                                                        TABLE V.        CONDITION AFTER MOVING S3D3 TO S2D3
+                                                                                      D1     D2     D3    D4   D5    S       TC     CS    Status
+                        Fig. 3.    CSM pseudocode.                                S1 4 (60)    4      9   10   13   100      40    4000    NS
+                                                                                  S2    7      9   8 (10) 10 4 (80) 90       38    3420     S
+   The following is an example of the application of the CSM                      S3    9   3 (40) 7 (80) 10    6   80       35    2800    ER
+algorithm to example N32 from [20].                                               S4   11      4     10 6 (70)  9   70       40    2800     S
+                                                                                  D    60     40     90   70   80
+1) Steps 1-4: Initialization and Initial Allocation
+                                                                                  Iteration 2 (S2-S1): With S3 still having surplus capacity
+    Create a TP matrix, as shown in Table III. Calculate the                       (ER), the algorithm identifies S1 as the remaining deficit
+total supply and total demand. Since the total supply and                          row (NS). Consequently, 40 units are transferred from S3 to
+demand of the problem are balanced (each 340), no dummy                            S1. As presented in Table VI, this action aligns with the
+                                                                                   rules, as S1 has a larger CS value (4000).
+
+        www.etasr.com                               Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+       Engineering, Technology & Applied Science Research                               Vol. 16, No. 2, 2026, 33024-33030                        33028
+
+    In this numerical example, the IBFS costs produced by                        improvement over SSM with an Ip of 2.20%. While SSM
+SSM and CSM are 1820 and 1780, respectively. CSM attains                         yields a cost of 1820, CSM reaches the optimal cost of 1780.
+                                                                                        V@ =                 × 100%
+the optimal solution.                                                                           CDEAWXAY
+                                                                                                  CDEA
+                                                                                                                                                     (10)
+       TABLE VI.         CONDITION AFTER MOVING S2D2 TO S1D2
+     D1     D2     D3    D4   D5    S                  TC     CS       Status
+ S1 4 (60) 4 (40)    9   10   13   100                 40    4000        S
+ S2    7      9   8 (10) 10 4 (80) 90                  38    3420        S
+ S3    9      3   7 (80) 10    6   80                  35    2800        S
+ S4   11      4     10 6 (70)  9   70                  40    2800        S
+ D    60     40     90   70   80
+
+
+3) Steps 8-9: Result
+    After these transfers, all supply and demand constraints are
+met (Status: Satisfied). The final TTC is calculated as: (4 x 60)
++ (4 x 40) + (8 x 10) + (7 x 80) + (6 x 70) = 1780.
+                                                                                                         Fig. 4.      Ap among the methods.
+                   IV.    EXPERIMENT RESULTS
+    CSM was evaluated using solution-quality measures                               Although ties are common across the benchmark, Table
+commonly reported for IBFS heuristics, particularly accuracy                     VIII shows a meaningful number of cases where CSM yields a
+and deviation from optimal cost, to determine the performance                    lower cost. In particular, CSM outperforms VAM in 15 out of
+of the proposed logic across different instances.                                42 datasets (36%).
+
+    A head-to-head comparison was conducted among VAM,                                      TABLE VIII.       IP BETWEEN CSM AND OTHER METHODS
+TOCM-MT, JHM, BCE, SSM, and CSM. The evaluation used                                                                       Total of                Average Ip
+42 datasets: 32 benchmark cases from prior studies, 5 synthetic                    NO          Method
+                                                                                                             Positive       Negative      Zero        (%)
+instances designed to test larger problem sizes, and 5                              1        VAM               15                5         22         3.00
+anonymized real-world cases from a logistics company. Table                         2        JHM                9                5         29         0.84
+VII summarizes each dataset. For instance, N32 is a 4 supply                        3      TOCM-MT             13                6         24         0.16
+and 5 demand (4×5 TP matrix), with an optimal cost of 1780.                         4        BCE                9                4         30         0.38
+Optimal solutions were computed using TORA and Gurobi.                              5        SSM                8                6         29         0.14
+The complete datasets are available in [21].                                         Figure 5 presents the Deviation Percentage (Dp) for each
+                                                                                 method relative to the optimal cost, calculated using (11). A Dp
+                   TABLE VII.      SUMMARY OF DATASETS
+                                                                                 value of zero indicates an optimal IBFS, while positive values
+    Dataset group                     Note                     Count             indicate greater deviation from optimality. For N32, CSM
+    Published study
+                            Benchmark cases from
+                                                                 32              attains a Dp of 0.00, confirming its optimality for that case. The
+                                 prior studies                                   average deviations are 4.21% (VAM), 1.68% (JHM), 0.95%
+                             Randomly generated
+       Synthetic                                                 5               (TOCM-MT), 1.15% (BCE), 1.38% (SSM), and 0.87% (CSM).
+                           instances on larger sizes
+                           Anonymized real-world                                 CSM has the lowest mean deviation, indicating that, on
+    Real world case                                                              average, it yields solutions closer to the optimal.
+                             cases from a logistics              5
+
+                                                                                         @=                                 x100%
+                                                                                                (Z[\]W^_`abcd ]edf`aeg)
+    (company XYZ)
+                                   company
+                                                                                                   ^_`abcd ]edf`aeg
+                                                                                                                                                     (11)
+    Figure 4 reports the Accuracy Percentage (Ap) across all 42
+datasets for: VAM, JHM, TOCM-MT, BCE, SSM, and CSM.
+The Ap metric, defined by (9), measures how often an IBFS
+matches the optimal cost. Based on the data in Table VII, the
+number of optimal IBFS solutions is 22 (VAM), 27 (JHM), 26
+(TOCM-MT), 29 (BCE), 31 (SSM), and 33 (CSM), equivalent
+to 52.38%, 64.29%, 61.90%, 69.05%, 73.81%, and 78.57%.
+CSM ranks first, achieving optimality in 33 of 42 cases.
+   3@ =                                             T100%
+           AB      CDEA FGH IJI KLM    NO APOBM P
+                         QPMNO RNMNSIM
+                                                                      (9)
+    Table VIII provides a comparative summary of the
+Improvement Percentage (Ip) outcomes. The Ip, calculated
+using (10), can be positive, negative, or zero. Table VIII also                                    Fig. 5.         Average Dp among the methods.
+presents the average Ip, comparing CSM against VAM,
+TOCM-MT, JHM, BCE, and SSM. Positive Ip indicates that                              Table IX reports the average runtime of each method
+CSM achieves a lower TC, negative Ip indicates a higher cost,                    together with its stated time complexity. CSM tends to run
+and zero denotes a tie. For example, in N32, CSM shows an                        longer than SSM because it introduces additional decision rules
+
+
+       www.etasr.com                                   Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+       Engineering, Technology & Applied Science Research                  Vol. 16, No. 2, 2026, 33024-33030                       33029
+
+during ER row reallocation, including the computation of TC          SSM (73.81%). It achieved the smallest mean deviation from
+and CS, and it applies explicit tie-breaking criteria when SSM       the optimum (0.87%), indicating that its solutions are closer to
+is ambiguous. As a result, CSM performs more checks per              the best.
+iteration and requires more computational effort than SSM.
+                                                                         While CSM produces a feasible solution, its detailed
+     TABLE IX.     AVERAGE RUNTIME AND TIME COMPLEXITY               selection and rebalancing steps introduce additional overhead,
+                        FOR EACH METHOD                              particularly for larger matrices. Like other deterministic IBFS
+                                                                     heuristics, CSM is not guaranteed to be optimal and offers only
+                       Average runtime
+      Methods
+                             (ms)
+                                             Time complexity         a limited advantage when costs are nearly uniform or when
+       VAM                 150.965             O (mn(m+n))           multiple allocations have similar objective values. CSM often
+       JHM                  4.365                O (mn2)             ties with SSM, and the additional computation may not be
+     TOCM-MT                12.548                O (mn)             justified.
+       BCE                  3.317                O (mn2)
+       SSM                  4.254                 O (mn)                 With these constraints in mind, CSM is best viewed as a
+       CSM                  6.287                O (mn2)             practical option for settings where obtaining a strong starting
+                                                                     point is useful, particularly when a better IBFS can reduce
+    A paired-samples t-test (N = 42) was performed to evaluate       steps in logistics planning. Future work will focus on reducing
+solution robustness by comparing the Percentage Deviation            computational overhead (e.g., hybrid tie-breaking or localized
+from Optimality of CSM against each benchmark heuristic              search) and extending the approach to broader variants of
+(Table X).                                                           transportation models, including unbalanced and more complex
+                                                                     distribution networks.
+     TABLE X.      P-VALUE FOR EACH METHOD COMPARED TO
+                                CSM                                                          ACKNOWLEDGMENT
+                                   P-value (one-                         The authors acknowledge the financial support from the
+                       Methods
+                                      tailed)
+                                                                     Institut Teknologi Sepuluh Nopember for this work, under the
+                      VAM              0.015
+                      JHM              0.070                         project scheme of the Publication Writing and IPR Incentive
+                    TOCM-MT            0.435                         Program (PPHKI) 2025.
+                      BCE              0.230
+                      SSM              0.228                                                       REFERENCES
+                                                                     [1]   H. Garg and R. M. Rizk-Allah, "A novel approach for solving rough
+    CSM achieves a statistically significant improvement over              multi-objective transportation problem: development and prospects,"
+VAM (p = 0.015 < 0.05), reducing the mean deviation from                   Computational and Applied Mathematics, vol. 40, no. 4, May 2021, Art.
+4.21% to 0.87%. For JHM, TOCM-MT, BCE, and SSM, the                        no. 149, https://doi.org/10.1007/s40314-021-01507-5.
+differences are not statistically significant at the 0.05 level.     [2]   L. Sahoo, "A new score function based Fermatean fuzzy transportation
+Nevertheless, CSM shows the lowest average deviation on this               problem," Results in Control and Optimization, vol. 4, Sept. 2021, Art.
+                                                                           no. 100040, https://doi.org/10.1016/j.rico.2021.100040.
+benchmark (compared to 1.38% for SSM), suggesting that its
+                                                                     [3]   F. L. Hitchcock, "The Distribution of a Product from Several Sources to
+decision rules often lead to solutions that are very close to the          Numerous Localities," Journal of Mathematics and Physics, vol. 20, no.
+optimal solution.                                                          1–4, pp. 224–230, 1941, https://doi.org/10.1002/sapm1941201224.
+    CSM emphasizes "high-impact rows" to prevent costly,             [4]   C. A. B. N. Bitundu, J. F. Wounba, C. Bwemba, and S. K. Fondzenyuy,
+                                                                           "Designing of An Integrated Port Development Planning Model:
+forced allocations common in penalty-based methods, but it                 Application to The Three Main Cameroonian Ports," Vokasi Unesa
+introduces overhead. In Table IX, CSM's average runtime is                 Bulletin of Engineering, Technology and Applied Science, vol. 2, no. 1,
+6.287 ms, whereas SSM's is 4.254 ms. Its asymptotic cost is O              pp. 12–35, Mar. 2025, https://doi.org/10.26740/vubeta.v2i1.35876.
+(mn2) due to repeated TC and CS calculations and tie-breaking        [5]   M. Sam'an, Y. Dasril, N. B. Bujang, and Farikhin, "Improved total
+during reallocation. For the small-to-medium matrices tested,              difference method (ITDM): a new approach to solving transportation
+this overhead is modest, but for very large instances, it may be           problem based on modifications of total difference method 1 and
+                                                                           integration of total ratio cost matrix," International Journal of
+significant. CSM is suited for scenarios where (i) supply is               Computing Science and Mathematics, vol. 16, no. 1, 2022,
+skewed (one or two sources dominate total supply), (ii) unit               https://doi.org/10.1504/IJCSM.2022.126767.
+costs are heterogeneous, especially when high-supply rows are        [6]   J. A. Obari, S. T. A, I. M. A, and A. B. H, "An emission and weight of
+not the cheapest ones, and (iii) multiple ties occur in                    vehicles-based road traffic congestion pricing system and control with
+rebalancing, where CSM's tie-breaking favors the smallest                  consideration of investment worthiness," Vokasi Unesa Bulletin of
+marginal cost increase.                                                    Engineering, Technology and Applied Science, vol. 2, no. 3, pp. 401–
+                                                                           411, Aug. 2025, https://doi.org/10.26740/vubeta.v2i3.38528.
+                     V.    CONCLUSIONS                               [7]   E. Hosseini, "Three new methods to find initial basic feasible solution of
+                                                                           transportation problems," Applied Mathematical Sciences, vol. 11, no.
+    This study introduces the Cost–Supply Method (CSM), a                  37, pp. 1803–1814, 2017, https://doi.org/10.12988/ams.2017.75178.
+supply-weighted SSM for creating an Initial Basic Feasible           [8]   K. Karagul and Y. Sahin, "A novel approximation method to obtain
+Solution (IBFS) in Transportation Problems (TPs).                          initial basic feasible solution of transportation problem," Journal of King
+Implemented in C, it was tested on 42 instances, with optimal              Saud University - Engineering Sciences, vol. 32, no. 3, pp. 211–218,
+                                                                           Mar. 2020, https://doi.org/10.1016/j.jksues.2019.03.003.
+costs verified via TORA and Gurobi. CSM matched the
+optimal in 33 cases (78.57%), outperforming VAM (52.38%),            [9]   M. A. Babu, M. A. Helal, M. S. Hasan, and U. K. Das, "Implied cost
+                                                                           method (ICM): an alternative approach to find the feasible solution of
+JHM (64.29%), TOCM-MT (61.90%), BCE (69.05%), and
+
+
+       www.etasr.com                       Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+        Engineering, Technology & Applied Science Research                        Vol. 16, No. 2, 2026, 33024-33030               33030
+     transportation problem," Global Journal of Science Frontier Research-
+     F: Mathematics and Decision Sciences, vol. 14, no. 1, pp. 5–13, 2014.
+[10] H. A. Hussein and M. A. K. Shiker, "A Modification to Vogel's
+     Approximation Method to Solve Transportation Problems," Journal of
+     Physics: Conference Series, vol. 1591, no. 1, 2020, Art. no. 012029,
+     https://doi.org/10.1088/1742-6596/1591/1/012029.
+[11] M. Mathirajan, S. Reddy, and M. V. Rani, "An experimental study of
+     newly proposed initial basic feasible solution methods for a
+     transportation problem," OPSEARCH, vol. 59, no. 1, pp. 102–145, 2022,
+     https://doi.org/10.1007/s12597-021-00533-5.
+[12] F. A. Wireko, I. D. K. Mensah, E. N. A. Aborhey, S. A. Appiah, C.
+     Sebil, and J. Ackora-Prah, "The maximum range method for finding
+     initial basic feasible solution for transportation problems," Results in
+     Control and Optimization, vol. 19, June 2025, Art. no. 100551,
+     https://doi.org/10.1016/j.rico.2025.100551.
+[13] Ö. Kirca and A. Şatir, "A Heuristic for Obtaining and Initial Solution for
+     the Transportation Problem," Journal of the Operational Research
+     Society,      vol.      41,     no.      9,      pp.     865–871,    1990,
+     https://doi.org/10.1057/jors.1990.124.
+[14] A. A. S. Bilkour, Vishal Vincent Henry, and Satakshi, "Initial Basic
+     Feasible Solution for Transportation Problem using TOCM with Zero
+     Point Minimum Method," International Journal of Intelligent Systems
+     and Applications in Engineering, vol. 12, no. 21s, pp. 3332–3343, 2024.
+[15] R. Murugesan and T. Esakkiammal, "TOCM-VAM method versus asm
+     method in transportation problems," Advances in Mathematics: Scientific
+     Journal,      vol.      9,     no.     6,      pp.     3549–3566,    2020,
+     https://doi.org/10.37418/amsj.9.6.34.
+[16] M. Amreen and V. B, "A New Way For Solving Transportation Issues
+     Based on the Exponential Distribution and the Contraharmonic Mean,"
+     Journal of applied mathematics & informatics, vol. 42, no. 3, pp. 647–
+     661, 2024, https://doi.org/10.14317/jami.2024.647.
+[17] M. Sam'an and Y. N. Ifriza, "A combination of TDM and KSAM to
+     determine initial feasible solution of transportation problems," Journal
+     of Soft Computing Exploration, vol. 2, no. 1, pp. 17–24, Mar. 2021,
+     https://doi.org/10.52465/joscex.v2i1.16.
+[18] B. Amaliah, C. Fatichah, and E. Suryani, "A Supply Selection Method
+     for better Feasible Solution of balanced transportation problem," Expert
+     Systems with Applications, vol. 203, Oct. 2022, Art. no. 117399,
+     https://doi.org/10.1016/j.eswa.2022.117399.
+[19] Z. A. M. S. Juman and M. A. Hoque, "An efficient heuristic to obtain a
+     better initial feasible solution to the transportation problem," Applied
+     Soft     Computing,       vol.   34,      pp.    813–826,     Sept.  2015,
+     https://doi.org/10.1016/j.asoc.2015.05.009.
+[20] Md. A. Babu, M. A. Hoque, and Md. S. Uddin, "A heuristic for
+     obtaining better initial feasible solution to the transportation problem,"
+     OPSEARCH,          vol.     57,    no.      1,     pp.    221–245,   2020,
+     https://doi.org/10.1007/s12597-019-00429-5.
+[21] R. F. Bunyamin, "CSM Dataset and Detailed Results," CSM Dataset and
+     Detailed Results, https://rihanfarih.blogspot.com/2025/11/csm-dataset-
+     and-detailed-results.html.
+
+
+
+
+        www.etasr.com                               Bunyamin et al.: A Cost Supply Method for Finding an Initial Basic Feasible Solution of the …
+

@@ -1,0 +1,34 @@
+problem,method,published_cost,reproduced_cost,status,match
+E19_Srinivasan,JHM,880,,unverified,
+E19_Srinivasan,VAM,955,955.0,ok,True
+E19_Srinivasan,optimal,880,880.0,LP verified,True
+E19_Sen,JHM,2146750,2146750.0,ok,True
+E19_Sen,VAM,2164000,2164000.0,ok,True
+E19_Sen,optimal,2146750,2146750.0,LP verified,True
+E19_Deshmukh_literal,JHM,743,883.0,ok,False
+E19_Deshmukh_literal,VAM,779,883.0,ok,False
+E19_Deshmukh_literal,optimal,743,743.0,LP verified,True
+E19_Ramadan,JHM,5600,5600.0,ok,True
+E19_Ramadan,VAM,5600,5600.0,ok,True
+E19_Ramadan,optimal,5600,5600.0,LP verified,True
+E19_Kulkarni,JHM,840,,unverified,
+E19_Kulkarni,VAM,880,880.0,ok,True
+E19_Kulkarni,optimal,840,840.0,LP verified,True
+E19_Schrenk,JHM,59,59.0,ok,True
+E19_Schrenk,VAM,59,59.0,ok,True
+E19_Schrenk,optimal,59,59.0,LP verified,True
+E19_Samuel,JHM,28,28.0,ok,True
+E19_Samuel,VAM,28,28.0,ok,True
+E19_Samuel,optimal,28,28.0,LP verified,True
+E19_Imam,JHM,460,460.0,ok,True
+E19_Imam,VAM,475,475.0,ok,True
+E19_Imam,optimal,435,435.0,LP verified,True
+E19_Adlakha,JHM,390,,unverified,
+E19_Adlakha,VAM,390,390.0,ok,True
+E19_Adlakha,optimal,390,390.0,LP verified,True
+L01_Real2x94,BCE,12175097,12175097.0,ok,True
+L01_Real2x94,VAM,12175097,12175097.0,ok,True
+L01_Real2x94,TDM1,12208071,12208071.0,ok,True
+L01_Real2x94,TOCM_MT,12210362,,not implemented,
+L01_Real2x94,JHM,12175097,12175097.0,ok,True
+L01_Real2x94,optimal,12175097,12175097.0,LP verified,True

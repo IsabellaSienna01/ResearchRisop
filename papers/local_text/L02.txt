@@ -1,0 +1,685 @@
+                                                                    MethodsX 16 (2026) 103825
+
+
+                                                           Contents lists available at ScienceDirect
+
+
+                                                                          MethodsX
+                                               journal homepage: www.elsevier.com/locate/methodsx
+
+
+
+
+Enhanced supply selection for better initial basic feasible solutions
+in transportation problems
+Rihan Farih Bunyamin, Bilqis Amaliah * , Ahmad Saikhu
+Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Institut Teknologi Sepuluh Nopember, Surabaya 60111,
+Indonesia
+
+
+
+
+G R A P H I C A L A B S T R A C T
+
+
+
+
+A R T I C L E I N F O                                    A B S T R A C T
+
+Keywords:                                                The Transportation Problem (TP) is an optimization model that distributes goods from multiple
+Transportation problem                                   supply points to various demand points at minimal cost. A crucial step in solving TP is generating
+Initial basic feasible solution                          an Initial Basic Feasible Solution (IBFS), which affects the efficiency of reaching the optimal
+Optimal solution
+                                                         solution. However, existing IBFS methods such as Supply Selection Method (SSM), Vogel’s
+Vogel’s approximation method
+                                                         Approximation Method (VAM), Bilqis–Chastine–Erma (BCE). Juman–Hoque Method (JHM), and
+                                                         Total Opportunity Cost Matrix–Minimal Total (TOCM-MT) are not always reliable in producing
+                                                         low-cost solutions.
+
+
+
+
+    For a published article
+    B. Amaliah, C. Fatichah, and E. Suryani, “A Supply Selection Method for better Feasible Solution of balanced transportation problem,” Expert Syst. Appl.,
+vol. 203, no. April, p. 117399, 2022. https://doi.org/10.1016/j.eswa.2022.117399.
+ * Corresponding author.
+    E-mail address: bilqis@its.ac.id (B. Amaliah).
+
+https://doi.org/10.1016/j.mex.2026.103825
+Received 2 September 2025; Accepted 14 February 2026
+Available online 15 February 2026
+2215-0161/© 2026 The Authors.           Published by Elsevier B.V. This is an open access article under the CC BY-NC license
+(http://creativecommons.org/licenses/by-nc/4.0/).
+R.F. Bunyamin et al.                                                                                                                           MethodsX 16 (2026) 103825
+
+
+                                                            This study proposes the Rihan–Bilqis–Saikhu Method (RBSM). This heuristic modifies SSM by
+                                                          considering the total cost-supply of each cell and adjusting how surplus allocations are shifted to
+                                                          rows with shortages. The method was evaluated using 42 test cases, including 32 published test
+                                                          cases, 5 randomly generated test cases, and 5 real test cases from XYZ company. Results show that
+                                                          RBSM outperformed all comparison methods, achieving the optimal solution in 36 out of 42 cases
+                                                          (85.71 % accuracy) and producing the lowest average deviation (0.58 %) from the optimal cost.
+                                                            The contributions of RBSM are:
+
+                                                            • Integration of total cost-supply into allocation decisions.
+                                                            • Refined reallocation rules between surplus rows and rows with shortages.
+                                                            • Consistent accuracy and efficiency across diverse test cases.
+
+
+
+
+    Specifications table
+
+
+  Subject area                             Computer Science
+  More specific subject area               Operations Research, Optimization, Transportation Problem
+  Name of your method                      Rihan–Bilqis–Saikhu Method (RBSM)
+  Name and reference of the                B. Amaliah, C. Fatichah, and E. Suryani, “A Supply Selection Method for better Feasible Solution of balanced transportation
+     original method                       problem,” Expert Syst. Appl., vol. 203, no. April, p. 117,399, 2022,
+                                           https://doi.org/10.1016/j.eswa.2022.117399
+  Resource availability                    Data Available on
+                                           https://rihanfarih.blogspot.com/2025/08/dataset-table-rbsm.html
+
+
+
+
+Background
+
+    The Transportation Problem (TP) is an optimization model that focuses on delivering goods from supply sources to demand des­
+tinations at the minimum possible cost [1,2]. It is usually expressed in the form of a cost matrix, where each entry represents the
+expense of transporting a single unit of goods from one origin to a destination [3]. Hitchcock first introduced the idea of TP in 1941 [4].
+Since then, numerous approaches have been proposed to make transportation more cost-efficient. In practice, TP has been applied in
+many fields, such as task scheduling and vehicle routing, helping organizations cut costs while ensuring that deliveries remain timely
+and efficient [5].
+    The solution process usually begins with an Initial Basic Feasible Solution (IBFS) [6], which satisfies all problem constraints and
+serves as the starting point for optimization. The quality of the IBFS strongly affects the efficiency of reaching the optimal solution
+through procedures such as Stepping Stone or Modified Distribution (MODI) [7]. Heuristics for IBFS are therefore evaluated by their
+ability to generate solutions close to the optimum.
+    Several heuristic methods have been developed for IBFS, including the Northwest Corner Rule (NWC), Least Cost Method (LCM),
+and Vogel’s Approximation Method (VAM) [8]. Over time, researchers have proposed modifications and other alternatives to improve
+performance, such as the Total Opportunity Cost Matrix (TOCM) method [1], the Juman–Hoque Method (JHM) [2], and the Bil­
+qis–Chastine–Erma (BCE) method [9]. BCE was later extended into the Supply Selection Method (SSM), which modified allocation
+rules when supply exceeded demand [10].
+    Although these heuristics contribute helpful strategies, their results are not always consistent in producing low-cost IBFS. SSM, for
+example, often performs well but still exhibits variability across cases. This motivates the development of the Rihan–Bilqis–Saikhu
+Method (RBSM). RBSM builds upon SSM by incorporating the total cost-supply of each row and refining the rules for reallocating
+excess supply from the first least cost (FLC) to the second least cost (SLC).
+    This study presents RBSM as an alternative method for finding starting solutions to the Transportation Problem. To test its
+
+Table 1
+Comparison between RBSM and SSM.
+  Difference                             SSM                                                           RBSM
+
+  TP Initial Matrix                      TP Matrix In general                                          Addition of a new Total Cost (TC) column
+                                         (no additions)
+  Searching for FLC and/or SLC           None                                                          Choose FLCs and/or SLCs that have a greater Total Cost (TC) value
+      (if there are two values of the
+      same value)
+  Select the Smallest Difference (SD),   Pick the one that has the maximum allocation                  Determine the number of units to be moved, then calculate the
+      if there is more than one SD                                                                     cost increase, and select the move with the smallest cost increase.
+  Excess Row Transfer Rules              If there is only one ER, satisfy the line with the smallest   Choosing the result of multiplying the cost unit to be moved (Cij)
+                                         supply; otherwise, satisfy the supply of the largest line.    by the largest Supply
+
+
+                                                                                     2
+R.F. Bunyamin et al.                                                                                                 MethodsX 16 (2026) 103825
+
+
+effectiveness, RBSM was compared with five well-known methods: VAM [11], JHM [2], TOCM-MT [1], BCE [9], and SSM [10] using
+42 test cases.
+
+Method details
+
+    The Rihan–Bilqis–Saikhu Method (RBSM) is a heuristic designed to generate an Initial Basic Feasible Solution (IBFS) for the
+Transportation Problem (TP). It builds upon the Supply Selection Method (SSM) but introduces modifications to improve consistency
+in cost efficiency, such as:
+
+1. It incorporates the total cost of each supply row into the decision process.
+2. It refines the allocation transfer rule, where excess supply is reallocated from the first least cost (FLC) to the second least cost (SLC).
+
+    Table 1 provides a more detailed explanation of these modifications, outlines the specific steps, and differences compared to SSM.
+
+Mathematical formulation of transportation problem
+
+    The standard form of the Transportation Problem (TP) network is shown in Table 2 . In this formulation, the rows denote the set of
+m sources (Si), while the columns represent the set of n destinations or demands (Dj). Each cell of the table contains two components:
+the unit transportation cost (Cij) and the decision variable for the number of units transported (Xij). The objective of TP is to determine
+the values of Xij that will minimize the overall transportation cost, as expressed in Eq. (1). The mathematical model of TP is formulated
+as follows.
+
+                          ∑ n
+                          m ∑
+                                                     ⎫
+                 minZ =                Cij Xij       ⎪
+                                                     ⎪
+                           i=1   j=1
+                                                     ⎪
+                                                     ⎪
+                                                     ⎪
+                                                     ⎪
+                 Subjects to constrains :            ⎪
+                                                     ⎪
+                                                     ⎪
+                                                     ⎪
+          n
+          ∑                                          ⎬
+                 Xij = Si for i = 1, 2, …, m
+                                                                                                                                               (1)
+          j=1
+                                      ⎪
+                                      ⎪
+             n
+                                      ⎪
+                                      ⎪
+          ∑                           ⎪
+            X = Dj for j = 1, 2, …, n ⎪
+                   ij                 ⎪
+                                      ⎪
+           j=1                        ⎪
+                                      ⎪
+                                      ⎭
+                         Xij ≥ 0
+
+Where
+   m Total number of supplies
+   n Total number of demands
+   Si Supply i
+   Dj Demand j
+   Cij Transportation cost per unit from supply i to demand jXij Number unit to be transported from supply i to demand j
+   Supply (Si), demand (Dj), cost (Cij), and unit (Xij) are integers. TP is considered balanced when the total supply matches the total
+demand.
+
+Step-by-step procedure
+
+   This section explains the proposed Rihan-Bilqis-Saikhu Method (RBSM), which is used to determine the Initial Basic Feasible
+Solution (IBFS) of the Transportation Problem (TP). Fig. 1 illustrates the overall process of RBSM in flowchart, and the step-by-step
+procedure is outlined as follows:
+Step 1. Create a matrix of m x n size for the Transportation Problem (TP) with the cost of Cij, Supply Si, and Demand Dj. If the TP is
+not balanced (the amount of supply is not equal to the demand), change the TP to balanced by adding dummy supply or demand so that
+the amount of supply equals the demand.
+
+Table 2
+Transportation problem.
+                           D1                            D2                          .....            Dn                              Supply
+
+  Supply 1                 C11                   X11     C12         X12             ....             C1n             X1n                 S1
+  Supply 2                 C21                   X21     C22         X22             ....             C2n             X2n                 S2
+  Supply m                 Cm1                   Xm1     Cm2         Xm2             ....             Cmn             Xmn                 Sm
+  Demand                   D1                    ​       D2          ​               ....             Dn              ​               ​
+
+
+                                                                         3
+R.F. Bunyamin et al.                                                                                                   MethodsX 16 (2026) 103825
+
+
+
+
+                                                           Fig. 1. RBSM Flowchart.
+
+
+Step 2.    Add a new column next to the supply column, Total Cost (TC). TC is the sum of all costs in a single line. Calculate TC with Eq.
+(2).
+                 n
+                 ∑
+        TCi =           Cij                                                                                                                 (2)
+                  j=1
+
+
+   Step 3. Identify the First Least Cost (FLC) in each column and allocate demand to FLC. FLC is the smallest cost in the Dj column.
+FLC can be calculated by Eq. (3).
+                  (                 )
+      FLCj = min C1j , C2j , .. Cnj                                                                                              (3)
+
+   Step 4. Calculate the Total Allocation (TA) for each row i. Add one new column next to TC, which is the status column. The status
+can contain Satisfy (S), Not Satisfy (NS), or Excess Row (ER). If TA is the same as supply, then the status is S; if the TA is smaller than
+supply, then the status is NS; and if the TA is greater than supply, then the status is ER. If there is an ER status, proceed to step 5; If not,
+proceed to step 9. TA can be calculated by Eq. (4).
+                 m
+                 ∑
+        TA =            Xij                                                                                                                 (4)
+                 j=1
+
+
+   Step 5. For each cell in the ER row, calculate the difference (Diff) between FLC and Second Least Cost (SLC). SLC is the second
+smallest cost value in a column after FLC, and should not come from an ER row. Select the SLC with the largest TC if there is a similar
+SLC. Select Smallest Different (SD) from multiple existing Diffs. Diff and SD are calculated by Eq. (5) and Eq. (6):
+        diff = |FLC − SLC|                                                                                                                  (5)
+
+        SD = min (diff)                                                                                                                     (6)
+
+    Step 6.     Check the number of SD. If there is only one SD, proceed to step 7. If more than one:
+    Determine the number of units to be transferred from the First Least Cost (FLC) cell to the Second Least Cost (SLC) cell. If the
+product of cost * supply (CSS) in the SLC is greater than the CSS in the FLC, then transfer enough units from FLC to SLC to satisfy the
+SLC. This quantity represents the quantity of units transferred from FLC to SLC. Otherwise, transfer enough units from FLC to SLC to
+satisfy the FLC, which defines the number of units transferred in this case.
+    After that, calculate the cost increase by multiplying the units moved by SLC.
+    Choose the smallest cost increase
+
+
+                                                                       4
+R.F. Bunyamin et al.                                                                                                  MethodsX 16 (2026) 103825
+
+
+Step 7.     Select the smallest diff. If it is still the same, select the smallest cost and proceed to step 8.
+
+Step 8. Check if the supply FLC is the same as the SLC. If so, then satisfy FLC. Otherwise, satisfy the row that has the result of
+multiplying the Supply by the Cost of the Largest cell. If the result has the same value, then satisfy SLC.
+
+Step 9. Calculate the Total Allocation (TA) for each i row and update the status of each row. If there is still an ER, go back to step 5, if
+not, proceed to step 10.
+
+Step 10.     Compute Total Transportation Cost (TTC) by multiplying the cost of Cij by the allocated unit Xij using the Eq. (7) .
+                  m ∑
+                  ∑ n
+        TTC =                  Cij Xij                                                                                                      (7)
+                   i=1   j=1
+
+
+   The test cases example from Muguresan [12] is employed to demonstrate the RBSM method, as presented in Table 3. In this
+scenario, a company operates with four supply and four demand points. The supply capacities are 6, 10, 12, and 14 units, while the
+demand requirements are 9, 16, 10, and 7 units, respectively. Each cell in the table indicates the unit transportation cost from supply .
+    First Iteration:
+Step 1.     Generate the TP matrix as shown in Table 3.
+
+Step 2.     Create a new column next to supply, the Total Cost column (TC).
+    Total cost S1=17; S2=15; S3=11; S4=25
+Step 3. Allocate demand, there is an FLC with the same value in cells S1D1 and S4D1 worth 4 each. Select S4D1 as FLC because TCS4
+> TCS1 (25>17) so as in Table 4.
+
+Step 4.     There is 1 ER, which is in S3.
+
+Step 5.     Calculate diff, diff D2=4; D4=1. Select the D4 diff as SD.
+
+Step 8.    Supply FLC != Supply SLC, then satisfy the line that has the multiplication between the unit cost and the largest supply row.
+
+Cost FLC * Supply FLC = 1 *12 = 12
+
+Cost SLC * Supply SLC = 2 * 6 = 12
+
+    Because the values of the FLC and SLC multiplication results are the same, satisfy FLC by moving the allocation from S3D4 to S1D4
+as shown in Table 5.
+
+Step 9.     S3 row still ER.
+    Second iteration:
+Step 4.     S3 row still ER.
+
+Step 5.     Calculate diff, diff D2=4; D4=6. Select diff D2 as SD.
+
+Step 8. Supply FLC != Supply SLC, then satisfy the row that has the multiplication between the unit cost and the largest supply row.
+
+Cost FLC * Supply FLC = 2 *12 = 24
+
+Cost SLC * Supply SLC = 6 * 14= 84
+
+    Satisfy SLC by moving the S3D2 allocation to S4D2 as shown in Table 6.
+
+
+
+Table 3
+TP Matrix from example test cases.
+                               D1              D2                     D3                    D4                   S                     Status
+
+  S1                           4               6                      5                     2                    6                     NS
+  S2                           6               4                      1                     4                    10                    NS
+  S3                           5               2                      3                     1                    12                    NS
+  S4                           4               6                      7                     8                    14                    NS
+  D                            9               16                     10                    7                    ​                     ​
+
+
+                                                                        5
+R.F. Bunyamin et al.                                                                                              MethodsX 16 (2026) 103825
+
+
+Table 4
+First Allocation RBSM.
+                D1                         D2                      D3                      D4                S            TC          Status
+
+  S1            4                ​         6            ​          5            ​          2        ​        6            17          NS
+  S2            6                ​         4            ​          1            10         4        ​        10           15          S
+  S3            5                ​         2            16         3            ​          1        7        12           11          ER
+  S4            4                9         6            ​          7            ​          8        ​        14           25          NS
+  D             9                          16                      10                      7                 ​            ​           ​
+
+
+
+
+Table 5
+Result from the first iteration.
+                D1                         D2                      D3                      D4            S            TC          Status
+
+  S1            4            ​             6        ​              5        ​              2    6        6            17          S
+  S2            6            ​             4        ​              1        10             4    ​        10           15          S
+  S3            5            ​             2        16             3        ​              1    1        12           11          ER
+  S4            4            9             6        ​              7        ​              8    ​        14           25          NS
+  D             9            ​             16       ​              10       ​              7    ​        ​            ​           ​
+
+
+
+
+Table 6
+Result from the second iteration.
+                D1                         D2                      D3                      D4                S            TC          Status
+
+  S1            4                ​         6            ​          5            ​          2        6        6            17          S
+  S2            6                ​         4            ​          1            10         4        ​        10           15          S
+  S3            5                ​         2            11         3            ​          1        1        12           11          S
+  S4            4                9         6            5          7            ​          8        ​        14           25          S
+  D             9                ​         16           ​          10           ​          7        ​        ​            ​           ​
+
+
+
+Step 9.     No row is ER; all rows are satisfied.
+
+Step 10.     Total Transportation Cost (TTC) is (6 × 2)+(1 × 10)+(2 × 11)+(1 × 1)+(4 × 9)+(6 × 5) = 111.
+    In this example, the results are the following allocations: X14= 6, X21= 10, X32= 11, X34= 1, X41= 9, and X42= 5, as shown in
+Table 6. With these assignments, the total transportation cost amounts to 111, representing the optimal solution for the case.
+    Although the experiments in this study focus on balanced Transportation Problems (where total supply equals total demand), RBSM
+is fully capable of solving unbalanced problems using the standard operational research technique of dummy variables. When total
+supply and demand are unequal, the problem is balanced by introducing a Dummy Row (Supply) or a Dummy Column (Demand). The
+transportation cost Cij for all cells in this dummy sector is set to zero. The RBSM algorithm then proceeds normally, treating the zero
+costs as regular values for calculating the Total Cost (TC) and cost differentials.
+    For example, N06 an unbalanced case where Total Demand (1350) exceeds Total Supply (1200). To balance this, a Dummy Supply
+row is added with a capacity of 150 and zero unit costs, as shown in Table 7:
+
+Method validation
+
+Datasets
+
+   Forty-two test cases were employed to evaluate their performance. The dataset includes 32 benchmark problems from published
+studies, 5 synthetic datasets generated randomly, and 5 real-world datasets provided by company XYZ. Table 8 summarizes the
+characteristics of each test case. Test case with asterisk (*) indicated for unbalanced TP Test case.
+   The complete description of the test cases is available at Dataset Table RBSM. As an illustration, case N04 corresponds to the fourth
+sample drawn from Kaur (2018), which involves three supply points and five demand points, resulting in a 3 × 5 problem structure.
+
+Table 7
+TP Matrix with dummy from example test cases N06.
+                                     D1                      D2                      D3                  D4                               S
+
+  S1                                 10                      8                       4                   3                                500
+  S2                                 12                      14                      20                  2                                400
+  S3                                 6                       9                       23                  25                               300
+  S4                                 0                       0                       0                   0                                150
+  D                                  250                     350                     600                 150                              ​
+
+
+                                                                        6
+R.F. Bunyamin et al.                                                                                                              MethodsX 16 (2026) 103825
+
+
+Table 8
+Details of test cases.
+  No     Source                            Name   TP          Optimal          No   Source                             Name   TP          Optimal
+                                                  Size        Solution                                                        Size        Solution
+
+  1      Ramadan & Ramadan, 2012           N01    3×3         5600             23   G.Patel et al., 2017 [14]          N26    4×5         490
+         [13]
+  2      Samuel, 2012 [15]                 N02    3×4         28               24   Korukoǧlu & Balli, 2011 [8]        N27    5×5         59,356
+  3      Karagul & Sahin, 2020 [6]         N03    5×5         1102             25   M Selim Reza et al., 2019          N28*   3×4         2090
+                                                                                    [16]
+  4      Kaur et al., 2018 [17]            N04    3×3         555              26   Kousalya1 & Malarvizhi,            N29    3×4         3857
+                                                                                    2016 [18]
+  5      Hussein & Shiker, 2020 [19]       N05    4×4         410              27   Ahmed et al., 2015 [20]            N30    3×3         465
+  6      Wireko et al., 2025 [21]          N06*   3×4         7750             28   Kirca et al., 1990 [22]            N31    3×4         1480
+  7      Das et al., 2014 [23]             N07    3×4         1160             29   Babu et al., 2020 [24]             N32    4×5         1780
+  8      Murugesan & Esakkiammal,          N09    4×4         111              30   Amreen & B, 2024 [25]              N33    3×3         1250
+         2020 [12]
+  9      Amaliah et al., 2019 [1]          N10    3×4         910              31   Sahito, 2021 [26]                  N34    4×5         510
+  10     Amaliah et al., 2019 [1]          N11    3×4         2460             32   Amaliah et al., 2022b [10]         N35    3×4         280
+  11     Amaliah et al., 2019 [1]          N12    3×3         425              33   Synthesis1                         S1     5×5         18,855
+  12     Juman & Hoque, 2015 [2]           N13    3×3         4525             34   Synthesis 2                        S2     5×5         153,500
+  13     Juman & Hoque, 2015 [2]           N14    3×4         920              35   Synthesis 3                        S3     11 ×        1044,180
+                                                                                                                              12
+  14     Ahmed et al., 2016 [27]           N15    3×4         156              36   Synthesis 4                        S4     11 ×        92,212
+                                                                                                                              12
+  15     Amreen, 2024 [28]                 N16    3×4         1510             37   Synthesis 5                        S5     11 ×        116,020
+                                                                                                                              12
+  16     Gupta, 2020 [29]                  N17    3×4         743              38   Real 1                             R1     2 × 94      12,928,429
+  17     Goyal, 1984 [30]                  N18*   3×3         1650             39   Real 2                             R2     2 × 94      13,657,053
+  18     Amreen, 2024 [28]                 N21    3×3         4205             40   Real 3                             R3     2 × 94      12,296,587
+  19     Rafi & Islam, 2020 [31]           N22    3×4         12,075           41   Real 4                             R4     2 × 94      14,117,586
+  20     Kaur et al., 2018 [17]            N23    3×4         23               42   Real 5                             R5     2 × 94      14,017,419
+  21     Juman & Hoque, 2015 [2]           N24    3×4         3460             ​    ​                                  ​      ​           ​
+  22     Juman & Hoque, 2015 [2]           N25    3×4         809              ​    ​                                  ​      ​           ​
+
+
+
+The optimal solution for this case, computed using the TORA software, is 1580.
+
+Experiment results
+
+    The proposed Rihan–Bilqis–Saikhu Method (RBSM) was assessed by comparing it with five established heuristics: SSM, VAM, BCE,
+JHM, and TOCM-MT. All methods were tested on 42 case studies. The obtained Initial Basic Feasible Solution (IBFS) costs for each
+method were compared against the known optimal costs. Detailed IBFS Results compared with the optimal solution of each method
+and testcase shown in (Supplementary Table 1).
+    To evaluate each method's consistency, the Frequency of the Number of Optimal Cost Solutions (FNOCS) [24] was calculated,
+representing the number of cases in which a method achieved the optimal solution across datasets of different sizes. The results, shown
+in Table 9, cover seven matrix dimensions. This distribution highlights how the success rate in reaching optimal solutions varies
+according to problem size.
+    Table 10 presents the number of optimal solutions obtained by each method along with their respective Accuracy Percentage (Ap),
+determined according to Eq. (8). The results show clear differences in accuracy across methods, with some reaching the optimal so­
+lution less frequently while others performed more consistently. As shown in Fig. 2, Accuracy Percentage of each method, providing a
+visual comparison of performance. From these results, it can be observed that RBSM achieved the highest level of accuracy among the
+tested methods.
+
+
+
+
+Table 9
+The Frequency of the Number of Optimal Cost Solutions (FNOCS).
+  Matrix Size             Number of test cases           VAM             JHM             TOCM-MT                  BCE              SSM               RBSM
+
+  3×3                     8                              4               4               5                        3                7                 7
+  3×4                     17                             6               13              13                       13               14                14
+  4×4                     2                              0               0               1                        2                1                 2
+  4×5                     3                              3               3               2                        3                2                 3
+  5×5                     4                              2               0               3                        1                1                 3
+  11 × 12                 3                              2               2               2                        2                2                 2
+  2 × 94                  5                              5               5               0                        5                5                 5
+  Total                   42                             22              27              26                       29               32                36
+
+
+                                                                          7
+R.F. Bunyamin et al.                                                                                             MethodsX 16 (2026) 103825
+
+
+                 Table 10
+                 The total optimal solution and accuracy percentage for each method.
+                   No                          Method                             Optimal                   Accuracy ( %)
+
+                   1                           VAM                                22                        52.38
+                   2                           JHM                                27                        64.29
+                   3                           TOCM-MT                            26                        61.90
+                   4                           BCE                                29                        69.05
+                   5                           SSM                                32                        76.19
+                   6                           RBSM                               36                        85.71
+
+
+
+
+                                                  Fig. 2. Accuracy Percentage of each method.
+
+
+                                        Total Number of IBFS Achieve Optimal Solution
+        Accuracy Percentage (Ap) =                                                    x100%                                           (8)
+                                                        Total Dataset
+    Based on the datasets tested, RBSM outperformed all comparison methods with an accuracy of 85.71 %, which is a significant
+increase compared to the next best method (SSM, 76.19 %), indicating that the integration of the Total Cost-Supply variable allows the
+proposed method to identify the optimal solution compared to existing Methods.
+    Table 11 present a performance comparison between RBSM and other methods using Improvement Percentage (Ip) . The
+improvement percentage, calculated using Eq. (9), shows how much better RBSM performs compared to other heuristics. A positive
+value indicates that RBSM yields a lower transportation cost, a negative value means the cost is higher, and a zero value denotes
+identical results. As an illustration, in case N06, RBSM improved over BCE by 7.19 %, reducing the total cost from 8350 to 7750, which
+also corresponds to the optimal solution.
+                                           (IBFS − RBSM)
+        Improvement Percentage (Ip) =                    x100%                                                                        (9)
+                                                IBFS
+    While negative improvements were observed in a few isolated cases, these instances are significantly outweighed by the method’s
+overall consistency for reaching more positive than negative results. For example, RBSM achieved a positive (lower cost solution) in 15
+out of 42 cases compared to VAM. The detailed improvement percentage result for each test case can be found in (supplementary
+Table 2).
+    The deviation percentage calculated using Eq. (10), indicates how far a solution is from the optimum, with zero meaning the result
+is optimal. For example, in case N12, RBSM achieved a deviation of 0.00, matching the exact optimal cost. Across all 42 test cases,
+RBSM showed the lowest average deviation and the most consistent improvements, confirming its ability to generate solutions very
+close to or equal to the optimum. Fig. 3 and Fig. 4 display the deviation percentages for all methods, highlighting that RBSM maintains
+the lowest deviation across the test cases. The detailed Deviation Percentage result for each test case can be found in (supplementary
+Table 3).
+                                        (IBFS − Optimal Solution)
+        Deviation Percentage (Dv) =                               x100%                                                             (10)
+                                            Optimal Solution
+    To evaluate the performance differences rigorously, a Wilcoxon signed-rank test was conducted comparing the deviation per­
+centages of RBSM against the reference method, SSM. The test focused on the 12 cases where the methods yielded different results (in
+30 out of 42 cases, both methods achieved identical solutions).
+    The analysis revealed a strong positive trend favoring RBSM, with Sum of Positive Ranks of 55, significantly outweighing the Sum
+of Negative Ranks of 23. While the resulting p-value (0.1047) stands slightly above the conventional 0.05 threshold due to the reduced
+sample size of non-tied pairs, the data confirms a clear positive trend in solution quality.
+    Furthermore, the dispersion of the results is analyzed using Boxplots as shown in Fig. 5. The plot visually reinforces the robustness
+of the proposed method. While the reference method (SSM) exhibits outliers reaching deviation levels of approximately 18 %, RBSM
+maintains a much tighter control over error, with maximum outliers restricted to below 6 %. This confirms that RBSM is not only more
+
+
+                                                                        8
+R.F. Bunyamin et al.                                                                                               MethodsX 16 (2026) 103825
+
+
+Table 11
+Improvement percentage between RBSM and other methods.
+  NO                   Method          Total of                                                         Average Improvement Percentage ( %)
+
+                                       Positive              Negative               Zero
+
+  1                    VAM             15                    2                      25                  3.14
+  2                    JHM             13                    3                      26                  0.99
+  3                    TOCM-MT         13                    5                      24                  0.31
+  4                    BCE             11                    3                      28                  0.53
+  5                    SSM             9                     3                      30                  0.62
+
+
+
+
+                                  Fig. 3. Deviation percentage values for every test case and method.
+
+
+
+
+                                      Fig. 4. The Average Deviation Percentage of each method.
+
+
+
+
+                                     Fig. 5. Boxplot of the deviation percentage for every method.
+
+
+
+
+                                                                  9
+R.F. Bunyamin et al.                                                                                                                         MethodsX 16 (2026) 103825
+
+
+accurate on average but also significantly safer against large deviation errors in complex cases.
+
+Limitations
+
+   Similar to its reference method, the Supply Selection Method (SSM), the proposed Rihan–Bilqis–Saikhu Method (RBSM) has so far
+been evaluated only on transportation problems with fixed supply, demand, and cost parameters. Its applicability to cases involving
+uncertainty and dynamic changes using fuzzy logic has not yet been investigated.
+
+Ethics statements
+
+    This research does not involve human subjects, animal experiments, or social media data.
+
+CRediT author statement
+
+  Rihan Farih: Writing - Original Draft, Software, Data Curation. Bilqis Amaliah: Conceptualization, Methodology, Validation.
+Ahmad Saikhu: Investigation, Writing – review & editing, Supervision.
+
+Declaration of competing interest
+
+    The authors declare that they have no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+
+Acknowledgments
+
+   This work was funded by the Department of Informatics, Institut Teknologi Sepuluh Nopember, through the Department Research
+Grant Scheme – Batch 1, 2025 (Grant No.2264/PKS/ITS/2025, dated 03/06 2025).
+
+Supplementary materials
+
+    Supplementary material associated with this article can be found, in the online version, at doi:10.1016/j.mex.2026.103825.
+
+
+
+
+Data availability
+
+    Data and sourcecode have been shared on given link : https://rihanfarih.blogspot.com/2025/08/dataset-table-rbsm.html.
+
+References
+
+ [1] B. Amaliah, C. Fatichah, E. Suryani, Total opportunity cost matrix – minimal total: a new approach to determine initial basic feasible solution of a transportation
+     problem, Egypt. Informatics J. 20 (2) (2019) 131–141, https://doi.org/10.1016/j.eij.2019.01.002.
+ [2] Z.A.M.S. Juman, M.A. Hoque, An efficient heuristic to obtain a better initial feasible solution to the transportation problem, Appl. Soft Comput. J. 34 (2015)
+     813–826, https://doi.org/10.1016/j.asoc.2015.05.009.
+ [3] D. Chauhan, Shivani, Offline learning-based competitive swarm optimizer for non-linear fixed-charge transportation problems, Swarm Evol. Comput. 88 (2024)
+     101608, https://doi.org/10.1016/j.swevo.2024.101608.
+ [4] F.L. Hitchcock, The distribution of a product from several sources to numerous localities, J. Math. Phys. 20 (1–4) (1941) 224–230, https://doi.org/10.1002/
+     sapm1941201224.
+ [5] Shivani, D. Rani, An extended Vogel’s approximation algorithm for efficiently solving Fermatean fuzzy solid transportation problems, Soft Comput. 28 (17–18)
+     (2024) 9711–9734, https://doi.org/10.1007/s00500-024-09812-x.
+ [6] K. Karagul, Y. Sahin, A novel approximation method to obtain initial basic feasible solution of transportation problem, J. King Saud Univ. - Eng. Sci. 32 (3)
+     (2020) 211–218, https://doi.org/10.1016/j.jksues.2019.03.003.
+ [7] Y. Kacher, P. Singh, A comprehensive literature review on transportation problems, Int. J. Appl. Comput. Math. 7 (5) (2021) 206, https://doi.org/10.1007/
+     s40819-021-01134-y.
+ [8] S. Korukoǧlu, S. Balli, An improved Vogel’s approximation method for the transportation problem, Math. Comput. Appl. 16 (2) (2011) 370–381, https://doi.
+     org/10.3390/mca16020370.
+ [9] B. Amaliah, C. Fatichah, E. Suryani, A new heuristic method of finding the initial basic feasible solution to solve the transportation problem, J. King Saud Univ. -
+     Comput. Inf. Sci. 34 (5) (2022) 2298–2307, https://doi.org/10.1016/j.jksuci.2020.07.007.
+[10] B. Amaliah, C. Fatichah, E. Suryani, A supply selection method for better feasible solution of balanced transportation problem, Expert Syst. Appl. 203 (April)
+     (2022) 117399, https://doi.org/10.1016/j.eswa.2022.117399.
+[11] H.A. Taha, “Operations research: an introduction eighth edition,” 2007.
+[12] R. Murugesan, T. Esakkiammal, TOCM-VAM method versus asm method in transportation problems, Adv. Math. Sci. J. 9 (6) (2020) 3549–3566, https://doi.org/
+     10.37418/amsj.9.6.34.
+[13] S.Z. Ramadan, I.Z. Ramadan, Hybrid two-stage algorithm for solving transportation problem, Mod. Appl. Sci. 6 (4) (2012) 12–22, https://doi.org/10.5539/mas.
+     v6n4p12.
+[14] R.G. Patel, D.P.H. Bhathawala, D.B.S. Patel, An alternate approach to find an optimal solution of a transportation problem, IOSR J. Math. 13 (01) (2017) 01–05,
+     https://doi.org/10.9790/5728-1301030105.
+[15] A.E. Samuel, “Improved zero point method (IZPM) for the transportation problems,” 2012.
+
+
+                                                                                   10
+R.F. Bunyamin et al.                                                                                                                       MethodsX 16 (2026) 103825
+
+[16] A.K.M Selim Reza, A.R.M Jalal Uddin Jamali, B. Biswas, a modified algorithm for solving unbalanced transportation problems, J. Eng. Sci. 10 (1) (2019)
+     93–101.
+[17] L. Kaur, M. Rakshit, S. Singh, An improvement in maximum difference method to find initial basic feasible solution for transportation problem [Online].
+     Available: www.ijcseonline.org, 2018.
+[18] P. Kousalya1, P. Malarvizhi, A new technique for finding initial basic feasible solution to transportation problem, Int. J. Eng. Manag. Res. (3) (2016) [Online].
+     Available: www.ijemr.net.
+[19] H.A. Hussein, M.A.K. Shiker, A modification to Vogel’s approximation method to solve transportation problems, J. Phys. Conf. Ser. 1591 (1) (2020) 0–12,
+     https://doi.org/10.1088/1742-6596/1591/1/012029.
+[20] M.M. Ahmed, M.A. Islam, M. Katun, S. Yesmin, M.S. Uddin, New procedure of finding an initial basic feasible solution of the time minimizing transportation
+     problems, Open J. Appl. Sci. 05 (10) (2015) 634–640, https://doi.org/10.4236/ojapps.2015.510062.
+[21] F.A. Wireko, I.D.K. Mensah, E.N.A. Aborhey, S.A. Appiah, C. Sebil, J. Ackora-Prah, The maximum range method for finding initial basic feasible solution for
+     transportation problems, Results Control Optim. 19 (September 2023) (2025) 100551, https://doi.org/10.1016/j.rico.2025.100551.
+[22] Ö. Kirca, A. Şatir, A heuristic for obtaining and initial solution for the transportation problem, J. Oper. Res. Soc. 41 (9) (1990) 865–871, https://doi.org/
+     10.2307/2583502.
+[23] U.K. Das, R. Ashraful Babu, A. Khan, U. Helal, Logical development of Vogel’s approximation method (LD-VAM): an approach to find basic feasible solution of
+     transportation problem, Int. J. Sci. Technol. Res. 3 (2) (2014) [Online]. Available: www.ijstr.org.
+[24] M.A. Babu, M.A. Hoque, M.S. Uddin, A heuristic for obtaining better initial feasible solution to the transportation problem, Opsearch 57 (1) (2020) 221–245,
+     https://doi.org/10.1007/s12597-019-00429-5.
+[25] M. Amreen, V. B, An innovative method to develop the initial basic feasible solution to a transportation issue, Afr. J. Biol. Sci. 6 (14) (2024) 348–363, https://
+     doi.org/10.48047/AFJBS.6.14.2024.
+[26] S. Sahito, Modification of Vogel’s approximation method for optimality of transportation problem by statistical technique, Quaid-E-Awam Univ. Res. J. Eng. Sci.
+     Technol. 19 (2) (2021) 42–48, https://doi.org/10.52584/qrj.1902.07.
+[27] M.M. Ahmed, A.R. Khan, M.S. Uddin, F. Ahmed, A new approach to solve transportation problems, Open J. Optim. 05 (01) (2016) 22–30, https://doi.org/
+     10.4236/ojop.2016.51003.
+[28] M. Amreen, A new way for solving transportation issues, J. Appl. Math. Informatics 42 (3) (2024) 647–661, https://doi.org/10.14317/jami.2024.647.
+[29] P. Gupta, A new method to find basic feasible solution of transportation problem, J. Xidian Univ. 14 (10) (2020), https://doi.org/10.37896/jxu14.10/083.
+[30] S.K. Goyal, “Improving VAM for unbalanced transportation problems,” 1984.
+[31] F.S. Rafi, S. Islam, A comparative study of solving methods of transportation problem in linear programming problem, J. Adv. Math. Comput. Sci. 35 (5) (2020)
+     45–67, https://doi.org/10.9734/jamcs/2020/v35i530281.
+
+
+
+
+                                                                                  11
+

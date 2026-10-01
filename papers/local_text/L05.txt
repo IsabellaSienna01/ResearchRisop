@@ -1,0 +1,484 @@
+                                                                                                                                                                                                                13th International Conference on Information & Communication Technology and System (ICTS) 2021
+
+
+                                                                                                                                                                                              Two Highest Penalties: A Modified Vogels
+                                                                                                                                                                                             Approximation Method to Find Initial Basic
+                                                                                                                                                                                             Feasible Solution of Transportation Problem
+
+                                                                                                                                                                                              Bilqis Amaliah                                         Chastine Fatichah                                         Erma Suryani
+                                                                                                                                                                                        Department of Informatics                               Department of Informatics                          Department of Information System
+
+
+
+
+2021 13th International Conference on Information & Communication Technology and System (ICTS) | 978-1-6654-4059-2/21/$31.00 ©2021 IEEE | DOI: 10.1109/ICTS52701.2021.9608005
+                                                                                                                                                                                  Institut Teknologi Sepuluh Nopember                     Institut Teknologi Sepuluh Nopember                     Institut Teknologi Sepuluh Nopember
+                                                                                                                                                                                            Surabaya, Indonesia                                     Surabaya, Indonesia                                     Surabaya, Indonesia
+                                                                                                                                                                                           bamaliah@gmail.com                                       chastine@if.its.ac.id                               erma.suryani@gmail.com
+
+
+
+                                                                                                                                                                                     Abstract— Vogel’s Approximation Method (VAM) is one of                        In the meantime, Meenakshi [8] analyzed some VAM
+                                                                                                                                                                                 the methods to find Initial Basic Feasible Solution (IBFS) of                     variants.
+                                                                                                                                                                                 Transportation Problem (TP), which is mostly used to find the                         Abdul Sattar Soomro et al. [9] recommended another
+                                                                                                                                                                                 solution with minimum cost. Unfortunately, VAM has a                              technique to obtain penalty cost on row by calculating the
+                                                                                                                                                                                 limitation, i.e., if there are more than one highest penalty, VAM                 difference between two maximum costs on every column.
+                                                                                                                                                                                 allows to select one arbitrarily. It causes ambiguity on penalty                  Penalty cost on a column was still calculated as the way it was
+                                                                                                                                                                                 selection, which leads to the production of several alternative
+                                                                                                                                                                                                                                                                   in VAM. Other calculation procedures were unchanged,
+                                                                                                                                                                                 final solutions. In order to answer the challenge, Logical
+                                                                                                                                                                                 Development Of Vogel’s Approximation Method (LD-VAM)
+                                                                                                                                                                                                                                                                   which made ambiguity during selection process may still
+                                                                                                                                                                                 turned up by selecting penalty in conflict using cell with lowest                 arose. Muwafaq Alkubaisi [10] used median range on every
+                                                                                                                                                                                 cost value. This technique triggered another ambiguity when                       row and column as penalty cost. This method was appropriate
+                                                                                                                                                                                 there are several cells with the same minimum cost value. To                      for data with distinct cell value. Ambiguity on row or column
+                                                                                                                                                                                 avoid the ambiguity, Two Highest Penalties Method (THP) is                        selection, as well as on cell selection, still occurred when more
+                                                                                                                                                                                 proposed. The proposed method can reduce the cost of                              than one row or column has identical median. Sharif Uddin et
+                                                                                                                                                                                 transportation problem as it uses Max-Min penalty, select two                     al. [11] proposed AVAM (Advanced VAM) to compute
+                                                                                                                                                                                 highest penalties, and use minimum (cost x allocation) to                         penalty cost by a method better than VAM, a method that
+                                                                                                                                                                                 allocate values to the cell. THP still inherits some of VAM and                   ignored two or more identical minimum costs and used the
+                                                                                                                                                                                 LD-VAM concepts and computation procedures, yet it also                           next minimum cost (min2 – min1). Unfortunately, since
+                                                                                                                                                                                 introduces a new algorithm to select the suitable cell when                       AVAM had similar calculation process to that of VAM,
+                                                                                                                                                                                 ambiguity arises. Numerical examples have been used at this                       ambiguity problem in selecting row or column as the result of
+                                                                                                                                                                                 research to prove that THP can solve ambiguity, providing only                    similar penalty costs had not been settled yet. Das et al. [12]
+                                                                                                                                                                                 one final solution and showing better final solution compared to                  suggested LD-VAM (Logical Development VAM) to answer
+                                                                                                                                                                                 those of VAM and LD-VAM. The result of THP is 98% accurate                        the ambiguity problem. The technique used was effortless by
+                                                                                                                                                                                 with optimal solution from TORA Program, which is used as                         simply using the lowest cost on a row or column that has
+                                                                                                                                                                                 reference.                                                                        similar penalty cost. Ambiguity problem occurred again when
+                                                                                                                                                                                                                                                                   there were some minimum costs on the selected row or
+                                                                                                                                                                                    Keywords— Initial Basic Feasible Solution, Transportation
+                                                                                                                                                                                 Problem, Vogel’s Approximation Method
+                                                                                                                                                                                                                                                                   column.
+                                                                                                                                                                                                                                                                       Two Highest Penalties Method (THP) is proposed to solve
+                                                                                                                                                                                                          I. INTRODUCTION                                          those ambiguities. The proposed method can decrease the cost
+                                                                                                                                                                                                                                                                   of transportation problem as it uses Max-Min penalty, chooses
+                                                                                                                                                                                     Vogel’s Approximation Method (VAM) is a method                                two highest penalty costs, and uses minimum (cost x
+                                                                                                                                                                                 mostly used to find Initial Basic Feasible Solution (IBFS) at                     allocation) to allocate values to the cell. THP still inherits
+                                                                                                                                                                                 minimum cost transportation problem [1]. Many researchers                         some concepts and computation procedures from VAM and
+                                                                                                                                                                                 have tried to improve the technique, which meant that many                        LD-VAM, yet it also introduces a new algorithm to select the
+                                                                                                                                                                                 derivative methods have been VAM proposed. These VAM                              suitable cell when ambiguous problem arises.
+                                                                                                                                                                                 derivatives have similar purpose to that of VAM, finding final                        The numerical examples have been used at this research to
+                                                                                                                                                                                 solution by value closest to optimal value. IBFS is the                           show that THP could solve the ambiguities, provide only one
+                                                                                                                                                                                 foundation and important step to get the total minimum cost                       final solution, and show better final solution compared to
+                                                                                                                                                                                 of transportation problem [2]–[4].                                                VAM and LD-VAM. Matrix 3 x 3, 4 x 4, and 5 x 5 are used
+                                                                                                                                                                                     Some of the VAM derivatives are as follows. Joseph [5]                        to evaluate the performance of the proposed method. The
+                                                                                                                                                                                 used to optimize energy flow in welding. The problem in                           result of THP will be compared with optimal solution from
+                                                                                                                                                                                 Transportation Problem [TP] was usually correlated to budget                      TORA program [13].
+                                                                                                                                                                                 plan optimization to distribute logistics into one supply chain
+                                                                                                                                                                                                                                                                               II. TRANSPORTATION PROBLEM
+                                                                                                                                                                                 [6]. Serkan Ball et al. [7] suggested IVAM (Improved VAM),
+                                                                                                                                                                                 which used total opportunity cost to solve TP. Although                               Generally, Transportation Problem can be described by the
+                                                                                                                                                                                 IVAM final solution worked better than VAM’s, IVAM                                following diagram as shown in Fig. 1. Transportation Problem
+                                                                                                                                                                                 mechanism did not solve ambiguities during penalty cost                           modeling on Fig. 1 can be tabulated into the transportation
+                                                                                                                                                                                 selection on a row or column as well as cost selection on a cell.                 table as shown in Table 1. Cij is transportation cost to transport
+                                                                                                                                                                                                                                                                   unit quantity from supply i to demand j. When the total
+
+
+
+                                                                                                                                                                                 978-1-6654-4059-2/21/$31.00 ©2021 IEEE                                      318
+
+                                                                                                                                                                                Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+ amounts of supply and demand are imbalance, it is called                                           IV. LD-VAM ALGORITHM
+ unbalanced transportation problem.                                                    Sharif Uddin [10] observed VAM limitation and proposed
+                                                                                   an improved approach called LD-VAM. In this method, when
+                                                                                   largest penalty cost appears more than once, LD-VAM can
+                                                                                   select penalty in conflict using cell with lowest cost. The steps
+                                                                                   of LD-VAM algorithm proposed by Sharif Uddin et al. [10]
+                                                                                   are as follows:
+                                                                                   Step 1. Preliminaries
+                                                                                   Determine whether total supply = total demand. Otherwise,
+                                                                                   add dummy rows or columns to balance the total supply and
+                                                                                   total demand.
+                                                                                   Step 2. Determine the Penalty for each row and column:
+                                                                                   a. Identify the lowest cell cost and the next lowest cell cost.
+                                                                                   b. Penalty is the difference between the lowest cell cost and
+                  TABLE 1. TRANSPORTATION PROBLEM                                      the next lowest cell cost.
+                                                                                   c. If there are more than one lowest cell cost, the penalty is
+                                       Destinations                                    zero.
+                                 D1     D2    …       Dn     Supply                Step 3. Select the Penalty Cost and Cell
+                      S1         c11    c12   …       c1n      s1                  a. Select the row or column with the highest penalty.
+                      S2         c21    c22   …       c2n      s2                  b. If there are more than one penalty with similar value, select
+        Sources
+                      …          …      …     …       …        …                       a row or column with the lowest cost in cell.
+                      Sm         cm1    cm2   …       cmn      sm                  c. If the lowest cost appears more than once, choose
+                    Demand       d1     d2    …       dn                               arbitrarily.
+                                                                                   Step 4. Allocate the Cell
+                                                                                   a. Allocate as much as possible to the chosen cell.
+                      III. VAM ALGORITHM
+                                                                                   b. Subtract the supply and demand with maximum allocation
+     Vogel’s Approximation Method is a technique to find an                            from point a.
+ initial solution of a transportation problem. The result of this                  Step 5. Eliminate Row or Column
+ VAM is usually better than North West and lowest cost                             a. Find out each row and column with zero supply or
+ methods. Steps in applying VAM technique is presented as                              demand.
+ follows:                                                                          b. Eliminate rows or columns with zero supply or demand.
+ Step 1. Preliminaries                                                             c. Repeat Step 2 until all rows and columns are eliminated.
+ Determine whether total supply = total demand. Otherwise,                             From the above illustrations, it is concluded that the
+ add dummy rows or columns to balance the total supply and                         difference between VAM and LD-VAM lies on Step 3, on
+ total demand.                                                                     which we need to choose row or column with similar penalty.
+ Step 2. Determine the Penalty for each row and column:                            Ambiguity in selecting a cell might still occur when some
+ a. Identify the lowest cell cost and the next lowest cell cost.                   lowest costs appear on the chosen row or column (Step 3,
+ b. Penalty is the difference between the lowest cell cost and                     point c). Meanwhile, other phases remain the same.
+     the next lowest cell cost.
+ c. If there are more than one lowest cell costs, the penalty is                              V. NEW PROPOSED METHOD: THP
+     zero.
+ Step 3. Select the Penalty and Cell                                                   VAM and LD-VAM schemes still contain ambiguities on
+ a. Select the row or column with the highest penalty.                             choosing highest penalty and cell, which leads to several
+ b. If there are more than one penalty with similar value,                         alternative final solutions. Those methods, either VAM or
+     choose the penalty arbitrarily.                                               LD-VAM, allow arbitrary selection of highest penalty or cell,
+ c. Select the lowest cost cell on the chosen penalty.                             and simply suggest applying North West Method (NWM). In
+ d. If there are more than one lowest cost cells with similar                      some cases, ignoring NWM during the selection stage will
+     value, choose arbitrarily.                                                    give different final solution from the process with applying
+ Step 4. Allocate the Cell                                                         NWM.
+ a. Allocate as much as possible to the chosen cell.
+                                                                                      The more ambiguity in selecting penalty cost and cell
+ b. Subtract the supply and demand with maximum allocation
+     from point a.                                                                 during calculation iteration, the more various final solutions
+ Step 5. Eliminate Row or Column                                                   will develop; meaning that more energy is needed to achieve
+ a. Find out each row and column with zero supply or                               optimal result. Therefore, a new technique is essential in
+     demand.                                                                       order to reduce ambiguity during calculation iteration and to
+ b. Eliminate rows or columns with zero supply or demand.                          obtain better final solution.
+ c. Repeat Step 2 until all rows and columns are eliminated.                           This section will explain a new method namely Two
+     VAM algorithm has some limitations, especially on                             Highest Penalties Method (THP) that aims at reducing, or
+ step_3: if there are more than one highest penalty, VAM                           eliminating, selection ambiguity which may happen. Detail of
+ allows to select one arbitrarily. By choosing arbitrarily, VAM                    THP is shown as follows:
+ final solution might not be optimal. We need to try all highest                   Step 1. Preliminaries
+ penalty costs to get the optimal solution. Thus, we will end up                   Determine whether total supply = total demand. Otherwise,
+ with more than one alternative final solution.                                    add dummy rows or columns to balance the total supply and
+                                                                                   total demand.
+
+
+
+                                                                             319
+
+Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+ Step 2. Determine the Penalty for each row and column:                               Based on the multiplication, three selections are available,
+ a. Identify the minimum cost and maximum cost.                                       a) cell 1,3 with cost=1, allocation=30, cost *
+ b. Penalty is the difference between minimum cost and                                     allocation=1*30=30 (D3)
+      maximum cost.                                                                   b) cell 2,4 with cost=1, allocation=55, cost *
+ Step 3. Select the Penalty and Cell                                                       allocation=1*55=55 (D4, S2)
+ a. Select the highest penalty and the next highest penalty.                          c) cell 3,2 with cost=4, allocation=65, cost *
+ b. When highest penalty appears more than once, choose all                                allocation=4*65=260 (S3)
+      of them. When the next highest penalty appears more than                        From the above variety, cell 1,3 is selected as it contains
+      once, select all of them.                                                       the lowest cost * allocation, namely 30.
+ c. For each penalty, choose cell with the lowest cost.
+                                                                                   4. Allocate cell.
+ d. For each cell, calculate multiplication between cost and
+                                                                                      Allocate 30 on cell 1,3.
+      allocation, CA = cost x allocation.
+                                                                                   5. Eliminate row and column.
+ e. From point d, select the lowest CA.
+ f. If lowest CA occurs more than once, choose cell with the                          Column Demand D3 and row Supply S1 is subtracted by
+      lowest cost.                                                                    30. Since column Demand D3 is used up, it is marked with
+ Step 4. Allocate the Cell                                                            grey and eliminated from the next iteration. Meanwhile,
+ a. Allocate as much as possible to the chosen cell.                                  Row S1 still has 20 (50 – 30 = 20).
+ b. Subtract the supply and demand with maximum allocation                         6. Continue to Iteration 2.
+      from point a.                                                                Calculation process works on the following flow:
+ Step 5. Eliminate Row or Column                                                   1. Recalculate penalty cost for each row and column.
+ a. Find out each row and column with zero supply or                               2. Select two highest penalty costs, namely penalty costs with
+      demand.                                                                         value 8 and 6, on D4, S2 and S3 as shown in Table 4.
+ b. Eliminate rows or columns with zero supply or demand.                          3. Select a cell. Since there are two cells are available,
+ c. Repeat Step 2 until all rows and columns are eliminated.                          namely:
+      From the detail of THP, it can be concluded that the                            a) cell       2,4      with      cost=1,      allocation=55,
+ differences among THP, VAM, and LD-VAM lie on Step 2                                     cost*allocation=1*55=55 (D4, S2)
+ and Step 3. On Step 2, Max-Min Penalty is applied to                                 b) cell       3,2      with      cost=4,      allocation=65,
+ calculate the penalty. In other words, penalty cost is the                               cost*allocation=4*65=260 (S3)
+ difference between the lowest and highest costs.                                     cell 2,4 is chosen as it contains the lowest cost*allocation,
+      Meanwhile, Step 3 in VAM, LD-VAM, and THP is                                    namely 55.
+ different. While Step 3 in VAM and LD-VAM only includes
+ selecting one highest penalty cost, Step 3 in THP includes                                      TABLE 3. ITERATION 1 OF CASE STUDY 1
+ choosing two highest penalty costs. Cell selection in THP is                                        D1      D2        D3(5)      D4       Supply   Penalty(1)
+ carried out by multiplying lowest cost with allocation in each
+ penalty cost, then choosing the lowest cost from the                                                6        3        1(3a)       4
+                                                                                           S1                                              50,20        5
+ calculation.                                                                                                          30   (4)
+
+    In some cases, calculation in THP may minimize or even                                           7        6         2         1(3b)
+ eliminate ambiguity during selection that might occur in the                              S2                                                55        6(2)
+ middle of calculation process. Arbitrary cell selection may                                         10      4(3c)      5          9
+ still happen but with minimum probability as the selection                                S3                                                75        6(2)
+ goes through several examinations; unlike VAM and LD-
+                                                                                                     7        7         7          3
+ VAM that allow arbitrary cell selection since the beginning of                            S4                                                60         4
+ calculation iteration.
+                                                                                        Demand       90      65        30,0       55
+              VI. NUMERICAL ILLUSTRATION                                                Penalty(1)   4        4        6(2)       8(2)
+
+    This section portrays some case studies to describe
+ Transportation Problem solution by THP. The case study 1 is                                     TABLE 4. ITERATION 2 OF CASE STUDY 1
+ shown in Table 2.                                                                                  D1     D2   D3    D4(4) Supply Penalty(1)
+ A. Case Study 1                                                                                         6         3         1         4
+                                                                                            S1                                             50,20       3
+ Calculation process works on the following flow:                                                                       30
+ 1. Compute penalty cost for each row and column. Penalty                                                7         6         2    1(3a)
+    cost in each row and column is calculated by subtracting                                S2                                              55,0      6(2)
+                                                                                                                                  55
+    maximum cost with minimum cost. For column D1,
+    maximum cost =10 and minimum cost =6, so penalty cost                                            10      4(3b)           5         9
+                                                                                            S3                                              75        6(2)
+    D1=4 as shown in Table 3.
+ 2. Select two highest penalty costs, they are penalty cost with                                         7         7         7         3
+                                                                                            S4                                              60         4
+    value 8 and 6. Penalty cost with value 8 is on D4. Penalty
+    cost with value 6 is on D3, S2, and S3.                                             Demand       90       65       30,0       55,0
+ 3. Select cell based on the result of multiplication process of                        Penalty(1)    4        4        0         8(2)
+    cost and allocation, CA = cost * allocation.
+
+
+
+                                                                             320
+
+Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+ 4. Allocate a cell                                                                Calculation process works on the following flow:
+    Allocate 55 on cell 2,4.                                                       Since there is one cell left, final allocation is directly done on
+ 5. Subtract row S2 and column D4 with 55.                                         cell 3,1, i.e., 30 as shown in Table 8.
+ 6. Eliminate row S2 and column D4 as they have been used                          Final solution of the calculation is:
+    up.                                                                            (1x30) + (1x55) + (3x20) + (4x45) + (10x30) + (7x60) = 1045
+ 7. Continue to Iteration 3.                                                       B. Case Study 2
+ Calculation process works on the following flow:
+  1. Recalculate penalty cost for each row and column.                               Calculation process for case study 2 is shown in Table 9,
+  2. Select two highest penalty costs; those are penalty costs                     and Table 10 shows the final result:
+        with value 6 and 4 on D1, D2, and S3 as shown in Table                      1. Iteration-1:
+        5.                                                                              a. Two highest penalty costs: 8 and 6 (D2, S3)
+  3. Select a cell. Since there are two cells are available,                            b. Cell options: cell 3,1 (cost*allocation=700); cell 3,2
+        namely:                                                                             (cost*allocation=5*100=500).
+        a) cell 1,1: cost=6, allocation=20, cost*allocation =                           c. Cell selection by the lowest cost*allocation, cell 3,2 is
+            6*20 =120 (D1)                                                                 chosen.
+        b) cell 1,2: cost=3, allocation=20, cost*allocation =                       2. Iteration-2:
+            3*20 =60 (D2)                                                               a. Two highest penalty costs: 8 and 4 (S1, S2, S3)
+        c) cell 3,2: cost=4, allocation=65, cost*allocation =                           b. Cell options: cell 3,1 (cost*allocation=4*175=700);
+            4*65=260 (S3)                                                                  cell    2,1     (cost*allocation=1225);     cell     1,1
+        cell 1,2 is chosen as it contains the lowest                                       (cost*allocation=900).
+        cost*allocation, namely 60.                                                     c. Cell selection by the lowest cost*allocation, cell 3,1 is
+  3. Allocate a cell                                                                       chosen.
+        Allocate 20 on cell 1,2.                                                    3. Iteration-3:
+  4. Subtract row S1 and column D2 with 20.                                             a. Two highest penalty costs: 4 and 1 (S1, S2, D1, D3).
+  5. Eliminate row S1 as it has been used up.                                           b. Cell options: cell 1,1 (cost*allocation=6*25=150);
+  6. Continue to Iteration 4.                                                              cell    2,1      (cost*allocation=175);     cell     1,3
+ Calculation process works on the following flow:                                          (cost*allocation=1500)
+  1. Recalculate penalty cost for each row and column.                                   c. Cell selection by the lowest cost*allocation, cell 1,1
+  2. Select two highest penalty costs; those are penalty costs                             is chosen.
+        with value 6 and 3 on D1, D2, and S3 as shown in Table
+                                                                                                      TABLE 5. ITERATION 3 OF CASE STUDY 1
+        6.
+  3 Select a cell. Since there are two cells are available,                                                D1            D2             D3        D4        Supply    Penalty(1)
+        namely:
+                                                                                                           6(3a)          3(3b)              1         4
+        a) cell 3,2: cost=4, allocation=45, cost*allocation =                                  S1                                                           50,20,0       3
+            4*45=180 (D1,S3)                                                                                             20   (4)
+                                                                                                                                        30
+        b) cell 4,1: cost=7, allocation=60, cost*allocation =                                  S2
+                                                                                                                    7           6            2         1
+                                                                                                                                                             55,0         0
+            7*60=420 (S4)                                                                                                                         55
+        cell 3,2 is chosen as it contains the lowest                                           S3
+                                                                                                              10          4(3c)              5         9
+                                                                                                                                                              75         6(2)
+        cost*allocation, namely 180.
+  4. Allocate a cell                                                                                                7           7            7         3
+                                                                                               S4                                                             60          0
+        Allocate 45 on cell 3,2.
+  5. Subtract row S3 and column D2 with 45.                                                 Demand          90          65,45           30,0      55,0
+  6. Eliminate column D2 as it has been used up.                                            Penalty(1)     4(2)          4(2)            0         0
+        Meanwhile, row S3 still has 30 (75-45=30).
+  7. Continue to Iteration 5.                                                                         TABLE 6. ITERATION 4 OF CASE STUDY 1
+ Calculation process works on the following flow:
+  1. Recalculate penalty cost for each row and column.                                                    D1             D2(5)           D3        D4       Supply     Penalty(1)
+        There is only penalty D1 that can be calculated                                                        6                    3         1         4
+  2. There is only penalty D1 that can be chosen as shown in                                  S1                                                            50,20,0        0
+                                                                                                                          20             30
+        Table 7.
+                                                                                                               7                    6         2         1
+  3. Select a cell                                                                            S2                                                              55,0         0
+        Only cell 4,1 available: cost=7, allocation=60,                                                                                            55
+        cost*allocation=7*60=420 (D1)                                                                      10                 4(3a)           5         9
+  4. Allocate a cell                                                                          S3                                                             75,30        6(2)
+                                                                                                                         45(4)
+        Allocate 60 on cell 4,1.
+                                                                                                          7(3b)                     7         7         3
+  5. Subtract row S4 and column D1 with 60.                                                   S4                                                               60          0
+  6. Eliminate row S4 as it has been used up.
+                                                                                           Demand         90            65,45,0         30,0      55,0
+  7. Continue to Iteration 6.
+                                                                                           Penalty  (1)
+                                                                                                          3   (2)
+                                                                                                                          3   (2)
+                                                                                                                                          0         0
+
+
+
+
+                                                                             321
+
+Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+                                                                                   Based on the iteration process, final solution of the
+                                                                                   calculation =
+   4.  b. Cell selection by minimum cost is cell 1,3 with                          (5x14) + (10x3) + (9x11) + (20x4) + (6x18) + (26x2) +
+          cost*allocation = 1.250.                                                 (54x11) + (62x14) + (93x5) = 2366
+   5. Iteration-5:
+                                                                                                                    VII. CONCLUSION
+       Only one cell left, namely cell 2,1, with cost*allocation
+       = 11*175 = 1925.                                                               By examining the calculation processes of the above case
+ Based on the iteration process, final solution of the                             studies, especially for the first case study, cell selection goes
+ calculation:                                                                      through a long procedure, yet comes up with final solution
+  (5x100) + (4x175) + (6x25) + (10x125) + (11x175) = 4525                          nearest to optimal solution. The final solution for the second
+                                                                                   and third case studies is exactly the same with optimal final
+ C. Case Study 3                                                                   solution. VAM and optimal solutions are obtained through
+ Calculation process for case study 3 is shown in Table 11,                        TORA [13].
+ and Table 12 shows the final result:                                                 This long journey to choose a cell is a proposed method
+  1. Iteration-1:                                                                  that aims at reducing ambiguity during cell selection process.
+      a. Two highest penalty costs: 88 and 87 (D3, S2)                             This new scheme is called Two Highest Penalties Method
+      b. Cell options: cell 1,3 (cost*allocation=108), cell                        (THP). Illustration of the above case studies evidently proves
+         2,4(cost*allocation=60).                                                  that there is no ambiguity during cell selection.
+      c. Cell selection by the lowest cost*allocation, cell 2,4 is                    This is different from VAM and LD-VAM which have
+         chosen.                                                                   ambiguity since the beginning of the calculation process,
+                                                                                   which leads to some alternative final solutions. THP
+  2. Iteration-2:
+                                                                                   successfully eliminates cell selection ambiguity. Thus, THP
+      a. Two highest penalty costs: 87 and 83 (D3, S2)
+                                                                                   creates single final solution.
+      b. Cell options: cell 1,3 (cost*allocation=108), cell 2,5
+                                                                                       THP final solution is also smaller than VAM and LD-
+         (cost*allocation=30).                                                     VAM with 98% accuracy, and it is better than VAM and LD-
+      c. Cell selection by the lowest cost*allocation, cell 2,5 is                 VAM as shown in Table 13. For the three examples, VAM
+         chosen.                                                                   and LD-VAM cannot reach the optimal solution.
+  3. Iteration-3:
+                                                                                                  TABLE 7. ITERATION 5 OF CASE STUDY 1
+      a. Two highest penalty costs: 78 and 75 (D3, D5, S5)
+      b. Cell options: cell 1,3 (cost*allocation=108), cell 5,5
+                                                                                                        D1                D2            D3            D4            Supply     Penalty(1)
+         (cost*allocation=99).
+      c. Cell selection by the lowest cost*allocation, cell 5,5                                                 6              3              1               4
+                                                                                       S1                                                                           50,20,0            0
+         is chosen.                                                                                                       20            30
+  4. Iteration-4:                                                                                               7              6              2               1
+      a. Two highest penalty costs: 78 and 64 (D3, S1, S5)                             S2                                                                            55,0              0
+                                                                                                                                                       55
+      b. Cell options: cell 1,3 (cost*allocation = 108), cell 5,2
+         (cost*allocation=80).                                                                                 10              4              5               9
+                                                                                       S3                                                                           75,30,0            --
+      c. Cell selection by the lowest cost*allocation, cell 5,2                                                           45
+         is chosen.                                                                                          7(3)              7              7               3
+  5. Iteration-5:                                                                      S4                                                                            60,0              0
+                                                                                                    60(4)
+      a. Two highest penalty costs: 71 and 64 (D3, S1)
+      b. Cell options: cell 1,3 (cost*allocation=108)                               Demand        90,60,30           65,45,0            30,0       55,0
+      c. If there is only one option, choose cell 1,3
+                                                                                    Penalty(1)          3(2)              0               0               0
+  6. Iteration-6:
+      a. Two highest penalty costs: 51 and 39 (D1, D3)                                            TABLE 8. ITERATION 6 OF CASE STUDY 1
+      b. Cell options: cell 4,1 (cost*allocation=594), cell 4,3
+         (cost*allocation=52).                                                                     D1                D2            D3             D4              Supply
+                                                                                                                                                                              Pena
+                                                                                                                                                                              lty(1)
+      c. Cell selection by the lowest cost*allocation, cell 4,3 is
+                                                                                                         6                3             1             4
+         chosen.                                                                      S1                                                                          50,20,0       0
+  7. Iteration-7:                                                                                                    20            30
+      a. Two highest penalty costs: 39 and 31 (D1, S3)                                                   7                6             2             1
+      b. Cell options: cell 4,1 (cost*allocation=594), cell 3,2                       S2                                                                           55,0         0
+                                                                                                                                                  55
+         (cost*allocation=868).
+                                                                                                        10                4             5             9
+      c. Cell selection by the lowest cost*allocation, cell 4,1 is                    S3                                                                          75,30,0      --
+         chosen.                                                                                   30                45
+  8. Iteration-8:                                                                     S4
+                                                                                                         7                7             7             3
+                                                                                                                                                                   60,0         0
+      a. Only one penalty cost left: 31 (S3)                                                       60
+      b. Cell selection by minimum cost is cell 3,2.                                 Dema        90,60,3                                          55,
+                                                                                                                65,45,0            30,0
+  9. Iteration-9:                                                                     nd          0, 0                                             0
+      Only one cell left, namely cell 3,1.                                          Penalty
+                                                                                                   --                0              0             0
+                                                                                       (1)
+
+
+
+
+                                                                             322
+
+Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+                               TABLE 9. CASE STUDY 2                                                             TABLE 13. IBFS RESULT OF VAM, LD-VAM AND WITH
+                               D1     D2       D3    Supply                                                                       ACCURATION
+                   S1           6                8                  10          150                                      IBFS                                  Accuration (%)
+                   S2           7               11                  11          175                  No         VAM      LD-        THP       Opti      VAM         LD-          THP
+                   S3           4                5                  12          275                                      VAM                  mal                   VAM
+
+              Demand           200              100                 300                                  1      1095     1095       1045       985        89          89          94
+                                                                                                         2      5125     5125       4525      4525        87          87          100
+                        TABLE 10. DETAIL OF CASE STUDY 2                                                 3      2388     2388       2366      2366        99          99          100
+                             D1       D2      D3      Supply
+                                                                                                                         Average                          92          92          98
+                                 6[3]                     8           10[4]
+              S1                                                                        150
+                               25                                   125
+                                     7                11              11[5]                                                            REFERENCES
+              S2                                                                        175              [1]    O. Kirca and A. Satir, “A Heuristic for Obtaining an Initial Solution
+                                                                    175
+                                                                                                                for the Transportation Problem,” Journal Operational Research
+                                 4   [2]
+                                                      5   [1]
+                                                                          12                                    Society, vol. 41, no. 9, pp. 865–871, 1990, doi:
+              S3                                                                        275                     https://doi.org/10.1057/jors.1990.124.
+                               175              100                                                      [2]    B. Amaliah, C. Fatichah, and E. Suryani, “Total opportunity cost
+                                                                                                                matrix – Minimal total: A new approach to determine initial basic
+          Demand               200              100                 300
+                                                                                                                feasible solution of a transportation problem,” Egyptian Informatics
+                                                                                                                Journal, vol. 20, no. 2, pp. 131–141, 2019, doi:
+                                                                                                                10.1016/j.eij.2019.01.002.
+                               TABLE 11. CASE STUDY 3                                                    [3]    B. Amaliah, C. Fatichah, and E. Suryani, “A new heuristic method of
+                                                                                                                finding the initial basic feasible solution to solve the transportation
+                        D1           D2              D3              D4        D5         Supply                problem,” Journal of King Saud University - Computer and
+                                                                                                                Information        Sciences,       no.      xxxx,      2020,       doi:
+                          70               37                   6        76     17                              10.1016/j.jksuci.2020.07.007.
+         S1                                                                                   18         [4]    B. Amaliah, C. Fatichah, E. Suryani, and A. Muswar, “Total
+                          59               90              93             5     10                              Opportunity Cost Matrix – Supreme Cell : A New Method to Obtain
+         S2                                                                                   17                Initial Basic Feasible Solution of Transportation Problems,” pp. 151–
+                          93               62              77            47     62                              156, 2020, doi: https://doi.org/10.1145/3411174.3411198.
+         S3                                                                                   19         [5]    J. I. Achebo, “Optimization of Fluence Energy in Relation to Weld
+                          54               55              26             9     84                              Properties Based on Vogel Approximation Method,” no. Juli, 2012,
+         S4                                                                                   13                [Online].                                                    Available:
+                                                                                                                https://www.researchgate.net/publication/265749198_Optimization_
+                          53               20              84            15         9
+         S5                                                                                   15                of_Fluence_Energy_in_Relation_to_Weld_Properties_Based_on_Vo
+                                                                                                                gel_Approximation_Method.
+     Demand             16           18               20             14        14                        [6]    S. Singh, G. C. Dubey, and R. Shrivastava, “A Various Method to
+                                                                                                                Solve the Optimality for the Transportation Problem Methods of
+                                                                                                                obtaining Intial Basic Feasible Solutions,” vol. 1, no. 4, pp. 21–28,
+                    TABLE 12. DETAIL OF CASE STUDY 3
+                                                                                                                2012.
+                                                                                                         [7]    S. Korukoğlu and S. Ballı, “A Improved Vogel’s Approximatio
+                                                                                                                Method for the Transportation Problem,” Mathematical and
+                                                                                                                Computational Applications, vol. 16, no. 4, pp. 370–381, 2011, doi:
+                                                                                                                10.3390/mca16020370.
+                                                                                                         [8]    M. Mathirajan and B. Meenakshi, “Experimental Analysis of Some
+                                                                                                                Variants of Vogel’s Approximation Method,” Asia-Pacific Journal of
+                                                                                                                Operational Research (APJOR), vol. 21, no. 04, pp. 447–462, 2004,
+                                                                                                                doi: https://doi.org/10.1142/S0217595904000333.
+                                                                                                         [9]    A. S. Soomro et al., “Modified Vogel ’ s Approximation Method For
+                                                                                                                Solving Transportation Problem,” Mathematical Theory and
+                                                                                                                Modeling, vol. 5, no. 4, pp. 32–43, 2015.
+                                                                                                         [10]   M. Alkubaisi, “Modified VOGEL Method to Find Initial Basic
+                                                                                                                Feasible Solution ( IBFS ) Introducing a New Methodology to Find
+                                                                                                                Best IBFS,” Business and Management Research, vol. 4, no. 2, pp.
+                                                                                                                22–36, 2015, doi: 10.5430/bmr.v4n2p22.
+                                                                                                         [11]   U. K. Das, A. Babu, A. R. Khan, and S. Uddin, “Advanced Vogel’s
+                                                                                                                Approximation Method (AVAM): A New Approach to Determine
+                                                                                                                Penalty Cost for Better Feasible Solution of Transportation Problem,”
+                                                                                                                International Journal of Engineering Research & Technology, vol. 3,
+                                                                                                                no. 1, pp. 182–187, 2014.
+                                                                                                         [12]   U. K. Das, R. Ashraful Babu, A. Khan, and U. Helal, “Logical
+                                                                                                                Development Of Vogel’s Approximation Method (LD-VAM): An
+                                                                                                                Approach To Find Basic Feasible Solution Of Transportation
+                                                                                                                Problem,” International Journal of Scientific & Technology Research,
+                                                                                                                vol. 3, no. 2, 2014.
+                                                                                                         [13]   H. A. Taha, Operations Research: An Introduction, 8th ed. New
+                                                                                                                Jersey: Pearson Prentice Hall, 2007.
+
+
+
+
+                                                                                                   323
+
+Authorized licensed use limited to: Institut Teknologi Sepuluh Nopember. Downloaded on September 30,2026 at 18:40:34 UTC from IEEE Xplore. Restrictions apply.
+

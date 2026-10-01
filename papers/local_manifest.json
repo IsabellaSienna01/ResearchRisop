@@ -1,0 +1,107 @@
+[
+  {
+    "id": "L01",
+    "path": "IBFS/ibfs.pdf",
+    "bytes": 951357,
+    "sha256": "2968ac51ae0fcdfb8ec0fed7fcdd47c379b09c050f9545c6d53cdda61d87c736",
+    "pages": 10,
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "",
+      "producer": "",
+      "creationDate": "",
+      "modDate": "",
+      "trapped": "",
+      "encryption": null
+    },
+    "text": "research/papers/local_text/L01.txt"
+  },
+  {
+    "id": "L02",
+    "path": "RBSM/rbsm.pdf",
+    "bytes": 1893816,
+    "sha256": "6f4cb4b39aef2fb28f7fa732332389a783c75a2de466a05bacf6c7db27d4bde2",
+    "pages": 11,
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "Enhanced supply selection for better initial basic feasible solutions in transportation problems",
+      "author": "Rihan Farih Bunyamin",
+      "subject": "MethodsX, 16 (2026) 103825. doi:10.1016/j.mex.2026.103825",
+      "keywords": "Transportation problem,Initial basic feasible solution,Optimal solution,Vogel\u2019s approximation method",
+      "creator": "Elsevier",
+      "producer": "Acrobat Distiller 8.1.0 (Windows)",
+      "creationDate": "D:20260616145532Z",
+      "modDate": "D:20260616154802Z",
+      "trapped": "",
+      "encryption": null
+    },
+    "text": "research/papers/local_text/L02.txt"
+  },
+  {
+    "id": "L03",
+    "path": "SSM/SSM.pdf",
+    "bytes": 1003114,
+    "sha256": "2de82580c1f05feb6e2c92a4d191b1920ed4029d4419e01e86a86950545f5a28",
+    "pages": 9,
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "A Supply Selection Method for better Feasible Solution of balanced transportation problem",
+      "author": "Bilqis Amaliah",
+      "subject": "Expert Systems With Applications, 203 (2022) 117399. doi:10.1016/j.eswa.2022.117399",
+      "keywords": "Transportation problem,Initial basic feasible solution,Optimal solution,Vogel\u2019s Approximation Method",
+      "creator": "Elsevier",
+      "producer": "Acrobat Distiller 8.1.0 (Windows)",
+      "creationDate": "D:20220612131927Z",
+      "modDate": "D:20220612145336Z",
+      "trapped": "",
+      "encryption": null
+    },
+    "text": "research/papers/local_text/L03.txt"
+  },
+  {
+    "id": "L04",
+    "path": "VAM/0AIP.pdf",
+    "bytes": 573627,
+    "sha256": "b4a7d225dd37e06ad5654a98a633aa950f35ae2fc037b9df70de4d400109a14b",
+    "pages": 6,
+    "metadata": {
+      "format": "PDF 1.4",
+      "title": "",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "",
+      "producer": "iTextSharp 4.1.6 by 1T3XT",
+      "creationDate": "D:20231205194419+00'00'",
+      "modDate": "D:20231205194419+00'00'",
+      "trapped": "",
+      "encryption": null
+    },
+    "text": "research/papers/local_text/L04.txt"
+  },
+  {
+    "id": "L05",
+    "path": "VAM/Two_Highest_Penalties_A_Modified_Vogels_Approximation_Method_to_Find_Initial_Basic_Feasible_Solution_of_Transportation_Problem.pdf",
+    "bytes": 609401,
+    "sha256": "43ff7f6d24cb4b252c276b09bf032cc536103037b9f847d053aa74e6f808c5d6",
+    "pages": 6,
+    "metadata": {
+      "format": "PDF 1.7",
+      "title": "Two Highest Penalties: A Modified Vogels Approximation Method to Find Initial Basic Feasible Solution of Transportation Problem",
+      "author": "",
+      "subject": "2021 13th International Conference on Information & Communication Technology and System (ICTS);2021; ; ;10.1109/ICTS52701.2021.9608005",
+      "keywords": "",
+      "creator": "Acrobat PDFMaker 21 for Word",
+      "producer": "Adobe PDF Library 21.7.127; modified using iText\u00ae 7.1.1 \u00a92000-2018 iText Group NV (AGPL-version)",
+      "creationDate": "D:20211010211856+07'00'",
+      "modDate": "D:20211119092632-05'00'",
+      "trapped": "",
+      "encryption": null
+    },
+    "text": "research/papers/local_text/L05.txt"
+  }
+]

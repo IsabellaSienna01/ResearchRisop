@@ -1,0 +1,801 @@
+                                         Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307
+
+
+
+                                                                Contents lists available at ScienceDirect
+
+                                                  Journal of King Saud University –
+                                                 Computer and Information Sciences
+                                                        journal homepage: www.sciencedirect.com
+
+
+
+
+A new heuristic method of finding the initial basic feasible solution to
+solve the transportation problem
+Bilqis Amaliah a,⇑, Chastine Fatichah a, Erma Suryani b
+a
+    Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya 60111, Indonesia
+b
+    Department of Information System, Institut Teknologi Sepuluh Nopember, Surabaya 60111, Indonesia
+
+
+
+
+a r t i c l e          i n f o                          a b s t r a c t
+
+Article history:                                        Many real applications use the transportation problems for finding the optimal solution for product ship-
+Received 6 January 2020                                 ment from supply to demand. The transportation problem (TP) is related to delivering some products
+Revised 22 June 2020                                    from the supply to the demand. The initial basic feasible solution (IBFS) is a significant step to achieve
+Accepted 16 July 2020
+                                                        the minimal total cost (optimal solution) of the transportation problem. However, the existing methods
+Available online 22 July 2020
+                                                        of IBFS do not always provide a good feasible solution which can reduce the number of iterations to find
+                                                        the optimal solution. Therefore, it is still challenging to develop a better method of IBFS. In this paper, a
+Keywords:
+                                                        new method to obtain the IBFS of transportation problem called Bilqis Chastine Erma method (BCE) was
+Transportation problem
+Initial basic feasible solution
+                                                        proposed. The thirty-five numerical examples were used to evaluate the performance of the proposed
+Optimal solution                                        method. It was compared to other IBFS methods, namely: Vogel’s Approximation Method (VAM), Total
+Minimal total cost                                      Differences Method 1 (TDM1), Total opportunity cost matrix – Minimal total (TOCM-MT), and Juman &
+Vogel’s approximation method                            Hoque Method (JHM). The experiment results indicate that BCE obtained lower total minimal cost than
+                                                        VAM, TDM1, TOCM-MT, and JHM and reached the fastest solving time. It reached its optimal solution for
+                                                        thirty-one of thirty-five numerical examples (88.57%).
+                                                        Ó 2020 The Authors. Published by Elsevier B.V. on behalf of King Saud University. This is an open access
+                                                                      article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+
+
+
+1. Introduction                                                                           ear Programming (LP) problem (Ahmed et al., 2015; Juman and
+                                                                                          Hoque, 2015), Nonlinear Programming (NLP) problem (Klanšek
+    The transportation problem (TP) is associated with delivering                         and Pšunder, 2010), Mixed Integer Linear Programming problem
+some goods from the source to the destination with minimal total                          (MILP), Mixed Integer Nonlinear Programming problem (MINLP)
+cost subject to satisfy the supply and demand constraints (Amaliah                        (Klanšek, 2015), and a specific class of network optimization prob-
+et al., 2019; Hosseini, 2017; Juman and Hoque, 2015). The minimal                         lem (Juman and Nawarathne, 2019).
+total cost is the objective of TP as an optimal solution (Amaliah                            Basically, there are two stages for obtaining the optimal solu-
+et al., 2019). Transportation cost becomes an important component                         tion of TP. Initial Basic Feasible Solution (IBFS) is the first stage
+for many companies because they spend millions of dollars on                              for finding an initial solution of TP because it is a fundamental
+transporting goods from supply to demand (Juman and                                       solution to obtain the minimal total cost (Ahmed et al., 2016a;
+Nawarathne, 2019). Therefore, they need planning in transporting                          Juman and Hoque, 2015; Karagul and Sahin, 2020). The second
+their product from supply to demand (Ahmed et al., 2016a). An                             stage is to find the optimal solution of IBFS by using Stepping Stone
+efficient transporting item has become an interesting subject to                          or Modified Distribution (MODI) (Amaliah et al., 2019). Many
+be explored. Transportation Problem (TP) is a particular case of Lin-                     researchers have explored IBFS to obtain the optimal solution
+                                                                                          directly without Stepping Stone or MODI, so it is important to start
+                                                                                          with IBFS for obtaining the optimal solution of TP (Amaliah et al.,
+    ⇑ Corresponding author.                                                               2019; Hosseini, 2017; Jude et al., 2017; Juman and Hoque, 2015;
+    E-mail addresses: bamaliah@gmail.com (B. Amaliah), chastine@if.its.ac.id              Karagul and Sahin, 2020; Uddin and Khan, 2016). The IBFS value
+(C. Fatichah), erma.suryani@gmail.com (E. Suryani).                                       affects the optimal solution; therefore, a better IBFS method is
+Peer review under responsibility of King Saud University.                                 essential and preferred (Amaliah et al., 2019; Hosseini, 2017;
+                                                                                          Karagul and Sahin, 2020). It can be a closer or similar value with
+                                                                                          the optimal solution (Amaliah et al., 2019).
+                                                                                             Several papers discussed about optimization technique for
+                     Production and hosting by Elsevier
+                                                                                          solving TP. Mizuno and Masuzawa (1989) developed two
+
+https://doi.org/10.1016/j.jksuci.2020.07.007
+1319-1578/Ó 2020 The Authors. Published by Elsevier B.V. on behalf of King Saud University.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+                          B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307             2299
+
+
+polynomial-time algorithms based on interior point algorithms for                 et al. (2018) improved Maximum Difference Method (MDM) by
+the optimal solution of TP, which can decrease the computational                  adding some rules for handling the same values of MDM. Juman
+complexities. Arsham and Kahn (1989) proposed a new method                        and Hoque (2015) developed a heuristic solution technique to find
+that was faster than simplex and more general than stepping stone                 an IBFS of the TP. JHM was started by assigning the demand to the
+by using Gauss Jordan pivoting in the simplex method. Ramadan                     first least cost in the column then transfer the Excess Units (EU)
+and Ramadan (2012) presented a hybrid two-stage algorithm, i.e.                   from the First Least Cost (FLC) to the Second Least Cost (SLC).
+the initial basic feasible solution was obtained by using genetic                     The existing heuristic techniques to obtain IBFS do not provide
+algorithm (GA) and the optimal solution is obtained by using                      the optimal solution all the time. JHM method has a good perfor-
+revised simplex method (RSM).                                                     mance for achieving the optimal solution, but there are still some
+   Vogel’s Approximation Method (VAM), Northwest Corner                           opportunities to improve the accuracy to achieve the optimal solu-
+Method, Least Cost Method are the well-known existing methods                     tions. Therefore, the Bilqis Chastine Erma method (BCE) was pre-
+to obtain IBFS (Taha, 2007). Many methods have been proposed                      sented in this research to obtain a better feasible solution which
+related to obtaining IBFS for TP. A heuristic method Total Opportu-               can reduce the number of iterations to find the optimal solution.
+nity Cost Matrix (TOCM) to get IBFS was introduced by Kirca and                   JHM directly moves the EU from the FLC to the SLC. The contribu-
+Satir (1990). TOCM transforms the main matrix into the initial                    tion of BCE is adding some procedures to move the EU from the FLC
+matrix by adding row and column opportunity cost matrix.                          to the SLC. The result indicated that BCE had a higher chance to
+Mathirajan and Meenakshi (2004) integrated total opportunity                      obtain the optimal solution. Thirty-five Numerical Examples (NE)
+concept with VAM. Islam et al. (2012) merged total opportunity                    were used to evaluate the performance of BCE. It was also com-
+cost table with different two maximal penalties. TOCM-SUM which                   pared with the existing methods such as VAM (Taha, 2007),
+transforms the original matrix into TOCM and continues with the                   TDM1 (Hosseini, 2017), TOCM-MT (Amaliah et al., 2019), and
+total penalty was presented by Khan et al. (2015a). Khan et al.                   JHM (Juman and Hoque, 2015).
+(2015b) started the method with TOCM and counted the distribu-                        This paper is organized as follows: Section 2 demonstrates the
+tion indicator for each cell. Amaliah et al. (2019) proposed a new                mathematics formulation of the TP. The proposed method is
+method called Total Opportunity Cost Matrix-Minimal Total                         explored in Section 3. The experimental results are discussed in
+(TOCM-MT) to find an IBFS that incorporated the TOCM and total                    Section 4. The conclusion of the paper is presented in Section 5.
+row penalty.
+   VAM is one of the popular IBFS methods. Alkubaisi (2015) used                  2. Mathematics formulation of transportation problem
+a median value for the penalty while VAM used difference of two
+minimum costs for penalty. Goyal (1984) improved VAM for the                         Generally, TP is presented in the transportation problem net-
+unbalanced TP by adding the maximal cost for the dummy.                           work as shown in Fig. 1 (Uddin and Khan, 2016) and in Table 1
+Hakim (2012) developed an alternative method to find IBFS and                     (Ahmed et al., 2016a). The objective of TP is to determine the vari-
+the penalty value was calculated by subtracting maximal and min-                  able Xij, which is able to influence the minimal total cost of TP, as
+imal cost. Das et al. (2014a) discussed the limitation of VAM and                 shown in Eq. (1). The objective of TP can be formulated in mathe-
+improved algorithm by presenting the Logical Development of                       matics as a linear programming problem as follows:
+Vogel’s Approximation Method (LD-VAM), and adding a rule if
+there is the same value of maximal penalty. Das et al. (2014b) pro-
+posed Advanced Vogel’s Approximation Method (AVAM) to find
+IBFS, which penalty value is the difference between two dissimilar
+minimum costs. Seethalakshmy and Srinivasan (2015) modified                                                                                        ð1Þ
+the row and column penalties. The row penalty is the difference
+between two maximal cost while the column penalty is the differ-
+ence between the maximal and minimal cost. Soomro et al. (2015)
+developed Modified Vogel’s Approximation Method (MVAM). Azad
+and Hossain (2017) presented a new method for IBFS by calculat-
+ing the Average Row Penalty (ARP) and the Average Column Pen-
+alty (ACP). Hosseini (2017) introduced Total Differences Method
+1(TDM1) and only considered the row penalty.
+   Imam et al. (2009) and Sen et al. (2010) used C++ programming
+language to make the objective-oriented model. Juman and Hoque
+(2015) used C++ programming for implementing the Juman and
+Hoque Method (JHM). Lawal and Eberendu (2016) implemented
+VAM, least cost, Northwest, and stepping stone in Java language.
+Khan et al. (2016) used Matlab to apply the twelve methods of
+IBFS.
+   Babu et al. (2013) introduced Lowest Allocation Method (LAM)
+which started from the minimal supply or demand. The similar
+method was presented by Kousalya and Malarvizhi (2016) and
+Morade, 2017. Babu et al. (2014) proposed the Implied Cost
+Method (ICM) method by calculating the implied cost for each cell.
+Uddin and Khan (2016) presented Improved Least Cost Method
+(ILCM) by adding some rules for handling the same value of least
+cost. Ahmed et al. (2016a) introduced Incessant Allocation Method
+(IAM) which started from the least cost, then continued by satisfy-
+ing rows and columns. Ahmed et al. (2016b) proposed Allocation
+Table Method (ATM) which started from the least odd cost. The
+similar method was also introduced by Deshmukh (2012). Kaur                                            Fig. 1. Transportation problem network.
+2300                            B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307
+
+
+Table 1
+Transportation problem.
+
+                          D1                                     D2                                                        Dn                            Supply
+  S1                      C11                X11                 C12                 X12                ...                C1n                X1n        S1
+  S2                      C21                X21                 C22                 X22                ...                C2n                X2n        S2
+                          .                                      .                                      ...                .
+                          .                                      .                                                         .
+  Sm                      Cm1                Xm1                 Cm2                 Xm2                ...                Cmn                Xmn        Sm
+  Demand                  D1                                     D2                                                        Dn
+
+
+
+
+Where
+
+      m Total number of supplies                                                            Step 4: Calculate the different Diffj between the FLCj and the
+      n Total number of demands                                                             SLCj, for each cell in ER as shown in Eq. (5)
+      Si Supply i
+      Dj Demand j                                                                          Diff j ¼ SLC j  FLC j                                              ð5Þ
+      Ci,j Transportation cost per unit from supply i to demand j
+      Xi,j Number unit to be transported from supply i to demand j                          Step 5: Select the Smallest Diff (SD) cell from Diffj as shown in
+                                                                                            Eq. (6). The row of SD becomes the FLR and the row of SLCj
+   Supply Si, demand Dj, cost Cij and unit Xij are integer. If the total                    becomes the SLR.
+supply is equal to the total demand, as shown in Eq. (2), then a TP is                                    
+balanced.                                                                                  SD ¼ min Diff j                                                     ð6Þ
+X
+m            X
+             m
+      Si ¼         Dj                                                         ð2Þ           Step 6: If TP is balanced, then go to step 7, else go to step 17
+i¼1          j¼1
+                                                                                            Step 7: If FLCj is not equal to SLCj and Least Supply (LS) is not
+                                                                                            equal to Second Supply (SS), then go to step 8 else go to step 15
+3. Bilqis Chastine Erma method                                                              Step 8: Check the SLR status. If SLR status is an ER, then go to
+                                                                                            step 9, else go to step 11
+    It is essential to start with the IBFS to find the optimal solution                     Step 9: Allocate the maximum amount of unit Xij to FLCj and
+of the TP because the IBFS affects the optimal solution (Hosseini,                          move all the remaining Xij to SLCj.
+2017; Karagul and Sahin, 2020). Because of this reason, this                                Step 10: If total unit in FLR (TUFLR) at row i is equal to supply
+research proposed a new IBFS method called Bilqis Chastine Erma                             FLR, then cross out the FLR and change the status to satisfy
+method (BCE) to obtain a better solution by modifying the JHM                               (not considering this row for the next step) and go to step 18,
+method because of the higher accuracy of IBFS compared to other                             else go to step 18. TUFLR is calculated using Eq. (7).
+methods. JHM directly moved the EU from FLC to SLC leading to a
+possibility not to achieve the optimal solution. In this section, the                                  X
+                                                                                                       n
+
+details of BCE are presented. BCE adds some procedure to move the                          TUFLR ¼            X ij                                             ð7Þ
+                                                                                                       j¼1
+EU from FLC to SLC to improve the JHM method. It is started by
+allocating the demand to FLC for each column. The next step is cal-
+culating the total demand of each row. If total demand is larger                            Step 11: Calculate the modulo Diff Supply (DS) and Diffj as
+than the supply, the EU has to move from the FLC to the SLC. It cal-                        shown in Eq. (8) and Eq. (9). If modulo is equal to zero, then
+culates the module between the different supply and cost. If it is                          go to step 12, else go to step 9.
+equal to zero, then check the total cost of the First Least Row
+                                                                                           DS ¼ jSS  LSj                                                      ð8Þ
+(FLR) and total cost of the Second Least Row (SLR). If the total cost
+of the FLR is bigger than the SLR, then it satisfies the FLR or else it                                                     
+satisfies the SLR. The Flowchart of BCE is shown in Fig. 2, and the
+                                                                                           Modulo ¼ mod DS; Diff j                                             ð9Þ
+steps of BCE are shown below:
+                                                                                            Step 12: Calculate the Total Cost of First Least Row (TCFLR) as
+      Step 1: Set up the TP matrix m  n with cost Cij, supplies Si                         shown in Eq. (10) and Total Cost of Second Least Row (TCSLR)
+      where i = 1..m and demands Dj where j = 1..n. For each row,                           as shown in Eq. (11). If TCFLR is greater than TCSLR, then go
+      the status is Not Satisfied (NS)                                                      to step 9, else go to step 13.
+      Step 2: Allocate demand Dj from column j into Xij where Cij is
+                                                                                                      X
+                                                                                                      n
+      the FLCj for each column as shown in Eq. (3).                                        TCFLR ¼           C 1;j                                            ð10Þ
+               
+   FLC j ¼ min C ij ; i ¼ 1::m                                                ð3Þ                      j¼1
+
+                                                                                                      X
+                                                                                                      n
+                                                                                           TCSLR ¼           C 2;j                                            ð11Þ
+                                                                                                       j¼1
+      Step 3: For each row, if total allocation Xij at row i (TAi) is larger
+      than supply Si, then change the status to Excess Row (ER). The ER                     Where C1,j is the cost at FLR and C2,j is the cost at SLR.
+      is a row that total demand is larger than supply, hence the EU
+      has to move from the FLC to the SLC. TAi is calculated using Eq. (4).                 Step 13: Allocate maximum amount unit Xij from SD to SLCj and
+             X
+             n                                                                              keep all remaining Xij in SD.
+   TAi ¼           X ij                                                       ð4Þ           Step 14: If total unit in SLR (TUSLR) at row i is equal to supply SS
+             j¼1                                                                            then cross out the SLR and change the status to the satisfied one
+                                  B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307                2301
+
+
+
+
+                                                                          Fig. 2. The BCE Flowchart.
+
+
+
+(not considering this row for the next step) and go to step 18,                               Step 18: If there is only one row that is NS, then calculate the
+else go to step 18. TUSLR is calculated using Eq. (12).                                       Total Cost of TP (TC) as shown in Eq. (14), and stop, else go to
+                                                                                              step 19.
+          X
+          n
+TUSLR ¼          X ij                                                          ð12Þ
+                                                                                                    Xm n
+                                                                                                       X
+           j¼1
+                                                                                             TC ¼       i¼1
+                                                                                                                    C ij X ij                                ð14Þ
+                                                                                                              j¼1
+Step 15: If FLCj is not equal to SLCj and LS is equal to SS, then go
+to step 9.                                                                                    Step 19: If ER still exists, then go to step 4, else go to step 3.
+Step 16: If FLCj is equal to SLCj, then calculate the TCFLR and
+TCSLR. If TCFLR is greater than TCSLR, then go to step 9, else                                The following NE from Imam (Imam et al., 2009) is used to illus-
+move all Xij from FLCj to SLCj. Switch the FLCj with SLCj and SLCj                            trate the BCE, as shown in Table 2. Considering a company has
+with next second least cost.                                                                  three supplies and four demands. The capacities of supply are
+                                                                                              15, 25, and 10, while the capacities of demand are 5, 15, 15,
+Step 17: Do the following procedures when TP is unbalanced.                                   and 15. The cell entries represent transportation cost per unit
+                                                                                              from supply i to demand j.
+  If TP is unbalanced, then check the SLR status
+     If SLR status is an ER, then go to step 9 else                                           First iteration
+        If TUNFLR is larger than supply LR, then go to step 13
+           else go to step 9.                                                                 Step 1: Set up the TP matrix 3  4 as shown in Table 2.
+                                                                                              Step 2: Allocate demand Dj into Xij as shown in Table 3.
+                                                                                              Column 1, FLC1 is 4, then allocate 5 units of D1 to X3,1.
+                                                                                              Column 2, FLC2 is 2, then allocate 15 units of D2 to X1,2.
+TUNFLR is calculated using Eq. (13).                                                          Column 3, FLC3 is 9, then allocate 15 units of D3 to X2,3.
+                                                                                              Column 4, FLC4 is 11, then allocate 15 units of D4 to X1,4.
+           X
+           n                X
+                            n
+TUNFLR ¼          X 1;j          X 2;j                                        ð13Þ           Step 3: TA1 is 30 units (15 units from X1,2 and 15 units from X1,4).
+           j¼1              j¼1                                                               Supply S1 is 15 units.
+                                                                                              Because TA1 is larger than S1, then change the status of row 1 to
+Where TUNLR is Total Units Now in FLRX1,j is allocation Xij in                                ER as shown in Table 3.
+LRX2,j is allocation Xij in SR
+2302                                B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307
+
+
+Table 2
+The transportation problem with three supplies and four demands.
+
+                                    D1                       D2                        D3                        D4                        Supply                 Status
+   S1                               10                       2                         20                        11                        15                     NS
+   S2                               12                       7                         9                         20                        25                     NS
+   S3                               4                        14                        16                        18                        10                     NS
+   Demand                           5                        15                        15                        15
+
+
+Table 3
+Allocation of demand in the cell.
+
+                           D1                          D2                             D3                              D4                            Supply        status
+   S1                      10            0             2              (15)            20             0                11            (15)            15            ER
+   S2                      12            0             7              0               9              (15)             20            0               25            NS
+   S3                      4             (5)           14             0               16             0                18            0               10            NS
+   Demand                  5                           15                             15                              15
+
+
+
+Table 4
+Allocation of maximum units from X1,2 to X2,2.
+
+                           D1                          D2                             D3                              D4                            Supply        status
+   S1                      10            0             2              (5)             20             0                11            (15)            15            ER
+   S2                      12            0             7              (10)            9              (15)             20            0               25            S
+   S3                      4             (5)           14             0               16             0                18            0               10            NS
+   Demand                  5                           15                             15                              15
+
+
+
+Table 5
+The final result of BCE.
+
+                           D1                          D2                             D3                              D4                            Supply        status
+   S1                      10            0             2              (5)             20             0                11            (10)            15            S
+   S2                      12            0             7              (10)            9              (15)             20            0               25            S
+   S3                      4             (5)           14             0               16             0                18            (5)             10            S
+   Demand                  5                           15                             15                              15
+
+
+
+Table 6
+Detail of numerical examples.
+
+   No                  From Journal                                          Name                 Problem size                 Optimal solution              Status
+   1                   Srinivasan and Thompson (1977)                        P01                  34                          880                           Balanced
+   2                   Sen et al. (2010)                                     P02                  54                          2,146,750                     Unbalanced
+   3                   Goyal (1984)                                          P03                  33                          1650                          Unbalanced
+   4                   Deshmukh (2012)                                       P04                  34                          743                           Balanced
+   5                   Ramadan and Ramadan (2012)                            P05                  33                          5600                          Balanced
+   6                   Kulkarni (2010)                                       P06                  43                          840                           Unbalanced
+   7                   Schrenk et al. (2011)                                 P07                  34                          59                            Balanced
+   8                   Samuel (2012)                                         P08                  34                          28                            Balanced
+   9                   Imam et al. (2009)                                    P09                  34                          435                           Balanced
+   10                  Adlakha and Kowalski (2009)                           P10                  45                          390                           Balanced
+   11                  Kaur et al. (2018)                                    P11                  35                          1580                          Balanced
+   12                  G. Patel et al. (2017)                                P12                  44                          49                            Balanced
+   13                  Ahmed et al. (2016b)                                  P13                  44                          410                           Balanced
+   14                  Ahmed et al. (2016b)                                  P14                  34                          2850                          Balanced
+   15                  Ahmed et al. (2016a)                                  P15                  35                          183                           Balanced
+   16                  Uddin and Khan (2016)                                 P16                  34                          799                           Balanced
+   17                  Uddin and Khan (2016)                                 P17                  35                          273                           Balanced
+   18                  Das et al. (2014a)                                    P18                  34                          1160                          Balanced
+   19                  Khan et al. (2015a)                                   P19                  34                          200                           Balanced
+   20                  Azad and Hossain (2017)                               P20                  34                          240                           Balanced
+   21                  Morade (2017)                                         P21                  33                          820                           Balanced
+   22                  Jude (2016)                                           P22                  34                          190                           Balanced
+   23                  Jude (2016)                                           P23                  44                          83                            Balanced
+   24                  Hosseini (2017)                                       P24                  34                          3460                          Balanced
+   25                  Amaliah et al. (2019)                                 P25                  34                          910                           Balanced
+   26                  Amaliah et al. (2019)                                 P26                  44                          1670                          Balanced
+   27                  Amaliah et al. (2019)                                 P27                  44                          2280                          Balanced
+   28                  Amaliah et al. (2019)                                 P28                  34                          2460                          Balanced
+   29                  Amaliah et al. (2019)                                 P29                  33                          291                           Balanced
+   30                  Juman and Hoque (2015)                                P30                  33                          4525                          Balanced
+   31                  Juman and Hoque (2015)                                P31                  34                          920                           Balanced
+   32                  Juman and Hoque (2015)                                P32                  34                          809                           Balanced
+   33                  Juman and Hoque (2015)                                P33                  34                          417                           Balanced
+   34                  Juman and Hoque (2015)                                P34                  45                          3458                          Balanced
+   35                  Juman and Hoque (2015)                                P35                  46                          109                           Balanced
+                                B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307                         2303
+
+
+   Step 4: FLC2 is 2, SLC2 is 7, FLC4 is 11 and SLC4 is 18, then Diff2 is 5                 Step 8: The SLR status is not an ER, then go to step 11.
+   and Diff4 is 7.                                                                          Step 11: DS is 5 from |10-15|, Diff4 is 7, then Modulo is 5 from
+   Step 5: SD is X1,2, FLR is row 1, and SLR is row 2.                                      mod (5,7). Modulo is 5, then go to step 9.
+   Step 6: The TP is balanced, then go to step 7.                                           Step 9: Allocate 10 units to X14 and move 5 remaining units to
+   Step 7: FLC2 is 2, SLC2 is 7, LS is 15 and SS is 25. Because FLC2 is                     X34 as shown in Table 5.
+   not equal to SLC2 and LS is not equal to SS, then go to step 8.                          Step 10: TUFLR is 15 from the sum of 5 and 10. TUFLR is equal to
+   Step 8: The SLR status is not an ER, then go to step 11.                                 FLR, then cross out the FLR and change the status to be satisfied
+   Step 11: DS is 10 from (25–15), Diff2 is 5, then Modulo is 0 from                        and go to step 18.
+   mod (10,5). Modulo is zero, then go to step 12.                                          Step 18: There is only one row that is NS, then calculate the
+   Step 12: TCFLR is 43 from the sum of 10, 2, 20 and 11. TCSLR is                          total cost. The total cost is 435.
+   48 from the sum of 12, 7, 9 and 20. TCFLR is less, than TCSLR,
+   then go to step 13.                                                                       The number of units to be transported from supply i to demand
+   Step 13: Allocation 10 units from X12 to X22 and keep 5 unit in                       j are X12 = 5, X14 = 10, X22 = 10, X23 = 15, X31 = 5, and X34 = 5 as shown
+   X12 as shown in Table 4.                                                              in Table 5. The total cost is 435, which is the optimal solution for
+   Step 14: TUSLR is 25 from the sum of 10 and 15. TUSLR is equal                        this NE. The IBFS of this NE was obtained by VAM, TDM1, TOCM-
+   to SS, then cross out the SLR and change the status to be satis-                      MT, JHM, and BCE are 475, 475, 435, 460 and 435, respectively.
+   fied and go to step 18 as shown in Table 4.                                           For this NE, just TOCM-MT and BCE meet the optimal solution.
+   Step 18: There are still two rows that are NS, then go to step 19
+   Step 19: Row 1 is still ER, then go to step 4.                                        4. Experiment results
+
+   Second iteration                                                                         In this section, a comparative study was done for VAM, TDM1,
+                                                                                         TOCM-MT, JHM, and proposed method BCE. The comparison
+   Step 4: FLC2 is 2, SLC2 is 14, FLC4 is 11 and SLC4 is 18, as shown in                 among these five methods was performed by using thirty-five NE
+   Table 4, then Diff2 is 12 and Diff4 is 7.                                             which were taken from some articles. The NE details are shown
+   Step 5: SD is X1,4. FLR is row 1 and SLR is row 3.                                    in Table 6. For example, P01 is NE that is taken from (Srinivasan
+   Step 6: The TP is balanced, then go to step 7.                                        and Thompson, 1977); it has three supplies and four demands,
+   Step 7: FLC4 is 11, SLC4 is 18, LS is 15 and SS is 10. Because FLC4                   and the optimal solution is 880. TDM1, TOCM-MT, JHM, and BCE
+   is not equal to SLC4 and LS is not equal to SS then go to step 8.                     were coded in C++ programming language. VAM and optimal
+
+
+Table 7
+Improvement percentage and Deviation percentage for each method.
+
+  No    Name    Initial Basic Feasible Solution (IBFS)                         Optimal      Improvement percentage (%) (Ip)      Deviation percentage (%) (Dv)
+                                                                               (Op)
+                VAM          TDM1         T0CM-          JHM      BCE                       VAM      TDM1     T0CM-     JHM      VAM     TDM1    T0CM-     JHM     BCE
+                                          MT                                                                  MT                                 MT
+  1     P01     955          880          880        880          880*         880          7.85     0.00     0.00      0.00     8.52    0       0         0       0
+  2     P02     2,164,000    2,158,500    2,158,500 2,146,750     2,146,750*   2,146,750    0.80     0.54     0.54      0.00     0.8     0.55    0.55      0       0
+  3     P03     1745         1650         1650       1650         1650*        1650         5.44     0.00     0.00      0.00     5.76    0       0         0       0
+  4     P04     779          779          743        743          743*         743          4.62     4.62     0.00      0.00     4.85    4.85    0         0       0
+  5     P05     5600         5600         5600       5600         5600*        5600         0.00     0.00     0.00      0.00     0       0       0         0       0
+  6     P06     880          980          980        840          840*         840          4.55     14.29    14.29     0.00     4.76    16.67   16.67     0       0
+  7     P07     59           59           61         59           59*          59           0.00     0.00     3.28      0.00     0       0       3.39      0       0
+  8     P08     28           28           28         28           28*          28           0.00     0.00     0.00      0.00     0       0       0         0       0
+  9     P09     475          475          435        460          435*         435          8.42     8.42     0.00      5.43     9.2     9.2     0         5.75    0
+  10    P10     390          400          390        390          390*         390          0.00     2.50     0.00      0.00     0       2.56    0         0       0
+  11    P11     1600         1595         1580       1580         1580*        1580         1.25     0.94     0.00      0.00     1.27    0.95    0         0       0
+  12    P12     49           53           53         49           49*          49           0.00     7.55     7.55      0.00     0       8.16    8.16      0       0
+  13    P13     470          435          435        420          410*         410          12.77    5.75     5.75      2.38     14.63   6.1     6.1       2.44    0
+  14    P14     2850         2850         2850       2850         2850*        2850         0.00     0.00     0.00      0.00     0       0       0         0       0
+  15    P15     187          186          187        183          187          183          0.00     0.54    0.00      2.19    2.19    1.64    2.19      0       2.19
+  16    P16     859          859          799        799          799*         799          6.98     6.98     0.00      0.00     7.51    7.51    0         0       0
+  17    P17     273          273          273        273          273*         273          0.00     0.00     0.00      0.00     0       0       0         0       0
+  18    P18     1220         1160         1160       1170         1170         1160         4.10     0.86    0.86     0.00     5.17    0       0         0.86    0.86
+  19    P19     204          200          200        218          204          200          0.00     2.00    2.00     6.42     2       0       0         9       2
+  20    P20     248          248          240        240          240*         240          3.23     3.23     0.00      0.00     3.33    3.33    0         0       0
+  21    P21     820          820          820        820          820*         820          0.00     0.00     0.00      0.00     0       0       0         0       0
+  22    P22     190          190          190        190          192          190          1.05    1.05    1.05     1.05    0       0       0         0       1.05
+  23    P23     92           83           83         83           83*          83           9.78     0.00     0.00      0.00     10.84   0       0         0       0
+  24    P24     3520         3570         3460       3460         3460*        3460         1.70     3.08     0.00      0.00     1.73    3.18    0         0       0
+  25    P25     990          990          910        960          910*         910          8.08     8.08     0.00      5.21     8.79    8.79    0         5.49    0
+  26    P26     1680         1670         1670       1690         1670*        1670         0.60     0.00     0.00      1.18     0.6     0       0         1.2     0
+  27    P27     2400         2400         2400       2340         2280*        2280         5.00     5.00     5.00      2.56     5.26    5.26    5.26      2.63    0
+  28    P28     2980         2980         2500       2500         2460*        2460         17.45    17.45    1.60      1.60     21.14   21.14   1.63      1.63    0
+  29    P29     327          291          291        327          291*         291          11.01    0.00     0.00      11.01    12.37   0       0         12.37   0
+  30    P30     5125         4550         5225       4525         4525*        4525         11.71    0.55     13.40     0.00     13.26   0.55    15.47     0       0
+  31    P31     960          960          930        920          920*         920          4.17     4.17     1.08      0.00     4.35    4.35    1.09      0       0
+  32    P32     859          849          809        809          809*         809          5.82     4.71     0.00      0.00     6.18    4.94    0         0       0
+  33    P33     476          465          417        417          417*         417          12.39    10.32    0.00      0.00     14.15   11.51   0         0       0
+  34    P34     3778         3572         3513       3487         3458*        3458         8.47     3.19     1.57      0.83     9.25    3.3     1.59      0.84    0
+  35    P35     112          117          109        112          109*         109          2.68     6.84     0.00      2.68     2.75    7.34    0         2.75    0
+                                          Average improvement                  4.51         3.25     1.43     1.03
+
+*Optimal solution.
+2304                            B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307
+
+
+solution of NE were calculated by using TORA Software (Taha, 2007).                     Table 9
+The main capacities of the hardware are Processor IntelÒ CoreTM                         The number of positive and negative improvement percentage.
+
+i7-4720 CPU @ 2.60 GHz (8 CPUs), ~2.6 GHz and 4096 MB Memory.                              No                 Method                    Positive               Negative
+    Table 7 shows the improvement percentage of BCE over VAM,                              1                  VAM                       24                     1
+TDM1, TOCM-MT, and JHM. It also shows the deviation percentage                             2                  TDM1                      20                     4
+of VAM, TDM1, TOCM-MT, JHM, and BCE from the optimal solution.                             3                  TOCM-MT                   10                     3
+It can be seen that BCE achieved the optimal solution in most cases                        4                  JHM                       10                     2
+
+because it added some rules when moving the EU from the FLC to
+the SLC, while JHM directly moved the all EU from the FLC to the
+SLC.
+    Table 8 shows the solving time for each method. The very good
+solving time was obtained by the BCE. BCE reached the fastest solv-
+ing time because the minimum solving time for all NE belongs to it.
+    The improvement percentage (Ip) is calculated by using Eq. (15)
+(Amaliah et al., 2019). The positive number means that the total
+cost of BCE is smaller than others; on the contrary, the negative
+number means that the total cost of BCE is bigger than others.
+The deviation percentage (Dv) is calculated using Eq. (16)
+(Amaliah et al., 2019). The zero number means that the result of
+the methods is the optimal solution, while the positive one means                       Fig. 3. The average improvement percentage of BCE over VAM, TDM1, TOCM-MT,
+that the result is not an optimal solution.                                             and JHM.
+
+
+       IBFS  BCE
+Ip ¼              x100                                                       ð15Þ       Table 10
+          IBFS
+                                                                                        The number of NE that is not the optimal solution and deviation percentage.
+
+        IBFS  Op                                                                          No       Method          Not optimal solution        Deviation percentage (%)
+Dv ¼              x100                                                       ð16Þ
+           Op                                                                              1        VAM             26                          74.29
+                                                                                           2        TDM1            21                          60
+Where IBFS Initial Basic Feasible Solution                                                 3        TOCM-MT         11                          31.43
+                                                                                           4        JHM             11                          31.43
+                                                                                           5        BCE             4                           11.43
+   BCE Bilqis Chastine Erma method
+   Op Optimal Solution
+
+
+Table 8
+Solving time for each method (seconds).
+
+  No                     Name                     VAM                        TDM1                        T0CM-MT                       JHM                         BCE
+  1                      P01                      0.6332                     0.1523                      2.1280                        0.1690                      0.0667
+  2                      P02                      0.7545                     0.6264                      0.1489                        0.6734                      0.0612
+  3                      P03                      0.8345                     1.6570                      1.1390                        0.7577                      0.1333
+  4                      P04                      0.6923                     0.1193                      0.5623                        2.5020                      0.0939
+  5                      P05                      1.3615                     0.0876                      0.0692                        0.1472                      0.0353
+  6                      P06                      0.7524                     0.5749                      0.5719                        0.1374                      0.1169
+  7                      P07                      0.7135                     0.9947                      0.0653                        3.1190                      0.0610
+  8                      P08                      0.9231                     0.3216                      0.0915                        0.2839                      0.0633
+  9                      P09                      0.8520                     2.0640                      1.5820                        0.1208                      0.0434
+  10                     P10                      0.7634                     1.7580                      1.3690                        0.4754                      0.1122
+  11                     P11                      0.9341                     0.0906                      0.0871                        0.1294                      0.0725
+  12                     P12                      0.7243                     0.0940                      0.0699                        0.1405                      0.0631
+  13                     P13                      0.7545                     0.7616                      1.3740                        0.1455                      0.0933
+  14                     P14                      0.5343                     0.1341                      0.0605                        0.1550                      0.0564
+  15                     P15                      0.8735                     1.6330                      1.8780                        0.1282                      0.0855
+  16                     P16                      0.6835                     0.3332                      0.2090                        0.6506                      0.0930
+  17                     P17                      0.6324                     0.0728                      0.1125                        0.4907                      0.0602
+  18                     P18                      0.7943                     0.2068                      0.1236                        0.4826                      0.0618
+  19                     P19                      0.9124                     0.0795                      0.0784                        0.1193                      0.0583
+  20                     P20                      0.7842                     0.1009                      0.4745                        0.8759                      0.0851
+  21                     P21                      0.7598                     0.1910                      0.6761                        0.7804                      0.0450
+  22                     P22                      0.7564                     0.2568                      0.7062                        0.1427                      0.0496
+  23                     P23                      0.7530                     0.1132                      0.0687                        1.5620                      0.0409
+  24                     P24                      0.7497                     0.4806                      1.5190                        0.5666                      0.1664
+  25                     P25                      0.7463                     0.2704                      0.1206                        0.1198                      0.0745
+  26                     P26                      0.7429                     0.2589                      1.1360                        0.9035                      0.0612
+  27                     P27                      0.7395                     1.2010                      0.3719                        1.8530                      0.0794
+  28                     P28                      0.7361                     0.0698                      0.4832                        1.0920                      0.0550
+  29                     P29                      0.8423                     2.8360                      0.6593                        0.1228                      0.0520
+  30                     P30                      0.7823                     1.1790                      0.0528                        0.1638                      0.0477
+  31                     P31                      0.6621                     0.7730                      0.0557                        0.1228                      0.0427
+  32                     P32                      0.7824                     0.0712                      0.4776                        1.1630                      0.0499
+  33                     P33                      0.6642                     0.2893                      0.0624                        1.2720                      0.0437
+  34                     P34                      0.7141                     1.0320                      0.0991                        0.1534                      0.0963
+  35                     P35                      0.8431                     0.0924                      1.2490                        1.6300                      0.0923
+                             B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307                    2305
+
+
+   Table 9 shows the number of positive and negative improve-                        Table 11
+                                                                                     The number of NE that is the optimal solution and accuracy.
+ment percentages. It indicates that the total cost of NE of BCE
+was 24, 20, 10, and 10 which were lower than VAM, TDM1,                                 No            Method                Optimal Solution       Accuracy (%)
+TOCM-MT, and JHM, respectively. It shows that the total cost of                         1             VAM                   9                      25.71
+NE of BCE is 1, 4, 3, and 2 which were higher than VAM, TDM1,                           2             TDM1                  14                     40
+TOCM-MT, and JHM, respectively. For example, P01, improvement                           3             TOCM-MT               24                     68.57
+                                                                                        4             JHM                   24                     68.57
+percentage of BCE over VAM was 7.85. The total cost of BCE was                          5             BCE                   31                     88.57
+880 and VAM was 955. It means that the total cost of BCE was
+lower than VAM. For example, P18, improvement percentage of
+BCE over TOCM-MT was 0.86. The total cost of BCE was 1170
+and TOCM-MT was 1160. It means that the total cost of BCE was
+higher than TOCM-MT. It has been proven that BCE can improve
+the minimal total cost over VAM, TDM1, TOCM-MT, and JHM. Most
+of NE with BCE resulted in lower total costs than others, but in
+some NE, they had higher total costs.
+   Fig. 3 shows the average improvement percentage of BCE over
+VAM, TDM1, TOCM-MT, and JHM taken from Table 7. The average
+improvement of BCE was 4.51 over VAM, 3.25 over TDM1, 1.43
+over TOCM-MT, and 1.03 over JHM. The highest average improve-
+ment of BCE was over VAM and the lowest one was over JHM.
+   Table 10 shows the number of NE that is not the optimal solu-
+tion and deviation percentage. The number of no optimal solution                               Fig. 6. The Accuracy of VAM, TDM1, TOCM-MT, JHM and BCE.
+of VAM, TDM1, TOCM-MT, JHM, and BCE were 26, 21, 11, 11, and 4,
+respectively. Therefore, the deviation percentage of VAM, TDM1,
+                                                                                        Table 11 shows the number of NE that is the optimal solution
+TOCM-MT, JHM, and BCE were 74.29%, 60%, 31.43%, 31.43%, and
+                                                                                     and the accuracy is calculated by using Eq. (17). The number of
+11.43%, respectively. For example, P12, deviation of TDM1 was
+                                                                                     optimal solutions of VAM, TDM1, TOCM-MT, JHM, and BCE were
+8.16. The total cost of TDM1 was 53 and the optimal solution
+                                                                                     9, 14, 24, 24, and 31, respectively. Therefore, the accuracy of
+was 49. It means that the total cost of TDM1 was not the optimal
+                                                                                     VAM, TDM1, TOCM-MT, JHM, and BCE were 25.71%, 40%, 68.57%,
+solution. Fig. 4 shows the deviation percentage of VAM, TDM1,
+                                                                                     68.57%, and 88.57%, respectively. For example, P27, deviation of
+TOCM-MT, JHM, and BCE was taken from Table 10. The highest
+                                                                                     BCE was 0. The total cost of BCE was 2.280 and the optimal solution
+deviation percentage was VAM while the lowest one was BCE.
+                                                                                     was 2.280. It means that the total cost of BCE was the optimal solu-
+Fig. 5 shows the deviation percentage of each method.
+                                                                                     tion. Fig. 6 shows the accuracy of VAM, TDM1, TOCM-MT, JHM, and
+                                                                                     BCE taken from Table 11. Compared with other methods, the best
+                                                                                     one was BCE with 88.57% accuracy.
+
+
+
+                                                                                                   Total number optimal solution of numerical examples
+                                                                                     Accuracy ¼                                                        x100
+                                                                                                           Total number of numerical examples
+                                                                                                                                                        ð17Þ
+                                                                                        The NE in Table 2 is used to illustrate the difference between the
+                                                                                     minimal total cost of BCE, JHM, VAM, TDM1, and TOCM-MT. The
+                                                                                     final result of BCE is shown in Table 5 with the minimal total cost
+                                                                                     was 435, which was the optimal solution. The minimal cost of JHM
+                                                                                     was 460, as shown in Table 12, which was not the optimal solution.
+                                                                                     The minimal cost of VAM and TDM1 was 475, as shown in Table 13,
+                                                                                     which was not the optimal solution. The minimal cost of TOCM-MT
+   Fig. 4. The deviation percentage of VAM, TDM1, TOCM-MT, JHM, and BCE.             was 435, as shown in Table 14, which was the optimal solution.
+
+
+
+
+                                                         Fig. 5. The deviation percentage of each method.
+2306                            B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307
+
+
+Table 12
+The final result of JHM.
+
+                           D1                            D2                                 D3                                 D4                    Supply
+  S1                       10           0                2                0                 20               0                 11             (15)   15
+  S2                       12           0                7                (10)              9                (15)              20             0      25
+  S3                       4            (5)              14               (5)               16               0                 18             0      10
+  Demand                   5                             15                                 15                                 15
+
+
+
+
+Table 13
+The final result of VAM and TDM1.
+
+                           D1                            D2                                 D3                                 D4                    Supply
+  S1                       10           0                2                (15)              20               0                 11             0      15
+  S2                       12           0                7                0                 9                (15)              20             (10)   25
+  S3                       4            (5)              14               0                 16               0                 18             (5)    10
+  Demand                   5                             15                                 15                                 15
+
+
+
+Table 14
+The final result of TOCM-MT.
+
+                           D1                            D2                                 D3                                 D4                    Supply
+  S1                       10           0                2                (5)               20               0                 11             (10)   15
+  S2                       12           0                7                (10)              9                (10)              20             0      25
+  S3                       4            (5)              14               0                 16               0                 18             (5)    10
+  Demand                   5                             15                                 15                                 15
+
+
+
+
+    The real application example has 2 factories as supply and 94                          The BCE achieved a better performance than VAM, TDM1,
+cities as demand. The detail data of real application example is                        TOCM-MT, and JHM because it provided a better mechanism
+given below.                                                                            when moving the excess unit from the first least cost to the
+    Data for real application example.                                                  second least cost. In addition, BCE reached the fastest solving
+    [Cij]2x94 = [22 38 32 17 31 15 23 25 25 20 33 30 18 12 23 18 26                     time. To evaluate the performance of BCE, thirty-five NE were
+20 15 18 15 25 28 23 16 18 21 28 20 20 25 18 18 18 25 27 21 25 23                       used. The comparative study showed that BCE obtained
+26 33 38 29 17 38 17 39 39 22 22 35 25 28 31 33 20 36 31 23 27 25                       twenty-four NE with lower total cost compared to VAM,
+35 30 31 28 27 28 30 27 54 43 52 56 46 59 53 40 58 44 51 40 43 45                       twenty got better results than TDM1, ten reached better
+49 48 57 46 46 60 61 66 59 55 56;                                                       results than TOCM-MT, and ten gained better results than
+    26 41 36 21 35 20 27 30 28 25 38 34 23 15 20 15 23 18 14 17 13                      JHM. The average improvement percentage of BCE over VAM,
+23 25 25 17 23 23 33 18 19 28 23 20 18 25 31 20 25 25 23 39 36 28                       TDM1, TOCM-MT, and JHM were 4.51, 3.25, 1.43, and 1.03,
+12 33 14 38 38 20 28 33 28 26 28 31 17 38 30 30 25 22 33 26 29 31                       respectively. Then the highest average improvement percentage
+34 28 33 31 49 38 49 52 43 56 49 36 54 40 46 36 39 41 46 44 54 41                       of BCE was over VAM.
+43 57 57 62 55 52 51]                                                                      In most cases, BCE was able to achieve the optimal solution.
+    [Si]2x1 = [281820, 136731]                                                          While four NE were not the optimal solution with 11.43% deviation
+    [Dj]1x94 = [3071, 4187, 1155, 3438, 6851, 3441, 5351, 20838,                        percentage and it indicated the lowest one. On the other hand, BCE
+2752, 6363, 2838, 2695, 37543, 6595, 2611, 0, 0, 2859, 622,                             successfully achieved the optimal solution for thirty-one NE with
+2113, 4599, 6339, 249, 4727, 17334, 4391, 25700, 1519, 3029,                            88.57% accuracy. The JHM and TOCM-MT obtained the optimal
+2207, 46729, 3084, 3922, 1381, 961, 3098, 1078, 2910, 1700,                             solution for twenty-four NE with 68.57% accuracy, TDM1 got 40%
+4848, 0, 0, 0, 10441, 0, 4724, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9820, 0, 0, 0,                accuracy with fourteen NE, and VAM had 25.71% accuracy with
+0, 6215, 0, 0, 0, 14221, 1503, 2137, 501, 562, 6626, 1494, 5878,                        nine NE. It can be concluded that the best method is BCE followed
+5338, 611, 1117, 472, 1814, 1227, 1229, 1724, 3743, 7922, 281,                          by TOCM-MT, JHM, TDM1, and VAM.
+689, 7822, 1307, 1012, 2395, 1150, 456, 4123, 528, 21067, 33274]                           The future research might be carried out to develop some alter-
+    The minimal total cost from the BCE method was 12.175.097,                          native methods that can handle a large number of supply and
+which was the optimal solution for this real application example,                       demand as well as incomplete information of transportation
+followed by VAM, TDM1, TOCM-MT, and JHM that got the minimal                            parameter for the real case.
+total cost 12.175.097, 12.208.071, 12.210.362, and 12.175.097,
+respectively.
+                                                                                        Funding
+5. Conclusion
+                                                                                           This research did not receive any specific grant from funding
+   An IBFS is the first and significant step to achieve an optimal                      agencies in the public, commercial, or not-for-profit sectors.
+solution of TP; however, the existing methods of IBFS do not                               All authors contributed to the study conception and design.
+always reach it. To improve the IBFS, a new method called Bilqis                        Material preparation, data collection and analysis were performed
+Chastine Erma method (BCE) was proposed to obtain a good feasi-                         by Bilqis Amaliah, Chastine Fatichah and Erma Suryani. The first
+ble solution. The BCE, TDM1, TOCM-MT, and JHM were coded using                          draft of the manuscript was written by Bilqis Amaliah and all
+C++ programming language, meanwhile the well-known TORA                                 authors commented on previous versions of the manuscript. All
+software was used to calculate VAM and optimal solution.                                authors read and approved the final manuscript.
+                                  B. Amaliah et al. / Journal of King Saud University – Computer and Information Sciences 34 (2022) 2298–2307                               2307
+
+
+Declaration of Competing Interest                                                         Juman, Z.A.M.S., Hoque, M.A., 2015. An efficient heuristic to obtain a better initial
+                                                                                              feasible solution to the transportation problem. Appl. Soft Comput. J. 34, 813–
+                                                                                              826. https://doi.org/10.1016/j.asoc.2015.05.009.
+    The authors declare that they have no known competing finan-                          Juman, Z.A.M.S., Nawarathne, N.G.S.A., 2019. An efficient alternative approach to
+cial interests or personal relationships that could have appeared                             solve a transportation problem. Ceylon J. Sci. 48, 19–29. https://doi.org/
+                                                                                              10.4038/cjs.v48i1.7584.
+to influence the work reported in this paper.
+                                                                                          Karagul, K., Sahin, Y., 2020. A novel approximation method to obtain initial basic
+                                                                                              feasible solution of transportation problem. J. King Saud Univ. - Eng. Sci. 32,
+References                                                                                    211–218. https://doi.org/10.1016/j.jksues.2019.03.003.
+                                                                                          Kaur, L., Rakshit, M., Singh, S., 2018. An improvement in maximum difference
+                                                                                              method to find initial basic feasible solution for transportation problem. Int. J.
+Adlakha, V., Kowalski, K., 2009. Alternate solutions analysis for transportation
+                                                                                              Comput. Sci. Eng. 6, 533–535.
+    problems. J. Bus. Econ. Res. 7, 41–50. https://doi.org/10.19030/jber.v7i11.2354.
+                                                                                          Khan, A.R., Vilcu, A., Istrate, C., 2016. The performance evaluation of various
+Ahmed, M.M., Islam, A., Katun, M., Yesmin, S., 2015. New procedure of finding an
+                                                                                              techniques for transportation problem. Bul. Institutului Politeh. DIN IAS    ß I 62,
+    initial basic feasible solution of the time minimizing transportation problem.
+                                                                                              19–30.
+    Open J. Appl. Sci. 5, 634–640.
+                                                                                          Khan, A.R., Vilcu, A., Sultana, N., Ahmed, S.S., 2015a. Determination of initial basic
+Ahmed, M.M., Khan, A.R., Ahmed, F., Uddin, S., 2016a. Incessant allocation method
+                                                                                              feasible solution of a transportation problem: a tocm-sum approach. Bul.
+    for solving transportation problems. Am. J. Oper. Res. 6, 236–244. https://doi.
+                                                                                              INSTITUTULUI Politeh. DIN IASI 61, 39–49.
+    org/10.4236/ajor.2016.63024.
+                                                                                          Khan, A.R., Vilcu, A., UDDIN, S., Ungureanu, F., 2015b. A competent algorithm to find
+Ahmed, M.M., Khan, A.R., Uddin, S., Ahmed, F., 2016b. A new approach to solve
+                                                                                              the initial basic feasible solution of cost minimization transportation problem.
+    transportation problems. Open J. Optim. 5, 22–30. https://doi.org/http://dx.doi.
+                                                                                              Bul. Institutului Politeh. DIN IASI 61, 71–83.
+    org/10.4236/ojop.2016.51003.
+                                                                                          Kirca, O., Satir, A., 1990. A Heuristic for Obtaining an Initial Solution for the
+Alkubaisi, M., 2015. Modified VOGEL method to find initial basic feasible solution
+                                                                                              Transportation Problem 41, 865–871.
+    (IBFS) introducing a new methodology to find best IBFS. Bus. Manag. Res. 4, 22–
+                                                                                          Klanšek, U., 2015. A comparison between MILP and MINLP approaches to optimal
+    36. https://doi.org/10.5430/bmr.v4n2p22.
+                                                                                              solution of Nonlinear Discrete Transportation Problem. Transport 30, 135–144.
+Amaliah, B., Fatichah, C., Suryani, E., 2019. Total opportunity cost matrix – Minimal
+                                                                                              https://doi.org/10.3846/16484142.2014.933361.
+    total: A new approach to determine initial basic feasible solution of a
+                                                                                          Klanšek, U., Pšunder, M., 2010. Solving the nonlinear transportation problem by
+    transportation problem. Egypt. Informatics J. 20, 131–141. https://doi.org/
+                                                                                              global      optimization.      Transport      25,    314–324.     https://doi.org/
+    10.1016/j.eij.2019.01.002.
+                                                                                              10.3846/transport.2010.39.
+Arsham, H., Kahn, A.B., 1989. A simplex-type algorithm for general transportation
+                                                                                          Kousalya, P., Malarvizhi, P., 2016. A new technique for finding initial basic feasible
+    problems: an alternative to stepping-stone. J. Oper. Res. Soc. 40, 581–590.
+                                                                                              solution to transportation problem. Int. J. Eng. Manag. Res. 6, 26–32.
+    https://doi.org/10.1057/palgrave.jors.0400607.
+                                                                                          Kulkarni, S.S., 2010. on Solution to modified unbalanced transportation problem.
+Azad, S.M.A.K., Hossain, M.B., 2017. A new method for solving transportation
+                                                                                              Bull. Marathwada Math. Soc. 11, 20–26.
+    problems considering average penalty. IOSR J. Math. 13, 40–43. https://doi.org/
+                                                                                          Lawal, J.I., Eberendu, A.C., 2016. Automating the computation of optimal solutions
+    10.9790/5728-1301044043.
+                                                                                              to transportation problems. Int. J. Comput. Sci. Eng. 8, 383–393.
+Babu, A., Helal, A., Hasan, M.S., Das, U.K., 2013. Lowest Allocation Method (LAM): a
+                                                                                          Mathirajan, M., Meenakshi, B., 2004. Experimental Analysis of Some Variants of
+    new approach to obtain feasible solution of transportation model. Int. J. Sci. Eng.
+                                                                                              Vogel’S Approximation Method. Asia-Pacific J. Oper. Res. 21, 447–462.
+    Res. 4, 1344–1348.
+                                                                                              https://doi.org/https://doi.org/10.1142/S0217595904000333.
+Babu, A., Helal, A., Sazzad Hasan, M., Kanti Das, U., 2014. Implied Cost Method
+                                                                                          Mizuno, S., Masuzawa, K., 1989. Polynomial time interior point algorithms for
+    (ICM): an alternative approach to find the feasible solution of transportation
+                                                                                              transportation problems. J. Oper. Res. Soc. Japan 32, 371–382. https://doi.org/
+    problem. Glob. J. Sci. Front. Res. Math. Decis. Sci. 14, 5–13.
+                                                                                              10.15807/jorsj.32.371.
+Das, U.K., Babu, A., Khan, A.R., Helal, A., Uddin, S., 2014a. Logical Development Of
+                                                                                          Morade, N.M., 2017. New Method to find initial basic feasible solution of
+    Vogel’s Approximation Method (LD-VAM): An Approach To Find Basic Feasible
+                                                                                              Transportation Problem using MSDM. Inernational J. Comput. Sci. Engneering
+    Solution Of Transportation Problem. Int. J. Sci. Technol. Res. 3, 42–48.
+                                                                                              5, 223–226.
+Das, U.K., Babu, A., Khan, A.R., Uddin, S., 2014b. Advanced Vogel’s Approximation
+                                                                                          Ramadan, S.Z., Ramadan, I.Z., 2012. Hybrid two-stage algorithm for solving
+    Method (AVAM): A New Approach to Determine Penalty Cost for Better Feasible
+                                                                                              transportation problem. Mod. Appl. Sci. 6, 12–22. https://doi.org/https://doi.
+    Solution of Transportation Problem. Int. J. Eng. Res. Technol. 3, 182–187.
+                                                                                              org/10.5539/mas.v6n4p12.
+Deshmukh, N.M., 2012. an Innovative Method for Solving Transportation. Int. J.
+                                                                                          Samuel, A.E., 2012. Improved Zero Point Method (IZPM) for the Transportation
+    Phys. Math. Sci. 2, 86–91.
+                                                                                              Problems. Appl. Math. Sci. 6, 5421–5426.
+Patel, G., Bhathawala, R., D.P.H., Patel, S., D.B., 2017. An Alternate approach to find
+                                                                                          Schrenk, S., Finke, G., Cung, V.D., 2011. Two classical transportation problems
+    an optimal solution of a transportation problem. IOSR J. Math. 13, 01–05.
+                                                                                              revisited: Pure constant fixed charges and the paradox. Math. Comput. Model.
+    https://doi.org/10.9790/5728-1301030105.
+                                                                                              54, 2306–2315. https://doi.org/10.1016/j.mcm.2011.05.039.
+Goyal, S.K., 1984. Improving VAM for Unbalanced Transportation Problems. J. Oper.
+                                                                                          Seethalakshmy, A., Srinivasan, N., 2015. An improved algorithm to obtain initial
+    Res. Soc. 35, 1113–1114. https://doi.org/https://doi.org/10.1057/jors.1984.217.
+                                                                                              basic feasible solution for the transportation problem. Int. J. Sci. Res. 6, 1225–
+Hakim, M.A., 2012. An alternative method to find initial basic feasible solution of a
+                                                                                              1229.
+    transportation problem. Ann. Pure Appl. Math. 1, 203–209.
+                                                                                          Sen, N., Som, T., Sinha, B., 2010. A study of transportation problem for an essential
+Hosseini, E., 2017. Three new methods to find initial basic feasible solution of
+                                                                                              item of Southern Part of North Eastern Region of India as an OR model and use
+    transportation problems. Appl. Math. Sci. 11, 1803–1814. https://doi.org/
+                                                                                              of object oriented programming. Int. J. Comput. Sci. Netw. Secur. 10, 78–86.
+    https://doi.org/10.12988/ams.2017.75178.
+                                                                                          Soomro, A.S., Junaid, M., Tularam, G.A., Science, C., Scholar, M.P., Science, C.,
+Imam, T., Elsharawy, G., Gomah, M., Samy, I., 2009. Solving transportation problem
+                                                                                              Lecturer, S., Engineering, S.E., 2015. Modified Vogel’s approximation method for
+    using object-oriented model. Int. J. Comput. Sci. Netw. Secur. 9, 353–361.
+                                                                                              solving transportation problem. Math. Theory Model. 5, 32–43.
+Islam, A., Khan, A.R., Uddin, M.S., Malek, M.A., 2012. Determination of Basic Feasible
+                                                                                          Srinivasan, V., Thompson, G.L., 1977. Cost operator algorithms for the
+    Solution of Transportation Problem: A New Approach. Jahangirnagar Univ. J. Sci.
+                                                                                              transportation problem. Math. Program. 12, 372–391. https://doi.org/
+    35, 101–108.
+                                                                                              https://doi.org/10.1007/BF01593805.
+Jude, O., 2016. Comparison of existing methods of solving linear transportation
+                                                                                          Taha, H.A., 2007. Operations Research: An Introduction. Pearson Prentice Hall, New
+    problems with a new approach. Int. J. Innov. Sci. Math. 4, 158–163.
+                                                                                              Jersey.
+Jude, O., Ifeanyichukwu, O. Ben, Ihuoma, I.A., Akpos, E.P., 2017. A new and efficient
+                                                                                          Uddin, S., Khan, A.R., 2016. Improved least cost method to obtain a better IBFS to the
+    proposed approach to find initial basic feasible solution of a transportation
+                                                                                              transportation problem. J. Appl. Math. Bioinforma. 6, 1–20.
+    problem. Am. J. Appl. Math. Stat. 5, 54–61. https://doi.org/10.12691/ajams-5-2-3.
+

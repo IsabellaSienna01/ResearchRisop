@@ -1,0 +1,276 @@
+[
+  {
+    "name": "rbsm_metodeS2new.cpp",
+    "status": "downloaded",
+    "bytes": 9967,
+    "prefix": "b'#include'"
+  },
+  {
+    "name": "rbsm_n01.txt",
+    "status": "downloaded",
+    "bytes": 62,
+    "prefix": "b'3 3\\r\\n\\r\\n3'"
+  },
+  {
+    "name": "rbsm_n02.txt",
+    "status": "downloaded",
+    "bytes": 53,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n03.txt",
+    "status": "downloaded",
+    "bytes": 110,
+    "prefix": "b'5 5\\r\\n\\r\\n7'"
+  },
+  {
+    "name": "rbsm_n04.txt",
+    "status": "downloaded",
+    "bytes": 46,
+    "prefix": "b'3 3\\r\\n\\r\\n6'"
+  },
+  {
+    "name": "rbsm_n05.txt",
+    "status": "downloaded",
+    "bytes": 73,
+    "prefix": "b'4 4\\r\\n\\r\\n7'"
+  },
+  {
+    "name": "rbsm_n06.txt",
+    "status": "downloaded",
+    "bytes": 87,
+    "prefix": "b'4 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n07.txt",
+    "status": "downloaded",
+    "bytes": 62,
+    "prefix": "b'3 4\\r\\n\\r\\n6'"
+  },
+  {
+    "name": "rbsm_n08.txt",
+    "status": "downloaded",
+    "bytes": 58,
+    "prefix": "b'3 4\\r\\n\\r\\n5'"
+  },
+  {
+    "name": "rbsm_n09.txt",
+    "status": "downloaded",
+    "bytes": 68,
+    "prefix": "b'4 4\\r\\n\\r\\n4'"
+  },
+  {
+    "name": "rbsm_n10.txt",
+    "status": "downloaded",
+    "bytes": 68,
+    "prefix": "b'3 4\\r\\n\\r\\n2'"
+  },
+  {
+    "name": "rbsm_n11.txt",
+    "status": "downloaded",
+    "bytes": 68,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n12.txt",
+    "status": "downloaded",
+    "bytes": 56,
+    "prefix": "b'3 3\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n13.txt",
+    "status": "downloaded",
+    "bytes": 60,
+    "prefix": "b'3 3\\r\\n\\r\\n6'"
+  },
+  {
+    "name": "rbsm_n14.txt",
+    "status": "downloaded",
+    "bytes": 59,
+    "prefix": "b'3 4\\r\\n\\r\\n4'"
+  },
+  {
+    "name": "rbsm_n15.txt",
+    "status": "downloaded",
+    "bytes": 57,
+    "prefix": "b'3 4\\r\\n\\r\\n4'"
+  },
+  {
+    "name": "rbsm_n16.txt",
+    "status": "downloaded",
+    "bytes": 70,
+    "prefix": "b'3 4\\r\\n\\r\\n2'"
+  },
+  {
+    "name": "rbsm_n17.txt",
+    "status": "downloaded",
+    "bytes": 65,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n18.txt",
+    "status": "downloaded",
+    "bytes": 69,
+    "prefix": "b'3 4\\r\\n\\r\\n6'"
+  },
+  {
+    "name": "rbsm_n21.txt",
+    "status": "downloaded",
+    "bytes": 65,
+    "prefix": "b'3 3\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n22.txt",
+    "status": "downloaded",
+    "bytes": 78,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n23.txt",
+    "status": "downloaded",
+    "bytes": 54,
+    "prefix": "b'3 4\\r\\n\\r\\n7'"
+  },
+  {
+    "name": "rbsm_n24.txt",
+    "status": "downloaded",
+    "bytes": 72,
+    "prefix": "b'3 4\\r\\n\\r\\n2'"
+  },
+  {
+    "name": "rbsm_n25.txt",
+    "status": "downloaded",
+    "bytes": 67,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n26.txt",
+    "status": "downloaded",
+    "bytes": 87,
+    "prefix": "b'4 5\\r\\n\\r\\n2'"
+  },
+  {
+    "name": "rbsm_n27.txt",
+    "status": "downloaded",
+    "bytes": 127,
+    "prefix": "b'5 5\\r\\n\\r\\n4'"
+  },
+  {
+    "name": "rbsm_n28.txt",
+    "status": "downloaded",
+    "bytes": 81,
+    "prefix": "b'4 4\\r\\n\\r\\n3'"
+  },
+  {
+    "name": "rbsm_n29.txt",
+    "status": "downloaded",
+    "bytes": 70,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n30.txt",
+    "status": "downloaded",
+    "bytes": 58,
+    "prefix": "b'3 3 \\r\\n\\r\\n'"
+  },
+  {
+    "name": "rbsm_n31.txt",
+    "status": "downloaded",
+    "bytes": 73,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_n32.txt",
+    "status": "downloaded",
+    "bytes": 89,
+    "prefix": "b'4 5\\r\\n\\r\\n4'"
+  },
+  {
+    "name": "rbsm_n33.txt",
+    "status": "downloaded",
+    "bytes": 56,
+    "prefix": "b'3 3 \\r\\n\\r\\n'"
+  },
+  {
+    "name": "rbsm_n34.txt",
+    "status": "downloaded",
+    "bytes": 81,
+    "prefix": "b'4 5\\r\\n\\r\\n7'"
+  },
+  {
+    "name": "rbsm_n35.txt",
+    "status": "downloaded",
+    "bytes": 65,
+    "prefix": "b'3 4\\r\\n\\r\\n1'"
+  },
+  {
+    "name": "rbsm_S1.txt",
+    "status": "downloaded",
+    "bytes": 128,
+    "prefix": "b'5 5\\r\\n\\r\\n2'"
+  },
+  {
+    "name": "rbsm_S2.txt",
+    "status": "downloaded",
+    "bytes": 140,
+    "prefix": "b'5 5\\r\\n\\r\\n8'"
+  },
+  {
+    "name": "rbsm_S3.txt",
+    "status": "downloaded",
+    "bytes": 648,
+    "prefix": "b'11 12\\r\\n\\r'"
+  },
+  {
+    "name": "rbsm_S4.txt",
+    "status": "downloaded",
+    "bytes": 508,
+    "prefix": "b'11 12\\r\\n1'"
+  },
+  {
+    "name": "rbsm_S5.txt",
+    "status": "downloaded",
+    "bytes": 584,
+    "prefix": "b'11 12\\r\\n\\r'"
+  },
+  {
+    "name": "E11_csm.pdf",
+    "status": "downloaded",
+    "bytes": 450757,
+    "prefix": "b'%PDF-1.4'"
+  },
+  {
+    "name": "E12_csm_data.pdf",
+    "status": "downloaded",
+    "bytes": 347636,
+    "prefix": "b'%PDF-1.7'"
+  },
+  {
+    "name": "E13_csm_results.pdf",
+    "status": "downloaded",
+    "bytes": 339570,
+    "prefix": "b'%PDF-1.7'"
+  },
+  {
+    "name": "E14_csm_runtime.pdf",
+    "status": "downloaded",
+    "bytes": 127612,
+    "prefix": "b'%PDF-1.7'"
+  },
+  {
+    "name": "E15_mrm_author.html",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "E16_ivam_author.html",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "E17_capacity2024.pdf",
+    "status": "downloaded",
+    "bytes": 861713,
+    "prefix": "b'%PDF-1.5'"
+  }
+]

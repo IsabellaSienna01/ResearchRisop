@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem
+							| Engineering, Technology & Applied Science Research
+			</title>
+
+	
+<link rel="icon" href="https://etasr.com/public/journals/1/favicon_en_US.png" />
+<meta name="generator" content="Open Journal Systems 3.3.0.22" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Rihan Farih Bunyamin"/>
+<meta name="DC.Creator.PersonalName" content="Bilqis Amaliah"/>
+<meta name="DC.Creator.PersonalName" content="Ahmad Saikhu"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2026-04-04"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2025-11-24"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2026-04-04"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2026-04-04"/>
+<meta name="DC.Description" xml:lang="en" content="The Transportation Problem (TP) allocates shipments from multiple supply points to demand points at minimum cost. Solving the TP begins with an Initial Basic Feasible Solution (IBFS), which affects the Total Cost (TC). Widely used IBFS heuristics, such as Vogel&#039;s Approximation Method (VAM), Juman–Hoque Method (JHM), Total Opportunity Cost Matrix–Minimal Total (TOCM-MT), Bilqis–Chastine–Erma (BCE), and the Supply Selection Method (SSM), cannot always deliver a low-cost starting solution. This study proposes the Cost-Supply Method (CSM). The key innovation of CSM is the formulation of the Cost-Supply (CS) variable. Unlike earlier approaches that treat cost and supply separately, CSM combines them to identify &quot;high-impact&quot; rows. Across 42 balanced test cases, CSM attained the highest accuracy (78.57%), defined as instances in which the IBFS matches the known optimal, and the lowest mean percentage deviation (0.87%) from the optimal cost. Compared with VAM, accuracy improved from 52.38% to 78.57%, and deviation dropped from 4.21% to 0.87%, indicating that CSM yields lower-cost starting solutions more consistently."/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="16468"/>
+<meta name="DC.Identifier.pageNumber" content="33024-33030"/>
+<meta name="DC.Identifier.DOI" content="10.48084/etasr.16468"/>
+<meta name="DC.Identifier.URI" content="https://etasr.com/index.php/ETASR/article/view/16468"/>
+<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2026 Rihan Farih Bunyamin, Bilqis Amaliah, Ahmad Saikhu"/>
+<meta name="DC.Rights" content="https://creativecommons.org/licenses/by/4.0/"/>
+<meta name="DC.Source" content="Engineering, Technology &amp; Applied Science Research"/>
+<meta name="DC.Source.ISSN" content="1792-8036"/>
+<meta name="DC.Source.Issue" content="2"/>
+<meta name="DC.Source.Volume" content="16"/>
+<meta name="DC.Source.URI" content="https://etasr.com/index.php/ETASR"/>
+<meta name="DC.Subject" xml:lang="en" content="initial basic feasible solution"/>
+<meta name="DC.Subject" xml:lang="en" content="Vogel approximation method"/>
+<meta name="DC.Subject" xml:lang="en" content="optimal solution"/>
+<meta name="DC.Subject" xml:lang="en" content="transportation problem"/>
+<meta name="DC.Title" content="A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content="Articles"/>
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="Engineering, Technology &amp; Applied Science Research"/>
+<meta name="citation_journal_abbrev" content="Eng. Technol. Appl. Sci. Res."/>
+<meta name="citation_issn" content="1792-8036"/> 
+<meta name="citation_author" content="Rihan Farih Bunyamin"/>
+<meta name="citation_author_institution" content="Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"/>
+<meta name="citation_author" content="Bilqis Amaliah"/>
+<meta name="citation_author_institution" content="Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"/>
+<meta name="citation_author" content="Ahmad Saikhu"/>
+<meta name="citation_author_institution" content="Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"/>
+<meta name="citation_title" content="A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2026/04/04"/>
+<meta name="citation_volume" content="16"/>
+<meta name="citation_issue" content="2"/>
+<meta name="citation_firstpage" content="33024"/>
+<meta name="citation_lastpage" content="33030"/>
+<meta name="citation_doi" content="10.48084/etasr.16468"/>
+<meta name="citation_abstract_html_url" content="https://etasr.com/index.php/ETASR/article/view/16468"/>
+<meta name="citation_keywords" xml:lang="en" content="initial basic feasible solution"/>
+<meta name="citation_keywords" xml:lang="en" content="Vogel approximation method"/>
+<meta name="citation_keywords" xml:lang="en" content="optimal solution"/>
+<meta name="citation_keywords" xml:lang="en" content="transportation problem"/>
+<meta name="citation_pdf_url" content="https://etasr.com/index.php/ETASR/article/download/16468/6350"/>
+<meta name="citation_reference" content="H. Garg and R. M. Rizk-Allah, &quot;A novel approach for solving rough multi-objective transportation problem: development and prospects,&quot; Computational and Applied Mathematics, vol. 40, no. 4, May 2021, Art. no. 149."/>
+<meta name="citation_reference" content="L. Sahoo, &quot;A new score function based Fermatean fuzzy transportation problem,&quot; Results in Control and Optimization, vol. 4, Sept. 2021, Art. no. 100040."/>
+<meta name="citation_reference" content="F. L. Hitchcock, &quot;The Distribution of a Product from Several Sources to Numerous Localities,&quot; Journal of Mathematics and Physics, vol. 20, no. 1–4, pp. 224–230, 1941."/>
+<meta name="citation_reference" content="C. A. B. N. Bitundu, J. F. Wounba, C. Bwemba, and S. K. Fondzenyuy, &quot;Designing of An Integrated Port Development Planning Model: Application to The Three Main Cameroonian Ports,&quot; Vokasi Unesa Bulletin of Engineering, Technology and Applied Science, vol. 2, no. 1, pp. 12–35, Mar. 2025."/>
+<meta name="citation_reference" content="M. Sam&#039;an, Y. Dasril, N. B. Bujang, and Farikhin, &quot;Improved total difference method (ITDM): a new approach to solving transportation problem based on modifications of total difference method 1 and integration of total ratio cost matrix,&quot; International Journal of Computing Science and Mathematics, vol. 16, no. 1, 2022."/>
+<meta name="citation_reference" content="J. A. Obari, S. T. A, I. M. A, and A. B. H, &quot;An emission and weight of vehicles-based road traffic congestion pricing system and control with consideration of investment worthiness,&quot; Vokasi Unesa Bulletin of Engineering, Technology and Applied Science, vol. 2, no. 3, pp. 401–411, Aug. 2025."/>
+<meta name="citation_reference" content="E. Hosseini, &quot;Three new methods to find initial basic feasible solution of transportation problems,&quot; Applied Mathematical Sciences, vol. 11, no. 37, pp. 1803–1814, 2017."/>
+<meta name="citation_reference" content="K. Karagul and Y. Sahin, &quot;A novel approximation method to obtain initial basic feasible solution of transportation problem,&quot; Journal of King Saud University - Engineering Sciences, vol. 32, no. 3, pp. 211–218, Mar. 2020."/>
+<meta name="citation_reference" content="M. A. Babu, M. A. Helal, M. S. Hasan, and U. K. Das, &quot;Implied cost method (ICM): an alternative approach to find the feasible solution of transportation problem,&quot; Global Journal of Science Frontier Research-F: Mathematics and Decision Sciences, vol. 14, no. 1, pp. 5–13, 2014."/>
+<meta name="citation_reference" content="H. A. Hussein and M. A. K. Shiker, &quot;A Modification to Vogel&#039;s Approximation Method to Solve Transportation Problems,&quot; Journal of Physics: Conference Series, vol. 1591, no. 1, 2020, Art. no. 012029."/>
+<meta name="citation_reference" content="M. Mathirajan, S. Reddy, and M. V. Rani, &quot;An experimental study of newly proposed initial basic feasible solution methods for a transportation problem,&quot; OPSEARCH, vol. 59, no. 1, pp. 102–145, 2022."/>
+<meta name="citation_reference" content="F. A. Wireko, I. D. K. Mensah, E. N. A. Aborhey, S. A. Appiah, C. Sebil, and J. Ackora-Prah, &quot;The maximum range method for finding initial basic feasible solution for transportation problems,&quot; Results in Control and Optimization, vol. 19, June 2025, Art. no. 100551."/>
+<meta name="citation_reference" content="Ö. Kirca and A. Şatir, &quot;A Heuristic for Obtaining and Initial Solution for the Transportation Problem,&quot; Journal of the Operational Research Society, vol. 41, no. 9, pp. 865–871, 1990."/>
+<meta name="citation_reference" content="A. A. S. Bilkour, Vishal Vincent Henry, and Satakshi, &quot;Initial Basic Feasible Solution for Transportation Problem using TOCM with Zero Point Minimum Method,&quot; International Journal of Intelligent Systems and Applications in Engineering, vol. 12, no. 21s, pp. 3332–3343, 2024."/>
+<meta name="citation_reference" content="R. Murugesan and T. Esakkiammal, &quot;TOCM-VAM method versus asm method in transportation problems,&quot; Advances in Mathematics: Scientific Journal, vol. 9, no. 6, pp. 3549–3566, 2020."/>
+<meta name="citation_reference" content="M. Amreen and V. B, &quot;A New Way For Solving Transportation Issues Based on the Exponential Distribution and the Contraharmonic Mean,&quot; Journal of applied mathematics &amp; informatics, vol. 42, no. 3, pp. 647–661, 2024."/>
+<meta name="citation_reference" content="M. Sam&#039;an and Y. N. Ifriza, &quot;A combination of TDM and KSAM to determine initial feasible solution of transportation problems,&quot; Journal of Soft Computing Exploration, vol. 2, no. 1, pp. 17–24, Mar. 2021."/>
+<meta name="citation_reference" content="B. Amaliah, C. Fatichah, and E. Suryani, &quot;A Supply Selection Method for better Feasible Solution of balanced transportation problem,&quot; Expert Systems with Applications, vol. 203, Oct. 2022, Art. no. 117399."/>
+<meta name="citation_reference" content="Z. A. M. S. Juman and M. A. Hoque, &quot;An efficient heuristic to obtain a better initial feasible solution to the transportation problem,&quot; Applied Soft Computing, vol. 34, pp. 813–826, Sept. 2015."/>
+<meta name="citation_reference" content="Md. A. Babu, M. A. Hoque, and Md. S. Uddin, &quot;A heuristic for obtaining better initial feasible solution to the transportation problem,&quot; OPSEARCH, vol. 57, no. 1, pp. 221–245, 2020."/>
+<meta name="citation_reference" content="R. F. Bunyamin, &quot;CSM Dataset and Detailed Results,&quot; CSM Dataset and Detailed Results, https://rihanfarih.blogspot.com/2025/11/csm-dataset-and-detailed-results.html."/>
+	<link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://etasr.com/index.php/ETASR/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://etasr.com/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/plugins/generic/citations/css/citations.css?v=3.3.0.22" type="text/css" /><link rel="stylesheet" href="https://etasr.com/public/journals/1/styleSheet.css?d=" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						
+ <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="						https://etasr.com/index.php/ETASR/index
+					" class="is_img">
+							<img src="https://etasr.com/public/journals/1/pageHeaderLogoImage_en_US.png" width="486" height="87" alt="Engineering, Technology &amp; Applied Science Research" />
+						</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR">
+					HOME
+				</a>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/about">
+					ABOUT
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/submissions">
+										Submissions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/archiving">
+										Archiving
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/editorialTeam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/privacy">
+										Privacy Statement
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/pfee">
+										Publication Fee
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/Payment">
+										Payment Instructions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/ReviewerRewards">
+										Reviewer Rewards
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/about/contact">
+										Contact
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/policy">
+										Ethics, Terms & Policies
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/faq">
+										Frequently Asked Questions
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/issues">
+					ISSUES
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/issue/current">
+										Current Issue
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/archives">
+										All Issues
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/onlinefirst/view">
+										Online First
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/ds">
+					DATA & STATISTICS
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats">
+										Overall Stats
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats_annual">
+										Annual Stats
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/stats_info">
+										Metrics Information
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15">
+					TEMPLATE
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://etasr.com/index.php/ETASR/troubleshooting">
+										Troubleshooting & Info
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15">
+										Download Template
+									</a>
+								</li>
+																		</ul>
+							</li>
+			</ul>
+
+				
+
+																						<div class="pkp_navigation_search_wrapper">
+									<a href="https://etasr.com/index.php/ETASR/search" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										Search
+									</a>
+								</div>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://etasr.com/index.php/ETASR/user/register">
+					Register
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://etasr.com/index.php/ETASR/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+<div class="page page_article">
+			<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol>
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/index">
+				Home
+			</a>
+			<span class="separator">/</span>
+		</li>
+		<li>
+			<a href="https://etasr.com/index.php/ETASR/issue/archive">
+				Archives
+			</a>
+			<span class="separator">/</span>
+		</li>
+					<li>
+				<a href="https://etasr.com/index.php/ETASR/issue/view/99">
+					Vol. 16 No. 2 (2026): April, 2026
+				</a>
+				<span class="separator">/</span>
+			</li>
+				<li class="current" aria-current="page">
+			<span aria-current="page">
+									Articles
+							</span>
+		</li>
+	</ol>
+</nav>
+	
+		  	 <article class="obj_article_details">
+
+		
+	<h1 class="page_title">
+		A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem
+	</h1>
+
+	
+	<div class="row">
+		<div class="main_entry">
+
+							<section class="item authors">
+					<h2 class="pkp_screen_reader">Authors</h2>
+					<ul class="authors">
+											<li>
+							<span class="name">
+								Rihan Farih Bunyamin
+							</span>
+															<span class="affiliation">
+									Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								Bilqis Amaliah
+							</span>
+															<span class="affiliation">
+									Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								Ahmad Saikhu
+							</span>
+															<span class="affiliation">
+									Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia
+																	</span>
+																				</li>
+										</ul>
+				</section>
+			
+																							     							
+			
+   
+     <div class="item issue_details" style="padding-top:0px;padding-bottom:0px;">
+				<span><a href='https://etasr.com/index.php/ETASR/issue/view/99' style="text-decoration: none;">Volume: 16 | Issue: 2</a> | Pages: 33024-33030 | April 2026 | <a href="https://doi.org/10.48084/etasr.16468">https://doi.org/10.48084/etasr.16468</a>				</span>
+    		</div>
+    		
+    <div class="item abstract article_information">
+        <p>Received: 24 November 2025 | Revised: 18 December 2025 and 7 January 2026 | Accepted: 17 January 2026 | Online: 23 March 2026</p><br>Corresponding author: Bilqis Amaliah
+    </div>
+
+<style>
+.article_information {
+    background: #ededed;
+    padding: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+</style>
+
+
+										<section class="item abstract">
+					<h2 class="label">Abstract</h2>
+					<p>The Transportation Problem (TP) allocates shipments from multiple supply points to demand points at minimum cost. Solving the TP begins with an Initial Basic Feasible Solution (IBFS), which affects the Total Cost (TC). Widely used IBFS heuristics, such as Vogel's Approximation Method (VAM), Juman–Hoque Method (JHM), Total Opportunity Cost Matrix–Minimal Total (TOCM-MT), Bilqis–Chastine–Erma (BCE), and the Supply Selection Method (SSM), cannot always deliver a low-cost starting solution. This study proposes the Cost-Supply Method (CSM). The key innovation of CSM is the formulation of the Cost-Supply (CS) variable. Unlike earlier approaches that treat cost and supply separately, CSM combines them to identify "high-impact" rows. Across 42 balanced test cases, CSM attained the highest accuracy (78.57%), defined as instances in which the IBFS matches the known optimal, and the lowest mean percentage deviation (0.87%) from the optimal cost. Compared with VAM, accuracy improved from 52.38% to 78.57%, and deviation dropped from 4.21% to 0.87%, indicating that CSM yields lower-cost starting solutions more consistently.</p>
+				</section>
+			   
+      						<section class="item keywords">
+				<h2 class="label">
+										Keywords:
+				</h2>
+				<span class="value">
+											initial basic feasible solution, 											Vogel approximation method, 											optimal solution, 											transportation problem									</span>
+			</section>
+			
+			
+
+																																	
+										<section class="item references">
+					<h2 class="label">
+						References
+					</h2>
+					<div class="value">
+																					<p>H. Garg and R. M. Rizk-Allah, "A novel approach for solving rough multi-objective transportation problem: development and prospects," Computational and Applied Mathematics, vol. 40, no. 4, May 2021, Art. no. 149.  
+DOI: <a href="https://doi.org/10.1007/s40314-021-01507-5">https://doi.org/10.1007/s40314-021-01507-5</a>
+</p>
+															<p>L. Sahoo, "A new score function based Fermatean fuzzy transportation problem," Results in Control and Optimization, vol. 4, Sept. 2021, Art. no. 100040.  
+DOI: <a href="https://doi.org/10.1016/j.rico.2021.100040">https://doi.org/10.1016/j.rico.2021.100040</a>
+</p>
+															<p>F. L. Hitchcock, "The Distribution of a Product from Several Sources to Numerous Localities," Journal of Mathematics and Physics, vol. 20, no. 1–4, pp. 224–230, 1941.  
+DOI: <a href="https://doi.org/10.1002/sapm1941201224">https://doi.org/10.1002/sapm1941201224</a>
+</p>
+															<p>C. A. B. N. Bitundu, J. F. Wounba, C. Bwemba, and S. K. Fondzenyuy, "Designing of An Integrated Port Development Planning Model: Application to The Three Main Cameroonian Ports," Vokasi Unesa Bulletin of Engineering, Technology and Applied Science, vol. 2, no. 1, pp. 12–35, Mar. 2025.  
+DOI: <a href="https://doi.org/10.26740/vubeta.v2i1.35876">https://doi.org/10.26740/vubeta.v2i1.35876</a>
+</p>
+															<p>M. Sam'an, Y. Dasril, N. B. Bujang, and Farikhin, "Improved total difference method (ITDM): a new approach to solving transportation problem based on modifications of total difference method 1 and integration of total ratio cost matrix," International Journal of Computing Science and Mathematics, vol. 16, no. 1, 2022.  
+DOI: <a href="https://doi.org/10.1504/IJCSM.2022.126767">https://doi.org/10.1504/IJCSM.2022.126767</a>
+</p>
+															<p>J. A. Obari, S. T. A, I. M. A, and A. B. H, "An emission and weight of vehicles-based road traffic congestion pricing system and control with consideration of investment worthiness," Vokasi Unesa Bulletin of Engineering, Technology and Applied Science, vol. 2, no. 3, pp. 401–411, Aug. 2025.  
+DOI: <a href="https://doi.org/10.26740/vubeta.v2i3.38528">https://doi.org/10.26740/vubeta.v2i3.38528</a>
+</p>
+															<p>E. Hosseini, "Three new methods to find initial basic feasible solution of transportation problems," Applied Mathematical Sciences, vol. 11, no. 37, pp. 1803–1814, 2017.  
+DOI: <a href="https://doi.org/10.12988/ams.2017.75178">https://doi.org/10.12988/ams.2017.75178</a>
+</p>
+															<p>K. Karagul and Y. Sahin, "A novel approximation method to obtain initial basic feasible solution of transportation problem," Journal of King Saud University - Engineering Sciences, vol. 32, no. 3, pp. 211–218, Mar. 2020.  
+DOI: <a href="https://doi.org/10.1016/j.jksues.2019.03.003">https://doi.org/10.1016/j.jksues.2019.03.003</a>
+</p>
+															<p>M. A. Babu, M. A. Helal, M. S. Hasan, and U. K. Das, "Implied cost method (ICM): an alternative approach to find the feasible solution of transportation problem," Global Journal of Science Frontier Research-F: Mathematics and Decision Sciences, vol. 14, no. 1, pp. 5–13, 2014. </p>
+															<p>H. A. Hussein and M. A. K. Shiker, "A Modification to Vogel's Approximation Method to Solve Transportation Problems," Journal of Physics: Conference Series, vol. 1591, no. 1, 2020, Art. no. 012029.  
+DOI: <a href="https://doi.org/10.1088/1742-6596/1591/1/012029">https://doi.org/10.1088/1742-6596/1591/1/012029</a>
+</p>
+															<p>M. Mathirajan, S. Reddy, and M. V. Rani, "An experimental study of newly proposed initial basic feasible solution methods for a transportation problem," OPSEARCH, vol. 59, no. 1, pp. 102–145, 2022.  
+DOI: <a href="https://doi.org/10.1007/s12597-021-00533-5">https://doi.org/10.1007/s12597-021-00533-5</a>
+</p>
+															<p>F. A. Wireko, I. D. K. Mensah, E. N. A. Aborhey, S. A. Appiah, C. Sebil, and J. Ackora-Prah, "The maximum range method for finding initial basic feasible solution for transportation problems," Results in Control and Optimization, vol. 19, June 2025, Art. no. 100551.  
+DOI: <a href="https://doi.org/10.1016/j.rico.2025.100551">https://doi.org/10.1016/j.rico.2025.100551</a>
+</p>
+															<p>Ö. Kirca and A. Şatir, "A Heuristic for Obtaining and Initial Solution for the Transportation Problem," Journal of the Operational Research Society, vol. 41, no. 9, pp. 865–871, 1990.  
+DOI: <a href="https://doi.org/10.1038/sj/jors/0410909">https://doi.org/10.1038/sj/jors/0410909</a>
+</p>
+															<p>A. A. S. Bilkour, Vishal Vincent Henry, and Satakshi, "Initial Basic Feasible Solution for Transportation Problem using TOCM with Zero Point Minimum Method," International Journal of Intelligent Systems and Applications in Engineering, vol. 12, no. 21s, pp. 3332–3343, 2024. </p>
+															<p>R. Murugesan and T. Esakkiammal, "TOCM-VAM method versus asm method in transportation problems," Advances in Mathematics: Scientific Journal, vol. 9, no. 6, pp. 3549–3566, 2020.  
+DOI: <a href="https://doi.org/10.37418/amsj.9.6.34">https://doi.org/10.37418/amsj.9.6.34</a>
+</p>
+															<p>M. Amreen and V. B, "A New Way For Solving Transportation Issues Based on the Exponential Distribution and the Contraharmonic Mean," Journal of applied mathematics &amp; informatics, vol. 42, no. 3, pp. 647–661, 2024. </p>
+															<p>M. Sam'an and Y. N. Ifriza, "A combination of TDM and KSAM to determine initial feasible solution of transportation problems," Journal of Soft Computing Exploration, vol. 2, no. 1, pp. 17–24, Mar. 2021.  
+DOI: <a href="https://doi.org/10.52465/joscex.v2i1.16">https://doi.org/10.52465/joscex.v2i1.16</a>
+</p>
+															<p>B. Amaliah, C. Fatichah, and E. Suryani, "A Supply Selection Method for better Feasible Solution of balanced transportation problem," Expert Systems with Applications, vol. 203, Oct. 2022, Art. no. 117399.  
+DOI: <a href="https://doi.org/10.1016/j.eswa.2022.117399">https://doi.org/10.1016/j.eswa.2022.117399</a>
+</p>
+															<p>Z. A. M. S. Juman and M. A. Hoque, "An efficient heuristic to obtain a better initial feasible solution to the transportation problem," Applied Soft Computing, vol. 34, pp. 813–826, Sept. 2015.  
+DOI: <a href="https://doi.org/10.1016/j.asoc.2015.05.009">https://doi.org/10.1016/j.asoc.2015.05.009</a>
+</p>
+															<p>Md. A. Babu, M. A. Hoque, and Md. S. Uddin, "A heuristic for obtaining better initial feasible solution to the transportation problem," OPSEARCH, vol. 57, no. 1, pp. 221–245, 2020.  
+DOI: <a href="https://doi.org/10.1007/s12597-019-00429-5">https://doi.org/10.1007/s12597-019-00429-5</a>
+</p>
+															<p>R. F. Bunyamin, "CSM Dataset and Detailed Results," CSM Dataset and Detailed Results, <a href="https://rihanfarih.blogspot.com/2025/11/csm-dataset-and-detailed-results.html">https://rihanfarih.blogspot.com/2025/11/csm-dataset-and-detailed-results.html</a>. </p>
+																		</div>
+				</section>
+			
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+						
+										<div class="item galleys">
+					<h2 class="pkp_screen_reader">
+						Downloads
+					</h2>
+					<ul class="value galleys_links">
+													<li>
+								
+	
+							
+
+<a class="obj_galley_link pdf" href="https://etasr.com/index.php/ETASR/article/view/16468/6350">
+
+		
+	PDF
+
+	</a>
+							</li>
+											</ul>
+				</div>
+						
+  										<div class="item citation">
+					<section class="sub_item citation_display">
+						<h2 class="label">
+							How to Cite
+						</h2>
+						<div class="value">
+							<div id="citationOutput" role="region" aria-live="polite">
+								<div class="csl-bib-body">
+  <div class="csl-entry"><div class="csl-left-margin">[1]</div><div class="csl-right-inline">R. F. Bunyamin, B. Amaliah, and A. Saikhu, “A Cost Supply Method for Finding an Initial Basic Feasible Solution of the Transportation Problem”, <i>Eng. Technol. Appl. Sci. Res.</i>, vol. 16, no. 2, pp. 33024–33030, Apr. 2026.</div></div>
+</div>
+							</div>
+							<div class="citation_formats">
+								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+									More Citation Formats
+								</button>
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+									<ul class="citation_formats_styles">
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/acm-sig-proceedings?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/acm-sig-proceedings?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													ACM
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/acs-nano?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/acs-nano?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													ACS
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/apa?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/apa?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													APA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													ABNT
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/chicago-author-date?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/chicago-author-date?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													Chicago
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/harvard-cite-them-right?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/harvard-cite-them-right?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													Harvard
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/ieee?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/ieee?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													IEEE
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/modern-language-association?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/modern-language-association?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													MLA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													Turabian
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/vancouver?submissionId=16468&amp;publicationId=15709"
+													data-load-citation
+													data-json-href="https://etasr.com/index.php/ETASR/citationstylelanguage/get/vancouver?submissionId=16468&amp;publicationId=15709&amp;return=json"
+												>
+													Vancouver
+												</a>
+											</li>
+																			</ul>
+																			<div class="label">
+											Download Citation
+										</div>
+										<ul class="citation_formats_styles">
+																							<li>
+													<a href="https://etasr.com/index.php/ETASR/citationstylelanguage/download/ris?submissionId=16468&amp;publicationId=15709">
+														<span class="fa fa-download"></span>
+														Endnote/Zotero/Mendeley (RIS)
+													</a>
+												</li>
+																							<li>
+													<a href="https://etasr.com/index.php/ETASR/citationstylelanguage/download/bibtex?submissionId=16468&amp;publicationId=15709">
+														<span class="fa fa-download"></span>
+														BibTeX
+													</a>
+												</li>
+																					</ul>
+																	</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			
+			   <div class="item galleys">
+   
+															
+   <div class="item citation">			
+       <h3 class="label">Metrics</h3>
+       Abstract Views: <span class="glyphicon glyphicon-eye-open"></span> 526
+       <br>
+                            PDF Downloads: <span class="glyphicon glyphicon-download-alt"></span> 448
+                     <br>
+       <br>
+       <a href="http://etasr.com/index.php/ETASR/stats_info">Metrics Information</a>
+   </div>
+
+										<div class="item copyright">
+					<h2 class="label">
+						License
+					</h2>
+																										<p>Copyright (c) 2026 Rihan Farih Bunyamin, Bilqis Amaliah, Ahmad Saikhu</p>
+														<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by/4.0/88x31.png" /></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+																<p style="text-align: justify;">Authors who publish with this journal agree to the following terms:</p>
+<p style="text-align: justify;">- Authors retain the copyright and grant the journal the right of first publication with the work simultaneously licensed under a <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></strong> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</p>
+<p style="text-align: justify;">- Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</p>
+<p style="text-align: justify;">- Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) after its publication in ETASR with an acknowledgement of its initial publication in this journal.</p>
+				</div>
+						
+			                        <div class="item dimension-badge">
+                <span class="__dimensions_badge_embed__" data-doi="10.48084/etasr.16468"></span>
+            </div>
+            <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+                       
+			<div class="item citations-container" data-image-path="https://etasr.com/plugins/generic/citations/images/" data-citations-url="https://etasr.com/index.php/ETASR/citations/get?citationsId=10.48084%2Fetasr.16468&amp;citationsShowList=1&amp;citationsProvider=crossref"
+     data-citations-provider="crossref" data-citations-total="1" data-citations-list="1"
+     data-show-google="1" data-show-pmc="0">
+	<div id="citations-loader"></div>
+	<div class="citations-count">
+		<div class="citations-count-crossref">
+			<img class="img-fluid" src="https://etasr.com/plugins/generic/citations/images/crossref.png" alt="Crossref"/>
+			<div class="badge_total"></div>
+		</div>
+		<div class="citations-count-scopus">
+			<img src="https://etasr.com/plugins/generic/citations/images/scopus.png" alt="Scopus"/>
+			<br/>
+			<span class="badge_total"></span>
+		</div>
+		<div class="citations-count-google">
+			<a href="https://scholar.google.com/scholar?q=10.48084/etasr.16468" target="_blank" rel="noreferrer">
+				<img src="https://etasr.com/plugins/generic/citations/images/scholar.png" alt="Google Scholar"/>
+			</a>
+		</div>
+		<div class="citations-count-pmc">
+			<a href="http://europepmc.org/search?scope=fulltext&query=(REF:10.48084/etasr.16468)" target="_blank" rel="noreferrer">
+				<img src="https://etasr.com/plugins/generic/citations/images/pmc.png" alt="Europe PMC"/>
+				<br/>
+				<span class="badge_total"></span>
+			</a>
+		</div>
+	</div>
+	<div class="citations-list"></div>
+    </div>
+
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+
+</article>
+
+	
+
+</div><!-- .page -->
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+				<div class="pkp_block block_custom" id="customblock-template">
+	<h2 class="title pkp_screen_reader">template</h2>
+	<div class="content">
+		<p><span class="title"><img src="/public/site/images/etasr_editor/ETASR_COVER.png"><br></span></p>
+<p><a href="https://etasr.com/index.php/ETASR/onlinefirst/view/index"><button style="height: 25px; width: 200px; color: #007ab2;">Online First (Upcoming)</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/archives"><button style="height: 25px; width: 200px; color: #007ab2;">All Issues (2011-Present)</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/faq"><button style="height: 25px; width: 200px; color: #007ab2;">Frequently Asked Questions</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/15"><button style="height: 25px; width: 200px; color: #007ab2;">Download the Template</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/about/submissions"><button style="height: 25px; width: 200px; color: #007ab2;">Make a submission</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/stats"><button style="height: 25px; width: 200px; color: #007ab2;">Data &amp; Statistics</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/pfee"><button style="height: 25px; width: 200px; color: #007ab2;">Article Publication Fees</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/policy"><button style="height: 25px; width: 200px; color: #007ab2;">Terms &amp; Policies</button></a></p>
+<p><a href="https://etasr.com/index.php/ETASR/about/contact"><button style="height: 25px; width: 200px; color: #007ab2;">Contact</button></a></p>
+<p><span class="title">Journal Abbreviation<br></span>Eng. Technol. Appl. Sci. Res.</p>
+<p><span class="title">eISSN<br></span>1792-8036</p>
+<p><span class="title">pISSN<br></span>2241-4487</p>
+<p><span class="title">Crossref Membership<br></span>DOI prefix: 10.48084<br>Direct DOI link:<br><a href="https://doi.org/10.48084/etasr">https://doi.org/10.48084/etasr</a></p>
+<p style="text-align: justify;"><span class="title">Citation Styling<br></span>Available in the official Zotero Style Repository (add it from inside Zotero or <a href="https://www.zotero.org/styles/engineering-technology-and-applied-science-research">download the csl file</a>)&nbsp;</p>
+<p style="text-align: justify;"><span class="title">RIS/BIB Files<br></span>Download links available in each article's abstract page.</p>
+<p><span class="title">Additional Information<br></span><a href="https://etasr.com/index.php/ETASR/information/readers">For Readers</a><br><a href="https://etasr.com/index.php/ETASR/information/authors">For Authors</a><br><a href="https://etasr.com/index.php/ETASR/information/librarians">For Librarians</a></p>
+<p>[ETASR cover artwork created by our late friend, the great N. Tsagkarakis. <a href="https://etasr.com/index.php/ETASR/libraryFiles/downloadPublic/22">Download HR here</a>]</p>
+<p>&nbsp;</p>
+<p><a href="https://pubeta.eu/"><img src="https://etasr.com/public/site/images/etasr_editor/pubeta.png" alt="PUBETA" width="605" height="146"></a></p>
+	</div>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<h3 style="text-align: center;">Got questions? <a href="https://etasr.com/index.php/ETASR/faq">Read our FAQ page</a>.</h3>
+			</div>
+		
+		<div style="padding:30px" role="complementary">Open Journal Systems Hosting and Support by: <a href="https://openjournalsystems.com/ojs-hosting">OpenJournalSystems.com</a></div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="https://etasr.com/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/popper/popper.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/util.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/themes/default/js/main.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/generic/citationStyleLanguage/js/articleCitation.js?v=3.3.0.22" type="text/javascript"></script><script src="https://etasr.com/plugins/generic/citations/js/citations.js?v=3.3.0.22" type="text/javascript"></script>
+
+
+</body>
+</html>

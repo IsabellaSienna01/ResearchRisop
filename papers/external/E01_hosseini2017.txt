@@ -1,0 +1,583 @@
+       Applied Mathematical Sciences, Vol. 11, 2017, no. 37, 1803 - 1814
+                     HIKARI Ltd, www.m-hikari.com
+                  https://doi.org/10.12988/ams.2017.75178
+
+
+
+
+  Three New Methods to Find Initial Basic Feasible
+
+             Solution of Transportation Problems
+
+                                      Eghbal Hosseini
+
+                             Department of Mathematics
+                 University of Raparin, Ranya, Kurdistan Region Iraq
+
+  Copyright © 2017 Eghbal Hosseini. This article is distributed under the Creative Commons
+Attribution License, which permits unrestricted use, distribution, and reproduction in any medium,
+provided the original work is properly cited.
+
+                                           Abstract
+
+The transportation problems have attracted many researchers in optimization
+because of their applications in several areas of science and real life. Therefore,
+solving of these problems especially finding initial basic feasible solution for them
+would be significant. Although there are some heuristic approaches to find initial
+solution, but there is no any efficient algorithm with its Matlab code to solve
+random large size transportation problems. In this paper, an efficient algorithm in
+three cases with its Matlab code is proposed which even is better than the best
+algorithm in references by solving some test problems and also our generated large
+size problems. The algorithm is forcefully efficient for problems with large size and
+it has sufficiently suitable results, at least in on case of the algorithm, for test
+problems in the references according to computational results.
+
+Keywords: Transportation problems; heuristic approaches; random large size;
+initial basic feasible solution
+
+1 Introduction
+The transportation problem is one of the most important problem in different
+science. This problem transports some products from sources to destinations with
+minimum cost of transportation and satisfaction of the demand and the supply
+constraints. One of the significant form of linear programming problem is
+transportation which can be expanded to inventory, assignment, traffic and so on.
+For analyzing and formulation of some model, transportation problems are required
+[1-3]. Therefore solving transportation problem, finding minimal total cost, would
+be remarkable [4-8]. Proposing optimal solution needs to start from a feasible solution
+1804                                                                Eghbal Hosseini
+
+
+as an initial basic feasible (IBFS) solution. Therefore initial feasible solution is
+basic solution which affects to optimal solution for the problem. In other words,
+finding IBFS would be significant. Although several meta-heuristic approaches
+have been proposed to solve optimization problems [9-12], but there just few
+methods in references which can find IBFS for the problem [13-15]. These methods
+are as follows: Northwest Corner Method (NCM), this method begins from the
+northeast cell in the transportation table. The algorithm allocates the possible
+maximum amount to the cell and regulates supply and demand quantities. Then
+each supply or demand which attains zero, correspond row or column will exit from
+the rest of calculations. This process will be continued until just a row or column is
+left from the table. During all these calculations the northwest cell of the table,
+without regarding removed rows and columns, will be selected each time. Minimum
+Cost Method (MCM), in this method, a cell which has lower cost is selected sooner
+than a cell with higher cost. In fact, the appropriation starts from the cell which
+includes the least cost of the table. The Minimum Cost Method finds IBFS better
+than NCM because the algorithm regards costs during the allocation unlike NCM.
+All process in NCM will be repeated here just with this difference that always the
+cell which includes minimum cost is selected instead the northwest cell. Minimum
+Row Method, Vogel’s Approximation Method (VAM), this method has the best
+results according to literature. Summary of VAM steps are as follows: at the first,
+the difference between two least costs is calculated for each row and column as a
+penalty. Then a row or column which has the biggest penalty will be chosen. The
+possible maximum amount is allocated to the cell with the minimum cost in the
+chosen row or column. Each row which has no supply or the column which the
+demand has been totally satisfied for that will be removed from the rest of
+calculations. The difference between two least costs will be calculated for the
+remaining rows and columns and the process is continued to find an initial basic
+feasible solution. Rahul Method, this method has high computing in each iterations.
+Rahul Method chooses the cell with the largest negative value of 𝑤𝑖𝑗 in each
+iteration which𝑤𝑖𝑗 = 𝑐𝑖𝑗 − 𝑢𝑖 − 𝑣𝑗 . 𝑢𝑖 is the value of the biggest cost in row i and
+𝑣𝑗 is the value of the biggest cost in column j. Removing of rows and columns and
+also the amount allocated are similar to the previous methods.
+
+In generally, the best initial basic feasible solution is found by Vogel’s
+Approximation Method and the worst IBFS is generated by Northwest Corner
+Method. Meanwhile the least number of calculations is related to Northwest Corner
+Method. In all methods, the supply and demand must be equal. So if supply is more
+than demand, then a dummy column will be added in the table of transportation.
+Costs of cells in this dummy column should be zero and its demand is equal to the
+difference between supply and demand at the first time. As well as, if demand is
+more than supply, then a dummy row will be added in the table of transportation.
+Costs of cells in the row is zero and its supply is equal to the difference between
+supply and demand at the first time.
+Three new methods to find initial basic feasible solution                       1805
+
+
+However there are heuristic approaches to find initial feasible solution, but there is
+no any attempt for proposing general code of algorithms in Matlab for example. In
+this paper, the authors has tried to propose three new algorithms to find initial
+feasible solution and also to propose Matlab codes of Vogel method and the best
+proposed algorithm in the paper. Therefore many more problems can be solved in
+the future by these codes.
+Majority of previous proposed algorithms have been used to solve small or specific
+problems. In fact, large size and random problems never have unresolved in
+literature. In this paper, Matlab codes have been proposed to generate different
+problems in large or small sizes and comparison of the some algorithms and our
+algorithm has been presented by these generated problems.
+The best results are related to Vogel algorithm in references therefore for all
+examples, proposed algorithms have been compared with Vogel algorithm and one
+of our algorithm is much better than Vogel almost for all examples. Briefly this
+paper has three novelty: three new algorithm to find initial solution of
+transportation, Matlab codes for proposed algorithms and Vogel approximation and
+Matlab codes to generate transportation problems in different sizes.
+
+2 Total Differences Method 1(TDM1)
+  In this section three new algorithms will be discussed in details and step by step.
+TDM1, TDM2 and TDSM have been constructed from scrutiny of relationship of
+costs in rows and columns. Therefore in this section the main concepts of the
+proposed algorithms and their steps to solve transportation problems are discussed.
+
+2.1 Main Step of TDM1
+
+Vogel algorithm uses penalties for all rows and columns, TDM1 calculates
+penalties only for rows. The algorithm uses following formula to calculate these
+penalties:
+
+𝛼𝑖 = ∑(𝑐𝑖𝑗 − 𝑐𝑟 )                                                                 (1)
+       𝑗
+
+
+Which 𝑐𝑟 = min{𝑐𝑖𝑗 & 𝑖 𝑖𝑠 𝑡ℎ𝑒 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑡ℎ𝑒 𝑟𝑜𝑤} . In fact all differences
+                𝑗
+between each cost and minimum cost will be determined. In Vogel algorithm, two
+least elements are important for each row and column. But all costs affect in a
+feasible solution of transportation problem, so TDM1 uses all costs for each row
+instead. To calculate penalties of each row by TDM1 just a simple code in Matlab
+is required. The pseudo code of that is proposed in Table 1.
+1806                                                              Eghbal Hosseini
+
+
+                 Table 1 - Pseudo code of penalties of rows by TDM1
+
+  begin
+       Number of rows is m
+       Number of column is n
+    for( i=1 to m)
+       Sort vector of costs in ith row (c(i))
+       sum=0;
+       for( j=2 to n)
+          sum=sum+(c(1,j)-c(1,,1));
+       end
+  end
+  end
+
+
+2.2 Main Step of TDSM
+The method of least squares is an appropriate method to define error, TDSM uses
+this idea to determine total differences between minimum cost and the other. The
+algorithm uses following formula to calculate these penalties:
+
+                                                𝜃
+                       𝛼𝑖 = ∑(𝑐𝑖𝑗 − 𝑐𝑟 )                                       (2)
+                               𝑗
+
+Which 𝑐𝑟 = min{𝑐𝑖𝑗 & 𝑖 𝑖𝑠 𝑡ℎ𝑒 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑡ℎ𝑒 𝑟𝑜𝑤} 𝑎𝑛𝑑 1 < 𝜃 ≤ 2 . In fact,
+                   𝑗
+using 𝜃 > 1 causes to clarify the differences between costs and the least cost. The
+pseudo code of this step in MATLAB has been shown in Table 2.
+
+                 Table 2 - Pseudo code of penalties of rows by TDSM
+
+  begin
+       Number of rows is m
+       Number of column is
+      1<𝜃≤2
+    for( i=1 to m)
+       Sort vector of costs in ith row (c(i))
+       sum=0;
+       for( j=2 to n)
+          sum=sum+(c(1,j)-c(1,,1)).^ 𝜃;
+       end
+  end
+  end
+
+
+2.3 Main Step of TDM2
+TDM1 calculates penalties only for rows, TDM2 uses (1) for all rows and columns.
+By calculating penalties for rows and columns, there will be more chooses and so
+maybe better feasible solution will be gained. All steps of TDM1 to propose an
+initial feasible solution are described as follows:
+         1. If the total supply and demand aren’t equal, make them equal by adding
+             a dummy row or a dummy column.
+Three new methods to find initial basic feasible solution                     1807
+
+
+       2. For each row of the transportation table, find the total differences
+          between the least and each other costs. In fact the algorithm corresponds
+          𝛼𝑖 for ith row according to the following formula:
+                                   𝛼𝑖 = ∑(𝑐𝑖𝑗 − 𝑐𝑟 )
+                                         𝑗
+
+           Which 𝑐𝑟 = min{𝑐𝑖𝑗 & 𝑖 𝑖𝑠 𝑡ℎ𝑒 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑡ℎ𝑒 𝑟𝑜𝑤} .
+                          𝑗
+
+       3. Choice a row with the greatest total differences.
+       4. The highest possible amount will be assigned to the minimum cost cell
+          of the chosen row to satisfy demand.
+       5. A row or a column which has no supply quantity available or the demand
+          is completely satisfied will be removed.
+       6. Using (1), total differences of the costs in rows without regarding the
+          removed row/rows and column/columns will be calculated.
+       7. While an initial feasible solution hasn’t been found go back to the step
+          3.
+
+All above Steps in two other algorithms are same except Step 2. This Step for
+TDSM and TDM2 algorithms have been proposed in section 3.2 and 3.3
+respectively.
+
+2.5 Feasibility and efficiency
+Proposed algorithm in three cases has been run for several times for solving
+different sizes of transportation problems. The algorithm, in all three cases, is
+feasible for small size of the problems based on Examples 1-3. Also the algorithm
+is completely feasible for moderate size of the problems but it is efficient just by
+TDM1 according to Examples 4-9. Calculations of TDM1 is less in comparison
+with other methods, because only rows are assigned by penalties. Also in small
+problems TDM1 has less choices than Vogel algorithm which allocates all of rows
+and columns by penalties. So the algorithm should be more efficient for larger size
+of problems. This claim has been confirmed according to the computational results
+in Examples 10 -15.
+
+3 Computational results
+Example 1
+Consider the following transportation problem:
+        D1     D2     D3     D4     Supply
+O1      20     22     17     4      120
+O2      24     37     9      7      70
+O3      32     37     20     15     50
+Demand 60      40     30     110 240
+Step 1: Total supply and demand are equal, therefore dummy row or column aren’t
+need.
+1808                                                               Eghbal Hosseini
+
+
+Step 2: Using (1), the total differences between the minimum cost and each other
+costs for each row is calculated.
+    Total Differences
+O1      47
+O2      49
+O3      44
+Step 3: Second row will be selected as the greatest total differences.
+Step 4: The minimum cost cell of the second row is 7 and the highest possible
+amount for that is 70. Table of transportation problem will be changed to the
+following Table.
+        D1      D2     D3      D4     Supply
+O1      20      22     17      4      120
+O2      24      37     9       7      70      0
+O3      32      37     20      15     50
+Demand 60       40     30      40     240
+Step 5: According to the recent Table the second row has no supply quantity, so it
+will be removed from the rest process of the algorithm.
+Step 6: Using (1), total differences of the costs in rows without regarding the
+removed second row is calculated.
+    Total Differences
+O1      47
+O2      ---
+O3      44
+Step 7: By going back to the step 3 the first row is selected. (Iteration 2):
+Step 4: The minimum cost cell of the first row is 4 and the highest possible amount
+for that is 40.
+        D1      D2     D3      D4 Supply
+O1      20      22     17      4      40      80
+O2      24      37     9       7      70      0
+O3      32      37     20      15     50
+Demand 60       40     30      0      240
+Step 5: The fourth column is removed because its demand has been completely
+satisfied.
+Step 6: Using (1), total differences of the costs in rows without regarding the
+removed second row and fourth column is calculated.
+    Total Differences
+O1      5
+O2      ---
+O3      29
+Step 7: By going back to the step 3 the third row is selected. (Iteration 3):
+Step 4: The minimum cost cell of the third row is 20 and the highest possible amount
+for that is 30
+        D1      D2     D3      D4 Supply
+O1      20      22     17      4      40      80
+O2      24      37     9       7      70      0
+Three new methods to find initial basic feasible solution                   1809
+
+
+O3     32      37     20      30      15    20
+Demand 60      40     0       0       240
+Step 5: The third column is removed too.
+Step 6: Using (1),
+   Total Differences
+O1      2
+O2      ---
+O3      5
+Finally, the Table which proposes a feasible solution is obtained: D1 D2
+        D3     D4     Supply
+O1      20     40     22      40      17    4       40      0
+O2      24     37     9       7       70    0
+O3      32     20     37      20      30    15      0
+Demand 0       0      0       0       240
+Cost of proposed feasible solution is: 𝐶𝑜𝑠𝑡 = 20 × 40 + 22 × 40 + 4 × 40 + 7 ×
+70 + 32 × 20 + 20 × 30 = 3570
+
+Example 2
+Consider the following transportation problem:
+       D1      D2    D3      D4 Supply
+O1     3       5     7       6      50
+O2     2       5     8       2      75
+O3     3       6     9       2      25
+Demand 20      20    50      60     150
+Using the proposed algorithm 1, feasible solution is found according to the
+following table.
+       D1      D2    D3      D4     Supply
+O1     3       5     20      7      30      6  50
+O2     2       20    5       8      20      2  35     75
+O3     3       6     9       2      25      25
+Demand 20      20    50      60     150
+Correspond cost of the Table is: 𝐶𝑜𝑠𝑡 = 5 × 20 + 7 × 30 + 2 × 20 + 8 × 20 +
+2 × 35 + 2 × 25 = 630
+
+Example 3
+Consider the following transportation problem:
+       D1      D2     D3      D4     Supply
+O1     19      30     50      10     7
+O2     70      30     40      60     9
+O3     40      8      70      20     18
+Demand 5       8      7       14     34
+A feasible solution will be found using the proposed algorithm 1 according to the
+following table.
+       D1      D2     D3      D4     Supply
+O1     19      5      30      50     10     2      7
+1810                                                               Eghbal Hosseini
+
+
+O2      70       30     40      7    60     2    9
+O3      40       8      8       70   20     10   18
+Demand 5         8      7       14   34
+Cost of the solution is: 𝐶𝑜𝑠𝑡 = 19 × 5 + 10 × 2 + 40 × 7 + 60 × 2 + 8 × 8 +
+20 × 10 = 779
+A comparison among the first and second algorithms in this paper and other
+methods has been shown in Table 5 for Examples 1-3. Algorithm of Vogel has the
+best results in references, both TDM 1 and TDSM have better solution than Vogel's
+solution in Example 2. Also TDM 1 works same as Vogel algorithm for Example
+3. Improvement amount by TDM 1 and TDSM have been shown in Tables 6 and 7.
+
+         Table 3 – Comparison among TDM1, TDSM and other algorithms
+
+                North-       Min-Cost       Vogel        TDM 1         TDSM
+                West
+ Example 1      3680         3670           3520         3570          3710
+ Example 2      670          650            650          630           610
+ Example 3      1015         814            779          779           781
+
+
+           Table 4 – Improvement amount of Vogel algorithm by TDM1
+
+                         Vogel           TDM 1                Improvement
+          Example 1      3520            3570                 -0.01%
+          Example 2      650             630                  0.3%
+          Example 3      779             779                  0%
+
+
+     Table 5 – Improvement amount of North-West and Min-Cost algorithms by
+                                    TDSM
+
+               North-     Min-       TDSM           Improvement1 Improvement2
+               West       Cost
+ Example 1     3680       3670       3710           -0.008%         -0.01%
+ Example 2     670        650        610            0.09%           0.06%
+ Example 3     1015       814        781            0.23%           0.04%
+
+
+To prove efficiency of the proposed algorithms, comparison by more examples is
+required. Therefore the author uses more examples with common size. Details of
+Examples 4-9 has been shown in Table 8 and a comparison among TDM1, TDSM
+with North-West and Vogel algorithms has been presented in Table 9. Only costs
+of the Example 4-9 are generated randomly, code of this case has been shown in
+the last column in Table 8.
+      Three new methods to find initial basic feasible solution                                                        1811
+
+
+                                       Table 6 – Details of Examples 4-9
+
+            Size     S                          D                                C                             Code
+
+Example 4   3×4      [7 9 18]                   [5 8 7 14]                           41   46 14 49                    randi(50,3,4)
+                                                                                     46   32 28 8
+                                                                                      7   5 48 49
+Example 5   5×5      [2 3 5 7 9]                [1 4 6 8 7]                          82   10 16 15 66                 randi(100,5,5)
+                                                                                     91   28 98 43 4
+                                                                                     13   55 96 92 85
+                                                                                     92   96 49 80 94
+                                                                                     64   97 81 96 68
+Example 6   10 × 7   [6 8 11 13 23 5 20         [14 24 28 33 4 12 14]                17    4 14 15 9 6 16             randi(20,10,7)
+                                                                                     19   20 1 1 8 14 6
+                     13 14 16]                                                        3   20 17 6 16 14 11
+                                                                                     19   10 19 1 16 4 14
+                                                                                     13   17 14 2 4 3 18
+                                                                                      2   3 16 17 10 10 20
+                                                                                      6   9 15 14 9 20 11
+                                                                                     11   19 8 7 13 7 3
+                                                                                     20   16 14 20 15 12 3
+                                                                                     20   20 4 1 16 5 6
+Example 7   8×9      [16 18 10 13 11 15         [13 21 15 8 10 12 20 13 16]                                           randi(30,8,9)
+                                                                                     25   29 13 21 9 14 22 29 27
+                     22 23]                                                          28   29 28 23 2 12 23 11 29
+                                                                                      4   5 24 23 3 23 9 18 17
+                                                                                     28   30 29 12 25 24 21 7 5
+                                                                                     19   29 20 20 21 6 20 23 5
+                                                                                      3   15 2 6 10 15 5 8 8
+                                                                                      9   25 26 22 29 14 4 16 26
+                                                                                     17    5 29 1 2 20 15 21 8
+Example 8   20 × 6   [5 18 7 11 20 15 10 11     [45 56 25 40 41 32]                                                   randi(40,20,6)
+                     4 6 21 8 11 10 20 3 7
+                     12 19 21]
+Example9    20       [10 12 61 71 31 13 43      [31 71 51 12 10 23 12 82 43 17                                        randi(40,20,20)
+            × 20     92 12 7 34 24 16 13 21     24 34 10 19 31 31 47 18 51 11]
+                     41 27 38 41 21]
+
+
+
+               Table 7 – Comparison among TDM1, TDSM and other algorithms
+
+                         North-West       Vogel         TDM1          TDSM
+        Example 4        1451             490           490           490
+        Example 5        1853             1401          1401          1661
+        Example 6        1651             740           712           712
+        Example 7        2251             844           935           979
+        Example 8        4088             1400          1379          1751
+        Example 9        12949            4637          3843          3870
+      Improvement amount of the best algorithm in references by TDM1 has been shown
+      in Table 6. It is easy to see that TDM1 is better than even the best algorithm
+      according to the results in Table 10.
+
+                   Table 8 – Improvement amount of Vogel algorithm by TDM1
+
+                                              Vogel                   TDM1                     Improvement
+                   Example 4                  490                     490                      0%
+                   Example 5                  1401                    1401                     0%
+                   Example 6                  740                     712                      0.037%
+                   Example 7                  844                     935                      -0.1%
+                   Example 8                  1400                    1379                     0.015%
+                   Example 9                  4637                    3843                     0.17%
+1812                                                               Eghbal Hosseini
+
+
+Using proposed MATLAB code of Vogel algorithm in this paper, solving of large
+size transportation problem is possible. In this section more large size Examples
+generated randomly for two reasons: firstly, to compare proposed algorithms here
+and other methods in references. Secondly to show feasibility of the proposed
+algorithms and MATLAB code of Vogel algorithm for solving much larger
+problems. Pseudo code of generation of the problems has been shown in Table 11
+and a comparison among TDM1, TDM2 with other algorithms has been proposed
+in Table 12. All of required information for a transportation problems are generated
+randomly for the Example 10-15.
+
+      Table 9 - Pseudo code of generation transportation problems in large size
+
+ Input(m,n,k);s=randi(100,1,m);d=zeros(1,n);
+ u=1;
+ for i=1:n
+    for j=u: u+1
+     d(i)=d(i)+s(j);
+    end
+   u=u+2;
+ end
+ c=randi(k,m,n);
+
+
+Table 10 – Comparison among TDM1, TDSM and other algorithms for large size
+                               problems
+
+                      Size              North-   Vogel    TDM1         TDM2
+                                        West
+ Example 10           200 × 50          297629   26566    25795        32663
+ Example 11           160 × 40          185366   85456    66948        13459
+ Example 12           100 × 25          177666   26462    26184        29502
+ Example 13            80 × 20          132804   30123    23412        27336
+ Example 14           210 × 70          322356   27619    27209        28765
+ Example 15           261 × 87          245311   152930   137248       10534
+
+According to Table 13, results of TDM1 is much better than Vogel algorithm for
+all different random problems (Examples 10-15). TDM2 is better only for Examples
+11, 15. Improvement amount of the Vogel algorithm by TDM1 for large size
+problems has been shown in Table 8.
+
+        Table 11 – Improvement amount of Vogel algorithm by TDM1
+                Size          Vogel         TDM1             Improvement
+  Example 10       200 × 50   26566         25795            0.029%
+  Example 11       160 × 40   85456         66948            0.216%
+  Example 12       100 × 25   26462         26184            0.010%
+  Example 13        80 × 20   30123         23412            0.222%
+  Example 14       210 × 70   27619         27209            0.014%
+  Example 15       261 × 87   152930        137248           0.102%
+Three new methods to find initial basic feasible solution                      1813
+
+
+4 Conclusion and future works
+In this paper, an efficient algorithm has been proposed which finds better initial
+basic feasible solution to start simplex method of transportation problems. Lower
+computational complexity is because of less calculations in the algorithm, in the
+best case (TDM1), in fact only rows of transportation table are allocated by
+penalties in this case. Therefore, perhaps this method will be interested by future
+works in real transportation problems. The proposed algorithm, in all three cases,
+and some of previous algorithms used to solve several test and generated problems
+in different sizes. These generated problems and comparisons and also Matlab
+codes of the best case of the algorithm and Vogel algorithm, can be useful in the
+future research in transportation area. Finally, a new approach, better than simplex,
+which can propose optimal solution will be main challenge of the transportation
+problems. Modification and improvement of proposed heuristic method in this
+paper, is helpful idea to propose an efficient algorithm to find optimal solution.
+
+
+References
+[1] L. Aizemberg, H.H. Kramer, A.A. Pessoa, E. Uchoa, Formulations for a
+problem of petroleum transportation, Eur. J. Oper. Res., 237 (2014), 82–90.
+https://doi.org/10.1016/j.ejor.2014.01.036
+
+[2] S. Juman, M.A. Hoque, M.I. Buhari, A sensitivity analysis and an
+implementation of the well-known Vogel’s approximation method for solving an
+unbalanced transportation problem, Malays. J. Sci., 32 (2013), no. 1, 66–72.
+
+[3] V. Adlakha, K. Kowalski, Alternate solutions analysis for transportation
+problems, J. Bus. Econ. Res., 7 (2009), no. 11, 41–49.
+https://doi.org/10.19030/jber.v7i11.2354
+
+[4] Z.A.M.S. Juman, M.A. Hoque, A heuristic solution technique to attain the
+minimal total cost bounds of transporting a homogeneous product with varying
+demands and supplies, Eur. J. Oper. Res., 239 (2014), 146–156.
+https://doi.org/10.1016/j.ejor.2014.05.004
+
+[5] N.M. Deshmukh, An Innovative method for solving transportation problem, Int.
+J. Phys. Math. Sci., 2 (2012), no. 3, 86–91.
+
+[6] S.Z. Ramadan, I.Z. Ramadan, Hybrid two-stage algorithm for solving
+transportation problem, Mod. Appl. Sci., 6 (2012), no. 4, 12–22.
+https://doi.org/10.5539/mas.v6n4p12
+1814                                                                  Eghbal Hosseini
+
+
+[7] T. Imam, G. Elsharawy, M. Gomah, I. Samy, Solving transportation problem
+using object-oriented model, Int. J. Comput. Sci. Netw. Secur., 9 (2009), no. 2, 353–
+361.
+
+[8] V. Adlakha, K. Kowalski, A simple heuristic for solving small fixed-charge
+transportation problems, Omega, 31 (2003), 205–211.
+https://doi.org/10.1016/s0305-0483(03)00025-2
+
+[9] Eghbal Hosseini, Laying Chicken Algorithm: A New Meta-Heuristic Approach
+to Solve Continuous Programming Problems, J. Appl. Computat. Math., 6 (2017),
+no. 1. https://doi.org/10.4172/2168-9679.1000344
+
+[10] Eghbal Hosseini, A Genetic Approach for Solving Bi-Level Programming
+Problems, Advanced Modeling and Optimization, 15 (2013), no. 3, 719–733.
+
+[11] Eghbal Hosseini, Line search and genetic approaches for solving linear tri-
+level programming problem, International Journal of Management, Accounting
+and Economics, 1 (2014), no. 4, 264–283.
+
+[12] Eghbal Hosseini, Taylor Approach for Solving Non-Linear Bi-level
+Programming Problem, Advances in Computer Science: an International Journal,
+3 (2014), no. 5, 91–97.
+
+[13] Z.A. Juman, M.A. Hoque, An efficient heuristic to obtain a better initial
+feasible solution to the transportation problem, Applied Soft Computing, 34 (2015),
+813–826. https://doi.org/10.1016/j.asoc.2015.05.009
+
+[14] U.K. Das, M.A. Babu, A.R. Khan, M.A. Helal, M.S. Uddin, Logical
+development of Vogel’s approximation method (LD-VAM): an approach to find
+basic feasible solution of transportation problem, Int. J. Sci. Technol. Res., 3 (2014),
+no. 2, 42–48.
+
+[15] S. Korukoglu, S. Balli, An improved Vogel’s approximation method for the
+transportation problem, Math. Comput. Appl., 16 (2011), no. 2, 370–381.
+https://doi.org/10.3390/mca16020370
+
+
+Received: June 3, 2017; Published: July 10, 2017
+
